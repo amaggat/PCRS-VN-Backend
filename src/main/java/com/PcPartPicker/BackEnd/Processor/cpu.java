@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name ="processor")
-public class CPU extends electronicComponents {
+public class cpu extends electronicComponents {
 
     @Column(name = "socket")
     @NotEmpty

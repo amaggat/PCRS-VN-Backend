@@ -1,11 +1,9 @@
 package com.PcPartPicker.BackEnd._Model.RelationshipConnect;
 
-import com.PcPartPicker.BackEnd.RAM.RAM;
 import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.RelationshipConnect.Key.RamKey;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 public class PcProfile_Ram {
@@ -21,7 +19,7 @@ public class PcProfile_Ram {
     @ManyToOne
     @MapsId("RamID")
     @JoinColumn(name = "RamID")
-    RAM ram;
+    com.PcPartPicker.BackEnd.RAM.ram ram;
 
     private int amount;
 

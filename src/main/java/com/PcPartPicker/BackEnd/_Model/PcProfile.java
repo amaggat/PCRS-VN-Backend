@@ -2,11 +2,8 @@ package com.PcPartPicker.BackEnd._Model;
 
 import com.PcPartPicker.BackEnd.Drives.HardDriveDisk.HardDiskDrive;
 import com.PcPartPicker.BackEnd.Drives.SolidStateDrive.SolidStateDrive;
-import com.PcPartPicker.BackEnd.GraphicCards.GraphicsProcessingUnit;
 import com.PcPartPicker.BackEnd.Mainboard.Mainboard;
 import com.PcPartPicker.BackEnd.PSU.PowerSupplyUnit;
-import com.PcPartPicker.BackEnd.Processor.CPU;
-import com.PcPartPicker.BackEnd.RAM.RAM;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -34,7 +31,7 @@ public class PcProfile {
             joinColumns = @JoinColumn(name = "PcID"),
             inverseJoinColumns = @JoinColumn(name = "CpuID")
     )
-    private Set<CPU> cpu;
+    private Set<com.PcPartPicker.BackEnd.Processor.cpu> cpu;
 
     @ManyToMany
     @JoinTable(
@@ -50,7 +47,7 @@ public class PcProfile {
             joinColumns = @JoinColumn(name = "PcID"),
             inverseJoinColumns = @JoinColumn(name = "RamID")
     )
-    private Set<RAM> ram;
+    private Set<com.PcPartPicker.BackEnd.RAM.ram> ram;
 
     @ManyToMany
     @JoinTable(
@@ -74,7 +71,7 @@ public class PcProfile {
             joinColumns = @JoinColumn(name = "PcID"),
             inverseJoinColumns = @JoinColumn(name = "GpuID")
     )
-    private Set<GraphicsProcessingUnit> gpu;
+    private Set<com.PcPartPicker.BackEnd.GraphicCards.gpu> gpu;
 
     @ManyToMany
     @JoinTable(
@@ -109,11 +106,11 @@ public class PcProfile {
         PcPrice = pcPrice;
     }
 
-    public Set<CPU> getCpu() {
+    public Set<com.PcPartPicker.BackEnd.Processor.cpu> getCpu() {
         return cpu;
     }
 
-    public void setCpu(Set<CPU> cpu) {
+    public void setCpu(Set<com.PcPartPicker.BackEnd.Processor.cpu> cpu) {
         this.cpu = cpu;
     }
 
@@ -125,11 +122,11 @@ public class PcProfile {
         this.main = main;
     }
 
-    public Set<RAM> getRam() {
+    public Set<com.PcPartPicker.BackEnd.RAM.ram> getRam() {
         return ram;
     }
 
-    public void setRam(Set<RAM> ram) {
+    public void setRam(Set<com.PcPartPicker.BackEnd.RAM.ram> ram) {
         this.ram = ram;
     }
 
@@ -149,11 +146,11 @@ public class PcProfile {
         this.hdd = hdd;
     }
 
-    public Set<GraphicsProcessingUnit> getGpu() {
+    public Set<com.PcPartPicker.BackEnd.GraphicCards.gpu> getGpu() {
         return gpu;
     }
 
-    public void setGpu(Set<GraphicsProcessingUnit> gpu) {
+    public void setGpu(Set<com.PcPartPicker.BackEnd.GraphicCards.gpu> gpu) {
         this.gpu = gpu;
     }
 

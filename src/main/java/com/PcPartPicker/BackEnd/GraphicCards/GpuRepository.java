@@ -1,6 +1,5 @@
 package com.PcPartPicker.BackEnd.GraphicCards;
 
-import com.PcPartPicker.BackEnd.GraphicCards.GraphicsProcessingUnit;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
@@ -8,27 +7,27 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 
-public interface GpuRepository extends Repository<GraphicsProcessingUnit, Integer> {
+public interface GpuRepository extends Repository<gpu, Integer> {
 
-    @Query("SELECT DISTINCT gpu FROM GraphicsProcessingUnit gpu WHERE gpu.id =:id")
+    @Query("SELECT DISTINCT gpu FROM gpu gpu WHERE gpu.id =:id")
     @Transactional(readOnly = true)
-    GraphicsProcessingUnit findByID(@Param("id") int id);
+    gpu findByID(@Param("id") int id);
 
-    @Query("SELECT DISTINCT gpu from GraphicsProcessingUnit gpu WHERE gpu.chipset =:chipset")
+    @Query("SELECT DISTINCT gpu from gpu gpu WHERE gpu.chipset =:chipset")
     @Transactional(readOnly = true)
-    Collection<GraphicsProcessingUnit> findByChipset(@Param("chipset") String chipset);
+    Collection<gpu> findByChipset(@Param("chipset") String chipset);
 
-    @Query("SELECT DISTINCT gpu FROM GraphicsProcessingUnit gpu WHERE gpu.manufacturer =:manufacturer")
+    @Query("SELECT DISTINCT gpu FROM gpu gpu WHERE gpu.manufacturer =:manufacturer")
     @Transactional(readOnly = true)
-    Collection<GraphicsProcessingUnit> findByManufacturer(@Param("manufacturer") String manufacturer);
+    Collection<gpu> findByManufacturer(@Param("manufacturer") String manufacturer);
 
-    @Query("SELECT DISTINCT gpu FROM GraphicsProcessingUnit gpu WHERE gpu.VRam =:VRam")
+    @Query("SELECT DISTINCT gpu FROM gpu gpu WHERE gpu.VRam =:VRam")
     @Transactional(readOnly = true)
-    Collection<GraphicsProcessingUnit> findByVRam(@Param("VRam") int VRam);
+    Collection<gpu> findByVRam(@Param("VRam") int VRam);
 
-    @Query("SELECT DISTINCT gpu FROM GraphicsProcessingUnit gpu WHERE gpu.fullname LIKE %:fullname%")
-    Collection<GraphicsProcessingUnit> findByName(@Param("fullname") String fullname);
+    @Query("SELECT DISTINCT gpu FROM gpu gpu WHERE gpu.fullname LIKE %:fullname%")
+    Collection<gpu> findByName(@Param("fullname") String fullname);
 
-    void save(GraphicsProcessingUnit gpu);
+    void save(gpu gpu);
 
 }

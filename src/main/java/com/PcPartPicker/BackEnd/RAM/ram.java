@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name ="ram")
-public class RAM extends electronicComponents {
+public class ram extends electronicComponents {
 
     private int numberOfRam;
 

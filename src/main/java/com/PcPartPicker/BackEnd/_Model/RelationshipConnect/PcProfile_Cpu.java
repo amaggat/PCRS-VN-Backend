@@ -2,7 +2,7 @@ package com.PcPartPicker.BackEnd._Model.RelationshipConnect;
 
 
 
-import com.PcPartPicker.BackEnd.Processor.CPU;
+import com.PcPartPicker.BackEnd.Processor.cpu;
 import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.RelationshipConnect.Key.CpuKey;
 
@@ -22,7 +22,7 @@ public class PcProfile_Cpu {
     @ManyToOne
     @MapsId("CpuID")
     @JoinColumn(name = "CpuID")
-    CPU processor;
+    cpu processor;
 
     private int amount;
 

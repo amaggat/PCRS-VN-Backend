@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "gpu")
-public class GraphicsProcessingUnit extends electronicComponents {
+public class gpu extends electronicComponents {
     private int numberOfFans;
 
     @Column(name = "VRam")

@@ -2,7 +2,7 @@ package com.PcPartPicker.BackEnd._Model.RelationshipConnect;
 
 
 
-import com.PcPartPicker.BackEnd.GraphicCards.GraphicsProcessingUnit;
+import com.PcPartPicker.BackEnd.GraphicCards.gpu;
 import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.RelationshipConnect.Key.GpuKey;
 
@@ -23,7 +23,7 @@ public class PcProfile_Gpu {
     @ManyToOne
     @MapsId("GpuID")
     @JoinColumn(name = "GpuID")
-    GraphicsProcessingUnit graphicsProcessingUnit;
+    gpu gpu;
 
     private int amount;
 }
