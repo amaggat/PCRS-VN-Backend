@@ -34,4 +34,7 @@ public interface MainRepository extends Repository<Mainboard, Integer> {
 
     void save(Mainboard main);
 
+    @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard")
+    @Transactional(readOnly = true)
+    List<Mainboard> findAll();
 }

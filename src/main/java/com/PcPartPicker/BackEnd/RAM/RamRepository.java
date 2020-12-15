@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.List;
 
 public interface RamRepository extends Repository<ram, Integer> {
 
@@ -31,4 +32,7 @@ public interface RamRepository extends Repository<ram, Integer> {
     Collection<ram> findByClockSpeed(@Param("clockSpeed") int clockSpeed);
 
     void save(ram ram);
+
+    @Query("SELECT DISTINCT ram From ram ram")
+    List<ram> findAll();
 }

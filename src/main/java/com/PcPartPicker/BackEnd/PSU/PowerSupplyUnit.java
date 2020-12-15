@@ -21,13 +21,13 @@ public class PowerSupplyUnit extends electronicComponents {
     @NotEmpty
     private String standard_80 = new String();
 
-    @Column(name = "size")
-    @NotEmpty
-    private String size = new String();
+//    @Column(name = "size")
+//    @NotEmpty
+//    private String size = new String();
 
-    public String getSize() {
-        return size;
-    }
+//    public String getSize() {
+//        return size;
+//    }
 
     public String getStandard_80() {
         return standard_80;
@@ -37,9 +37,9 @@ public class PowerSupplyUnit extends electronicComponents {
         return Power;
     }
 
-    public void setSize(String size) {
-        this.size = size;
-    }
+//    public void setSize(String size) {
+//        this.size = size;
+//    }
 
     public void setStandard_80(String standard_80) {
         this.standard_80 = standard_80;

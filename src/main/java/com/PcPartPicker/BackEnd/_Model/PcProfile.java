@@ -17,13 +17,13 @@ public class PcProfile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id = new String();
     
-    @Column(name = "PcName")
+    @Column(name = "Pcname")
     @NotEmpty
     private String PcName = new String();
     
-    @Column(name = "price")
-    @NotEmpty
-    private double PcPrice;
+//    @Column(name = "price")
+//    @NotEmpty
+//    private double PcPrice;
 
     @ManyToMany
     @JoinTable(
@@ -86,9 +86,9 @@ public class PcProfile {
         return id;
     }
 
-    public double getPcPrice() {
-        return PcPrice;
-    }
+//    public double getPcPrice() {
+//        return PcPrice;
+//    }
 
     public String getPcName() {
         return PcName;
@@ -102,9 +102,9 @@ public class PcProfile {
         PcName = pcName;
     }
 
-    public void setPcPrice(double pcPrice) {
-        PcPrice = pcPrice;
-    }
+//    public void setPcPrice(double pcPrice) {
+//        PcPrice = pcPrice;
+//    }
 
     public Set<com.PcPartPicker.BackEnd.Processor.cpu> getCpu() {
         return cpu;

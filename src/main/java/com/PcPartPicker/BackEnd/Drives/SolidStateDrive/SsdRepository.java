@@ -32,4 +32,8 @@ public interface SsdRepository extends Repository<SolidStateDrive, String> {
     Collection<SolidStateDrive> findByChipset(@Param("chipset") String chipset);
 
     void save(SolidStateDrive ssd);
+
+    @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd")
+    @Transactional(readOnly = true)
+    List<SolidStateDrive> findAll();
 }

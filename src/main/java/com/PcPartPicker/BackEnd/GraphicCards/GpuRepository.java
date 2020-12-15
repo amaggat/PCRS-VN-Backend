@@ -6,6 +6,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.List;
 
 public interface GpuRepository extends Repository<gpu, Integer> {
 
@@ -26,8 +27,12 @@ public interface GpuRepository extends Repository<gpu, Integer> {
     Collection<gpu> findByVRam(@Param("VRam") int VRam);
 
     @Query("SELECT DISTINCT gpu FROM gpu gpu WHERE gpu.fullname LIKE %:fullname%")
+    @Transactional(readOnly = true)
     Collection<gpu> findByName(@Param("fullname") String fullname);
 
     void save(gpu gpu);
 
+    @Query("SELECT DISTINCT gpu FROM gpu gpu")
+    @Transactional(readOnly = true)
+    List<gpu> findAll();
 }

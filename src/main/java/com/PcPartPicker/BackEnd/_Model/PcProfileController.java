@@ -14,7 +14,7 @@ public class PcProfileController {
         this.pcProfileRepository = pcProfileRepository;
     }
 
-    @GetMapping("/pcprofiles")
+    @GetMapping("/pcProfiles")
     public List<PcProfile> list(){
         return pcProfileRepository.findAll();
     }

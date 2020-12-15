@@ -28,4 +28,9 @@ public interface HddRepository extends Repository<HardDiskDrive, Integer> {
     Collection<HardDiskDrive> findByName(@Param("fullname") String fullname);
 
     void save(HardDiskDrive hdd);
+
+
+    @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd")
+    @Transactional(readOnly = true)
+    List<HardDiskDrive> findAll();
 }

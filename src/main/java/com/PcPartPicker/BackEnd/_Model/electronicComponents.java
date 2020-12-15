@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty;
 public abstract class electronicComponents {
     private String manufacturer = new String();
 
-    @Column(name = "serieName")
+    @Column(name = "seriename")
     @NotEmpty
     private String serieName = new String();
 
@@ -16,10 +16,10 @@ public abstract class electronicComponents {
     @NotEmpty
     private String chipset = new String();
 
-    @Column(name = "price")
-    @NotEmpty
-    @Digits(fraction = 2, integer = 4)
-    private double price = 0.0;
+//    @Column(name = "price")
+//    @NotEmpty
+//    @Digits(fraction = 2, integer = 4)
+//    private double price = 0.0;
 
     @Column(name = "fullname")
     @NotEmpty
@@ -37,9 +37,9 @@ public abstract class electronicComponents {
         return manufacturer;
     }
 
-    public double getPrice() {
-        return price;
-    }
+//    public double getPrice() {
+//        return price;
+//    }
 
     public String getSerieName() {
         return serieName;
@@ -49,9 +49,9 @@ public abstract class electronicComponents {
         this.manufacturer = manufacturer;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+//    public void setPrice(double price) {
+//        this.price = price;
+//    }
 
     public void setChipset(String chipset) {
         this.chipset = chipset;

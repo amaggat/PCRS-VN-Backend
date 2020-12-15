@@ -10,14 +10,15 @@ import javax.validation.constraints.NotEmpty;
 
 
 @Entity
-@Table(name ="processor")
+@Table(name ="cpu")
 public class cpu extends electronicComponents {
 
     @Column(name = "socket")
     @NotEmpty
     private String socket = new String();
-    private double BaseClock;
-    private double BoostCLock;
+
+//    private double BaseClock;
+//    private double BoostCLock;
 
     @Column(name = "Cores")
     @NotEmpty
@@ -39,21 +40,21 @@ public class cpu extends electronicComponents {
         return Threads;
     }
 
-    public double getBaseClock() {
-        return BaseClock;
-    }
-
-    public double getBoostCLock() {
-        return BoostCLock;
-    }
-
-    public void setBaseClock(double baseClock) {
-        BaseClock = baseClock;
-    }
-
-    public void setBoostCLock(double boostCLock) {
-        BoostCLock = boostCLock;
-    }
+//    public double getBaseClock() {
+//        return BaseClock;
+//    }
+//
+//    public double getBoostCLock() {
+//        return BoostCLock;
+//    }
+//
+//    public void setBaseClock(double baseClock) {
+//        BaseClock = baseClock;
+//    }
+//
+//    public void setBoostCLock(double boostCLock) {
+//        BoostCLock = boostCLock;
+//    }
 
     public void setCores(int cores) {
         Cores = cores;

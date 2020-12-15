@@ -9,14 +9,14 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name ="main")
+@Table(name ="mainboard")
 public class Mainboard extends electronicComponents {
 
     @Column(name = "socket")
     @NotEmpty
     private String socket = new String();
     
-    @Column(name = "main_size")
+    @Column(name = "size")
     @NotEmpty
     private String size = new String();
 

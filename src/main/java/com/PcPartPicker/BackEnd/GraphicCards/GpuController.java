@@ -1,6 +1,10 @@
 package com.PcPartPicker.BackEnd.GraphicCards;
 
+import com.PcPartPicker.BackEnd.Mainboard.MainRepository;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class GpuController {
@@ -12,5 +16,9 @@ public class GpuController {
         this.gpuRepository = gpuRepository;
     }
 
+    @GetMapping("/gpus")
+    public List<gpu> list(){
+        return gpuRepository.findAll();
+    }
 
 }

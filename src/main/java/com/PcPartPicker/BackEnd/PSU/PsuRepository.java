@@ -11,6 +11,10 @@ import java.util.List;
 
 public interface PsuRepository extends Repository<PowerSupplyUnit, Integer> {
 
+    @Query("SELECT DISTINCT psu FROM PowerSupplyUnit psu")
+    @Transactional(readOnly = true)
+    List<PowerSupplyUnit> findAll();
+
     @Query("SELECT DISTINCT psu FROM PowerSupplyUnit psu WHERE psu.id=:id")
     PowerSupplyUnit findByID(@Param("id") int id);
 
@@ -31,4 +35,5 @@ public interface PsuRepository extends Repository<PowerSupplyUnit, Integer> {
     Collection<PowerSupplyUnit> findByPower(@Param("min_power") int min_power, @Param("max_power") int max_power);
 
     void save(PowerSupplyUnit psu);
+
 }

@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.List;
 
 
 public interface CpuRepository extends Repository<cpu, Integer> {
@@ -32,4 +33,8 @@ public interface CpuRepository extends Repository<cpu, Integer> {
     Collection<cpu> findByChipset(@Param("chipset") String chipset);
 
     void save(cpu cpu);
+
+    @Query("SELECT DISTINCT cpu FROM cpu cpu")
+    @Transactional(readOnly = true)
+    List<cpu> findAll();
 }

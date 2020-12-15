@@ -17,13 +17,13 @@ public class SolidStateDrive extends electronicComponents {
     @NotEmpty
     private int size;
 
-    @Column(name = "writeSpeed")
-    @NotEmpty
-    private int writeSpeed;
-
-    @Column(name = "readSpeed")
-    @NotEmpty
-    private int readSpeed;
+//    @Column(name = "writeSpeed")
+//    @NotEmpty
+//    private int writeSpeed;
+//
+//    @Column(name = "readSpeed")
+//    @NotEmpty
+//    private int readSpeed;
 
     @Column(name = "chipset")
     @NotEmpty
@@ -33,25 +33,25 @@ public class SolidStateDrive extends electronicComponents {
         return size;
     }
 
-    public int getReadSpeed() {
-        return readSpeed;
-    }
-
-    public int getWriteSpeed() {
-        return writeSpeed;
-    }
+//    public int getReadSpeed() {
+//        return readSpeed;
+//    }
+//
+//    public int getWriteSpeed() {
+//        return writeSpeed;
+//    }
 
     public String getNandType() {
         return chipset;
     }
 
-    public void setReadSpeed(int readSpeed) {
-        this.readSpeed = readSpeed;
-    }
-
-    public void setWriteSpeed(int writeSpeed) {
-        this.writeSpeed = writeSpeed;
-    }
+//    public void setReadSpeed(int readSpeed) {
+//        this.readSpeed = readSpeed;
+//    }
+//
+//    public void setWriteSpeed(int writeSpeed) {
+//        this.writeSpeed = writeSpeed;
+//    }
 
     public void setSize(int size) {
         this.size = size;

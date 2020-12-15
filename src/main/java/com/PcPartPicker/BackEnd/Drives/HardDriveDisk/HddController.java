@@ -1,6 +1,10 @@
 package com.PcPartPicker.BackEnd.Drives.HardDriveDisk;
 
+import com.PcPartPicker.BackEnd.Drives.SolidStateDrive.SsdRepository;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class HddController {
@@ -9,5 +13,10 @@ public class HddController {
     public HddController(HddRepository hddRepository)
     {
         this.hddRepository = hddRepository;
+    }
+
+    @GetMapping("/hardDiskDrives")
+    public List<HardDiskDrive> list(){
+        return hddRepository.findAll();
     }
 }
