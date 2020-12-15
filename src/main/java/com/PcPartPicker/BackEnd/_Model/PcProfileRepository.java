@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Collection;
+import java.util.List;
 
 public interface PcProfileRepository extends Repository<PcProfile, String> {
 
@@ -21,4 +22,8 @@ public interface PcProfileRepository extends Repository<PcProfile, String> {
 //    PcProfile findByManufacturer(String manufacturer);
 
     void save(PcProfile profile);
+
+    @Query("SELECT DISTINCT pcProfile FROM PcProfile pcProfile")
+    @Transactional(readOnly = true)
+    List<PcProfile> findAll();
 }
