@@ -2,8 +2,11 @@ package com.PcPartPicker.BackEnd._Model;
 
 import com.PcPartPicker.BackEnd.Drives.HardDriveDisk.HardDiskDrive;
 import com.PcPartPicker.BackEnd.Drives.SolidStateDrive.SolidStateDrive;
+import com.PcPartPicker.BackEnd.GraphicCards.gpu;
 import com.PcPartPicker.BackEnd.Mainboard.Mainboard;
 import com.PcPartPicker.BackEnd.PSU.PowerSupplyUnit;
+import com.PcPartPicker.BackEnd.Processor.cpu;
+import com.PcPartPicker.BackEnd.RAM.ram;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -106,11 +109,11 @@ public class PcProfile {
 //        PcPrice = pcPrice;
 //    }
 
-    public Set<com.PcPartPicker.BackEnd.Processor.cpu> getCpu() {
+    public Set<cpu> getCpu() {
         return cpu;
     }
 
-    public void setCpu(Set<com.PcPartPicker.BackEnd.Processor.cpu> cpu) {
+    public void setCpu(Set<cpu> cpu) {
         this.cpu = cpu;
     }
 
@@ -122,11 +125,11 @@ public class PcProfile {
         this.main = main;
     }
 
-    public Set<com.PcPartPicker.BackEnd.RAM.ram> getRam() {
+    public Set<ram> getRam() {
         return ram;
     }
 
-    public void setRam(Set<com.PcPartPicker.BackEnd.RAM.ram> ram) {
+    public void setRam(Set<ram> ram) {
         this.ram = ram;
     }
 
@@ -146,11 +149,11 @@ public class PcProfile {
         this.hdd = hdd;
     }
 
-    public Set<com.PcPartPicker.BackEnd.GraphicCards.gpu> getGpu() {
+    public Set<gpu> getGpu() {
         return gpu;
     }
 
-    public void setGpu(Set<com.PcPartPicker.BackEnd.GraphicCards.gpu> gpu) {
+    public void setGpu(Set<gpu> gpu) {
         this.gpu = gpu;
     }
 
