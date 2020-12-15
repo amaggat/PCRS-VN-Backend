@@ -12,8 +12,6 @@ import java.util.List;
 
 public interface RamRepository extends Repository<RAM, Integer> {
 
-    List<RAM> findRAM();
-
     @Query("SELECT DISTINCT ram From RAM ram WHERE ram.id= :id")
     @Transactional(readOnly = true)
     RAM findByID(@Param("id") int id);
@@ -22,9 +20,9 @@ public interface RamRepository extends Repository<RAM, Integer> {
     @Transactional(readOnly = true)
     Collection<RAM> findByManufacturer(@Param("manufacturer") String manufacturer);
 
-    @Query("SELECT DISTINCT ram From RAM ram WHERE ram.fullname LIKE %:fullName%")
+    @Query("SELECT DISTINCT ram From RAM ram WHERE ram.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<RAM> findByName(@Param("fullName") String fullName);
+    Collection<RAM> findByName(@Param("fullname") String fullName);
 
     @Query("SELECT DISTINCT ram From RAM ram WHERE ram.sizeOfRam= :sizeOfName")
     @Transactional(readOnly = true)

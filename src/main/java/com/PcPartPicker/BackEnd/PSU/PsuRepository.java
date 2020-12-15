@@ -11,8 +11,6 @@ import java.util.List;
 
 public interface PsuRepository extends Repository<PowerSupplyUnit, Integer> {
 
-    List<PowerSupplyUnit> findPSU();
-
     @Query("SELECT DISTINCT psu FROM PowerSupplyUnit psu WHERE psu.id=:id")
     PowerSupplyUnit findByID(@Param("id") int id);
 
@@ -20,9 +18,9 @@ public interface PsuRepository extends Repository<PowerSupplyUnit, Integer> {
     @Transactional(readOnly = true)
     Collection<PowerSupplyUnit> findByManufacturer(@Param("manufacturer")String manufacturer);
 
-    @Query("SELECT DISTINCT psu FROM PowerSupplyUnit psu WHERE psu.fullname LIKE %:fullName%")
+    @Query("SELECT DISTINCT psu FROM PowerSupplyUnit psu WHERE psu.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<PowerSupplyUnit> findByName(@Param("fullName")String fullName);
+    Collection<PowerSupplyUnit> findByName(@Param("fullname")String fullname);
 
     @Query("SELECT DISTINCT psu FROM PowerSupplyUnit psu WHERE psu.standard_80=:standard")
     @Transactional(readOnly = true)

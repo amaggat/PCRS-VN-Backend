@@ -11,13 +11,11 @@ import java.util.List;
 
 public interface HddRepository extends Repository<HardDiskDrive, Integer> {
 
-    List<HardDiskDrive> findHDD();
-
     @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.id= :id")
     @Transactional(readOnly = true)
     HardDiskDrive findByID(@Param("id") int id);
 
-    @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.manufacturer= :manufacurer")
+    @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.manufacturer= :manufacturer")
     @Transactional(readOnly = true)
     Collection<HardDiskDrive> findByManufacturer(@Param("manufacturer") String manufacturer);
 
@@ -25,9 +23,9 @@ public interface HddRepository extends Repository<HardDiskDrive, Integer> {
     @Transactional(readOnly = true)
     Collection<HardDiskDrive> findBySize(@Param("size") int size);
 
-    @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.fullname LIKE %:fullName%")
+    @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<HardDiskDrive> findByName(@Param("fullName") String fullName);
+    Collection<HardDiskDrive> findByName(@Param("fullname") String fullname);
 
     void save(HardDiskDrive hdd);
 }

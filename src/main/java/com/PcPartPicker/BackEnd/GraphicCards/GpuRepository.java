@@ -10,8 +10,6 @@ import java.util.Collection;
 
 public interface GpuRepository extends Repository<GraphicsProcessingUnit, Integer> {
 
-    Collection<GraphicsProcessingUnit> findGPU();
-
     @Query("SELECT DISTINCT gpu FROM GraphicsProcessingUnit gpu WHERE gpu.id =:id")
     @Transactional(readOnly = true)
     GraphicsProcessingUnit findByID(@Param("id") int id);
@@ -28,8 +26,8 @@ public interface GpuRepository extends Repository<GraphicsProcessingUnit, Intege
     @Transactional(readOnly = true)
     Collection<GraphicsProcessingUnit> findByVRam(@Param("VRam") int VRam);
 
-    @Query("SELECT DISTINCT gpu FROM GraphicsProcessingUnit gpu WHERE gpu.fullname LIKE %:fullName%")
-    Collection<GraphicsProcessingUnit> findByName(@Param("fullName") String fullName);
+    @Query("SELECT DISTINCT gpu FROM GraphicsProcessingUnit gpu WHERE gpu.fullname LIKE %:fullname%")
+    Collection<GraphicsProcessingUnit> findByName(@Param("fullname") String fullname);
 
     void save(GraphicsProcessingUnit gpu);
 

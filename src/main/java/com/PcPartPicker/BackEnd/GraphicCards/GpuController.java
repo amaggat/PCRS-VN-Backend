@@ -1,9 +1,8 @@
 package com.PcPartPicker.BackEnd.GraphicCards;
 
+import org.springframework.web.bind.annotation.RestController;
 
-import org.springframework.stereotype.Controller;
-
-@Controller
+@RestController
 public class GpuController {
 
     private final GpuRepository gpuRepository;

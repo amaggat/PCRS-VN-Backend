@@ -9,7 +9,6 @@ import java.util.Collection;
 import java.util.List;
 
 public interface SsdRepository {
-    List<SolidStateDrive> findSSD();
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.id = :id")
     @Transactional(readOnly = true)
@@ -19,9 +18,9 @@ public interface SsdRepository {
     @Transactional(readOnly = true)
     Collection<SolidStateDrive> findByManufacturer(@Param("manufacturer") String manufacturer);
 
-    @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.fullname LIKE %:fullName%")
+    @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<SolidStateDrive> findByName(@Param("fullName") String name);
+    Collection<SolidStateDrive> findByName(@Param("fullname") String fullname);
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.size = :size")
     @Transactional(readOnly = true)

@@ -13,8 +13,6 @@ import java.util.List;
 
 public interface CpuRepository extends Repository<CPU, Integer> {
 
-    List<CPU> findCPU();
-
     @Query("SELECT DISTINCT cpu FROM CPU cpu WHERE cpu.id= :id")
     @Transactional(readOnly = true)
     CPU findByID(@Param("id") String id);
@@ -23,9 +21,9 @@ public interface CpuRepository extends Repository<CPU, Integer> {
     @Transactional(readOnly = true)
     Collection<CPU> findByManufacturer(@Param("manufacturer") String manufacturer);
 
-    @Query("SELECT DISTINCT cpu FROM CPU cpu WHERE cpu.fullname LIKE %:fullName%")
+    @Query("SELECT DISTINCT cpu FROM CPU cpu WHERE cpu.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<CPU> findByName(@Param("fullName") String fullName);
+    Collection<CPU> findByName(@Param("fullname") String fullname);
 
     @Query("SELECT DISTINCT cpu FROM CPU cpu WHERE cpu.Cores= :Cores")
     @Transactional(readOnly = true)

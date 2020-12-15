@@ -11,7 +11,6 @@ import java.util.List;
 
 public interface MainRepository extends Repository<Mainboard, Integer> {
 
-    List<Mainboard> findMain();
 
     @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.id= :id")
     @Transactional(readOnly = true)
@@ -29,9 +28,9 @@ public interface MainRepository extends Repository<Mainboard, Integer> {
     @Transactional(readOnly = true)
     Collection<Mainboard> findByManufacturer(@Param("manufacturer") String manufacturer);
 
-    @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.fullname LIKE %:fullName%")
+    @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<Mainboard> findByName(@Param("fullname") String fullName);
+    Collection<Mainboard> findByName(@Param("fullname") String fullname);
 
     void save(Mainboard main);
 

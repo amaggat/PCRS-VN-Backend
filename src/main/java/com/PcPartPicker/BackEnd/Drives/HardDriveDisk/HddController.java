@@ -1,9 +1,8 @@
+package com.PcPartPicker.BackEnd.Drives.HardDriveDisk;
 
+import org.springframework.web.bind.annotation.RestController;
 
-import com.PcPartPicker.BackEnd.Drives.HardDriveDisk.HddRepository;
-import org.springframework.stereotype.Controller;
-
-@Controller
+@RestController
 public class HddController {
     private final HddRepository hddRepository;
 

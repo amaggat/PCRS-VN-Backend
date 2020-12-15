@@ -1,9 +1,9 @@
 package com.PcPartPicker.BackEnd.RAM;
 
-import com.PcPartPicker.BackEnd.RAM.RamRepository;
-import org.springframework.stereotype.Controller;
 
-@Controller
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class RamController {
 
     private final RamRepository ramRepository;

@@ -1,8 +1,8 @@
 package com.PcPartPicker.BackEnd.PSU;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class PsuController {
     private final PsuRepository psuRepository;
 
