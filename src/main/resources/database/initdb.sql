@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`mainboard` (
     `ID` VARCHAR(100) NOT NULL,
     `manufacturer` VARCHAR(100) NOT NULL,
     `serieName` VARCHAR(100) NOT NULL,
-    `chipset` INT NOT NULL,
+    `chipset` VARCHAR(100) NOT NULL,
     `socket` VARCHAR(100) NOT NULL,
     `size` VARCHAR(100) NOT NULL,
     `fullname` TEXT NOT NULL,
