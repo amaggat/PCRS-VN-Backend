@@ -25,18 +25,18 @@ INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('apacer-panther-2x4-gddr4-2666'
 
 
 INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('id', 'manufacturer', 'serie', 'size', 'chipset', 'fullname');
-INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('samsung-evo970-512-m2nvme', 'Samsung', 'EVO 970', '512', 'M.2 NVMe', ' SSD Samsung 970 PRO 512GB');
-INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('pny-cs2040-120-m2sata', 'PNY', 'CS2040', '120', 'M.2 SATA', 'SSD PNY CS900 120GB');
-INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('wd-black-1024-m2nvme', 'Western Digital', 'Black', '1024', 'M.2 NVMe', 'SSD Western Digital Black SN750 PCIe Gen3 x4 NVMe M.2 1TB');
-INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('kioxia-exceria-480-2.5sata', 'KIOXIA', 'Exceria', '480', '2.5 SATA', 'SSD Kioxia (TOSHIBA) Exceria 3D NAND 2.5-Inch SATA III BiCS FLASH 480GB');
-INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('wd-green-120-m2sata', 'Western Digital', 'Green', '120', 'M.2 SATA', 'SSD WD Green 120GB M.2 2280');
-INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('kingston-a400-240-m2sata', 'Kingston', 'A400', '240', 'M.2 SATA', 'SSD Kingston A400 240GB');
+INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('samsung-evo970-512-m2nvme', 'Samsung', 'EVO 970', '512 GB', 'M.2 NVMe', ' SSD Samsung 970 PRO 512GB');
+INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('pny-cs2040-120-m2sata', 'PNY', 'CS2040', '120 GB', 'M.2 SATA', 'SSD PNY CS900 120GB');
+INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('wd-black-1024-m2nvme', 'Western Digital', 'Black', '1 TB', 'M.2 NVMe', 'SSD Western Digital Black SN750 PCIe Gen3 x4 NVMe M.2 1TB');
+INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('kioxia-exceria-480-2.5sata', 'KIOXIA', 'Exceria', '480 GB', '2.5 SATA', 'SSD Kioxia (TOSHIBA) Exceria 3D NAND 2.5-Inch SATA III BiCS FLASH 480GB');
+INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('wd-green-120-m2sata', 'Western Digital', 'Green', '120 GB', 'M.2 SATA', 'SSD WD Green 120GB M.2 2280');
+INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('kingston-a400-240-m2sata', 'Kingston', 'A400', '240 GB', 'M.2 SATA', 'SSD Kingston A400 240GB');
 
 INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('id', 'manufacturer', 'serie', 'size', 'chipset', 'fullname');
-INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('wd-green-1024-3.5sata', 'Western Digital', 'Green', '1024', '3.5 SATA', 'HDD WD Green 1TB');
-INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('seagate-barracuda-2048-3.5sata', 'Seagate', 'Barracuda', '1024', '3.5 SATA', 'HDD Seagate Barracuda 2TB');
+INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('wd-green-1024-3.5sata', 'Western Digital', 'Green', '1 TB', '3.5 SATA', 'HDD WD Green 1TB');
+INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('seagate-barracuda-2048-3.5sata', 'Seagate', 'Barracuda', '1 TB', '3.5 SATA', 'HDD Seagate Barracuda 2TB');
 
-INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('id', 'manufacturer', 'serie', 'chipset', 'Vram', 'fullname');
+INSERT IGNORE INTO `pc_parts_picker`.gpu VALUES ('id', 'manufacturer', 'serie', 'chipset', 'Vram', 'fullname');
 INSERT IGNORE INTO `pc_parts_picker`.gpu VALUES ('asus-kogaming-rtx3060ti', 'Asus', 'NVIDIA', 'RTX 3060 ti', '6', 'VGA ASUS RTX 3060 Ti 8GB KO GAMING');
 INSERT IGNORE INTO `pc_parts_picker`.gpu VALUES ('galax-exgamerwhite-rtx3070', 'GALAX', 'NVIDIA', 'RTX 3070', '8', 'GALAX GeForce RTX™ 3070 EX Gamer White (1-Click OC)');
 INSERT IGNORE INTO `pc_parts_picker`.gpu VALUES ('msi-gamingx-rx5600xt', 'MSI', 'AMD', 'RX5600XT', '8', 'MSI RX 5600 XT GAMING X');
@@ -45,7 +45,7 @@ INSERT IGNORE INTO `pc_parts_picker`.gpu VALUES ('evga-koultragaming-rtx2060', '
 INSERT IGNORE INTO `pc_parts_picker`.gpu VALUES ('gigabyte-radeon-rx6800xt', 'Gigabyte', 'AMD', 'RX6800XT', '16', 'Gigabyte Radeon RX 6800 XT 16G');
 
 
-INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('id', 'manufacturer', 'serie', 'chipset', 'Vram', 'fullname');
+INSERT IGNORE INTO `pc_parts_picker`.psu VALUES ('id', 'manufacturer', 'serie', 'chipset', 'Vram', 'fullname');
 INSERT IGNORE INTO `pc_parts_picker`.psu VALUES ('corsair-cx550-bronze', 'Corsair', 'CX', 'ATX', '550', 'bronze', 'Corsair CX550 - 80 Plus Bronze');
 INSERT IGNORE INTO `pc_parts_picker`.psu VALUES ('cm-elitev3-700-none', 'Cooler Master', 'Elite V3', 'ATX', '700', 'none', 'Cooler Master Elite V3 230V PC700');
 INSERT IGNORE INTO `pc_parts_picker`.psu VALUES ('xigmatek-cerberus-550-bronze', 'Xigmatek', 'Cerberus', 'ATX', '650', 'bronze', 'XIGMATEK CERBERUS S550');

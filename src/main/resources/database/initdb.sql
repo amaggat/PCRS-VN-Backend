@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ssd` (
     `ID` VARCHAR(100) NOT NULL,
     `manufacturer` VARCHAR(100) NOT NULL,
     `serieName` VARCHAR(100) NOT NULL,
-    `size` INT NOT NULL,
+    `size` VARCHAR(1000) NOT NULL,
     `chipset` VARCHAR(100) NOT NULL,
     `fullname` TEXT NOT NULL,
     PRIMARY KEY (`ID`)
