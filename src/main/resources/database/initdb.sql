@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`mainboard` (
     `ID` VARCHAR(100) NOT NULL,
     `manufacturer` VARCHAR(100) NOT NULL,
     `serieName` VARCHAR(100) NOT NULL,
-    `chipset` INT NOT NULL,
+    `chipset` VARCHAR(100) NOT NULL,
     `socket` VARCHAR(100) NOT NULL,
     `size` VARCHAR(100) NOT NULL,
     `fullname` TEXT NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ram` (
     `ID` VARCHAR(100) NOT NULL,
     `manufacturer` VARCHAR(100) NOT NULL,
     `serieName` VARCHAR(100) NOT NULL,
-    `sizeOfRam` INT NOT NULL,
+    `sizeOfRam` VARCHAR(100) NOT NULL,
     `chipset` VARCHAR(100) NOT NULL,
     `clockSpeed` INT NOT NULL,
     `fullname` TEXT NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ssd` (
     `ID` VARCHAR(100) NOT NULL,
     `manufacturer` VARCHAR(100) NOT NULL,
     `serieName` VARCHAR(100) NOT NULL,
-    `size` VARCHAR(1000) NOT NULL,
+    `size` VARCHAR(100) NOT NULL,
     `chipset` VARCHAR(100) NOT NULL,
     `fullname` TEXT NOT NULL,
     PRIMARY KEY (`ID`)
@@ -158,4 +158,81 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile_hdd`
     FOREIGN KEY (`PcID`) REFERENCES pcprofile(ID),
     FOREIGN KEY (`HddID`) REFERENCES hdd(ID)
 );
+
+CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cpu_price_list`
+(
+	`Id` VARCHAR(100) NOT NULL,
+    `link` BLOB NOT NULL,
+    `img` BLOB NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
+    `price` INT NOT NULL,
+    
+    FOREIGN KEY (`Id`) REFERENCES cpu(ID)
+);
+
+CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`mainboard_price_list`
+(
+	`Id` VARCHAR(100) NOT NULL,
+    `link` BLOB NOT NULL,
+    `img` BLOB NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
+    `price` INT NOT NULL,
+    
+    FOREIGN KEY (`Id`) REFERENCES mainboard(ID)
+);
+
+CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ram_price_list`
+(
+	`Id` VARCHAR(100) NOT NULL,
+    `link` BLOB NOT NULL,
+    `img` BLOB NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
+    `price` INT NOT NULL,
+    
+    FOREIGN KEY (`Id`) REFERENCES ram(ID)
+);
+
+CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`hdd_price_list`
+(
+	`Id` VARCHAR(100) NOT NULL,
+    `link` BLOB NOT NULL,
+    `img` BLOB NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
+    `price` INT NOT NULL,
+    
+    FOREIGN KEY (`Id`) REFERENCES hdd(ID)
+);
+
+CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ssd_price_list`
+(
+	`Id` VARCHAR(100) NOT NULL,
+    `link` BLOB NOT NULL,
+    `img` BLOB NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
+    `price` INT NOT NULL,
+    
+    FOREIGN KEY (`Id`) REFERENCES ssd(ID)
+);
+
+CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`gpu_price_list`
+(
+	`Id` VARCHAR(100) NOT NULL,
+    `link` BLOB NOT NULL,
+    `img` BLOB NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
+    `price` INT NOT NULL,
+    
+    FOREIGN KEY (`Id`) REFERENCES gpu(ID)
+);
+
+CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`psu_price_list`
+(
+	`Id` VARCHAR(100) NOT NULL,
+    `link` BLOB NOT NULL,
+    `img` BLOB NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
+    `price` INT NOT NULL,
+    
+    FOREIGN KEY (`Id`) REFERENCES psu(ID)
+)
 
