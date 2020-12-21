@@ -1,7 +1,8 @@
 package com.PcPartPicker.BackEnd.Processor;
 
-import com.PcPartPicker.BackEnd.PSU.PsuRepository;
+
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -18,5 +19,11 @@ public class CpuController {
     @GetMapping("/cpus")
     public List<cpu> list(){
         return cpuRepository.findAll();
+    }
+
+    @GetMapping("/cpus/search")
+    public List<cpu> SearchByName(@RequestParam(value = "name", defaultValue = "") String name)
+    {
+        return cpuRepository.findByName(name);
     }
 }

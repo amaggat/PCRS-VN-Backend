@@ -18,19 +18,19 @@ public interface CpuRepository extends Repository<cpu, Integer> {
 
     @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE cpu.manufacturer= :manufacturer")
     @Transactional(readOnly = true)
-    Collection<cpu> findByManufacturer(@Param("manufacturer") String manufacturer);
+    List<cpu> findByManufacturer(@Param("manufacturer") String manufacturer);
 
     @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE cpu.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<cpu> findByName(@Param("fullname") String fullname);
+    List<cpu> findByName(@Param("fullname") String fullname);
 
     @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE cpu.Cores= :Cores")
     @Transactional(readOnly = true)
-    Collection<cpu> findByCores(@Param("Cores") int Cores);
+    List<cpu> findByCores(@Param("Cores") int Cores);
 
     @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE cpu.chipset= :chipset")
     @Transactional(readOnly = true)
-    Collection<cpu> findByChipset(@Param("chipset") String chipset);
+    List<cpu> findByChipset(@Param("chipset") String chipset);
 
     void save(cpu cpu);
 
