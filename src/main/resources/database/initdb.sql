@@ -285,5 +285,31 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`psu_price_list`
     
     FOREIGN KEY (`fid`) REFERENCES psu(ID),
     PRIMARY KEY (`Id`)
-)
+);
+
+# CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`case_price_list`
+# (
+#     `Id` INT NOT NULL AUTO_INCREMENT,
+#     `link` TEXT NOT NULL,
+#     `img` TEXT NOT NULL,
+#     `name` TEXT NOT NULL,
+#     `price` INT NOT NULL,
+#     `fid` VARCHAR(100) NOT NULL,
+#
+#     FOREIGN KEY (`fid`) REFERENCES case(ID),
+#     PRIMARY KEY (`Id`)
+# );
+#
+# CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cooler_price_list`
+# (
+#     `Id` INT NOT NULL AUTO_INCREMENT,
+#     `link` TEXT NOT NULL,
+#     `img` TEXT NOT NULL,
+#     `name` TEXT NOT NULL,
+#     `price` INT NOT NULL,
+#     `fid` VARCHAR(100) NOT NULL,
+#
+#     FOREIGN KEY (`fid`) REFERENCES cooler(ID),
+#     PRIMARY KEY (`Id`)
+# );
 
