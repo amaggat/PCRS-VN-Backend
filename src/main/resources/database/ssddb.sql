@@ -98,4 +98,4 @@ INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('seagate-600-series-120-m2-sata
 INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('seagate-600-series--m2-sata', 'Seagate', '600 Series', 'M2 SATA', '480 GB', 'SSD Seagate 600 Series 480 GB');
 INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('seagate-nytro-enterprise--m2-sata', 'Seagate', 'Nytro Enterprise', 'M2 SATA', '1.92 TB', 'SSD Seagate Nytro Enterprise 1.92 TB');
 INSERT IGNORE INTO `pc_parts_picker`.ssd VALUES ('seagate-nytro-enterprise--m2-sata', 'Seagate', 'Nytro Enterprise', 'M2 SATA', '960 GB', 'SSD Seagate Nytro Enterprise 960 GB');
- 
+

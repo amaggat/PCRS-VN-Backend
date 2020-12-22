@@ -162,77 +162,91 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile_hdd`
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cpu_price_list`
 (
 	`Id` INT NOT NULL AUTO_INCREMENT,
-    `link` BLOB NOT NULL,
-    `img` BLOB NOT NULL,
-    `name` VARCHAR(100) NOT NULL,
+    `link` TEXT NOT NULL,
+    `img` TEXT NOT NULL,
+    `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `fid` VARCHAR(100) NOT NULL,
     
+    FOREIGN KEY (`fid`) REFERENCES cpu(ID),
     PRIMARY KEY (`Id`)
 );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`mainboard_price_list`
 (
 	`Id` INT NOT NULL AUTO_INCREMENT,
-    `link` BLOB NOT NULL,
-    `img` BLOB NOT NULL,
-    `name` VARCHAR(100) NOT NULL,
+    `link` TEXT NOT NULL,
+    `img` TEXT NOT NULL,
+    `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `fid` VARCHAR(100) NOT NULL,
     
+    FOREIGN KEY (`fid`) REFERENCES mainboard(ID),
     PRIMARY KEY (`Id`)
 );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ram_price_list`
 (
 	`Id` INT NOT NULL AUTO_INCREMENT,
-    `link` BLOB NOT NULL,
-    `img` BLOB NOT NULL,
-    `name` VARCHAR(100) NOT NULL,
+    `link` TEXT NOT NULL,
+    `img` TEXT NOT NULL,
+    `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `fid` VARCHAR(100) NOT NULL,
     
+    FOREIGN KEY (`fid`) REFERENCES ram(ID),
     PRIMARY KEY (`Id`)
 );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`hdd_price_list`
 (
 	`Id` INT NOT NULL AUTO_INCREMENT,
-    `link` BLOB NOT NULL,
-    `img` BLOB NOT NULL,
-    `name` VARCHAR(100) NOT NULL,
+    `link` TEXT NOT NULL,
+    `img` TEXT NOT NULL,
+    `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `fid` VARCHAR(100) NOT NULL,
     
+    FOREIGN KEY (`fid`) REFERENCES hdd(ID),
     PRIMARY KEY (`Id`)
 );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ssd_price_list`
 (
 	`Id` INT NOT NULL AUTO_INCREMENT,
-    `link` BLOB NOT NULL,
-    `img` BLOB NOT NULL,
-    `name` VARCHAR(100) NOT NULL,
+    `link` TEXT NOT NULL,
+    `img` TEXT NOT NULL,
+    `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `fid` VARCHAR(100) NOT NULL,
     
+    FOREIGN KEY (`fid`) REFERENCES ssd(ID),
     PRIMARY KEY (`Id`)
 );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`gpu_price_list`
 (
 	`Id` INT NOT NULL AUTO_INCREMENT,
-    `link` BLOB NOT NULL,
-    `img` BLOB NOT NULL,
-    `name` VARCHAR(100) NOT NULL,
+    `link` TEXT NOT NULL,
+    `img` TEXT NOT NULL,
+    `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `fid` VARCHAR(100) NOT NULL,
     
+    FOREIGN KEY (`fid`) REFERENCES gpu(ID),
     PRIMARY KEY (`Id`)
 );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`psu_price_list`
 (
 	`Id` INT NOT NULL AUTO_INCREMENT,
-    `link` BLOB NOT NULL,
-    `img` BLOB NOT NULL,
-    `name` VARCHAR(100) NOT NULL,
+    `link` TEXT NOT NULL,
+    `img` TEXT NOT NULL,
+    `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `fid` VARCHAR(100) NOT NULL,
     
+    FOREIGN KEY (`fid`) REFERENCES psu(ID),
     PRIMARY KEY (`Id`)
 )
 
