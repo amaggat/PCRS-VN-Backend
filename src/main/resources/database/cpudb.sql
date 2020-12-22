@@ -1,4 +1,5 @@
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i3-10100', 'Intel', 'Comet Lake', 'Core i3', 'LGA1200', '4', '8', 'Intel Core i3-10100 Processor');
+INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i3-10100F', 'Intel', 'Comet Lake', 'Core i3', 'LGA1200', '4', '8', 'Intel Core i3-10100F Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i3-10300', 'Intel', 'Comet Lake', 'Core i3', 'LGA1200', '4', '8', 'Intel Core i3-10300 Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i3-10320', 'Intel', 'Comet Lake', 'Core i3', 'LGA1200', '4', '8', 'Intel Core i3-10320 Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i3-10350K', 'Intel', 'Comet Lake', 'Core i3', 'LGA1200', '4', '8', 'Intel Core i3-10350K Processor');
@@ -87,6 +88,7 @@ INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-2600', 'AMD', 'Zen
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-2600e', 'AMD', 'Zen', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 2600E Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-2600x', 'AMD', 'Zen', 'Ryzen', 'Socket AM4', '6', '', 'AMD Ryzen 5 2600X Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3400g', 'AMD', 'Picasso', 'Ryzen', 'Socket AM4', '4', '8', 'AMD Ryzen 5 3400G Desktop Processor');
+INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3500', 'AMD', 'Matisse', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 3500 Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3500x', 'AMD', 'Matisse', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 3500X Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3600', 'AMD', 'Matisse', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 3600 Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3600x', 'AMD', 'Matisse', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 3600X Desktop Processor');

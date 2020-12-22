@@ -1,3 +1,21 @@
+-- EVGA
+
+-- Corsair
+
+-- Cooler Master
+
+-- Xigmatek
+
+-- AEROCOOL
+
+-- ANTEC
+
+-- ASUS
+
+-- SilverStone
+
+-- Seasonic
+
 INSERT IGNORE INTO `pc_parts_picker`.psu VALUES ('evga-bq-600-bronze', 'EVGA', 'BQ', 'ATX', '600', 'bronze', 'EVGA BQ 600W');
 INSERT IGNORE INTO `pc_parts_picker`.psu VALUES ('evga-bq-500-bronze', 'EVGA', 'BQ', 'ATX', '500', 'bronze', 'EVGA BQ 500W');
 INSERT IGNORE INTO `pc_parts_picker`.psu VALUES ('cm-mwe-gold-650-gold', 'Cooler Master', 'MWE Gold', 'ATX', '650', 'gold', 'Cooler Master MWE Gold 650W');
