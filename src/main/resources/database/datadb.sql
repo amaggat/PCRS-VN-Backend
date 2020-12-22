@@ -11,7 +11,7 @@ INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('id', 'manufacturer', 'se
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('asus-b460f-rog-strix', 'Asus', 'Rog Strix', 'B460', 'LGA1200', 'ATX', 'ASUS ROG STRIX B460-F');
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('asrock-b450m-steel-legend', 'Asrock', 'Steel Legend', 'B450', 'AM4', 'M-ATX', 'ASROCK B450M STEEL LEGEND');
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('msi-h410m-pro', 'MSI', 'PRO', 'H410', 'LGA1200', 'M-ATX', 'MSI H410M PRO');
-INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('gigabyte-z490-aorus-master', 'Gigabyte', 'Aorus Master', 'Z490', 'LGA1200', 'ATX', 'GIGABYTE Z490 AORUS MASTER');
+INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('gigabyte-z490-aorus-mapsu_price_listster', 'Gigabyte', 'Aorus Master', 'Z490', 'LGA1200', 'ATX', 'GIGABYTE Z490 AORUS MASTER');
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('gigabyte-b550i-aorus-pro-ax', 'Gigabyte', 'Aorus Pro', 'B550', 'AM4', 'ITX', 'GIGABYTE B550I AORUS PRO AX');
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('asrock-a420-hdvp', 'Asrock', 'HDVP', 'A520', 'AM4', 'M-ATX', 'ASROCK A520M-HDVP');
 
