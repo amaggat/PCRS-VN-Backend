@@ -24,25 +24,25 @@ public class CpuController {
         return cpuRepository.findAll();
     }
 
-    @GetMapping("/cpu/find/name={CpuName}")
+    @GetMapping("/api/cpu/find/name={CpuName}")
     public List<cpu> SearchByName(@PathVariable("CpuName") String name)
     {
         return cpuRepository.findByName(name);
     }
 
-    @GetMapping("/cpu/find/socket={CpuSocket}")
+    @GetMapping("/api/cpu/find/socket={CpuSocket}")
     public List<cpu> SearchBySocket(@PathVariable("CpuSocket") String socket)
     {
         return cpuRepository.findBySocket(socket);
     }
 
-    @GetMapping("/cpu/{CpuID}")
+    @GetMapping("/api/cpu/{CpuID}")
     public cpu SearchById(@PathVariable("CpuID") String id)
     {
         return cpuRepository.findByID(id);
     }
 
-    @GetMapping("/cpu/{CpuID}/price")
+    @GetMapping("/api/cpu/{CpuID}/price")
     public List<cpuPriceList> ReturnPriceList(@PathVariable("CpuID") String fid)
     {
         return cpuPriceListRepository.findcpuPriceListByFid(fid);
