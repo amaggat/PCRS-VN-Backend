@@ -23,13 +23,13 @@ public class ram extends electronicComponents {
 
     @Column(name = "sizeofram")
     @NotEmpty
-    private int sizeOfRam;
+    private String sizeOfRam = new String();
 
     public int getClockSpeed() {
         return clockSpeed;
     }
 
-    public int getSizeOfRam() {
+    public String getSizeOfRam() {
         return sizeOfRam;
     }
 
@@ -41,7 +41,7 @@ public class ram extends electronicComponents {
         this.clockSpeed = clockSpeed;
     }
 
-    public void setSizeOfRam(int sizeOfRam) {
+    public void setSizeOfRam(String sizeOfRam) {
         this.sizeOfRam = sizeOfRam;
     }
 

@@ -3,10 +3,9 @@ package com.PcPartPicker.BackEnd.Processor;
 
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 
 @Entity
@@ -27,6 +26,9 @@ public class cpu extends electronicComponents {
     @Column(name = "Threads")
     @NotEmpty
     private int Threads;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cpu", fetch = FetchType.EAGER)
+    private List<cpuPriceList> cpuPriceList;
 
     public String getSocket() {
         return socket;
@@ -55,6 +57,15 @@ public class cpu extends electronicComponents {
 //    public void setBoostCLock(double boostCLock) {
 //        BoostCLock = boostCLock;
 //    }
+
+
+    public List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> getCpuPriceList() {
+        return cpuPriceList;
+    }
+
+    public void setCpuPriceList(List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> cpuPriceList) {
+        this.cpuPriceList = cpuPriceList;
+    }
 
     public void setCores(int cores) {
         Cores = cores;

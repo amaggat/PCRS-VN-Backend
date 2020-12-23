@@ -19,6 +19,8 @@ public class gpu extends electronicComponents {
     @Digits(fraction = 0, integer = 2)
     private int VRam;
 
+    
+
 //    private int coreClock;
 
 //    @Column(name = "GDDR")

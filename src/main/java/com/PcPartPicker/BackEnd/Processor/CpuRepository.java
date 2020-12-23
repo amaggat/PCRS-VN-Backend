@@ -1,16 +1,16 @@
 package com.PcPartPicker.BackEnd.Processor;
 
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Collection;
+
 import java.util.List;
 
 
-public interface CpuRepository extends Repository<cpu, Integer> {
+public interface CpuRepository extends JpaRepository<cpu, Integer> {
 
     @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE cpu.id= :id")
     @Transactional(readOnly = true)
@@ -32,9 +32,13 @@ public interface CpuRepository extends Repository<cpu, Integer> {
     @Transactional(readOnly = true)
     List<cpu> findByChipset(@Param("chipset") String chipset);
 
-    void save(cpu cpu);
+    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE cpu.socket LIKE %:socket%")
+    @Transactional(readOnly = true)
+    List<cpu> findBySocket(@Param("socket") String socket);
 
-    @Query("SELECT DISTINCT cpu FROM cpu cpu")
+//    void save(cpu cpu);
+
+    @Query("SELECT DISTINCT cpu FROM cpu cpu LEFT JOIN cpu.cpuPriceList")
     @Transactional(readOnly = true)
     List<cpu> findAll();
 }

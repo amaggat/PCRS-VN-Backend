@@ -249,4 +249,3 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`psu_price_list`
     FOREIGN KEY (`fid`) REFERENCES psu(ID),
     PRIMARY KEY (`Id`)
 )
-

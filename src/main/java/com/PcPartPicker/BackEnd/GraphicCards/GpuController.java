@@ -21,4 +21,5 @@ public class GpuController {
         return gpuRepository.findAll();
     }
 
+
 }
