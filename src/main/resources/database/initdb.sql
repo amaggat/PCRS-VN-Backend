@@ -88,24 +88,24 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`hdd` (
     PRIMARY KEY (`ID`)
 );
 
-# CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cooler` (
-#     `ID` VARCHAR(100) NOT NULL,
-#     `manufacturer` VARCHAR(100) NOT NULL,
-#     `serieName` VARCHAR(100) NOT NULL,
-#     `chipset` VARCHAR(100) NULL,
-#     `fullname` TEXT NOT NULL,
-#     PRIMARY KEY (`ID`)
-# );
-
-# CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`case` (
-#     `ID` VARCHAR(100) NOT NULL,
-#     `manufacturer` VARCHAR(100) NOT NULL,
-#     `serieName` VARCHAR(100) NOT NULL,
-#     `chipset` VARCHAR(100) NULL,
-#     `fullname` TEXT NOT NULL,
-#     `chipset` VARCHAR(100) NULL,
-#     PRIMARY KEY (`ID`)
-# );
+-- # CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cooler` (
+-- #     `ID` VARCHAR(100) NOT NULL,
+-- #     `manufacturer` VARCHAR(100) NOT NULL,
+-- #     `serieName` VARCHAR(100) NOT NULL,
+-- #     `chipset` VARCHAR(100) NULL,
+-- #     `fullname` TEXT NOT NULL,
+-- #     PRIMARY KEY (`ID`)
+-- # );
+--
+-- # CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`case` (
+-- #     `ID` VARCHAR(100) NOT NULL,
+-- #     `manufacturer` VARCHAR(100) NOT NULL,
+-- #     `serieName` VARCHAR(100) NOT NULL,
+-- #     `chipset` VARCHAR(100) NULL,
+-- #     `fullname` TEXT NOT NULL,
+-- #     `chipset` VARCHAR(100) NULL,
+-- #     PRIMARY KEY (`ID`)
+-- # );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile` (
     `ID` VARCHAR(100) NOT NULL,
@@ -178,23 +178,23 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile_hdd`
     FOREIGN KEY (`HddID`) REFERENCES hdd(ID)
 );
 
-# CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile_case`
-# (
-#     `PcID` VARCHAR(100) NOT NULL,
-#     `CaseID` VARCHAR(100) NOT NULL,
-#
-#     FOREIGN KEY (`PcID`) REFERENCES pcprofile(ID),
-#     FOREIGN KEY (`CaseID`) REFERENCES case(ID)
-# );
-
-# CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile_cooler`
-# (
-#     `PcID` VARCHAR(100) NOT NULL,
-#     `CoolerID` VARCHAR(100) NOT NULL,
-#
-#     FOREIGN KEY (`PcID`) REFERENCES pcprofile(ID),
-#     FOREIGN KEY (`CoolerID`) REFERENCES cooler(ID)
-# );
+-- # CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile_case`
+-- # (
+-- #     `PcID` VARCHAR(100) NOT NULL,
+-- #     `CaseID` VARCHAR(100) NOT NULL,
+-- #
+-- #     FOREIGN KEY (`PcID`) REFERENCES pcprofile(ID),
+-- #     FOREIGN KEY (`CaseID`) REFERENCES case(ID)
+-- # );
+--
+-- # CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile_cooler`
+-- # (
+-- #     `PcID` VARCHAR(100) NOT NULL,
+-- #     `CoolerID` VARCHAR(100) NOT NULL,
+-- #
+-- #     FOREIGN KEY (`PcID`) REFERENCES pcprofile(ID),
+-- #     FOREIGN KEY (`CoolerID`) REFERENCES cooler(ID)
+-- # );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cpu_price_list`
 (
@@ -287,29 +287,29 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`psu_price_list`
     PRIMARY KEY (`Id`)
 );
 
-# CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`case_price_list`
-# (
-#     `Id` INT NOT NULL AUTO_INCREMENT,
-#     `link` TEXT NOT NULL,
-#     `img` TEXT NOT NULL,
-#     `name` TEXT NOT NULL,
-#     `price` INT NOT NULL,
-#     `fid` VARCHAR(100) NOT NULL,
-#
-#     FOREIGN KEY (`fid`) REFERENCES case(ID),
-#     PRIMARY KEY (`Id`)
-# );
-#
-# CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cooler_price_list`
-# (
-#     `Id` INT NOT NULL AUTO_INCREMENT,
-#     `link` TEXT NOT NULL,
-#     `img` TEXT NOT NULL,
-#     `name` TEXT NOT NULL,
-#     `price` INT NOT NULL,
-#     `fid` VARCHAR(100) NOT NULL,
-#
-#     FOREIGN KEY (`fid`) REFERENCES cooler(ID),
-#     PRIMARY KEY (`Id`)
-# );
+-- # CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`case_price_list`
+-- # (
+-- #     `Id` INT NOT NULL AUTO_INCREMENT,
+-- #     `link` TEXT NOT NULL,
+-- #     `img` TEXT NOT NULL,
+-- #     `name` TEXT NOT NULL,
+-- #     `price` INT NOT NULL,
+-- #     `fid` VARCHAR(100) NOT NULL,
+-- #
+-- #     FOREIGN KEY (`fid`) REFERENCES case(ID),
+-- #     PRIMARY KEY (`Id`)
+-- # );
+-- #
+-- # CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cooler_price_list`
+-- # (
+-- #     `Id` INT NOT NULL AUTO_INCREMENT,
+-- #     `link` TEXT NOT NULL,
+-- #     `img` TEXT NOT NULL,
+-- #     `name` TEXT NOT NULL,
+-- #     `price` INT NOT NULL,
+-- #     `fid` VARCHAR(100) NOT NULL,
+-- #
+-- #     FOREIGN KEY (`fid`) REFERENCES cooler(ID),
+-- #     PRIMARY KEY (`Id`)
+-- # );
 
