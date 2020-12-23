@@ -59,13 +59,7 @@ public class cpu extends electronicComponents {
 //    }
 
 
-    public List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> getCpuPriceList() {
-        return cpuPriceList;
-    }
 
-    public void setCpuPriceList(List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> cpuPriceList) {
-        this.cpuPriceList = cpuPriceList;
-    }
 
     public void setCores(int cores) {
         Cores = cores;
@@ -77,5 +71,13 @@ public class cpu extends electronicComponents {
 
     public void setThreads(int threads) {
         Threads = threads;
+    }
+
+    public List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> getCpuPriceList() {
+        return cpuPriceList;
+    }
+
+    public void setCpuPriceList(List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> cpuPriceList) {
+        this.cpuPriceList = cpuPriceList;
     }
 }
