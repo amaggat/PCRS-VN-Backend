@@ -1,0 +1,233 @@
+[{
+        "fid": "wd-re-2048-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-datacenter-re-2tb-sata_id20349.html",
+        "img": "https://anphat.com.vn/media/product/250_20349_wd2004fbyz.jpg",
+        "name": "Ổ cứng Western Digital Datacenter RE 2TB SATA",
+        "price": "",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-re-1024-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-datacenter-re-1tb-sata_id20350.html",
+        "img": "https://anphat.com.vn/media/product/250_20350_56c01fed545b0b8bf6fe7afdbcb2f257a706b470.jpg",
+        "name": "Ổ cứng Western Digital Datacenter RE 1TB SATA",
+        "price": "2510000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-re-3072-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-enterprise-re-3tb-sata_id20345.html",
+        "img": "https://anphat.com.vn/media/product/250_20345_wd3000fyyz.jpg",
+        "name": "Ổ cứng Western Digital Enterprise RE 3TB SATA",
+        "price": "7060000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-re-4096-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-enterprise-re-4tb-sata_id20347.html",
+        "img": "https://anphat.com.vn/media/product/250_20347_hd_w4000re.jpg",
+        "name": "Ổ cứng Western Digital Enterprise RE 4TB SATA",
+        "price": "9080000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-pipeline-hd-500-3.5sata",
+        "link": "https://www.anphatpc.com.vn/seagate-pipeline-hd-500gb-8mb-cache-sata-30gbs-st3500312cs_id16190.html",
+        "img": "https://anphat.com.vn/media/product/250_16190_.jpg",
+        "name": "Ổ cứng Seagate Pipeline HD 500GB 8MB cache",
+        "price": "1520000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-pipeline-hd-1024-3.5sata",
+        "link": "https://www.anphatpc.com.vn/seagate-pipeline-hd-1tb-64mb-cache-sata-30gbs-st1000vm002_id16191.html",
+        "img": "https://anphat.com.vn/media/product/250_16191_.jpg",
+        "name": "Ổ cứng Seagate Pipeline HD 1TB 64MB Cache",
+        "price": "1820000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-pipeline-hd-2048-3.5sata",
+        "link": "https://www.anphatpc.com.vn/seagate-pipeline-hd-2tb-64mb-cache-sata-30gbs-st2000vm003_id16192.html",
+        "img": "https://anphat.com.vn/media/product/250_16192_.jpg",
+        "name": "Ổ cứng Seagate Pipeline HD 2TB 64MB cache",
+        "price": "2530000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-se-1024-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-enterprise-se-1tb-sata_id20348.html",
+        "img": "https://anphat.com.vn/media/product/250_20348_wd1002f9yz.jpg",
+        "name": "Ổ cứng Western Digital Enterprise Se 1TB SATA",
+        "price": "2360000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-re-500-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-enterprise-re-500gb-sata_id11269.html",
+        "img": "https://anphat.com.vn/media/product/250_11269_en_500.jpg",
+        "name": "Ổ cứng Western Digital Enterprise RE 500GB SATA",
+        "price": "2210000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-re-1024-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-enterprise-re-1tb-sata_id11270.html",
+        "img": "https://anphat.com.vn/media/product/250_11270_en_1tb.jpg",
+        "name": "Ổ cứng Western Digital Enterprise RE 1TB SATA",
+        "price": "2580000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-re-2048-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-enterprise-re-2tb-sata_id11271.html",
+        "img": "https://anphat.com.vn/media/product/250_11271_en_2tb.jpg",
+        "name": "Ổ cứng Western Digital Enterprise RE 2TB SATA",
+        "price": "4310000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-ironwolf-pro-14336-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-seagate-ironwolf-pro-14tb-sata-7200rpm-st14000ne0008_id33894.html",
+        "img": "https://anphat.com.vn/media/product/250_33894_st14000ne0008.jpg",
+        "name": "Ổ cứng Seagate Ironwolf Pro 14TB SATA 7200rpm (ST14000NE0008)",
+        "price": "14199000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-ironwolf-pro-16384-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-seagate-ironwolf-pro-16tb-sata-7200rpm-st16000ne000_id33895.html",
+        "img": "https://anphat.com.vn/media/product/250_33895_51409_hdd_nas_seagate_ironwolf_pro_16tb.jpg",
+        "name": "Ổ cứng Seagate Ironwolf Pro 16TB SATA 7200rpm (ST16000NE000)",
+        "price": "15990000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-black2-1024-2.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-caviar-black-1tb-64mb-cache_id11263.html",
+        "img": "https://anphat.com.vn/media/product/250_11263_black_1t.jpg",
+        "name": "Ổ cứng Western Digital Caviar Black 1TB 64MB Cache",
+        "price": "1950000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-skyhawk-ai-10240-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-seagate-skyhawk-ai-10tb-3-5-st10000ve0008-chuyen-dung-cho-camera_id30809.html",
+        "img": "https://anphat.com.vn/media/product/250_30809_st10000ve0008__1.jpg",
+        "name": "Ổ cứng Seagate Skyhawk AI 10TB 3.5'' ST10000VE0008 (Chuyên dùng cho Camera)",
+        "price": "8399000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-firecuda-1024-2.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-sshd-seagate-firecuda-1tb-25-128mb-cache_id24857.html",
+        "img": "https://anphat.com.vn/media/product/250_24857_____c___ng_sshd_seagate_firecuda_1tb_2_5___128mb__st1000lx015__1.jpg",
+        "name": "Ổ cứng SSHD Seagate Firecuda 1TB 2.5'' 128MB (ST1000LX015)",
+        "price": "1790000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-firecuda-1024-2.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-seagate-firecuda-1tb-35-sata-st1000dx002_id22622.html",
+        "img": "https://anphat.com.vn/media/product/250_22622_____c___ng_seagate_firecuda_1tb_st1000dx002_1.jpg",
+        "name": "Ổ cứng Seagate FireCuda 1TB 3.5\" SATA ST1000DX002 SSHD",
+        "price": "1850000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-re4-1024-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-red-1tb-64mb-cache_id11265.html",
+        "img": "https://anphat.com.vn/media/product/250_11265_red_1tb.jpg",
+        "name": "Ổ cứng Western Digital Red 1TB 64MB Cache",
+        "price": "1550000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "wd-re4-2048-3.5sata",
+        "link": "https://www.anphatpc.com.vn/o-cung-western-digital-red-2tb-256mb-cache_id11266.html",
+        "img": "https://anphat.com.vn/media/product/250_11266_2tbred.jpg",
+        "name": "Ổ cứng Western Digital Red 2TB 256MB Cache",
+        "price": "2010000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-skyhawk-ai-8192-3.5sata",
+        "link": "https://www.hanoicomputer.vn/o-cung-gan-trong-seagate-skyhawk-ai-8tb-7200rpm-sata-3.5-st8000ve000",
+        "img": "https://hanoicomputercdn.com/media/product/250_47156_____c___ng_g___n_trong_seagate_skyhawk_ai_8tb.jpg",
+        "name": "Ổ cứng g?n trong Seagate SkyHawk AI 8TB 7200rpm SATA 3.5 inch ( ST8000VE000 )",
+        "price": "6699000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-barracuda-3072-3.5sata",
+        "link": "https://gearvn.com/products/hdd-seagate-barracuda-3tb-5200rpm",
+        "img": "//product.hstatic.net/1000026716/product/hdd_seagate_baracuda_3tb_c71d13e7103a4749ac75660e3eda341d_large.jpg",
+        "name": "HDD Seagate Barracuda 3TB 5200rpm",
+        "price": "2350000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-barracuda-4096-3.5sata",
+        "link": "https://gearvn.com/products/hdd-seagate-barracuda-4tb-5400rpm",
+        "img": "//product.hstatic.net/1000026716/product/hdd_seagate_baracuda_4tb_gearvn00_efd02c4f0c3844d1a9fa38f83c59e11c_large.jpg",
+        "name": "HDD Seagate Barracuda 4TB 5400rpm",
+        "price": "2950000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-barracuda-6144-3.5sata",
+        "link": "https://gearvn.com/products/hdd-seagate-barracuda-6tb-5400rpm",
+        "img": "//product.hstatic.net/1000026716/product/hdd_seagate_baracuda_6tb_gearvn00_fb59e26dc92c43edb73cdefeab17427c_large.jpg",
+        "name": "HDD Seagate Barracuda 6TB 5400rpm",
+        "price": "4950000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-ironwolf-pro-14336-3.5sata",
+        "link": "https://gearvn.com/products/hdd-seagate-ironwolf-pro-14tb-7200rpm",
+        "img": "//product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_14tb_gearvn00_db80430925ad487b97f5715d9b2b0cd8_large.jpg",
+        "name": "HDD Seagate Ironwolf PRO 14TB 7200rpm",
+        "price": "14490000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-ironwolf-pro-12288-3.5sata",
+        "link": "https://gearvn.com/products/hdd-seagate-ironwolf-pro-12tb-7200rpm",
+        "img": "//product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_12tb_gearrvn00_94ca9ec381254ecba9b76db749eb84ea_large.jpg",
+        "name": "HDD Seagate Ironwolf PRO 12TB 7200rpm",
+        "price": "11990000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-ironwolf-pro-10240-3.5sata",
+        "link": "https://gearvn.com/products/hdd-seagate-ironwolf-pro-10tb-7200rpm",
+        "img": "//product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_10tb_b59a30485fbc430bb7fcceacabfe4d5c_large.jpg",
+        "name": "HDD Seagate Ironwolf PRO 10TB 7200rpm",
+        "price": "12700000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-ironwolf-pro-4096-3.5sata",
+        "link": "https://gearvn.com/products/hdd-seagate-ironwolf-pro-4tb-7200rpm",
+        "img": "//product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_4tb_09ba2e0b7a52403c857123e1183c1448_large.jpg",
+        "name": "HDD Seagate Ironwolf PRO 4TB 7200rpm",
+        "price": "5090000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-ironwolf-pro-6144-3.5sata",
+        "link": "https://gearvn.com/products/hdd-seagate-ironwolf-pro-6tb-7200rpm",
+        "img": "//product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_6tb_gearvn00_494ae91539ee4b4193508d4d619ca70f_large.jpg",
+        "name": "HDD Seagate Ironwolf PRO 6TB 7200rpm",
+        "price": "7900000",
+        "path": "hdd_price_list"
+    },
+    {
+        "fid": "seagate-ironwolf-pro-8192-3.5sata",
+        "link": "https://gearvn.com/products/hdd-seagate-ironwolf-pro-8tb-7200rpm",
+        "img": "//product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_8tb_gearvn00_356fda9588be4753aea0286830244006_large.jpg",
+        "name": "HDD Seagate Ironwolf PRO 8TB 7200rpm",
+        "price": "8690000",
+        "path": "hdd_price_list"
+    }
+]
