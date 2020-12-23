@@ -19,7 +19,7 @@ public class CpuController {
         this.cpuPriceListRepository = cpuPriceListRepository;
     }
 
-    @GetMapping("/cpu")
+    @GetMapping("/api/cpu")
     public List<cpu> list(){
         return cpuRepository.findAll();
     }
