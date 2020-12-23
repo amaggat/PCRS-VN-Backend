@@ -17,19 +17,19 @@ public interface RamRepository extends Repository<ram, Integer> {
 
     @Query("SELECT DISTINCT ram From ram ram WHERE ram.manufacturer LIKE %:manufacturer%")
     @Transactional(readOnly = true)
-    Collection<ram> findByManufacturer(@Param("manufacturer") String manufacturer);
+    List<ram> findByManufacturer(@Param("manufacturer") String manufacturer);
 
     @Query("SELECT DISTINCT ram From ram ram WHERE ram.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<ram> findByName(@Param("fullname") String fullName);
+    List<ram> findByName(@Param("fullname") String fullName);
 
     @Query("SELECT DISTINCT ram From ram ram WHERE ram.sizeOfRam= :sizeOfName")
     @Transactional(readOnly = true)
-    Collection<ram> findBySize(@Param("sizeOfName") int size);
+    List<ram> findBySize(@Param("sizeOfName") String size);
 
     @Query("SELECT DISTINCT ram From ram ram WHERE ram.clockSpeed= :clockSpeed")
     @Transactional(readOnly = true)
-    Collection<ram> findByClockSpeed(@Param("clockSpeed") int clockSpeed);
+    List<ram> findByClockSpeed(@Param("clockSpeed") int clockSpeed);
 
     void save(ram ram);
 

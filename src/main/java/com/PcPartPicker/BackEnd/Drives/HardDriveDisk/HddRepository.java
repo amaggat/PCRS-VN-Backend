@@ -17,15 +17,15 @@ public interface HddRepository extends Repository<HardDiskDrive, Integer> {
 
     @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.manufacturer= :manufacturer")
     @Transactional(readOnly = true)
-    Collection<HardDiskDrive> findByManufacturer(@Param("manufacturer") String manufacturer);
+    List<HardDiskDrive> findByManufacturer(@Param("manufacturer") String manufacturer);
 
     @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.size= :size")
     @Transactional(readOnly = true)
-    Collection<HardDiskDrive> findBySize(@Param("size") int size);
+    List<HardDiskDrive> findBySize(@Param("size") int size);
 
     @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<HardDiskDrive> findByName(@Param("fullname") String fullname);
+    List<HardDiskDrive> findByName(@Param("fullname") String fullname);
 
     void save(HardDiskDrive hdd);
 

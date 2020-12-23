@@ -17,19 +17,19 @@ public interface SsdRepository extends Repository<SolidStateDrive, String> {
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.manufacturer = :manufacturer")
     @Transactional(readOnly = true)
-    Collection<SolidStateDrive> findByManufacturer(@Param("manufacturer") String manufacturer);
+    List<SolidStateDrive> findByManufacturer(@Param("manufacturer") String manufacturer);
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<SolidStateDrive> findByName(@Param("fullname") String fullname);
+    List<SolidStateDrive> findByName(@Param("fullname") String fullname);
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.size = :size")
     @Transactional(readOnly = true)
-    Collection<SolidStateDrive> findBySize(@Param("size") int size);
+    List<SolidStateDrive> findBySize(@Param("size") int size);
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.chipset = :chipset")
     @Transactional(readOnly = true)
-    Collection<SolidStateDrive> findByChipset(@Param("chipset") String chipset);
+    List<SolidStateDrive> findByChipset(@Param("chipset") String chipset);
 
     void save(SolidStateDrive ssd);
 

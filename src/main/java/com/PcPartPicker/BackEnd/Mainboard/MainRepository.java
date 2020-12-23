@@ -18,19 +18,19 @@ public interface MainRepository extends Repository<Mainboard, Integer> {
 
     @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.size LIKE %:mainSize%")
     @Transactional(readOnly = true)
-    Collection<Mainboard> findBySize(@Param("mainSize") String mainSize);
+    List<Mainboard> findBySize(@Param("mainSize") String mainSize);
 
     @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.chipset= :chipset")
     @Transactional(readOnly = true)
-    Collection<Mainboard> findByChipset(@Param("chipset") String chipset);
+    List<Mainboard> findByChipset(@Param("chipset") String chipset);
 
     @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.manufacturer =:manufacturer")
     @Transactional(readOnly = true)
-    Collection<Mainboard> findByManufacturer(@Param("manufacturer") String manufacturer);
+    List<Mainboard> findByManufacturer(@Param("manufacturer") String manufacturer);
 
     @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)
-    Collection<Mainboard> findByName(@Param("fullname") String fullname);
+    List<Mainboard> findByName(@Param("fullname") String fullname);
 
     void save(Mainboard main);
 

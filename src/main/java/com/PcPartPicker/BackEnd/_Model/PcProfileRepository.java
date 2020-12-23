@@ -26,4 +26,5 @@ public interface PcProfileRepository extends Repository<PcProfile, String> {
     @Query("SELECT DISTINCT pcProfile FROM PcProfile pcProfile")
     @Transactional(readOnly = true)
     List<PcProfile> findAll();
+
 }
