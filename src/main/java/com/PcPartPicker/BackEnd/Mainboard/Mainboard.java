@@ -1,7 +1,6 @@
 package com.PcPartPicker.BackEnd.Mainboard;
 
 
-import com.PcPartPicker.BackEnd.RAM.ramPriceList;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -21,7 +20,7 @@ public class Mainboard extends electronicComponents {
     private String size = new String();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "mainboard", fetch = FetchType.EAGER)
-    private List<mainPriceList> mainPriceList;
+    private List<mainPriceList> PriceList;
 
     public String getSize() {
         return size;
@@ -31,12 +30,12 @@ public class Mainboard extends electronicComponents {
         this.size = size;
     }
 
-    public List<com.PcPartPicker.BackEnd.Mainboard.mainPriceList> getMainPriceList() {
-        return mainPriceList;
+    public List<com.PcPartPicker.BackEnd.Mainboard.mainPriceList> getPriceList() {
+        return PriceList;
     }
 
-    public void setMainPriceList(List<com.PcPartPicker.BackEnd.Mainboard.mainPriceList> mainPriceList) {
-        this.mainPriceList = mainPriceList;
+    public void setPriceList(List<com.PcPartPicker.BackEnd.Mainboard.mainPriceList> mainPriceList) {
+        this.PriceList = mainPriceList;
     }
 
     public String getSocket() {

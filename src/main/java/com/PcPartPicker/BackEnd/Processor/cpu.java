@@ -28,7 +28,7 @@ public class cpu extends electronicComponents {
     private int Threads;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cpu", fetch = FetchType.EAGER)
-    private List<cpuPriceList> cpuPriceList;
+    private List<cpuPriceList> PriceList;
 
     public String getSocket() {
         return socket;
@@ -73,11 +73,11 @@ public class cpu extends electronicComponents {
         Threads = threads;
     }
 
-    public List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> getCpuPriceList() {
-        return cpuPriceList;
+    public List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> getPriceList() {
+        return PriceList;
     }
 
-    public void setCpuPriceList(List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> cpuPriceList) {
-        this.cpuPriceList = cpuPriceList;
+    public void setPriceList(List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> cpuPriceList) {
+        this.PriceList = cpuPriceList;
     }
 }

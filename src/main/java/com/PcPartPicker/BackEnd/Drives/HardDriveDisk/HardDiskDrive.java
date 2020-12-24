@@ -1,6 +1,5 @@
 package com.PcPartPicker.BackEnd.Drives.HardDriveDisk;
 
-import com.PcPartPicker.BackEnd.RAM.ramPriceList;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -16,14 +15,14 @@ public class HardDiskDrive extends electronicComponents {
     private String size;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hdd", fetch = FetchType.EAGER)
-    private List<hddPriceList> hddPriceList;
+    private List<hddPriceList> PriceList;
 
-    public List<com.PcPartPicker.BackEnd.Drives.HardDriveDisk.hddPriceList> getHddPriceList() {
-        return hddPriceList;
+    public List<com.PcPartPicker.BackEnd.Drives.HardDriveDisk.hddPriceList> getPriceList() {
+        return PriceList;
     }
 
-    public void setHddPriceList(List<com.PcPartPicker.BackEnd.Drives.HardDriveDisk.hddPriceList> hddPriceList) {
-        this.hddPriceList = hddPriceList;
+    public void setPriceList(List<com.PcPartPicker.BackEnd.Drives.HardDriveDisk.hddPriceList> PriceList) {
+        this.PriceList = PriceList;
     }
 
 

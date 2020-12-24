@@ -29,14 +29,14 @@ public class SolidStateDrive extends electronicComponents {
     }
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "ssd", fetch = FetchType.EAGER)
-    private List<ssdPriceList> ssdPriceList;
+    private List<ssdPriceList> PriceList;
 
-    public List<ssdPriceList> getSsdPriceList() {
-        return ssdPriceList;
+    public List<ssdPriceList> getPriceList() {
+        return PriceList;
     }
 
-    public void setSsdPriceList(List<ssdPriceList> ssdPriceList) {
-        this.ssdPriceList = ssdPriceList;
+    public void setPriceList(List<ssdPriceList> ssdPriceList) {
+        this.PriceList = ssdPriceList;
     }
 
     //    public int getReadSpeed() {

@@ -1,6 +1,5 @@
 package com.PcPartPicker.BackEnd.GraphicCards;
 
-import com.PcPartPicker.BackEnd.RAM.ramPriceList;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -21,14 +20,14 @@ public class gpu extends electronicComponents {
 
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "gpu", fetch = FetchType.EAGER)
-    private List<gpuPriceList> gpuPriceList;
+    private List<gpuPriceList> PriceList;
 
-    public List<com.PcPartPicker.BackEnd.GraphicCards.gpuPriceList> getGpuPriceList() {
-        return gpuPriceList;
+    public List<com.PcPartPicker.BackEnd.GraphicCards.gpuPriceList> getPriceList() {
+        return PriceList;
     }
 
-    public void setGpuPriceList(List<com.PcPartPicker.BackEnd.GraphicCards.gpuPriceList> gpuPriceList) {
-        this.gpuPriceList = gpuPriceList;
+    public void setPriceList(List<com.PcPartPicker.BackEnd.GraphicCards.gpuPriceList> gpuPriceList) {
+        this.PriceList = gpuPriceList;
     }
 
     //    private int coreClock;

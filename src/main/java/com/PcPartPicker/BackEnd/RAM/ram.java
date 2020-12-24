@@ -1,7 +1,6 @@
 package com.PcPartPicker.BackEnd.RAM;
 
 
-import com.PcPartPicker.BackEnd.Processor.cpuPriceList;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -26,7 +25,7 @@ public class ram extends electronicComponents {
     private String sizeOfRam = new String();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "ram", fetch = FetchType.EAGER)
-    private List<ramPriceList> ramPriceList;
+    private List<ramPriceList> PriceList;
 
     public int getClockSpeed() {
         return clockSpeed;
@@ -39,12 +38,12 @@ public class ram extends electronicComponents {
 //    public String getDDR() {
 //        return DDR;
 
-    public List<com.PcPartPicker.BackEnd.RAM.ramPriceList> getRamPriceList() {
-        return ramPriceList;
+    public List<com.PcPartPicker.BackEnd.RAM.ramPriceList> getPriceList() {
+        return PriceList;
     }
 
-    public void setRamPriceList(List<com.PcPartPicker.BackEnd.RAM.ramPriceList> ramPriceList) {
-        this.ramPriceList = ramPriceList;
+    public void setPriceList(List<com.PcPartPicker.BackEnd.RAM.ramPriceList> ramPriceList) {
+        this.PriceList = ramPriceList;
     }
 //    }
 
