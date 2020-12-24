@@ -12,7 +12,7 @@ public interface GpuRepository extends Repository<gpu, Integer> {
 
     @Query("SELECT DISTINCT gpu FROM gpu gpu WHERE gpu.id =:id")
     @Transactional(readOnly = true)
-    gpu findByID(@Param("id") int id);
+    gpu findByID(@Param("id") String id);
 
     @Query("SELECT DISTINCT gpu from gpu gpu WHERE gpu.chipset =:chipset")
     @Transactional(readOnly = true)

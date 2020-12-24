@@ -2,6 +2,7 @@ package com.PcPartPicker.BackEnd.Drives.HardDriveDisk;
 
 import com.PcPartPicker.BackEnd.Drives.SolidStateDrive.SsdRepository;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -18,5 +19,10 @@ public class HddController {
     @GetMapping("/api/hdd")
     public List<HardDiskDrive> list(){
         return hddRepository.findAll();
+    }
+
+    @GetMapping("/api/hdd/{id}")
+    public HardDiskDrive SearchByID(@PathVariable("id") String id){
+        return hddRepository.findByID(id);
     }
 }

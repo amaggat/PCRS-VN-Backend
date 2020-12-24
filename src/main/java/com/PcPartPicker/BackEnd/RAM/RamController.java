@@ -23,6 +23,11 @@ public class RamController {
         return ramRepository.findAll();
     }
 
+    @GetMapping("/api/ram/{RamID}")
+    public ram SearchByID(@PathVariable("RamID") String id){
+        return ramRepository.findByID(id);
+    }
+
     @GetMapping("/api/ram/find/name={RamName}")
     public List<ram> SearchByName(@PathVariable("RamName") String name)
     {

@@ -1,7 +1,8 @@
 package com.PcPartPicker.BackEnd.GraphicCards;
 
-import com.PcPartPicker.BackEnd.Mainboard.MainRepository;
+import com.PcPartPicker.BackEnd.PSU.PowerSupplyUnit;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,5 +22,10 @@ public class GpuController {
         return gpuRepository.findAll();
     }
 
+    @GetMapping("/api/gpu/{id}")
+    public gpu SearchById(@PathVariable("id") String id)
+    {
+        return gpuRepository.findByID(id);
+    }
 
 }

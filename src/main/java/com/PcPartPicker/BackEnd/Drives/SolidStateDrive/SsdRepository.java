@@ -13,7 +13,7 @@ public interface SsdRepository extends Repository<SolidStateDrive, String> {
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.id = :id")
     @Transactional(readOnly = true)
-    SolidStateDrive findByID(@Param("id") int id);
+    SolidStateDrive findByID(@Param("id") String id);
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.manufacturer = :manufacturer")
     @Transactional(readOnly = true)

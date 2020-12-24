@@ -13,7 +13,7 @@ public interface HddRepository extends Repository<HardDiskDrive, Integer> {
 
     @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.id= :id")
     @Transactional(readOnly = true)
-    HardDiskDrive findByID(@Param("id") int id);
+    HardDiskDrive findByID(@Param("id") String id);
 
     @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.manufacturer= :manufacturer")
     @Transactional(readOnly = true)

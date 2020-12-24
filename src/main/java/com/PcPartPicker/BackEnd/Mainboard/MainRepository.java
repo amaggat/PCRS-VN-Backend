@@ -14,7 +14,7 @@ public interface MainRepository extends Repository<Mainboard, Integer> {
 
     @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.id= :id")
     @Transactional(readOnly = true)
-    Mainboard findByID(@Param("id") int id);
+    Mainboard findByID(@Param("id") String id);
 
     @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.size LIKE %:mainSize%")
     @Transactional(readOnly = true)

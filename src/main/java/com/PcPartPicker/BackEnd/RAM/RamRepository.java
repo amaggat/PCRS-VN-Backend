@@ -13,7 +13,7 @@ public interface RamRepository extends Repository<ram, Integer> {
 
     @Query("SELECT DISTINCT ram From ram ram WHERE ram.id= :id")
     @Transactional(readOnly = true)
-    ram findByID(@Param("id") int id);
+    ram findByID(@Param("id") String id);
 
     @Query("SELECT DISTINCT ram From ram ram WHERE ram.manufacturer LIKE %:manufacturer%")
     @Transactional(readOnly = true)
