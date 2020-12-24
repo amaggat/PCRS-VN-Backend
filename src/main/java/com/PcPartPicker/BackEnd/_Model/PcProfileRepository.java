@@ -13,7 +13,7 @@ public interface PcProfileRepository extends Repository<PcProfile, String> {
 
     @Query("SELECT DISTINCT pcProfile FROM PcProfile pcProfile WHERE pcProfile.PcName LIKE %:PcName%")
     @Transactional(readOnly = true)
-    Collection<PcProfile> findByName(@RequestParam("PcName") String PcName);
+    List<PcProfile> findByName(@RequestParam("PcName") String PcName);
 
     @Query("SELECT DISTINCT pcProfile FROM PcProfile pcProfile WHERE pcProfile.id= :id")
     @Transactional(readOnly = true)
