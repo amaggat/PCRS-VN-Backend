@@ -16,7 +16,7 @@ public class GpuController {
         this.gpuRepository = gpuRepository;
     }
 
-    @GetMapping("/gpus")
+    @GetMapping("/api/gpu")
     public List<gpu> list(){
         return gpuRepository.findAll();
     }

@@ -15,8 +15,8 @@ public class HddController {
         this.hddRepository = hddRepository;
     }
 
-//    @GetMapping("/hardDiskDrives")
-//    public List<HardDiskDrive> list(){
-//        return hddRepository.findAll();
-//    }
+    @GetMapping("/api/hdd")
+    public List<HardDiskDrive> list(){
+        return hddRepository.findAll();
+    }
 }

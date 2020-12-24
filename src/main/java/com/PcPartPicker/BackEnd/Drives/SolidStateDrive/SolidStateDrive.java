@@ -3,10 +3,9 @@ package com.PcPartPicker.BackEnd.Drives.SolidStateDrive;
 
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 
 @Entity
@@ -15,7 +14,7 @@ public class SolidStateDrive extends electronicComponents {
 
     @Column(name = "size")
     @NotEmpty
-    private int size;
+    private String size;
 
 //    @Column(name = "writeSpeed")
 //    @NotEmpty
@@ -25,15 +24,22 @@ public class SolidStateDrive extends electronicComponents {
 //    @NotEmpty
 //    private int readSpeed;
 
-    @Column(name = "chipset")
-    @NotEmpty
-    private String chipset= new String();
-
-    public int getSize() {
+    public String getSize() {
         return size;
     }
 
-//    public int getReadSpeed() {
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ssd", fetch = FetchType.EAGER)
+    private List<ssdPriceList> ssdPriceList;
+
+    public List<ssdPriceList> getSsdPriceList() {
+        return ssdPriceList;
+    }
+
+    public void setSsdPriceList(List<ssdPriceList> ssdPriceList) {
+        this.ssdPriceList = ssdPriceList;
+    }
+
+    //    public int getReadSpeed() {
 //        return readSpeed;
 //    }
 //
@@ -41,9 +47,6 @@ public class SolidStateDrive extends electronicComponents {
 //        return writeSpeed;
 //    }
 
-    public String getNandType() {
-        return chipset;
-    }
 
 //    public void setReadSpeed(int readSpeed) {
 //        this.readSpeed = readSpeed;
@@ -53,11 +56,7 @@ public class SolidStateDrive extends electronicComponents {
 //        this.writeSpeed = writeSpeed;
 //    }
 
-    public void setSize(int size) {
+    public void setSize(String size) {
         this.size = size;
-    }
-
-    public void setNandType(String nandType) {
-        chipset = nandType;
     }
 }

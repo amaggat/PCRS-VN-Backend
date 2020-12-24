@@ -1,11 +1,11 @@
 package com.PcPartPicker.BackEnd.Drives.HardDriveDisk;
 
+import com.PcPartPicker.BackEnd.RAM.ramPriceList;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 @Entity
 @Table(name ="hdd")
@@ -13,9 +13,21 @@ public class HardDiskDrive extends electronicComponents {
 
     @Column(name = "size")
     @NotEmpty
-    private int size;
+    private String size;
 
-//    @Column(name = "writeSpeed")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hdd", fetch = FetchType.EAGER)
+    private List<hddPriceList> hddPriceList;
+
+    public List<com.PcPartPicker.BackEnd.Drives.HardDriveDisk.hddPriceList> getHddPriceList() {
+        return hddPriceList;
+    }
+
+    public void setHddPriceList(List<com.PcPartPicker.BackEnd.Drives.HardDriveDisk.hddPriceList> hddPriceList) {
+        this.hddPriceList = hddPriceList;
+    }
+
+
+    //    @Column(name = "writeSpeed")
 //    @NotEmpty
 //    private int writeSpeed;
 //
@@ -37,11 +49,11 @@ public class HardDiskDrive extends electronicComponents {
 //        return readSpeed;
 //    }
 
-    public int getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(String size) {
         this.size = size;
     }
 

@@ -1,12 +1,12 @@
 package com.PcPartPicker.BackEnd.PSU;
 
 
+import com.PcPartPicker.BackEnd.RAM.ramPriceList;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 
 @Entity
@@ -21,7 +21,18 @@ public class PowerSupplyUnit extends electronicComponents {
     @NotEmpty
     private String standard_80 = new String();
 
-//    @Column(name = "size")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "psu", fetch = FetchType.EAGER)
+    private List<psuPriceList> psuPriceList;
+
+    public List<com.PcPartPicker.BackEnd.PSU.psuPriceList> getPsuPriceList() {
+        return psuPriceList;
+    }
+
+    public void setPsuPriceList(List<com.PcPartPicker.BackEnd.PSU.psuPriceList> psuPriceList) {
+        this.psuPriceList = psuPriceList;
+    }
+
+    //    @Column(name = "size")
 //    @NotEmpty
 //    private String size = new String();
 

@@ -15,7 +15,7 @@ public class MainController {
         this.mainRepository = mainRepository;
     }
 
-    @GetMapping("/mainboards")
+    @GetMapping("/api/mainboard")
     public List<Mainboard> list(){
         return mainRepository.findAll();
     }

@@ -16,8 +16,8 @@ public class SsdController {
         this.ssdRepository = ssdRepository;
     }
 
-//    @GetMapping("/solidStateDrives")
-//    public List<SolidStateDrive> list(){
-//        return ssdRepository.findAll();
-//    }
+    @GetMapping("/api/ssd")
+    public List<SolidStateDrive> list(){
+        return ssdRepository.findAll();
+    }
 }

@@ -1,12 +1,12 @@
 package com.PcPartPicker.BackEnd.GraphicCards;
 
+import com.PcPartPicker.BackEnd.RAM.ramPriceList;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 
 @Entity
@@ -19,9 +19,19 @@ public class gpu extends electronicComponents {
     @Digits(fraction = 0, integer = 2)
     private int VRam;
 
-    
 
-//    private int coreClock;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "gpu", fetch = FetchType.EAGER)
+    private List<gpuPriceList> gpuPriceList;
+
+    public List<com.PcPartPicker.BackEnd.GraphicCards.gpuPriceList> getGpuPriceList() {
+        return gpuPriceList;
+    }
+
+    public void setGpuPriceList(List<com.PcPartPicker.BackEnd.GraphicCards.gpuPriceList> gpuPriceList) {
+        this.gpuPriceList = gpuPriceList;
+    }
+
+    //    private int coreClock;
 
 //    @Column(name = "GDDR")
 //    @NotEmpty

@@ -38,7 +38,7 @@ public interface CpuRepository extends JpaRepository<cpu, Integer> {
 
 //    void save(cpu cpu);
 
-    @Query("SELECT DISTINCT cpu FROM cpu cpu LEFT JOIN cpu.cpuPriceList")
+    @Query("SELECT DISTINCT cpu FROM cpu cpu")
     @Transactional(readOnly = true)
     List<cpu> findAll();
 }

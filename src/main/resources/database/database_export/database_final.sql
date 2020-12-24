@@ -144,8 +144,8 @@ CREATE TABLE `hdd` (
   `ID` varchar(100) NOT NULL,
   `manufacturer` varchar(100) NOT NULL,
   `serieName` varchar(100) NOT NULL,
-  `size` varchar(100) NOT NULL,
-  `chipset` varchar(100) DEFAULT NULL,
+  `chipset` varchar(100) NOT NULL,
+  `size` varchar(100) DEFAULT NULL,
   `fullname` text NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -587,8 +587,8 @@ CREATE TABLE `ssd` (
   `ID` varchar(100) NOT NULL,
   `manufacturer` varchar(100) NOT NULL,
   `serieName` varchar(100) NOT NULL,
-  `size` varchar(100) NOT NULL,
   `chipset` varchar(100) NOT NULL,
+  `size` varchar(100) NOT NULL,
   `fullname` text NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -669,4 +669,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-24  9:01:31
+-- Dump completed on 2020-12-24 15:23:56
