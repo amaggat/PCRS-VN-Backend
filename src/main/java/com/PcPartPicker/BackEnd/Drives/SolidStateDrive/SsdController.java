@@ -28,17 +28,17 @@ public class SsdController {
         return ssdRepository.findByID(id);
     }
 
-    @GetMapping("/api/hdd/find/name={SsdName}")
+    @GetMapping("/api/ssd/find/name={SsdName}")
     public List<SolidStateDrive> SearchByName(@PathVariable("SsdName") String name){
         return ssdRepository.findByName(name);
     }
 
-    @GetMapping("/api/hdd/find/name={SsdSize}")
+    @GetMapping("/api/ssd/find/size={SsdSize}")
     public List<SolidStateDrive> SearchBySize(@PathVariable("SsdSize") String size){
         return ssdRepository.findBySize(size);
     }
 
-    @GetMapping("/api/hdd/find/manufacturer={SsdManufacturer}")
+    @GetMapping("/api/ssd/find/manufacturer={SsdManufacturer}")
     public List<SolidStateDrive> SearchByManufacturer(@PathVariable("SsdManufacturer") String manufacturer){
         return ssdRepository.findByManufacturer(manufacturer);
     }
