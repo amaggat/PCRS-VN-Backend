@@ -16,6 +16,38 @@ public class cpuPriceList {
     @JoinColumn(name = "fid")
     private cpu cpu;
 
+    @Column(name = "logo")
+    @NotEmpty
+    private String logo;
+
+    @Column(name = "retailer")
+    @NotEmpty
+    private String retailer;
+
+    public com.PcPartPicker.BackEnd.Processor.cpu getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(com.PcPartPicker.BackEnd.Processor.cpu cpu) {
+        this.cpu = cpu;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getRetailer() {
+        return retailer;
+    }
+
+    public void setRetailer(String retailer) {
+        this.retailer = retailer;
+    }
+
     @Column(name= "link")
     @NotEmpty
     private String link = new String();

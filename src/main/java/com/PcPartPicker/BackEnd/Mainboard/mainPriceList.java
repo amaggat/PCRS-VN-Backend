@@ -16,6 +16,38 @@ public class mainPriceList {
     @JoinColumn(name = "fid")
     private Mainboard mainboard;
 
+    @Column(name = "logo")
+    @NotEmpty
+    private String logo;
+
+    @Column(name = "retailer")
+    @NotEmpty
+    private String retailer;
+
+    public Mainboard getMainboard() {
+        return mainboard;
+    }
+
+    public void setMainboard(Mainboard mainboard) {
+        this.mainboard = mainboard;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getRetailer() {
+        return retailer;
+    }
+
+    public void setRetailer(String retailer) {
+        this.retailer = retailer;
+    }
+
     @Column(name= "link")
     @NotEmpty
     private String link = new String();

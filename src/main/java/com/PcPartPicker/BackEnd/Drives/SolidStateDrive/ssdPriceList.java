@@ -8,6 +8,14 @@ import javax.validation.constraints.NotEmpty;
 @Table(name = "ssd_price_list")
 public class ssdPriceList {
 
+    @Column(name = "logo")
+    @NotEmpty
+    private String logo;
+
+    @Column(name = "retailer")
+    @NotEmpty
+    private String retailer;
+
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
@@ -70,5 +78,29 @@ public class ssdPriceList {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getRetailer() {
+        return retailer;
+    }
+
+    public void setRetailer(String retailer) {
+        this.retailer = retailer;
+    }
+
+    public SolidStateDrive getSsd() {
+        return ssd;
+    }
+
+    public void setSsd(SolidStateDrive ssd) {
+        this.ssd = ssd;
     }
 }

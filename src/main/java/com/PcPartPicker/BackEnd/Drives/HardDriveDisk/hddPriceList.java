@@ -8,13 +8,17 @@ import javax.validation.constraints.NotEmpty;
 @Table(name = "hdd_price_list")
 public class hddPriceList {
 
+    @Column(name = "logo")
+    @NotEmpty
+    private String logo;
+
+    @Column(name = "retailer")
+    @NotEmpty
+    private String retailer;
+
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "fid")
-    private HardDiskDrive hdd;
 
     @Column(name= "link")
     @NotEmpty
@@ -70,5 +74,13 @@ public class hddPriceList {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getRetailer() {
+        return retailer;
+    }
+
+    public void setRetailer(String retailer) {
+        this.retailer = retailer;
     }
 }

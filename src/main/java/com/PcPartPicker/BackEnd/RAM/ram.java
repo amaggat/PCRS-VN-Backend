@@ -16,6 +16,14 @@ public class ram extends electronicComponents {
 //    @NotEmpty
 //    private String DDR = new String();
 
+    @Column(name = "logo")
+    @NotEmpty
+    private String logo;
+
+    @Column(name = "retailer")
+    @NotEmpty
+    private String retailer;
+
     @Column(name = "clockspeed")
     @NotEmpty
     private int clockSpeed;

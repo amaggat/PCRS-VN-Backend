@@ -12,6 +12,38 @@ public class gpuPriceList {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
+    @Column(name = "logo")
+    @NotEmpty
+    private String logo;
+
+    @Column(name = "retailer")
+    @NotEmpty
+    private String retailer;
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getRetailer() {
+        return retailer;
+    }
+
+    public void setRetailer(String retailer) {
+        this.retailer = retailer;
+    }
+
+    public com.PcPartPicker.BackEnd.GraphicCards.gpu getGpu() {
+        return gpu;
+    }
+
+    public void setGpu(com.PcPartPicker.BackEnd.GraphicCards.gpu gpu) {
+        this.gpu = gpu;
+    }
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fid")
     private gpu gpu;

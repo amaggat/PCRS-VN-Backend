@@ -16,6 +16,14 @@ public class ramPriceList {
     @JoinColumn(name = "fid")
     private ram ram;
 
+    @Column(name = "logo")
+    @NotEmpty
+    private String logo;
+
+    @Column(name = "retailer")
+    @NotEmpty
+    private String retailer;
+
     @Column(name= "link")
     @NotEmpty
     private String link = new String();
@@ -70,5 +78,29 @@ public class ramPriceList {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public com.PcPartPicker.BackEnd.RAM.ram getRam() {
+        return ram;
+    }
+
+    public void setRam(com.PcPartPicker.BackEnd.RAM.ram ram) {
+        this.ram = ram;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getRetailer() {
+        return retailer;
+    }
+
+    public void setRetailer(String retailer) {
+        this.retailer = retailer;
     }
 }

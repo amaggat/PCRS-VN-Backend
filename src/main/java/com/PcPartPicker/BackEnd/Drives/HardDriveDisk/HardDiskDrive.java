@@ -17,14 +17,13 @@ public class HardDiskDrive extends electronicComponents {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hdd", fetch = FetchType.EAGER)
     private List<hddPriceList> PriceList;
 
-    public List<com.PcPartPicker.BackEnd.Drives.HardDriveDisk.hddPriceList> getPriceList() {
+    public List<hddPriceList> getPriceList() {
         return PriceList;
     }
 
-    public void setPriceList(List<com.PcPartPicker.BackEnd.Drives.HardDriveDisk.hddPriceList> PriceList) {
+    public void setPriceList(List<hddPriceList> PriceList) {
         this.PriceList = PriceList;
     }
-
 
     //    @Column(name = "writeSpeed")
 //    @NotEmpty
