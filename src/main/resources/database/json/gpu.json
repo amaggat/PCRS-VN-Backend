@@ -4,7 +4,9 @@
         "img": "https://anphat.com.vn/media/product/250_35057_product_8_20200317155243_5e7081cb9206e.png",
         "name": "VGA MSI GeForce GTX 1650 D6 VENTUS XS OC",
         "price": "3799000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-gt-1030-gv-n1030oc-2gi",
@@ -12,7 +14,9 @@
         "img": "https://anphat.com.vn/media/product/250_22872_vga_gigabyte_geforce_gt_1030_oc_2g__gv_n1030oc_2gi__1.png",
         "name": "VGA GIGABYTE GV-N1030OC-2GI (GeForce GT 1030)",
         "price": "2199000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-gtx-1650-super-ventus-xs-oc",
@@ -20,15 +24,18 @@
         "img": "https://anphat.com.vn/media/product/250_31390_product_7_20191029132444_5db7cd1d0059e.png",
         "name": "VGA MSI GeForce GTX 1650 SUPER VENTUS XS OC",
         "price": "4999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2070-super-ventus-gp-oc",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2070-super-ventus-oc_id30105.html",
         "img": "https://anphat.com.vn/media/product/250_30105_product_10_20200211140511_5e424417d5592.png",
         "name": "VGA MSI GeForce RTX 2070 SUPER VENTUS GP OC",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-gtx-1660-super-ventus-xs-oc",
@@ -36,7 +43,9 @@
         "img": "https://anphat.com.vn/media/product/250_31038_product_10_20191025104517_5db261bdd01ce_1.jpg",
         "name": "VGA MSI GEFORCE GTX 1660 SUPER VENTUS XS OC",
         "price": "6099000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-3070-ventus-2x-oc",
@@ -44,7 +53,9 @@
         "img": "https://anphat.com.vn/media/product/250_34442_product_2_20200902133520_5f4f2f18e3582.png",
         "name": "VGA MSI GeForce RTX 3070 VENTUS 2X OC",
         "price": "15499000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-3070-ventus-3x-oc",
@@ -52,7 +63,9 @@
         "img": "https://anphat.com.vn/media/product/250_34437_product_6_20200902132940_5f4f2dc4c3650.png",
         "name": "VGA MSI GeForce RTX 3070 VENTUS 3X OC",
         "price": "16199000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-3070-gaming-x-trio",
@@ -60,31 +73,36 @@
         "img": "https://anphat.com.vn/media/product/250_34435_product_5_20200902103103_5f4f03e770ce3.png",
         "name": "VGA MSI GeForce RTX 3070 GAMING X TRIO",
         "price": "17999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2060-super-ventus-oc",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2060-super-ventus-oc_id30101.html",
         "img": "https://anphat.com.vn/media/product/250_30101_vga_msi_geforce_rtx_2060_super_ventus_oc_1.png",
         "name": "VGA MSI GeForce RTX 2060 SUPER VENTUS OC",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2060-super-armor-oc",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2060-super-armor-oc_id30793.html",
         "img": "https://anphat.com.vn/media/product/250_30793_vga_msi_geforce_rtx_2060_super_armor_oc_1.png",
         "name": "VGA MSI GeForce RTX 2060 SUPER ARMOR OC",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2060-super-gaming-x",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2060-super-gaming-x_id30104.html",
         "img": "https://anphat.com.vn/media/product/250_30104_vga_msi_geforce_rtx_2060_super_gaming_x_1.png",
         "name": "VGA MSI GeForce RTX 2060 SUPER GAMING X",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-gtx-1660-super-gaming-x",
@@ -92,15 +110,18 @@
         "img": "https://anphat.com.vn/media/product/250_31251_vga_msi_geforce_gtx_1660_super_gaming_x_1.png",
         "name": "VGA MSI GeForce GTX 1660 SUPER GAMING X",
         "price": "6599000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2080-ti-duke",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2080ti-duke-11gb-oc-gddr6_id27062.html",
         "img": "https://anphat.com.vn/media/product/250_27062_vga_msi_geforce_rtx_2080ti_duke_11gb_oc_gddr6_1.png",
         "name": "VGA MSI GeForce RTX 2080 Ti DUKE 11G OC GDDR6",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3090-gv-n3090gaming-oc-24gd",
@@ -108,15 +129,18 @@
         "img": "https://anphat.com.vn/media/product/250_34419_1.png",
         "name": "VGA GIGABYTE GeForce RTX 3090 GAMING OC 24G (GV-N3090GAMING OC-24GD)",
         "price": "49199000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2070-super-gaming-x-trio",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2070-super-gaming-x-trio-8g_id30022.html",
         "img": "https://anphat.com.vn/media/product/250_30022_msi_geforce_rtx_2070_super_gaming_x_trio_1.png",
         "name": "VGA MSI GeForce RTX 2070 SUPER GAMING X TRIO 8G",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-3090-ventus-3x-oc",
@@ -124,7 +148,9 @@
         "img": "https://anphat.com.vn/media/product/250_34427_product_4_20200902105355_5f4f09437ea08.png",
         "name": "VGA MSI GeForce RTX 3090 VENTUS 3X 24G OC",
         "price": "45999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-3090-gaming-x-trio",
@@ -132,47 +158,55 @@
         "img": "https://anphat.com.vn/media/product/250_34425_product_4_20200902095324_5f4efb14e37d5.png",
         "name": "VGA MSI GeForce RTX 3090 GAMING X TRIO 24G",
         "price": "47399000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-gtx-1660-ti-ventus-xs-oc",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-gtx-1660-ti-ventus-xs-6g-oc_id28699.html",
         "img": "https://anphat.com.vn/media/product/250_28699_product_0_20190222171034_5c6fbc8a6dc4f.png",
-        "name": "VGA MSI GeForce GTX 1660 Ti VENTUS XS 6G OC",
+        "name": "VGA MSI GeForce GTX 1660 Ti VENTUS XS 6G OC ",
         "price": "8099000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-2080-aorus-xtreme",
         "link": "https://www.anphatpc.com.vn/vga-gigabyte-aorus-geforce-rtx-2080-xtreme-8gb_id27543.html",
         "img": "https://anphat.com.vn/media/product/250_27543_2018092511565041_big.png",
-        "name": "VGA GIGABYTE AORUS GeForce RTX 2080 XTREME 8GB",
-        "price": "",
-        "path": "gpu_price_list"
+        "name": "VGA GIGABYTE AORUS GeForce RTX 2080 XTREME 8GB ",
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2070-gaming-z",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2070-gaming-z-8gb_id27558.html",
         "img": "https://anphat.com.vn/media/product/250_27558_product_0_20181008115320_5bbad4b01007e.png",
-        "name": "VGA MSI GeForce RTX 2070 GAMING Z 8GB",
-        "price": "",
-        "path": "gpu_price_list"
+        "name": "VGA MSI GeForce RTX 2070 GAMING Z 8GB ",
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2060-gaming-z",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2060-gaming-z-6gb_id28421.html",
         "img": "https://anphat.com.vn/media/product/250_28421_product_5_20190104135833_5c2ef60987095.png",
-        "name": "VGA MSI GeForce RTX 2060 GAMING Z 6GB",
-        "price": "",
-        "path": "gpu_price_list"
+        "name": "VGA MSI GeForce RTX 2060 GAMING Z 6GB ",
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2080-ti-aero",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2080-ti-aero-11g_id34197.html",
         "img": "https://anphat.com.vn/media/product/250_34197_13165407_1.png",
         "name": "VGA MSI GeForce RTX 2080 Ti AERO 11G",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-3080-ventus-3x-oc",
@@ -180,7 +214,9 @@
         "img": "https://anphat.com.vn/media/product/250_34433_product_1_20200902111536_5f4f0e58ec420.png",
         "name": "VGA MSI GeForce RTX 3080 VENTUS 3X 10G OC",
         "price": "21799000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2060-ventus-xs-oc",
@@ -188,7 +224,9 @@
         "img": "https://anphat.com.vn/media/product/250_28422_product_7_20190524132704_5ce780a89dddb.png",
         "name": "VGA MSI GeForce RTX 2060 VENTUS XS 6G OC",
         "price": "9499000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-3080-gaming-x-trio",
@@ -196,31 +234,36 @@
         "img": "https://anphat.com.vn/media/product/250_34431_product_8_20200902101830_5f4f00f6b5f4b.png",
         "name": "VGA MSI GeForce RTX 3080 GAMING X TRIO 10G",
         "price": "22899000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-super-windforce-oc-3x",
         "link": "https://www.anphatpc.com.vn/vga-gigabyte-geforce-rtx-2070-super-windforce-oc-3x-8g-gv-n207swf3oc-8gd_id34171.html",
         "img": "https://anphat.com.vn/media/product/250_34171_2019081916421105254f61efd097407facdfd62e35e8fb1f_big.png",
         "name": "VGA GIGABYTE GeForce RTX 2070 SUPER WINDFORCE OC 3X 8G (GV-N207SWF3OC-8GD)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2080-ti-gaming-x-trio",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2080ti-gaming-x-trio-11gb-gddr6_id27063.html",
         "img": "https://anphat.com.vn/media/product/250_27063_vga_msi_geforce_rtx_2080ti_gaming_x_trio_11gb_gddr6_1.png",
         "name": "VGA MSI GeForce RTX 2080 Ti GAMING X TRIO 11GB GDDR6",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2080-ti-lightning-z",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2080-ti-lightning-z-11gb-gddr6_id28508.html",
         "img": "https://anphat.com.vn/media/product/250_28508_product_5_20190123133055_5c47fc0f66547.png",
         "name": "VGA MSI GeForce RTX 2080 Ti Lightning Z 11GB GDDR6",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-3080-suprim-x",
@@ -228,23 +271,27 @@
         "img": "https://anphat.com.vn/media/product/250_35433_2.jpg",
         "name": "VGA MSI GeForce RTX 3080 SUPRIM X 10G",
         "price": "25499000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2070-armor",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2070-armor-8g_id30686.html",
         "img": "https://anphat.com.vn/media/product/250_30686_vga_msi_geforce_rtx_2070_armor_8g_1.png",
         "name": "VGA MSI GeForce RTX 2070 ARMOR 8G",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2080-sea-hawk-x",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2080-sea-hawk-ek-x-8gb_id28147.html",
         "img": "https://anphat.com.vn/media/product/250_28147_product_1_20180925182621_5baa0d4d6fba6.png",
-        "name": "VGA MSI GeForce RTX 2080 SEA HAWK EK X 8GB",
-        "price": "",
-        "path": "gpu_price_list"
+        "name": "VGA MSI GeForce RTX 2080 SEA HAWK EK X 8GB ",
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-gt-710-gt710-sl-2gd5",
@@ -252,23 +299,27 @@
         "img": "https://anphat.com.vn/media/product/250_32642_1.jpg",
         "name": "VGA Asus GT710-SL-2GD5-BRK (GeForce GT 710 2GB GDDR5)",
         "price": "1249000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2080-ti-sea-hawk-x",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2080-ti-sea-hawk-ek-x-11gb-gddr6_id28509.html",
         "img": "https://anphat.com.vn/media/product/250_28509_product_0_20180925182434_5baa0ce2c6a98.png",
         "name": "VGA MSI GeForce RTX 2080 Ti SEA HAWK EK X 11GB GDDR6",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-windforce-2x",
         "link": "https://www.anphatpc.com.vn/vga-gigabyte-geforce-rtx-2070-8g-windforce-2x-gv-n2070wf2-8gd_id29854.html",
         "img": "https://anphat.com.vn/media/product/250_29854_geforce_rtx_2070_8g_windforce_2x_1.png",
         "name": "VGA GIGABYTE GeForce RTX 2070 8G WINDFORCE 2X (GV-N2070WF2-8GD)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-gtx-1650-super-windforce-oc",
@@ -276,7 +327,9 @@
         "img": "https://anphat.com.vn/media/product/250_32180_2019102917251156c13cede76a4c2522ede9790d5e300064_big.png",
         "name": "VGA GIGABYTE GeForce GTX 1650 SUPER WINDFORCE OC 4G (GV-N165SWF2OC-4GD)",
         "price": "5199000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3090-tuf-gaming-oc",
@@ -284,15 +337,18 @@
         "img": "https://anphat.com.vn/media/product/250_34548_tuf_rtx3090_o24g_gaming_01.jpg",
         "name": "VGA ASUS TUF Gaming GeForce RTX 3090 OC (TUF-RTX3090-O24G-GAMING)",
         "price": "50749000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-rtx-2080-duke",
         "link": "https://www.anphatpc.com.vn/vga-msi-geforce-rtx-2080-duke-8gb-oc-gddr6_id27072.html",
         "img": "https://anphat.com.vn/media/product/250_27072_vga_msi_geforce_rtx_2080_duke_8gb_oc_gddr6_1.png",
         "name": "VGA MSI GeForce RTX 2080 DUKE 8G OC GDDR6",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3080-tuf-gaming-oc",
@@ -300,7 +356,9 @@
         "img": "https://anphat.com.vn/media/product/250_34551_tuf_rtx3080_o10g_gaming_01.jpg",
         "name": "VGA ASUS TUF Gaming GeForce RTX 3080 OC (TUF-RTX3080-O10G-GAMING)",
         "price": "24499000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3070-tuf-gaming-oc",
@@ -308,15 +366,18 @@
         "img": "https://anphat.com.vn/media/product/250_34974_01_tuf_rtx3070_o8g_gaming.jpg",
         "name": "VGA ASUS TUF Gaming GeForce RTX 3070 OC (TUF-RTX3070-O8G-GAMING)",
         "price": "16999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-super-gaming-oc-3x",
         "link": "https://www.anphatpc.com.vn/vga-gigabyte-geforce-rtx-2070-super-gaming-oc-3x-8g-gv-n207sgaming-oc-8gd_id34170.html",
         "img": "https://anphat.com.vn/media/product/250_34170_20190814181241615dc00b7f13a8e5bf58a146246d37246b_big.png",
         "name": "VGA GIGABYTE GeForce RTX 2070 SUPER GAMING OC 3X 8G (GV-N207SGAMING OC-8GD)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3090-tuf-gaming",
@@ -324,15 +385,18 @@
         "img": "https://anphat.com.vn/media/product/250_34412_tuf_rtx3090_24g_gaming_01.jpg",
         "name": "VGA ASUS TUF GAMING GeForce RTX 3090 (TUF-RTX3090-24G-GAMING)",
         "price": "42799000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-2070-dual-evo-oc-v2",
         "link": "https://www.anphatpc.com.vn/vga-asus-dual-geforce-rtx-2070-evo-v2-8gb-gddr6-dual-rtx2070-8g-evo-v2_id34858.html",
         "img": "https://anphat.com.vn/media/product/250_34858_p_setting_000_1_90_end_500.jpg",
         "name": "VGA ASUS Dual GeForce RTX 2070 EVO V2 8GB GDDR6 (DUAL-RTX2070-8G-EVO-V2)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3070-dual-oc",
@@ -340,7 +404,9 @@
         "img": "https://anphat.com.vn/media/product/250_34552_dual_rtx3070_o8g_01.jpg",
         "name": "VGA ASUS DUAL GeForce RTX 3070 OC (DUAL-RTX3070-O8G)",
         "price": "16349000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3080-vision-oc",
@@ -348,7 +414,9 @@
         "img": "https://anphat.com.vn/media/product/250_34856_9.png",
         "name": "VGA GIGABYTE GeForce RTX 3080 VISION OC 10G (GV-N3080VISION OC-10GD)",
         "price": "23799000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3070-dual",
@@ -356,7 +424,9 @@
         "img": "https://anphat.com.vn/media/product/250_34454_dual_rtx3070_8g_01.jpg",
         "name": "VGA ASUS DUAL GeForce RTX 3070 (DUAL-RTX3070-8G)",
         "price": "15899000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-eagle-oc",
@@ -364,15 +434,18 @@
         "img": "https://anphat.com.vn/media/product/250_34768_9.png",
         "name": "VGA GIGABYTE GeForce RTX 3070 EAGLE OC 8G (GV-N3070EAGLE OC-8GD)",
         "price": "16999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-2080-ti-aorus-xtreme-waterforce",
         "link": "https://www.anphatpc.com.vn/vga-gigabyte-aorus-geforce-rtx-2080ti-xtreme-waterforce-wb-11g-gv-n208taorusx-wb-11gc_id27838.html",
         "img": "https://anphat.com.vn/media/product/250_27838_2018101918364824_big.jpg",
         "name": "VGA GIGABYTE AORUS GeForce RTX 2080Ti XTREME WATERFORCE WB 11G (GV-N208TAORUSX WB-11GC)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-eagle",
@@ -380,7 +453,9 @@
         "img": "https://anphat.com.vn/media/product/250_35091_10.png",
         "name": "VGA GIGABYTE GeForce RTX 3070 EAGLE 8G (GV-N3070EAGLE-8GD)",
         "price": "16499000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3090-strix-gaming-oc",
@@ -388,7 +463,9 @@
         "img": "https://anphat.com.vn/media/product/250_34547_rog_strix_rtx3090_01_oc.jpg",
         "name": "VGA ASUS ROG Strix GeForce RTX 3090 OC (ROG-STRIX-RTX3090-O24G-GAMING)",
         "price": "55899000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-vision-oc",
@@ -396,15 +473,18 @@
         "img": "https://anphat.com.vn/media/product/250_35090_1.png",
         "name": "VGA GIGABYTE GeForce RTX 3070 VISION OC 8G (GV-N3070VISION OC-8GD)",
         "price": "18399000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "msi-geforce-gtx-1660-ventus-xs-oc",
         "link": "https://www.anphatpc.com.vn/vga-msi-gtx-1660-ventus-xs-6g-oc_id28939.html",
         "img": "https://anphat.com.vn/media/product/250_28939_product_6_20190314113217_5c89cb410e79e.png",
         "name": "VGA MSI GTX 1660 VENTUS XS 6G OC",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3080-eagle-oc",
@@ -412,15 +492,18 @@
         "img": "https://anphat.com.vn/media/product/250_34424_1.png",
         "name": "VGA GIGABYTE GeForce RTX 3080 EAGLE OC 10G (GV-N3080EAGLE OC-10GD)",
         "price": "22399000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-gtx-1060-6gb-strix-oc",
         "link": "https://www.anphatpc.com.vn/vga-asus-strix-geforce-gtx-1060-oc-edition-6gb-gddr5-strix-gtx1060-dc2o6g_id23783.html",
         "img": "https://anphat.com.vn/media/product/250_23783_vga_asus_strix_geforce_gtx_1060_oc_edition_6gb_gddr5__strix_gtx1060_dc2o6g__1.png",
         "name": "VGA ASUS Strix GeForce GTX 1060 OC edition 6GB GDDR5 (STRIX-GTX1060-DC2O6G)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3080-tuf-gaming",
@@ -428,7 +511,9 @@
         "img": "https://anphat.com.vn/media/product/250_34414_tuf_rtx3080_10g_gaming_01.jpg",
         "name": "VGA ASUS TUF GAMING GeForce RTX 3080 (TUF-RTX3080-10G-GAMING)",
         "price": "22999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-gtx-1660-super-tuf-gaming-x3-oc",
@@ -436,7 +521,9 @@
         "img": "https://anphat.com.vn/media/product/250_31250_tuf_3_gtx1660s_o6g_gaming_1.png",
         "name": "VGA ASUS TUF Gaming X3 GeForce GTX 1660 SUPER OC edition 6GB GDDR6 (TUF 3-GTX1660S-O6G-GAMING)",
         "price": "6799000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-aorus-master",
@@ -444,7 +531,9 @@
         "img": "https://anphat.com.vn/media/product/250_35089_10.png",
         "name": "VGA GIGABYTE AORUS GeForce RTX 3070 MASTER 8G (GV-N3070AORUS M-8GD)",
         "price": "19399000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3090-aorus-xtreme",
@@ -452,7 +541,9 @@
         "img": "https://anphat.com.vn/media/product/250_34415_10.png",
         "name": "VGA GIGABYTE AORUS GeForce RTX 3090 XTREME 24G (GV-N3090AORUS X-24GD)",
         "price": "53799000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3080-strix-gaming-oc",
@@ -460,7 +551,9 @@
         "img": "https://anphat.com.vn/media/product/250_34549_rog_strix_rtx3080_o10g_gaming_01.jpg",
         "name": "VGA ASUS ROG Strix GeForce RTX 3080 OC (ROG-STRIX-RTX3080-O10G-GAMING)",
         "price": "27899000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3090-aorus-master",
@@ -468,7 +561,9 @@
         "img": "https://anphat.com.vn/media/product/250_34417_10.png",
         "name": "VGA GIGABYTE AORUS GeForce RTX 3090 MASTER 24G (GV-N3090AORUS M-24GD)",
         "price": "51599000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3090-strix-gaming",
@@ -476,7 +571,9 @@
         "img": "https://anphat.com.vn/media/product/250_34409_rog_strix_rtx3090_01.jpg",
         "name": "VGA ASUS ROG Strix GeForce RTX 3090 (ROG-STRIX-RTX3090-24G-GAMING)",
         "price": "53749000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3090-turbo",
@@ -484,15 +581,18 @@
         "img": "https://anphat.com.vn/media/product/250_34857_9.png",
         "name": "VGA GIGABYTE GeForce RTX 3090 TURBO 24G (GV-N3090TURBO-24GD)",
         "price": "49999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-gaming-8g",
         "link": "https://www.anphatpc.com.vn/vga-gigabyte-geforce-rtx-2070-super-gaming-oc-8g-gv-n207sgaming-oc-8gc_id29966.html",
         "img": "https://anphat.com.vn/media/product/250_29966_gv_n207sgaming_oc_8gc_1.png",
         "name": "VGA GIGABYTE GeForce RTX 2070 SUPER GAMING OC 8G (GV-N207SGAMING OC-8GC)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3080-aorus-master",
@@ -500,7 +600,9 @@
         "img": "https://anphat.com.vn/media/product/250_34422_10.png",
         "name": "VGA GIGABYTE AORUS GeForce RTX 3080 MASTER 10G (GV-N3080AORUS M-10GD)",
         "price": "26799000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3070-tuf-gaming-oc",
@@ -508,7 +610,9 @@
         "img": "https://anphat.com.vn/media/product/250_34975_01_tuf_rtx3070_8g_gaming.jpg",
         "name": "VGA ASUS TUF Gaming GeForce RTX 3070 (TUF-RTX3070-8G-GAMING)",
         "price": "17749000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3070-strix-gaming",
@@ -516,15 +620,18 @@
         "img": "https://anphat.com.vn/media/product/250_34453_rog_strix_rtx3070_8g_gaming_01.jpg",
         "name": "VGA ASUS ROG Strix GeForce RTX 3070 (ROG-STRIX-RTX3070-8G-GAMING)",
         "price": "19699000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-2070-dual-evo-oc-v2",
         "link": "https://www.anphatpc.com.vn/vga-asus-dual-geforce-rtx-2070-evo-v2-oc-edition-8gb-gddr6-dual-rtx2070-o8g-evo-v2_id33206.html",
         "img": "https://anphat.com.vn/media/product/250_33206_2070_dual.jpg",
         "name": "VGA ASUS Dual GeForce RTX 2070 EVO V2 OC Edition 8GB GDDR6 (DUAL-RTX2070-O8G-EVO-V2)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3080-strix-gaming",
@@ -532,15 +639,18 @@
         "img": "https://anphat.com.vn/media/product/250_34413_rog_strix_rtx3080_10g_gaming_01.jpg",
         "name": "VGA ASUS ROG Strix GeForce RTX 3080 (ROG-STRIX-RTX3080-10G-GAMING)",
         "price": "26499000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-2060-dual-mini-oc",
         "link": "https://www.anphatpc.com.vn/vga-asus-dual-geforce-rtx-2060-mini-oc-edition-6gb-gddr6-dual-rtx2060-o6g-mini_id34299.html",
         "img": "https://anphat.com.vn/media/product/250_34299_6hrdqyfjcffitb27_setting_000_1_90_end_500.jpg",
         "name": "VGA ASUS Dual GeForce RTX 2060 MINI OC edition 6GB GDDR6 (DUAL-RTX2060-O6G-MINI)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-3070-strix-gaming",
@@ -548,7 +658,9 @@
         "img": "https://anphat.com.vn/media/product/250_34972_01_rog_strix_rtx3070_o8g_gaming.jpg",
         "name": "VGA ASUS ROG Strix GeForce RTX 3070 OC (ROG-STRIX-RTX3070-O8G-GAMING)",
         "price": "20699000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-gt-710-gv-n710sl-2gl",
@@ -556,7 +668,9 @@
         "img": "https://anphat.com.vn/media/product/250_30906_n710.png",
         "name": "VGA Gigabite GeForce GT 710 2GB DDR5 (GV-N710D5-2GIL)",
         "price": "1299000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-gtx-1650-phoenix-oc",
@@ -564,7 +678,9 @@
         "img": "https://anphat.com.vn/media/product/250_35055_1_3.jpg",
         "name": "VGA ASUS Phoenix GeForce GTX 1650 OC edition 4GB GDDR6 (PH-GTX1650-O4GD6)",
         "price": "3799000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-radeon-rx-570-rog-strix",
@@ -572,7 +688,9 @@
         "img": "https://anphat.com.vn/media/product/250_32022_39146_rog_strix_rx570_8g_gaming_ha1.jpg",
         "name": "VGA ASUS ROG Strix Radeon RX570 8GB GDDR5 (ROG-STRIX-RX570-8G-GAMING)",
         "price": "3999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-gtx-1660-super-tuf-gaming-x3-oc",
@@ -580,15 +698,18 @@
         "img": "https://anphat.com.vn/media/product/250_31034_tuf_3_gtx1660s_6g_gaming_box_vga.png",
         "name": "VGA ASUS TUF Gaming X3 GeForce GTX 1660 SUPER 6GB GDDR6 (TUF 3-GTX1660S-6G-GAMING)",
         "price": "6499000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-rtx-2080-ti-matrix",
         "link": "https://www.anphatpc.com.vn/vga-asus-rog-matrix-rtx2080ti-p11g-gaming_id29157.html",
         "img": "https://anphat.com.vn/media/product/250_29157_rog_matrix_rtx2080ti_p11g_gaming_2.png",
         "name": "VGA ASUS ROG-MATRIX-RTX2080TI-P11G-GAMING",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-radeon-rx-550---512-rx550-4g",
@@ -596,15 +717,18 @@
         "img": "https://anphat.com.vn/media/product/250_33989_p_setting_fff_1_90_end_600.jpg",
         "name": "VGA ASUS Phoenix Radeon RX 550 4GB GDDR5 (PH-RX550-4G-EVO)",
         "price": "1899000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-gaming-8g",
         "link": "https://www.anphatpc.com.vn/vga-gigabyte-aorus-geforce-rtx-2070-super-8g-gv-n207saorus-8gc_id29967.html",
         "img": "https://anphat.com.vn/media/product/250_29967_gv_n207saorus_8gc_1.png",
         "name": "VGA GIGABYTE AORUS GeForce RTX 2070 SUPER 8G (GV-N207SAORUS-8GC)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "asus-geforce-gtx-1650-phoenix-oc",
@@ -612,710 +736,887 @@
         "img": "https://anphat.com.vn/media/product/250_34303_yinhpacyzpdbyk4x_setting_000_1_90_end_500.jpg",
         "name": "VGA ASUS Phoenix GeForce GTX 1650 4GB GDDR6 (PH-GTX1650-4GD6)",
         "price": "3599000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-gaming-8g",
         "link": "https://www.anphatpc.com.vn/vga-gigabyte-geforce-rtx-2070-super-windforce-oc-8g-gv-n207swf3oc-8gc_id30229.html",
         "img": "https://anphat.com.vn/media/product/250_30229_gv_n207swf3oc_8gc_1.png",
         "name": "VGA GIGABYTE GeForce RTX 2070 SUPER WINDFORCE OC 8G (GV-N207SWF3OC-8GC)",
-        "price": "",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "An Phát PC",
+        "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3080-eagle-oc",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-gigabyte-rtx-3080-eagle-oc-10gd-10gb-gdd6x-320-bit-hdmi-dp-2x8-pin",
         "img": "https://hanoicomputercdn.com/media/product/250_55063_gv_n3080eagle_oc_10gd_candb.jpg",
-        "name": "Card m�n h�nh Gigabyte RTX 3080 EAGLE OC-10GD (10GB GDD6X, 320-bit, HDMI +DP, 2x8-pin)",
+        "name": "Card màn hình Gigabyte RTX 3080 EAGLE OC-10GD (10GB GDD6X, 320-bit, HDMI +DP, 2x8-pin)",
         "price": "22949000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-vision-oc",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-gigabyte-rtx-3070-vision-oc-8gd-8gb-gdd6-256-bit-hdmi-dp-1x8-pin-6x1-pin",
         "img": "https://hanoicomputercdn.com/media/product/250_56129_card_man_hinh_gigabyte_rtx_3070_vision_oc_8gd_8gb_gdd6_256_bit_hdmi_dp_1x8_pin_6x1_pin_01.png",
-        "name": "Card m�n h�nh Gigabyte RTX 3070 VISION OC - 8GD (8GB GDD6, 256-bit, HDMI +DP, 1x8-pin+6x1-pin)",
+        "name": "Card màn hình Gigabyte RTX 3070 VISION OC - 8GD (8GB GDD6, 256-bit, HDMI +DP, 1x8-pin+6x1-pin)",
         "price": "17999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "msi-geforce-rtx-3070-ventus-2x-oc",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-msi-rtx-3070-ventus-2x-8g-8gb-gdd6-256-bit-hdmi-dp-2x8-pin",
         "img": "https://hanoicomputercdn.com/media/product/250_55081_card_man_hinh_msi_rtx_3070_ventus_2x_oc_8g_8gb_gdd6_256_bit_hdmi_dp_2x8_pin.jpg",
-        "name": "Card m�n h�nh MSI RTX 3070 VENTUS 2X OC 8G",
+        "name": "Card màn hình MSI RTX 3070 VENTUS 2X OC 8G",
         "price": "15999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3090-aorus-xtreme",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-gigabyte-rtx-3090-aorus-xtreme-24gd",
         "img": "https://hanoicomputercdn.com/media/product/250_55043_card_man_hinh_gigabyte_rtx_3090_aorus_xtreme_24gd_00101.jpg",
-        "name": "Card m�n h�nh Gigabyte RTX 3090 AORUS XTREME-24GD",
+        "name": "Card màn hình Gigabyte RTX 3090 AORUS XTREME-24GD",
         "price": "53990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-eagle-oc",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-gigabyte-rtx-3070-eagle-oc-8gd-1",
         "img": "https://hanoicomputercdn.com/media/product/250_56118_card_man_hinh_gigabyte_rtx_3070_eagle_oc_8gd_111.jpg",
-        "name": "Card m�n h�nh Gigabyte RTX 3070 EAGLE OC - 8GD (8GB GDD6, 256-bit, HDMI +DP, 1x8-pin+6x1-pin)",
+        "name": "Card màn hình Gigabyte RTX 3070 EAGLE OC - 8GD (8GB GDD6, 256-bit, HDMI +DP, 1x8-pin+6x1-pin)",
         "price": "16999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "msi-geforce-gtx-1650-super-ventus-xs-oc",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-msi-gtx-1650-super-ventus-xs-4g-oc",
         "img": "https://hanoicomputercdn.com/media/product/250_50169_msi_gtx_1650_super_ventus_xs_01.jpg",
-        "name": "Card m�n h�nh MSI GTX 1650 Super VENTUS XS OC (4GB GDDR6, 128-bit, DVI+HDMI+DP, 1x6-pin)",
+        "name": "Card màn hình MSI GTX 1650 Super VENTUS XS OC (4GB GDDR6, 128-bit, DVI+HDMI+DP, 1x6-pin) ",
         "price": "4799000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "msi-geforce-rtx-3090-ventus-3x-oc",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-msi-rtx-3090-ventus-3x-oc-24g-24gb-gddr6x-384-bit-hdmi-dp-2x8-pin",
         "img": "https://hanoicomputercdn.com/media/product/250_55074_card_man_hinh_msi_rtx_3090_ventus_3x_oc_24g_24gb_gddr6x_384_bit_hdmi_dp_2x8_pin_1.png",
-        "name": "Card m�n h�nh MSI RTX 3090 VENTUS 3X OC 24G (24GB GDDR6X, 384-bit, HDMI +DP, 2x8-pin)",
+        "name": "Card màn hình MSI RTX 3090 VENTUS 3X OC 24G (24GB GDDR6X, 384-bit, HDMI +DP, 2x8-pin)",
         "price": "45999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3060-ti-aorus-master",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-gigabyte-rtx-3060-ti-aorus-master-8gd",
         "img": "https://hanoicomputercdn.com/media/product/250_56746_card_man_hinh_gigabyte_rtx_3060_ti_aorus_master_8gd_1.jpg",
-        "name": "Card m�n h�nh Gigabyte RTX 3060 Ti AORUS MASTER (8GB GDD6, 256-bit, HDMI +DP, 1x8-pin, 1x6-pin)",
+        "name": "Card màn hình Gigabyte RTX 3060 Ti AORUS MASTER (8GB GDD6, 256-bit, HDMI +DP, 1x8-pin, 1x6-pin)",
         "price": "15999000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "msi-geforce-rtx-3090-gaming-x-trio",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-msi-rtx-3090-gaming-x-trio-24g-24gb-gddr6x-384-bit-hdmi-dp-3x8-pin",
         "img": "https://hanoicomputercdn.com/media/product/250_55072_card_man_hinh_msi_rtx_3090_gaming_x_trio_24g_24gb_gddr6x_384_bit_hdmi_dp_3x8_pin_3.png",
-        "name": "Card m�n h�nh MSI RTX 3090 GAMING X TRIO 24G (24GB GDDR6X, 384-bit, HDMI +DP, 3x8-pin)",
+        "name": "Card màn hình MSI RTX 3090 GAMING X TRIO 24G (24GB GDDR6X, 384-bit, HDMI +DP, 3x8-pin)",
         "price": "49990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-aorus-master",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-gigabyte-rtx-3070-aorus-master-8gd",
         "img": "https://hanoicomputercdn.com/media/product/250_56236_card_man_hinh_gigabyte_rtx_3070_aorus_master_8gd_0101.jpg",
-        "name": "Card m�n h�nh Gigabyte RTX 3070 AORUS MASTER - 8GD (8GB GDD6, 256-bit, HDMI +DP, 2x8-pin)",
+        "name": "Card màn hình Gigabyte RTX 3070 AORUS MASTER - 8GD (8GB GDD6, 256-bit, HDMI +DP, 2x8-pin) ",
         "price": "19599000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "msi-geforce-gtx-1650-d6-ventus-xs-oc",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-msi-gtx-1650-d6-ventus-xs-4g-oc",
         "img": "https://hanoicomputercdn.com/media/product/250_55831_card_man_hinh_msi_gtx_1650_d6_ventus_xs_4g_oc_01.jpg",
-        "name": "Card m�n h�nh MSI GTX 1650 D6 VENTUS XS 4G OCV1 (4GB GDDR6, 128-bit, DVI+HDMI+DP)",
+        "name": "Card màn hình MSI GTX 1650 D6 VENTUS XS 4G OCV1 (4GB GDDR6, 128-bit, DVI+HDMI+DP)",
         "price": "4099000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "asus-geforce-rtx-3090-tuf-gaming",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-asus-tuf-rtx3090-o24g-gaming-24gb-gdd6x-384-bit-hdmi-dp-2x8-pin",
         "img": "https://hanoicomputercdn.com/media/product/250_55637_card_man_hinh_asus_tuf_rtx3090_o24g_gaming_24gb_gdd6x_384_bit_hdmi_dp_2x8_pin_001.jpg",
-        "name": "Card m�n h�nh Asus TUF RTX3090-O24G-GAMING (24GB GDD6X, 384-bit, HDMI +DP, 2x8-Pin)",
+        "name": "Card màn hình Asus TUF RTX3090-O24G-GAMING (24GB GDD6X, 384-bit, HDMI +DP, 2x8-Pin)",
         "price": "50790000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "msi-geforce-gtx-1650-d6-aero-itx-oc",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-msi-gtx-1650-d6-aero-itx-4g-ocv1",
         "img": "https://hanoicomputercdn.com/media/product/250_56197_card_man_hinh_msi_gtx_1650_d6_aero_itx_4g_ocv1_2.jpg",
-        "name": "Card m�n h�nh MSI GTX 1650 D6 AERO ITX 4G OCV1 (4GB GDDR6, 128-bit, DVI+HDMI+DP, 1x6-pin)",
+        "name": "Card màn hình MSI GTX 1650 D6 AERO ITX 4G OCV1 (4GB GDDR6, 128-bit, DVI+HDMI+DP, 1x6-pin)",
         "price": "3899000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "asus-geforce-rtx-3090-strix-gaming",
         "link": "https://www.hanoicomputer.vn/card-man-hinh-asus-rog-strix-rtx3090-o24g-gaming",
         "img": "https://hanoicomputercdn.com/media/product/250_55690_card_man_hinh_asus_rog_strix_rtx3090_o24g_gaming_001.jpg",
-        "name": "Card m�n h�nh Asus ROG STRIX RTX3090-O24G-GAMING (24GB GDD6X, 384-bit, HDMI +DP, 3x8-pin)",
+        "name": "Card màn hình Asus ROG STRIX RTX3090-O24G-GAMING (24GB GDD6X, 384-bit, HDMI +DP, 3x8-pin)",
         "price": "55899000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "HanoiComputer",
+        "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png"
     },
     {
         "fid": "asus-geforce-rtx-3060-ti-tuf-gaming-oc",
         "link": "https://gearvn.com/products/asus-tuf-gaming-geforce-rtx-3060-ti-oc",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga_15df0e14db634c9c9820b59058f385dd_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga_15df0e14db634c9c9820b59058f385dd_large.jpg",
         "name": "ASUS TUF Gaming GeForce RTX 3060 Ti OC",
         "price": "15290000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3060-ti-gaming-x-trio",
         "link": "https://gearvn.com/products/msi-geforce-rtx-3060-ti-gaming-x-trio",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga_eeace4c4ea2b45948fe765c4472a034f_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga_eeace4c4ea2b45948fe765c4472a034f_large.jpg",
         "name": "MSI GeForce RTX 3060 Ti GAMING X TRIO",
         "price": "14990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3060-ti-ventus-2x-oc",
         "link": "https://gearvn.com/products/msi-geforce-rtx-3060-ti-ventus-2x-oc",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga_766b0cec6345460b8fc9b061d59e302a_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga_766b0cec6345460b8fc9b061d59e302a_large.jpg",
         "name": "MSI GeForce RTX 3060 Ti VENTUS 2X OC",
         "price": "13490000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3060-ti-dual-oc",
         "link": "https://gearvn.com/products/asus-dual-geforce-rtx-3060-ti-oc",
-        "img": "//product.hstatic.net/1000026716/product/8_46c67b41bf864eb7b047bab6f1a89bf7_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/8_46c67b41bf864eb7b047bab6f1a89bf7_large.png",
         "name": "ASUS Dual GeForce RTX 3060 Ti OC",
         "price": "13390000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3060-ti-rog-strix-gaming-oc",
         "link": "https://gearvn.com/products/asus-rog-strix-geforce-rtx-3060-ti-oc",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-asus-rog-strix-geforce-rtx-3060-ti-oc-666_ee9cc2b1de1b4651aff3e2edec540657_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-asus-rog-strix-geforce-rtx-3060-ti-oc-666_ee9cc2b1de1b4651aff3e2edec540657_large.png",
         "name": "ASUS ROG Strix GeForce RTX 3060 Ti OC",
         "price": "16990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-gaming-8g",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-2070-gaming-oc-8g",
-        "img": "//product.hstatic.net/1000026716/product/rtx_2070_gaming_oc_8g__gearvn_large.jpg",
-        "name": "GIGABYTE GeForce� RTX 2070 GAMING OC 8G",
+        "img": "https://product.hstatic.net/1000026716/product/rtx_2070_gaming_oc_8g__gearvn_large.jpg",
+        "name": "GIGABYTE GeForce® RTX 2070 GAMING OC 8G",
         "price": "16290000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3090-ventus-3x-oc",
         "link": "https://gearvn.com/products/msi-geforce-rtx-3090-ventus-3x-24g-oc",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-msi-geforce-rtx-3090-ventus-3x-24g-oc-666_e8e5fd35bbdd4f808fea2782d9819984_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-msi-geforce-rtx-3090-ventus-3x-24g-oc-666_e8e5fd35bbdd4f808fea2782d9819984_large.png",
         "name": "MSI GeForce RTX 3090 VENTUS 3X 24G OC",
         "price": "45990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3070-ventus-2x-oc",
         "link": "https://gearvn.com/products/vga-msi-geforce-rtx-3070-ventus-2x-oc",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-vga-msi-geforce-rtx-3070-ventus-2x-oc_2db8d5cf8b5b4f78934ef1a31e948ded_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-vga-msi-geforce-rtx-3070-ventus-2x-oc_2db8d5cf8b5b4f78934ef1a31e948ded_large.jpg",
         "name": "VGA MSI Geforce RTX 3070 VENTUS 2x OC",
         "price": "15990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3060-ti-aorus-master",
         "link": "https://gearvn.com/products/card-man-hinh-aorus-geforce-rtx-3060-ti-master-8g",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga_f17764d45bc54168871e1ed648db2645_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga_f17764d45bc54168871e1ed648db2645_large.jpg",
         "name": "GIGABYTE AORUS GeForce RTX 3060 Ti MASTER 8G",
         "price": "15650000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3090-gaming-x-trio",
         "link": "https://gearvn.com/products/msi-geforce-rtx-3090-gaming-x-trio-24g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-geforce-rtx-3090-gaming-x-trio-24g-66_19b3f78b95bc46af9956ad3334281e72_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-geforce-rtx-3090-gaming-x-trio-24g-66_19b3f78b95bc46af9956ad3334281e72_large.png",
         "name": "MSI GeForce RTX 3090 GAMING X TRIO 24G",
         "price": "47990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3070-ventus-3x-oc",
         "link": "https://gearvn.com/products/vga-msi-geforce-rtx-3070-ventus-3x-oc",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-vga-msi-geforce-rtx-3070-ventus-3x-oc-666_fc03e9df711542f499a9eeee7629f73c_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-vga-msi-geforce-rtx-3070-ventus-3x-oc-666_fc03e9df711542f499a9eeee7629f73c_large.jpg",
         "name": "VGA MSI GeForce RTX 3070 VENTUS 3X OC",
         "price": "17490000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3070-ko-gaming-oc",
         "link": "https://gearvn.com/products/asus-geforce-rtx-3070-ko-oc-8g-gaming",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-card-do-hoa-asus-geforce-rtx-3070-ko-oc-8g-gaming-666_fa311a77f4a24753924451bf977c21d5_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-card-do-hoa-asus-geforce-rtx-3070-ko-oc-8g-gaming-666_fa311a77f4a24753924451bf977c21d5_large.jpg",
         "name": "ASUS GeForce RTX 3070 KO OC 8G GAMING",
         "price": "16990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3060-ti-eagle-oc",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-3060-ti-eagle-oc-8g",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga_f7bc46ee6f954a6d8ae7d8cd571195de_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga_f7bc46ee6f954a6d8ae7d8cd571195de_large.jpg",
         "name": "GIGABYTE GeForce RTX 3060 Ti EAGLE OC 8G",
         "price": "13490000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3090-aorus-master",
         "link": "https://gearvn.com/products/gigabyte-aorus-geforce-rtx-3090-master-24g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-gigabyte-aorus-geforce-rtx-3090-master-24g-111_08024bdac5af49979dae6a30e67a9f98_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-gigabyte-aorus-geforce-rtx-3090-master-24g-111_08024bdac5af49979dae6a30e67a9f98_large.png",
         "name": "GIGABYTE AORUS GeForce RTX 3090 MASTER 24G",
         "price": "51990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3070-gaming-x-trio",
         "link": "https://gearvn.com/products/msi-geforce-rtx-3070-gaming-x-trio-8gb",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-msi-geforce-rtx-3070-gaming-x-trio-8gb-1_64635a6f450c41878bc4c98613a4768b_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-msi-geforce-rtx-3070-gaming-x-trio-8gb-1_64635a6f450c41878bc4c98613a4768b_large.jpg",
         "name": "MSI GeForce RTX 3070 GAMING X TRIO 8GB",
         "price": "18490000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-gt-1030-aero-itx-oc",
         "link": "https://gearvn.com/products/msi-geforce-gt-1030-aero-itx-2gb-oc",
-        "img": "//product.hstatic.net/1000026716/product/gt1030-aero-2gb-oc-msi_9e353c3df0f849f29676d12a5cd8477d_large.jpg",
-        "name": "MSI GeForce� GT 1030 AERO ITX 2GB OC",
+        "img": "https://product.hstatic.net/1000026716/product/gt1030-aero-2gb-oc-msi_9e353c3df0f849f29676d12a5cd8477d_large.jpg",
+        "name": "MSI GeForce® GT 1030 AERO ITX 2GB OC",
         "price": "2390000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3070-suprim-x",
         "link": "https://gearvn.com/products/msi-geforce-rtx-3070-suprim-x-8g",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga-recovered_5079545205a446b7ade3ab3d70a43800_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga-recovered_5079545205a446b7ade3ab3d70a43800_large.jpg",
         "name": "MSI GeForce RTX 3070 SUPRIM X 8G",
         "price": "20990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3060-ti-gaming-oc-pro",
         "link": "https://gearvn.com/products/card-man-hinh-aorus-geforce-rtx-3060-ti-gaming-oc-pro-8g",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga_53d4b19684dc459c9d6b9c03332df865_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga_53d4b19684dc459c9d6b9c03332df865_large.jpg",
         "name": "GIGABYTE GeForce RTX 3060 Ti GAMING OC PRO 8G",
         "price": "14250000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3060-ti-eagle",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-3060-ti-eagle-8g",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga_dced2ef89b894fb98565f298aa11dc71_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga_dced2ef89b894fb98565f298aa11dc71_large.jpg",
         "name": "GIGABYTE GeForce RTX 3060 Ti EAGLE 8G",
         "price": "12990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-eagle-oc",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-3070-eagle-oc-8g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3070-eagle-oc-8g-666_bf4aa0876a4e4248be6225f8390fac87_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3070-eagle-oc-8g-666_bf4aa0876a4e4248be6225f8390fac87_large.jpg",
         "name": "GIGABYTE GeForce RTX 3070 EAGLE OC 8G",
         "price": "16890000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-super-windforce-oc",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-2070-super-windforce-oc-8g",
-        "img": "//product.hstatic.net/1000026716/product/2019072516383039edb505de43945ea5e38ca2d6a1fd91bd_big_5c9be67319ec48fc868c839892926ef7_large.png",
-        "name": "GIGABYTE GeForce RTX� 2070 SUPER WINDFORCE OC 8G",
+        "img": "https://product.hstatic.net/1000026716/product/2019072516383039edb505de43945ea5e38ca2d6a1fd91bd_big_5c9be67319ec48fc868c839892926ef7_large.png",
+        "name": "GIGABYTE GeForce RTX™ 2070 SUPER WINDFORCE OC 8G",
         "price": "14690000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-2060-super-windforce-oc",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-2060-super-windforce-oc-8g",
-        "img": "//product.hstatic.net/1000026716/product/2019070116183895ea1fc8d58e39695946012735e455dd88_big_0175f4efd462405196c930d6551919a5_large.png",
-        "name": "GIGABYTE GeForce RTX� 2060 SUPER WINDFORCE OC 8G",
+        "img": "https://product.hstatic.net/1000026716/product/2019070116183895ea1fc8d58e39695946012735e455dd88_big_0175f4efd462405196c930d6551919a5_large.png",
+        "name": "GIGABYTE GeForce RTX™ 2060 SUPER WINDFORCE OC 8G",
         "price": "10990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3090-gaming-trio",
         "link": "https://gearvn.com/products/msi-geforce-rtx-3090-gaming-trio-24g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-msi-geforce-rtx-3090-gaming-trio-24g-666_54ff5988c7d94101a9796ff030171028_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-msi-geforce-rtx-3090-gaming-trio-24g-666_54ff5988c7d94101a9796ff030171028_large.png",
         "name": "MSI GeForce RTX 3090 GAMING TRIO 24G",
-        "price": "Li�n h?",
-        "path": "gpu_price_list"
+        "price": "Liên hệ",
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-2070-gaming-z",
         "link": "https://gearvn.com/products/msi-geforce-rtx-2070-gaming-z-8g",
-        "img": "//product.hstatic.net/1000026716/product/rtx__2070_gaming_z_8g_gearvn_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/rtx__2070_gaming_z_8g_gearvn_large.jpg",
         "name": "MSI GeForce RTX 2070 GAMING Z 8G",
         "price": "16790000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-eagle",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-3070-eagle-8g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3070-egale-8g-666_9ec87b949f41460081534ec8e1a69945_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3070-egale-8g-666_9ec87b949f41460081534ec8e1a69945_large.jpg",
         "name": "GIGABYTE GeForce RTX 3070 EAGLE 8G",
         "price": "16390000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3060-ti-gaming-oc",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-3060-ti-gaming-oc-8g",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga_fc44aa99753947649d1a3ec6911147ab_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga_fc44aa99753947649d1a3ec6911147ab_large.jpg",
         "name": "GIGABYTE GeForce RTX 3060 Ti GAMING OC 8G",
         "price": "13990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3090-turbo",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-3090-turbo-24g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3090-turbo-24g_fd83ada536534a11917a98ec89ac2524_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3090-turbo-24g_fd83ada536534a11917a98ec89ac2524_large.png",
         "name": "GIGABYTE GeForce RTX 3090 TURBO 24G",
         "price": "50990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-gtx-1050-ti-aero-itx",
         "link": "https://gearvn.com/products/msi-geforce-gtx-1050-ti-aero-itx-oc-4gd5",
-        "img": "//product.hstatic.net/1000026716/product/gtx1050ti_aero_gearvn_90551edd91594b749b8a556b80a23387_large.png",
-        "name": "MSI GeForce� GTX 1050 Ti AERO ITX OC 4GD5",
+        "img": "https://product.hstatic.net/1000026716/product/gtx1050ti_aero_gearvn_90551edd91594b749b8a556b80a23387_large.png",
+        "name": "MSI GeForce® GTX 1050 Ti AERO ITX OC 4GD5",
         "price": "4190000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-gtx-1650-dual-oc",
         "link": "https://gearvn.com/products/asus-geforce-gtx-1650-4gb-dual-oc",
-        "img": "//product.hstatic.net/1000026716/product/gtx_1650_dual_oc_cab0cc4c064f44a19ec98b63b79d1446_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gtx_1650_dual_oc_cab0cc4c064f44a19ec98b63b79d1446_large.png",
         "name": "ASUS GeForce GTX 1650 4GB DUAL OC",
         "price": "4090000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-gaming-oc",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-3070-gaming-oc-8g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3070-gaming-oc-8g-666_bb5b5b524f064aa7ae01ed9fc221209c_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3070-gaming-oc-8g-666_bb5b5b524f064aa7ae01ed9fc221209c_large.jpg",
         "name": "GIGABYTE GeForce RTX 3070 GAMING OC 8G",
         "price": "17490000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-3080-ventus-3x-oc",
         "link": "https://gearvn.com/products/msi-geforce-rtx-3080-ventus-3x-10g-oc",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-msi-geforce-rtx-3080-ventus-3x-10g-oc-666_69408c857b1a48be803846b6165946f4_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-msi-geforce-rtx-3080-ventus-3x-10g-oc-666_69408c857b1a48be803846b6165946f4_large.png",
         "name": "MSI GeForce RTX 3080 VENTUS 3X 10G OC",
         "price": "23490000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-windforce",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-2070-windforce-8g",
-        "img": "//product.hstatic.net/1000026716/product/rtx_2070_windforce_8gb___gearvn_large.png",
-        "name": "GIGABYTE GeForce� RTX 2070 Windforce 8G",
+        "img": "https://product.hstatic.net/1000026716/product/rtx_2070_windforce_8gb___gearvn_large.png",
+        "name": "GIGABYTE GeForce® RTX 2070 Windforce 8G",
         "price": "15290000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-2070-aorus",
         "link": "https://gearvn.com/products/gigabyte-aorus-geforce-rtx-2070-8g",
-        "img": "//product.hstatic.net/1000026716/product/aorus_geforce__rtx_2070_8g_gearvn_large.jpg",
-        "name": "GIGABYTE AORUS GeForce� RTX 2070 8G",
-        "price": "Li�n h?",
-        "path": "gpu_price_list"
+        "img": "https://product.hstatic.net/1000026716/product/aorus_geforce__rtx_2070_8g_gearvn_large.jpg",
+        "name": "GIGABYTE AORUS GeForce® RTX 2070 8G",
+        "price": "Liên hệ",
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-2080-aorus",
         "link": "https://gearvn.com/products/gigabyte-aorus-geforce-rtx-2080-8g",
-        "img": "//product.hstatic.net/1000026716/product/aorus_geforce__rtx_2080_8g_gearvn_large.jpg",
-        "name": "GIGABYTE AORUS GeForce� RTX 2080 8G",
-        "price": "Li�n h?",
-        "path": "gpu_price_list"
+        "img": "https://product.hstatic.net/1000026716/product/aorus_geforce__rtx_2080_8g_gearvn_large.jpg",
+        "name": "GIGABYTE AORUS GeForce® RTX 2080 8G",
+        "price": "Liên hệ",
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-2070-armor",
         "link": "https://gearvn.com/products/msi-geforce-rtx-2070-armor-8g-oc",
-        "img": "//product.hstatic.net/1000026716/product/rtx2070_armor_gearvn_large.jpg",
-        "name": "MSI GeForce RTX� 2070 Armor 8G OC",
-        "price": "Li�n h?",
-        "path": "gpu_price_list"
+        "img": "https://product.hstatic.net/1000026716/product/rtx2070_armor_gearvn_large.jpg",
+        "name": "MSI GeForce RTX™ 2070 Armor 8G OC",
+        "price": "Liên hệ",
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-aorus-master",
         "link": "https://gearvn.com/products/vga-gigabyte-aorus-geforce-rtx-3070-master-8g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-vga-gigabyte-aorus-geforce-rtx-3070-master-8g-66_fee49014ce524927b71cc6f7a8d293f3_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-vga-gigabyte-aorus-geforce-rtx-3070-master-8g-66_fee49014ce524927b71cc6f7a8d293f3_large.png",
         "name": "VGA Gigabyte AORUS GeForce RTX 3070 MASTER 8G",
         "price": "18990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3090-tuf-gaming",
         "link": "https://gearvn.com/products/asus-tuf-3090-24g-gaming",
-        "img": "//product.hstatic.net/1000026716/product/tuf-rtx3090-24g-gaming-01_8123ae5eedb94a78962509d10151637d_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/tuf-rtx3090-24g-gaming-01_8123ae5eedb94a78962509d10151637d_large.jpg",
         "name": "Asus TUF RTX 3090 24G GAMING",
         "price": "42990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-2080-sea-hawk-x",
         "link": "https://gearvn.com/products/msi-geforce-rtx-2080-sea-hawk-ek-x-8gb",
-        "img": "//product.hstatic.net/1000026716/product/msi_rtx_2080_sea_hawk_ek_x_8gb_gearvn_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/msi_rtx_2080_sea_hawk_ek_x_8gb_gearvn_large.png",
         "name": "MSI GEFORCE RTX 2080 SEA HAWK EK X 8GB",
         "price": "27990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-radeon-rx-5600-xt-mech-oc",
         "link": "https://gearvn.com/products/msi-amd-radeon-rx-5600-xt-mech-oc-6g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-msi-amd-rx-5600xt-mech-oc-6gb-1_3071cf8d4d0749eeba6c0879b27c5d49_large.png",
-        "name": "MSI AMD Radeon� RX 5600 XT Mech OC 6G",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-msi-amd-rx-5600xt-mech-oc-6gb-1_3071cf8d4d0749eeba6c0879b27c5d49_large.png",
+        "name": "MSI AMD Radeon™ RX 5600 XT Mech OC 6G",
         "price": "8590000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3070-vision-oc",
         "link": "https://gearvn.com/products/vga-gigabyte-geforce-rtx-3070-vision-oc-8g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-vga-gigabyte-geforce-rtx-3070-vision-oc-8g-666_441dfec49ca247ba957196bfb51dcc57_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-vga-gigabyte-geforce-rtx-3070-vision-oc-8g-666_441dfec49ca247ba957196bfb51dcc57_large.png",
         "name": "VGA Gigabyte GeForce RTX 3070 VISION OC 8G",
         "price": "17890000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-2080-super-gaming-x-trio",
         "link": "https://gearvn.com/products/msi-rtx-2080-super-gaming-x-trio-8gb",
-        "img": "//product.hstatic.net/1000026716/product/67206775_2138436959617121_2874657345340702720_n_e468b53122fa48b09c6cf08bead65bf6_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/67206775_2138436959617121_2874657345340702720_n_e468b53122fa48b09c6cf08bead65bf6_large.png",
         "name": "MSI RTX 2080 SUPER GAMING X TRIO 8GB",
         "price": "20990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-radeon-rx-5600-xt-gaming-x",
         "link": "https://gearvn.com/products/msi-amd-radeon-rx-5600-xt-gaming-x-6g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-msi-radeon-rx-5600xt-gaming-oc-6gb-1_a29c28c3c7304160b8c7beba30fa7b67_large.png",
-        "name": "MSI AMD Radeon� RX 5600 XT Gaming X 6G",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-msi-radeon-rx-5600xt-gaming-oc-6gb-1_a29c28c3c7304160b8c7beba30fa7b67_large.png",
+        "name": "MSI AMD Radeon™ RX 5600 XT Gaming X 6G",
         "price": "8690000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-radeon-rx-5600-xt-gaming-oc",
         "link": "https://gearvn.com/products/gigabyte-amd-radeon-rx-5600-xt-gaming-oc-6g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-vga-radeon-rx-5600xt-gaming-oc-6gb-1_bb539a9e013f42829b490a816be19afe_large.png",
-        "name": "GIGABYTE AMD Radeon� RX 5600 XT GAMING OC 6G",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-vga-radeon-rx-5600xt-gaming-oc-6gb-1_bb539a9e013f42829b490a816be19afe_large.png",
+        "name": "GIGABYTE AMD Radeon™ RX 5600 XT GAMING OC 6G",
         "price": "7990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-2080-gaming-x-trio",
         "link": "https://gearvn.com/products/msi-rtx-2080-gaming-x-trio-8g",
-        "img": "//product.hstatic.net/1000026716/product/rtx_2080_trio_gearvn_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/rtx_2080_trio_gearvn_large.jpg",
         "name": "MSI RTX 2080 GAMING X TRIO 8G",
         "price": "23790000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3090-strix-gaming-oc",
         "link": "https://gearvn.com/products/vga-asus-geforce-rtx-3090-rog-strix-oc-24g-gaming",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-vga-asus-geforce-rtx-3090-rog-strix-oc-24g-gaming-666_8ee13b43ada1449da0bd8fef0790e78c_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-vga-asus-geforce-rtx-3090-rog-strix-oc-24g-gaming-666_8ee13b43ada1449da0bd8fef0790e78c_large.jpg",
         "name": "VGA ASUS GeForce RTX 3090 Rog Strix OC 24G Gaming",
         "price": "51990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-gtx-1650-super-ventus-xs-oc",
         "link": "https://gearvn.com/products/msi-gtx-1650-super-ventus-xs-oc",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-1650-super-ventus-xs-oc-1_b390de012d0441d2a5c8f5db8186a9ad_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-1650-super-ventus-xs-oc-1_b390de012d0441d2a5c8f5db8186a9ad_large.jpg",
         "name": "MSI GTX 1650 Super VENTUS XS OC 4GB GDDR6",
         "price": "4690000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3080-tuf-gaming",
         "link": "https://gearvn.com/products/asus-tuf-rtx3080-o10g-gaming",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-asus-tuf-rtx3080-o10g-gaming-666_38228e151b6a48738e24a967573bfc45_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-asus-tuf-rtx3080-o10g-gaming-666_38228e151b6a48738e24a967573bfc45_large.jpg",
         "name": "Asus TUF RTX 3080 O10G GAMING",
         "price": "24950000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-3090-gv-n3090gaming-oc-24gd",
         "link": "https://gearvn.com/products/gigabyte-geforce-rtx-3090-gaming-oc-24g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3090-gaming-oc-24g-666_5049e5e8b5f04201987ef91908984b67_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-rtx-3090-gaming-oc-24g-666_5049e5e8b5f04201987ef91908984b67_large.png",
         "name": "Gigabyte GeForce RTX 3090 GAMING OC 24G",
         "price": "49990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-radeon-rx-5600-xt-tuf-gaming-x3-evo-oc",
         "link": "https://gearvn.com/products/asus-amd-tuf-gaming-x3-radeon-rx-5600-xt-evo-6g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-asus-tuf-gaming-rx-5600xt-oc-evo_a79af287dbb04570a0b9fb5e92561754_large.png",
-        "name": "ASUS AMD TUF Gaming X3 Radeon� RX 5600 XT EVO 6G",
-        "price": "Li�n h?",
-        "path": "gpu_price_list"
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-asus-tuf-gaming-rx-5600xt-oc-evo_a79af287dbb04570a0b9fb5e92561754_large.png",
+        "name": "ASUS AMD TUF Gaming X3 Radeon™ RX 5600 XT EVO 6G",
+        "price": "Liên hệ",
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-gtx-1660-ti-ventus-xs-oc",
         "link": "https://gearvn.com/products/msi-gtx-1660-ti-ventus-xs-6g-oc-gddr6",
-        "img": "//product.hstatic.net/1000026716/product/1660ti_ventus_xs_oc_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/1660ti_ventus_xs_oc_large.png",
         "name": "MSI GTX 1660 Ti Ventus XS 6G OC GDDR6",
         "price": "7490000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-gtx-1650-super-tuf-gaming-oc",
         "link": "https://gearvn.com/products/asus-gtx-1650-super-4gb-tuf-gaming-oc",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-tuf-gtx1650s-o4g-gaming_a4f2c8546b0041049d019cbec8fdfcdf_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-tuf-gtx1650s-o4g-gaming_a4f2c8546b0041049d019cbec8fdfcdf_large.png",
         "name": "ASUS GTX 1650 Super TUF GAMING OC 4GB GDDR6",
         "price": "4890000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3090-tuf-gaming-oc",
         "link": "https://gearvn.com/products/vga-asus-tuf-rtx-3090-oc-24g-gaming",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-vga-asus-tuf-rtx-3090-oc-24g-gaming-666_d4c3adce3d1d4ab69c84571c960a5674_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-vga-asus-tuf-rtx-3090-oc-24g-gaming-666_d4c3adce3d1d4ab69c84571c960a5674_large.jpg",
         "name": "VGA ASUS TUF RTX 3090 OC 24G GAMING",
         "price": "47990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3070-dual",
         "link": "https://gearvn.com/products/asus-dual-rtx-3070-8g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-dual-rtx3070-8g-66666_216cc5c5c639413792a356557e2369e4_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-dual-rtx3070-8g-66666_216cc5c5c639413792a356557e2369e4_large.png",
         "name": "Asus Dual RTX 3070 8G",
         "price": "15950000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-gtx-1650-super-gaming-x",
         "link": "https://gearvn.com/products/msi-gtx-1650-super-gaming-x-4gb-gddr6",
-        "img": "//product.hstatic.net/1000026716/product/msi-gtx-1650-super-gaming-x-4gb-1_7259676890764aed9abf256b4b9c9af2_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/msi-gtx-1650-super-gaming-x-4gb-1_7259676890764aed9abf256b4b9c9af2_large.png",
         "name": "MSI GTX 1650 Super GAMING X 4GB GDDR6",
         "price": "5390000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-gtx-1650-super-windforce-oc",
         "link": "https://gearvn.com/products/gigabyte-gtx-1650-super-wf-oc",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-1650-super-wfoc-1_3228f4f7aa634bef9b61b237fc2a0ad3_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-1650-super-wfoc-1_3228f4f7aa634bef9b61b237fc2a0ad3_large.jpg",
         "name": "GIGABYTE GTX 1650 Super Windforce OC 4GB GDDR6",
         "price": "4890000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-gtx-1650-super-tuf-gaming",
         "link": "https://gearvn.com/products/asus-gtx-1650-super-4gb-tuf-gaming",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-tuf-gtx1650s-4g-gaming-1_96aa3931416742cfa93309890f86da07_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-tuf-gtx1650s-4g-gaming-1_96aa3931416742cfa93309890f86da07_large.png",
         "name": "ASUS GTX 1650 Super TUF GAMING 4GB GDDR6",
         "price": "4790000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-2080-duke",
         "link": "https://gearvn.com/products/msi-rtx-2080-duke-8g-oc",
-        "img": "//product.hstatic.net/1000026716/product/2080_duke_oc_gearvn_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/2080_duke_oc_gearvn_large.jpg",
         "name": "MSI RTX 2080 DUKE 8G OC",
         "price": "23990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-gtx-1660-ventus-xs-oc",
         "link": "https://gearvn.com/products/msi-gtx-1660-ventus-xs-6g-oc-gddr5",
-        "img": "//product.hstatic.net/1000026716/product/gvn_1660_ventus_27c7ae50e5f540ebbfe73b24762c2a73_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gvn_1660_ventus_27c7ae50e5f540ebbfe73b24762c2a73_large.jpg",
         "name": "MSI GTX 1660 Ventus XS 6G OC GDDR5",
         "price": "5590000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3090-strix-gaming",
         "link": "https://gearvn.com/products/asus-rog-strix-rx-3090-24g-gaming",
-        "img": "//product.hstatic.net/1000026716/product/rog-strix-rx3090-24g-gaming_box_vga_logo_666666_64f0a9a7bc6446ebb9e3f65af420abf8_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/rog-strix-rx3090-24g-gaming_box_vga_logo_666666_64f0a9a7bc6446ebb9e3f65af420abf8_large.png",
         "name": "Asus ROG STRIX RTX 3090 24G GAMING",
         "price": "50990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-gtx-1650-ventus-xs-oc",
         "link": "https://gearvn.com/products/msi-gtx-1650-ventus-xs-4gb-gddr6",
-        "img": "//product.hstatic.net/1000026716/product/geforce-gtx-1650-d6-ventus-xs-1_1a58afefb51b48c8b0e9d81d4580a55a_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/geforce-gtx-1650-d6-ventus-xs-1_1a58afefb51b48c8b0e9d81d4580a55a_large.png",
         "name": "MSI GTX 1650 VENTUS XS 4GB OC V1 GDDR6",
         "price": "3790000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3080-strix-gaming",
         "link": "https://gearvn.com/products/asus-rog-strix-rtx3080-o10g-gaming",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-asus-rog-strix-rtx3080-o10g-gaming-666_c81abc2ab75244b2bc5fc71dc3df888a_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-asus-rog-strix-rtx3080-o10g-gaming-666_c81abc2ab75244b2bc5fc71dc3df888a_large.jpg",
         "name": "ASUS ROG STRIX RTX 3080 O10G GAMING",
         "price": "27990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-2080-aorus-xtreme-waterforce",
         "link": "https://gearvn.com/products/aorus-geforce-rtx-2080-xtreme-waterforce-wb-8g",
-        "img": "//product.hstatic.net/1000026716/product/aorus_geforce_rtx__2080_xtreme_waterforce_wb_8g_gearvn_large.png",
-        "name": "AORUS GeForce RTX� 2080 XTREME WATERFORCE WB 8G",
-        "price": "Li�n h?",
-        "path": "gpu_price_list"
+        "img": "https://product.hstatic.net/1000026716/product/aorus_geforce_rtx__2080_xtreme_waterforce_wb_8g_gearvn_large.png",
+        "name": "AORUS GeForce RTX™ 2080 XTREME WATERFORCE WB 8G",
+        "price": "Liên hệ",
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-gtx-1650-windforce-oc",
         "link": "https://gearvn.com/products/gigabyte-gtx-1650-winforce-oc-4gb-gddr6",
-        "img": "//product.hstatic.net/1000026716/product/gv-n1656wf2oc-4gd_3daa8a9d197a46d3a49e2474111ba370_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gv-n1656wf2oc-4gd_3daa8a9d197a46d3a49e2474111ba370_large.png",
         "name": "GIGABYTE GTX 1650 Winforce OC 4GB GDDR6",
         "price": "3990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-rtx-2080-aorus-xtreme",
         "link": "https://gearvn.com/products/aorus-geforce-rtx-2080-xtreme-8g",
-        "img": "//product.hstatic.net/1000026716/product/rtx_2080_xtreme_8g_gearvn_large.jpg",
-        "name": "AORUS GeForce� RTX 2080 XTREME 8G",
+        "img": "https://product.hstatic.net/1000026716/product/rtx_2080_xtreme_8g_gearvn_large.jpg",
+        "name": "AORUS GeForce® RTX 2080 XTREME 8G",
         "price": "24490000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-gt-710-gv-n710d3-1gl-1.0",
         "link": "https://gearvn.com/products/gigabyte-geforce-gt-710-1gb",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-gt-710-1gb-66_0f5d847d869e40e3ae96bb70508464a8_large.jpg",
-        "name": "Gigabyte GeForce� GT 710 1GB",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-gigabyte-geforce-gt-710-1gb-66_0f5d847d869e40e3ae96bb70508464a8_large.jpg",
+        "name": "Gigabyte GeForce® GT 710 1GB",
         "price": "990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-radeon-rx-5600-xt-strix-gaming-oc",
         "link": "https://gearvn.com/products/asus-amd-rog-strix-radeon-rx-5600-xt-oc-6g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-asus-rog-strix-rx-5600xt-gaming-oc_f30433f2b8e94d959a30ce3a298a28b5_large.jpg",
-        "name": "ASUS AMD ROG Strix Radeon� RX 5600 XT T6G GAMING",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-asus-rog-strix-rx-5600xt-gaming-oc_f30433f2b8e94d959a30ce3a298a28b5_large.jpg",
+        "name": "ASUS AMD ROG Strix Radeon™ RX 5600 XT T6G GAMING",
         "price": "8990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3070-strix-gaming",
         "link": "https://gearvn.com/products/vga-asus-rog-strix-rtx-3070-o8g-gaming",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-vga-asus-rog-strix-rtx-3070-o8g-gaming-666_373bb621483140df8ecb300a58004062_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-vga-asus-rog-strix-rtx-3070-o8g-gaming-666_373bb621483140df8ecb300a58004062_large.jpg",
         "name": "VGA ASUS ROG Strix RTX 3070 O8G Gaming",
         "price": "20750000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "msi-geforce-rtx-2060-ventus-xs-oc",
         "link": "https://gearvn.com/products/msi-geforce-rtx-2060-ventus-xs-6g-ocv1-gddr6",
-        "img": "//product.hstatic.net/1000026716/product/rtx_2060_gearvn_692b694d930949708bbd5143cc2eae1e_1869966df5db4e4e9570526f53ebf802_large.png",
-        "name": "MSI GeForce RTX� 2060 VENTUS XS 6G OCV1 GDDR6",
+        "img": "https://product.hstatic.net/1000026716/product/rtx_2060_gearvn_692b694d930949708bbd5143cc2eae1e_1869966df5db4e4e9570526f53ebf802_large.png",
+        "name": "MSI GeForce RTX™ 2060 VENTUS XS 6G OCV1 GDDR6",
         "price": "8490000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-gtx-1650-dual-oc",
         "link": "https://gearvn.com/products/asus-geforce-gtx-1650-4gb-dual",
-        "img": "//product.hstatic.net/1000026716/product/gvn_gtx1650_dual_4gb_be2801ddf91d4c2b8ffa64008272ffb1_large.png",
+        "img": "https://product.hstatic.net/1000026716/product/gvn_gtx1650_dual_4gb_be2801ddf91d4c2b8ffa64008272ffb1_large.png",
         "name": "ASUS GeForce GTX 1650 4GB DUAL",
         "price": "3990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-geforce-gtx-1660-super-gaming",
         "link": "https://gearvn.com/products/msi-geforce-gtx-1660-super-gaming-z-plus",
-        "img": "//product.hstatic.net/1000026716/product/thumbvga_4b9de361ef404d77b31b92c52574cfce_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/thumbvga_4b9de361ef404d77b31b92c52574cfce_large.jpg",
         "name": "MSI GeForce GTX 1660 SUPER GAMING Z PLUS",
         "price": "6790000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-gtx-1650-super-strix-gaming-oc",
         "link": "https://gearvn.com/products/asus-rog-strix-gtx-1650-super-oc-gddr6",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-asus-rog-strix-gtx-1650s-o4g-gddr5-2222_f5a5128a8ba54e3480a660006134cd50_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-asus-rog-strix-gtx-1650s-o4g-gddr5-2222_f5a5128a8ba54e3480a660006134cd50_large.jpg",
         "name": "ASUS ROG STRIX GTX 1650 Super OC 4GB GDDR6",
         "price": "5720000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "asus-geforce-rtx-3070-tuf-gaming-oc",
         "link": "https://gearvn.com/products/vga-asus-tuf-rtx-3070-o8g-gaming",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-vga-asus-tuf-rtx-3070-o8g-gaming-666_656a6d2729ab4d438776b0d8d7dc4caf_large.jpg",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-vga-asus-tuf-rtx-3070-o8g-gaming-666_656a6d2729ab4d438776b0d8d7dc4caf_large.jpg",
         "name": "VGA ASUS TUF RTX 3070 O8G Gaming",
         "price": "16990000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     },
     {
         "fid": "gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b",
         "link": "https://gearvn.com/products/gigabyte-radeon-rx-6800-xt-gaming-oc-16g",
-        "img": "//product.hstatic.net/1000026716/product/gearvn-gigabyte-radeon-rx-6800-xt-gaming-oc-16g-666_b65b611aece240568c9842c6bf92e142_large.png",
-        "name": "GIGABYTE Radeon� RX 6800 XT GAMING OC 16G",
+        "img": "https://product.hstatic.net/1000026716/product/gearvn-gigabyte-radeon-rx-6800-xt-gaming-oc-16g-666_b65b611aece240568c9842c6bf92e142_large.png",
+        "name": "GIGABYTE Radeon™ RX 6800 XT GAMING OC 16G",
         "price": "23250000",
-        "path": "gpu_price_list"
+        "path": "gpu_price_list",
+        "retailer": "GearVN",
+        "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
     }
 ]
