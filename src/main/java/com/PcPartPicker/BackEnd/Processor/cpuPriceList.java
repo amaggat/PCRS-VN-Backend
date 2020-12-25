@@ -24,14 +24,6 @@ public class cpuPriceList {
     @NotEmpty
     private String retailer;
 
-    public com.PcPartPicker.BackEnd.Processor.cpu getCpu() {
-        return cpu;
-    }
-
-    public void setCpu(com.PcPartPicker.BackEnd.Processor.cpu cpu) {
-        this.cpu = cpu;
-    }
-
     public String getLogo() {
         return logo;
     }

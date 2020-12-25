@@ -36,14 +36,6 @@ public class gpuPriceList {
         this.retailer = retailer;
     }
 
-    public com.PcPartPicker.BackEnd.GraphicCards.gpu getGpu() {
-        return gpu;
-    }
-
-    public void setGpu(com.PcPartPicker.BackEnd.GraphicCards.gpu gpu) {
-        this.gpu = gpu;
-    }
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fid")
     private gpu gpu;

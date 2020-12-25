@@ -16,6 +16,10 @@ public class hddPriceList {
     @NotEmpty
     private String retailer;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "fid")
+    private HardDiskDrive hdd;
+
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;

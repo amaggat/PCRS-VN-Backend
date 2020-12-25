@@ -24,14 +24,6 @@ public class psuPriceList {
     @NotEmpty
     private String retailer;
 
-    public PowerSupplyUnit getPsu() {
-        return psu;
-    }
-
-    public void setPsu(PowerSupplyUnit psu) {
-        this.psu = psu;
-    }
-
     public String getLogo() {
         return logo;
     }

@@ -80,14 +80,6 @@ public class ramPriceList {
         this.price = price;
     }
 
-    public com.PcPartPicker.BackEnd.RAM.ram getRam() {
-        return ram;
-    }
-
-    public void setRam(com.PcPartPicker.BackEnd.RAM.ram ram) {
-        this.ram = ram;
-    }
-
     public String getLogo() {
         return logo;
     }

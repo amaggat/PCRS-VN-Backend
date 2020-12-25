@@ -95,12 +95,4 @@ public class ssdPriceList {
     public void setRetailer(String retailer) {
         this.retailer = retailer;
     }
-
-    public SolidStateDrive getSsd() {
-        return ssd;
-    }
-
-    public void setSsd(SolidStateDrive ssd) {
-        this.ssd = ssd;
-    }
 }

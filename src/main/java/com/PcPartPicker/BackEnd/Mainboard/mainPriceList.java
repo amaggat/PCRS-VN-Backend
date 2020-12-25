@@ -24,14 +24,6 @@ public class mainPriceList {
     @NotEmpty
     private String retailer;
 
-    public Mainboard getMainboard() {
-        return mainboard;
-    }
-
-    public void setMainboard(Mainboard mainboard) {
-        this.mainboard = mainboard;
-    }
-
     public String getLogo() {
         return logo;
     }
