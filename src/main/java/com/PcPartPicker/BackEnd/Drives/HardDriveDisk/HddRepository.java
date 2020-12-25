@@ -21,7 +21,7 @@ public interface HddRepository extends Repository<HardDiskDrive, Integer> {
 
     @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.size= :size")
     @Transactional(readOnly = true)
-    List<HardDiskDrive> findBySize(@Param("size") int size);
+    List<HardDiskDrive> findBySize(@Param("size") String size);
 
     @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.fullname LIKE %:fullname%")
     @Transactional(readOnly = true)

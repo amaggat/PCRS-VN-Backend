@@ -28,4 +28,27 @@ public class GpuController {
         return gpuRepository.findByID(id);
     }
 
+    @GetMapping("/api/gpu/find/name={GpuName}")
+    public List<gpu> SearchByName(@PathVariable("GpuName") String name)
+    {
+        return gpuRepository.findByName(name);
+    }
+
+    @GetMapping("/api/gpu/find/manufacturer={GpuManufacturer}")
+    public List<gpu> SearchByManufacturer(@PathVariable("GpuManufacturer") String name)
+    {
+        return gpuRepository.findByManufacturer(name);
+    }
+
+    @GetMapping("/api/gpu/find/vram={GpuVRAM}")
+    public List<gpu> SearchByVram(@PathVariable("GpuVRAM") int vram)
+    {
+        return gpuRepository.findByVRam(vram);
+    }
+
+    @GetMapping("/api/gpu/find/chipset={GpuChipset}")
+    public List<gpu> SearchByChipset(@PathVariable("GpuChipset") String chipset)
+    {
+        return gpuRepository.findByChipset(chipset);
+    }
 }

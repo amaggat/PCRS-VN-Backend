@@ -25,4 +25,19 @@ public class HddController {
     public HardDiskDrive SearchByID(@PathVariable("id") String id){
         return hddRepository.findByID(id);
     }
+
+    @GetMapping("/api/hdd/find/name={HddName}")
+    public List<HardDiskDrive> SearchByName(@PathVariable("HddName") String name){
+        return hddRepository.findByName(name);
+    }
+
+    @GetMapping("/api/hdd/find/size={HddSize}")
+    public List<HardDiskDrive> SearchBySize(@PathVariable("HddSize") String size){
+        return hddRepository.findBySize(size);
+    }
+
+    @GetMapping("/api/hdd/find/manufacturer={HddManufacturer}")
+    public List<HardDiskDrive> SearchByManufacturer(@PathVariable("HddManufacturer")String manufacturer){
+        return hddRepository.findByManufacturer(manufacturer);
+    }
 }

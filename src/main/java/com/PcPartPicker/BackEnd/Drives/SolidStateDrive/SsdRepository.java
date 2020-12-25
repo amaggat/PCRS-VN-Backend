@@ -25,7 +25,7 @@ public interface SsdRepository extends Repository<SolidStateDrive, String> {
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.size = :size")
     @Transactional(readOnly = true)
-    List<SolidStateDrive> findBySize(@Param("size") int size);
+    List<SolidStateDrive> findBySize(@Param("size") String size);
 
     @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.chipset = :chipset")
     @Transactional(readOnly = true)

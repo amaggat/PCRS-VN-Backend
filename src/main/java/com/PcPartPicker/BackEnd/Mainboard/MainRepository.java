@@ -24,6 +24,10 @@ public interface MainRepository extends Repository<Mainboard, Integer> {
     @Transactional(readOnly = true)
     List<Mainboard> findByChipset(@Param("chipset") String chipset);
 
+    @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.socket= :socket")
+    @Transactional(readOnly = true)
+    List<Mainboard> findBySocket(@Param("socket") String socket);
+
     @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.manufacturer =:manufacturer")
     @Transactional(readOnly = true)
     List<Mainboard> findByManufacturer(@Param("manufacturer") String manufacturer);
