@@ -2,7 +2,6 @@ INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('seagate-firecuda-1024-2.5sata'
 INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('seagate-ironwolf-pro-14336-3.5sata', 'Seagate', 'IronWolf Pro', '3.5 SATA', '14 TB', 'HDD Seagate IronWolf Pro 14 TB');
 INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('wd-re-1024-3.5sata', 'Western Digital', 'Re', '3.5 SATA', '1 TB', 'HDD Western Digital Re 1 TB');
 INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('wd-re-2048-3.5sata', 'Western Digital', 'RE', '3.5 SATA', '2 TB', 'HDD Western Digital RE 2 TB');
-INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('wd-re-2048-3.5sata', 'Western Digital', 'RE', '3.5 SATA', '2 TB', 'HDD Western Digital RE 2 TB');
 INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('wd-re-3072-3.5sata', 'Western Digital', 'RE', '3.5 SATA', '3 TB', 'HDD Western Digital RE 3 TB');
 INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('seagate-pipeline-hd-1024-3.5sata', 'Seagate', 'Pipeline HD', '3.5 SATA', '1 TB', 'HDD Seagate Pipeline HD 1 TB');
 INSERT IGNORE INTO `pc_parts_picker`.hdd VALUES ('seagate-skyhawk-ai-10240-3.5sata', 'Seagate', 'SkyHawk AI', '3.5 SATA', '10 TB', 'HDD Seagate SkyHawk AI 10 TB');
