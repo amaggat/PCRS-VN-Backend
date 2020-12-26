@@ -1,5 +1,6 @@
 package com.PcPartPicker.BackEnd.Drives.HardDriveDisk;
 
+import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -13,6 +14,9 @@ public class HardDiskDrive extends electronicComponents {
     @Column(name = "size")
     @NotEmpty
     private String size;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "hdd")
+    private List<PcProfile> pcProfile;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hdd", fetch = FetchType.EAGER)
     private List<hddPriceList> PriceList;

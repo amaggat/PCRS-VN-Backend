@@ -1,6 +1,7 @@
 package com.PcPartPicker.BackEnd.RAM;
 
 
+import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -16,17 +17,12 @@ public class ram extends electronicComponents {
 //    @NotEmpty
 //    private String DDR = new String();
 
-    @Column(name = "logo")
-    @NotEmpty
-    private String logo;
-
-    @Column(name = "retailer")
-    @NotEmpty
-    private String retailer;
-
     @Column(name = "clockspeed")
     @NotEmpty
-    private int clockSpeed;
+    private Integer clockSpeed;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "ram")
+    private List<PcProfile> pcProfile;
 
     @Column(name = "sizeofram")
     @NotEmpty
@@ -43,17 +39,18 @@ public class ram extends electronicComponents {
         return sizeOfRam;
     }
 
-//    public String getDDR() {
-//        return DDR;
-
     public List<com.PcPartPicker.BackEnd.RAM.ramPriceList> getPriceList() {
         return PriceList;
     }
 
     public void setPriceList(List<com.PcPartPicker.BackEnd.RAM.ramPriceList> ramPriceList) {
         this.PriceList = ramPriceList;
+
+
     }
-//    }
+
+
+
 
     public void setClockSpeed(int clockSpeed) {
         this.clockSpeed = clockSpeed;

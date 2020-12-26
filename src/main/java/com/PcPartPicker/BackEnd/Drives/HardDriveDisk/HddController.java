@@ -1,7 +1,6 @@
 package com.PcPartPicker.BackEnd.Drives.HardDriveDisk;
 
-import com.PcPartPicker.BackEnd.Drives.SolidStateDrive.SsdRepository;
-import com.PcPartPicker.BackEnd.RAM.ram;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.criteria.Predicate;
-import java.util.List;
 import java.util.Objects;
 
 @RestController

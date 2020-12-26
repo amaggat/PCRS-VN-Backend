@@ -11,7 +11,7 @@ import com.PcPartPicker.BackEnd._UserRelate.User.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name ="pcprofile")
@@ -21,73 +21,73 @@ public class PcProfile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id = new String();
     
-    @Column(name = "Pcname")
+    @Column(name = "pcname")
     @NotEmpty
-    private String PcName = new String();
+    private String pcname = new String();
     
 //    @Column(name = "price")
 //    @NotEmpty
 //    private double PcPrice;
 
-    @ManyToOne
-    @JoinColumn(name = "UserID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userid")
     private User user;
 
     @ManyToMany
     @JoinTable(
             name = "pcprofile_cpu",
-            joinColumns = @JoinColumn(name = "PcID"),
-            inverseJoinColumns = @JoinColumn(name = "CpuID")
+            joinColumns = {@JoinColumn(name = "pcid")},
+            inverseJoinColumns = {@JoinColumn(name = "cpuid")}
     )
-    private Set<com.PcPartPicker.BackEnd.Processor.cpu> cpu;
+    private List<cpu> cpu;
 
     @ManyToMany
     @JoinTable(
             name = "pcprofile_mainboard",
-            joinColumns = @JoinColumn(name = "PcID"),
-            inverseJoinColumns = @JoinColumn(name = "MainID")
+            joinColumns = {@JoinColumn(name = "pcid")},
+            inverseJoinColumns = {@JoinColumn(name = "mainid")}
     )
-    private Set<Mainboard> main;
+    private List<Mainboard> main;
 
     @ManyToMany
     @JoinTable(
             name = "pcprofile_ram",
-            joinColumns = @JoinColumn(name = "PcID"),
-            inverseJoinColumns = @JoinColumn(name = "RamID")
+            joinColumns = @JoinColumn(name = "pcid"),
+            inverseJoinColumns = @JoinColumn(name = "ramid")
     )
-    private Set<com.PcPartPicker.BackEnd.RAM.ram> ram;
+    private List<ram> ram;
 
     @ManyToMany
     @JoinTable(
             name = "pcprofile_ssd",
-            joinColumns = @JoinColumn(name = "PcID"),
-            inverseJoinColumns = @JoinColumn(name = "SsdID")
+            joinColumns = @JoinColumn(name = "pcid"),
+            inverseJoinColumns = @JoinColumn(name = "ssdid")
     )
-    private Set<SolidStateDrive> ssd;
+    private List<SolidStateDrive> ssd;
 
     @ManyToMany
     @JoinTable(
             name = "pcprofile_hdd",
-            joinColumns = @JoinColumn(name = "PcID"),
-            inverseJoinColumns = @JoinColumn(name = "HddID")
+            joinColumns = @JoinColumn(name = "pcid"),
+            inverseJoinColumns = @JoinColumn(name = "hddid")
     )
-    private Set<HardDiskDrive> hdd;
+    private List<HardDiskDrive> hdd;
 
     @ManyToMany
     @JoinTable(
             name = "pcprofile_gpu",
-            joinColumns = @JoinColumn(name = "PcID"),
-            inverseJoinColumns = @JoinColumn(name = "GpuID")
+            joinColumns = @JoinColumn(name = "pcid"),
+            inverseJoinColumns = @JoinColumn(name = "gpuid")
     )
-    private Set<com.PcPartPicker.BackEnd.GraphicCards.gpu> gpu;
+    private List<gpu> gpu;
 
     @ManyToMany
     @JoinTable(
             name = "pcprofile_psu",
-            joinColumns = @JoinColumn(name = "PcID"),
-            inverseJoinColumns = @JoinColumn(name = "PsuID")
+            joinColumns = @JoinColumn(name = "pcid"),
+            inverseJoinColumns = @JoinColumn(name = "psuid")
     )
-    private Set<PowerSupplyUnit> psu;
+    private List<PowerSupplyUnit> psu;
 
 
     public String getId() {
@@ -98,87 +98,87 @@ public class PcProfile {
 //        return PcPrice;
 //    }
 
-    public String getPcName() {
-        return PcName;
+    public String getPcname() {
+        return pcname;
     }
 
     public void setId(String id) {
         this.id = id;
     }
 
-    public void setPcName(String pcName) {
-        PcName = pcName;
+    public void setPcname(String pcname) {
+        this.pcname = pcname;
     }
 
 //    public void setPcPrice(double pcPrice) {
 //        PcPrice = pcPrice;
 //    }
 
-    public Set<cpu> getCpu() {
-        return cpu;
-    }
-
-    public void setCpu(Set<cpu> cpu) {
-        this.cpu = cpu;
-    }
-
-    public Set<Mainboard> getMain() {
-        return main;
-    }
-
-    public void setMain(Set<Mainboard> main) {
-        this.main = main;
-    }
-
-    public Set<ram> getRam() {
-        return ram;
-    }
-
-    public void setRam(Set<ram> ram) {
-        this.ram = ram;
-    }
-
-    public Set<SolidStateDrive> getSsd() {
-        return ssd;
-    }
-
-    public void setSsd(Set<SolidStateDrive> ssd) {
-        this.ssd = ssd;
-    }
-
-    public Set<HardDiskDrive> getHdd() {
-        return hdd;
-    }
-
-    public void setHdd(Set<HardDiskDrive> hdd) {
-        this.hdd = hdd;
-    }
-
-    public Set<gpu> getGpu() {
-        return gpu;
-    }
-
-    public void setGpu(Set<gpu> gpu) {
-        this.gpu = gpu;
-    }
-
-    public Set<PowerSupplyUnit> getPsu() {
-        return psu;
-    }
-
-    public void setPsu(Set<PowerSupplyUnit> psu) {
-        this.psu = psu;
-    }
-
-    public boolean isNew() {
-        return this.id == null;
-    }
 
     public User getUser() {
-        return user;
+        User user1 = new User();
+        user1.setName(user.getName());
+        user1.setGmail(user.getGmail());
+        return user1;
     }
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public List<com.PcPartPicker.BackEnd.Processor.cpu> getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(List<com.PcPartPicker.BackEnd.Processor.cpu> cpu) {
+        this.cpu = cpu;
+    }
+
+    public List<Mainboard> getMain() {
+        return main;
+    }
+
+    public void setMain(List<Mainboard> main) {
+        this.main = main;
+    }
+
+    public List<com.PcPartPicker.BackEnd.RAM.ram> getRam() {
+        return ram;
+    }
+
+    public void setRam(List<com.PcPartPicker.BackEnd.RAM.ram> ram) {
+        this.ram = ram;
+    }
+
+    public List<SolidStateDrive> getSsd() {
+        return ssd;
+    }
+
+    public void setSsd(List<SolidStateDrive> ssd) {
+        this.ssd = ssd;
+    }
+
+    public List<HardDiskDrive> getHdd() {
+        return hdd;
+    }
+
+    public void setHdd(List<HardDiskDrive> hdd) {
+        this.hdd = hdd;
+    }
+
+    public List<com.PcPartPicker.BackEnd.GraphicCards.gpu> getGpu() {
+        return gpu;
+    }
+
+    public void setGpu(List<com.PcPartPicker.BackEnd.GraphicCards.gpu> gpu) {
+        this.gpu = gpu;
+    }
+
+    public List<PowerSupplyUnit> getPsu() {
+        return psu;
+    }
+
+    public void setPsu(List<PowerSupplyUnit> psu) {
+        this.psu = psu;
     }
 }

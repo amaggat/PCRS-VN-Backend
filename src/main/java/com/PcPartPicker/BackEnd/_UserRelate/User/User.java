@@ -19,16 +19,16 @@ public class User extends NameEntity {
     @Column(name = "password")
     private String password = new String();
 
-    @Column(name = "gmail")
+    @Column(name = "mail")
     private String gmail = new String();
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<Feedbacks> feedbacks;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<PcProfile> pcProfile;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<Article> articles;
 
     public String getUsername() {

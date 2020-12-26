@@ -1,6 +1,7 @@
 package com.PcPartPicker.BackEnd.PSU;
 
 
+import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -22,6 +23,9 @@ public class PowerSupplyUnit extends electronicComponents {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "psu", fetch = FetchType.EAGER)
     private List<psuPriceList> PriceList;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "psu")
+    private List<PcProfile> pcProfile;
 
     public List<com.PcPartPicker.BackEnd.PSU.psuPriceList> getPriceList() {
         return PriceList;

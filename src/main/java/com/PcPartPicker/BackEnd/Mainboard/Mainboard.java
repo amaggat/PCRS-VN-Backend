@@ -1,6 +1,7 @@
 package com.PcPartPicker.BackEnd.Mainboard;
 
 
+import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -18,6 +19,9 @@ public class Mainboard extends electronicComponents {
     @Column(name = "size")
     @NotEmpty
     private String size = new String();
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "main")
+    private List<PcProfile> pcProfile;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "mainboard", fetch = FetchType.EAGER)
     private List<mainPriceList> PriceList;

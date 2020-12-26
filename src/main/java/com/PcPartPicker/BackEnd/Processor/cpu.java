@@ -1,6 +1,7 @@
 package com.PcPartPicker.BackEnd.Processor;
 
 
+import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -29,6 +30,9 @@ public class cpu extends electronicComponents {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cpu", fetch = FetchType.EAGER)
     private List<cpuPriceList> PriceList;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "cpu")
+    private List<PcProfile> pcProfile;
 
     public String getSocket() {
         return socket;
@@ -80,4 +84,12 @@ public class cpu extends electronicComponents {
     public void setPriceList(List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> cpuPriceList) {
         this.PriceList = cpuPriceList;
     }
+
+//    public List<PcProfile> getPcProfile() {
+//        return pcProfile;
+//    }
+//
+//    public void setPcProfile(List<PcProfile> pcProfile) {
+//        this.pcProfile = pcProfile;
+//    }
 }

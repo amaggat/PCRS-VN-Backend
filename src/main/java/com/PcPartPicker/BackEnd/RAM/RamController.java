@@ -31,6 +31,7 @@ public class RamController {
                           @RequestParam(name = "chipset", required = false) String chipset,
                           @RequestParam(name = "manufacturer", required = false) String manufacturer,
                           @RequestParam(name = "sizeOfRam", required = false) String sizeOfRam,
+                          @RequestParam(name = "clockSpeed", required = false) Integer clockSpeed,
                           Pageable pageable){
         Page<ram> ramPage = ramRepository.findAll((Specification<ram>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
@@ -42,6 +43,9 @@ public class RamController {
             }
             if (Objects.nonNull(sizeOfRam) ) {
                 p = cb.and(p, cb.like(root.get("sizeOfRam"), "%" + sizeOfRam+ "%"));
+            }
+            if (Objects.nonNull(clockSpeed) ) {
+                p = cb.and(p, cb.equal(root.get("clockSpeed"),clockSpeed));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));

@@ -12,6 +12,7 @@ public abstract class NameEntity {
     @Column(name = "name")
     private String name;
 
+
     public int getID() {
         return ID;
     }

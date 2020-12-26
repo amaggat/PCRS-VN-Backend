@@ -1,6 +1,7 @@
 package com.PcPartPicker.BackEnd.Drives.SolidStateDrive;
 
 
+import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -15,6 +16,9 @@ public class SolidStateDrive extends electronicComponents {
     @Column(name = "size")
     @NotEmpty
     private String size;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "ssd")
+    private List<PcProfile> pcProfile;
 
 //    @Column(name = "writeSpeed")
 //    @NotEmpty

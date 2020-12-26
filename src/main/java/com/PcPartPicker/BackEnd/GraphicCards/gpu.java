@@ -1,5 +1,6 @@
 package com.PcPartPicker.BackEnd.GraphicCards;
 
+import com.PcPartPicker.BackEnd._Model.PcProfile;
 import com.PcPartPicker.BackEnd._Model.electronicComponents;
 
 import javax.persistence.*;
@@ -17,6 +18,9 @@ public class gpu extends electronicComponents {
     @NotEmpty
     @Digits(fraction = 0, integer = 2)
     private Integer VRam;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "gpu")
+    private List<PcProfile> pcProfile;
 
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "gpu", fetch = FetchType.EAGER)
