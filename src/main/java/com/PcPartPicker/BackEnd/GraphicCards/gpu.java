@@ -16,7 +16,7 @@ public class gpu extends electronicComponents {
     @Column(name = "VRam")
     @NotEmpty
     @Digits(fraction = 0, integer = 2)
-    private int VRam;
+    private Integer VRam;
 
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "gpu", fetch = FetchType.EAGER)

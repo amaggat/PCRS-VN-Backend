@@ -2,6 +2,7 @@ package com.PcPartPicker.BackEnd.Drives.HardDriveDisk;
 
 import com.PcPartPicker.BackEnd.Drives.HardDriveDisk.HardDiskDrive;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
@@ -10,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Collection;
 import java.util.List;
 
-public interface HddRepository extends JpaRepository<HardDiskDrive, Integer> {
+public interface HddRepository extends JpaRepository<HardDiskDrive, Integer>, JpaSpecificationExecutor<HardDiskDrive> {
 
     @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.id= :id")
     @Transactional(readOnly = true)
@@ -30,8 +31,8 @@ public interface HddRepository extends JpaRepository<HardDiskDrive, Integer> {
 
 //    void save(HardDiskDrive hdd);
 
-
-    @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd")
-    @Transactional(readOnly = true)
-    List<HardDiskDrive> findAll();
+//
+//    @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd")
+//    @Transactional(readOnly = true)
+//    List<HardDiskDrive> findAll();
 }

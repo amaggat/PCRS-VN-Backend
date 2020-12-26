@@ -1,12 +1,16 @@
 package com.PcPartPicker.BackEnd.Drives.SolidStateDrive;
 
-import com.PcPartPicker.BackEnd.Drives.HardDriveDisk.HardDiskDrive;
-import com.PcPartPicker.BackEnd.GraphicCards.GpuRepository;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.persistence.criteria.Predicate;
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 public class SsdController {
@@ -19,8 +23,29 @@ public class SsdController {
     }
 
     @GetMapping("/api/ssd")
-    public List<SolidStateDrive> list(){
-        return ssdRepository.findAll();
+    public List<SolidStateDrive> list(@RequestParam(name = "name", required = false) String name,
+                                      @RequestParam(name = "chipset", required = false) String chipset,
+                                      @RequestParam(name = "manufacturer", required = false) String manufacturer,
+                                      @RequestParam(name = "size", required = false) String size,
+                                      Pageable pageable){
+        List<SolidStateDrive> ssd = ssdRepository.findAll((Specification<SolidStateDrive>) (root, cq, cb) -> {
+            Predicate p = cb.conjunction();
+            if (Objects.nonNull(chipset) ) {
+                p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
+            }
+            if (Objects.nonNull(manufacturer) ) {
+                p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+            }
+            if (Objects.nonNull(size) ) {
+                p = cb.and(p, cb.like(root.get("size"), "%" + size+ "%"));
+            }
+            if (!StringUtils.isEmpty(name)) {
+                p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
+            }
+            cq.orderBy(cb.desc(root.get("fullname")), cb.asc(root.get("id")));
+            return p;
+        }, pageable).getContent();
+        return ssd;
     }
 
     @GetMapping("/api/ssd/{id}")

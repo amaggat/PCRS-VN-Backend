@@ -1,16 +1,16 @@
 package com.PcPartPicker.BackEnd.Mainboard;
 
-import com.PcPartPicker.BackEnd.Mainboard.Mainboard;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.List;
 
-public interface MainRepository extends JpaRepository<Mainboard, Integer> {
+public interface MainRepository extends JpaRepository<Mainboard, Integer>, JpaSpecificationExecutor<Mainboard> {
 
 
     @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.id= :id")
@@ -39,7 +39,7 @@ public interface MainRepository extends JpaRepository<Mainboard, Integer> {
 
 //    void save(Mainboard main);
 
-    @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard")
-    @Transactional(readOnly = true)
-    List<Mainboard> findAll();
+//    @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard")
+//    @Transactional(readOnly = true)
+//    List<Mainboard> findAll();
 }

@@ -1,7 +1,7 @@
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('asrock-b450m-steel-legend', 'ASRock', 'B450M Steel Legend', '', 'AM4', '64 GB', 'ASRock B450M Steel Legend');
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('asus-ex-b360m-v5', 'Asus', 'EX-B360M-V5', '', 'LGA1151', '32 GB', 'Asus EX-B360M-V5');
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('asus-tuf-gaming-b460-plus', 'Asus', 'TUF GAMING B460-PLUS', '5', 'LGA1200', '128 GB', 'Asus TUF GAMING B460-PLUS');
-INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('gigabyte-b450-aorus-m', 'Gigabyte', 'B50 AORUS M', '4', 'AM4', '64 GB', 'Gigabyte B450 AORUS M');
+INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('gigabyte-b450-aorus-m', 'Gigabyte', 'B450 AORUS M', '4', 'AM4', '64 GB', 'Gigabyte B450 AORUS M');
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('asus-prime-a320m-k', 'Asus', 'PRIME A320M-K', '4', 'AM4', '32 GB', 'Asus PRIME A320M-K');
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('msi-b450m-mortar-max', 'MSI', 'B450M MORTAR MAX', '3', 'AM4', '64 GB', 'MSI B450M MORTAR MAX');
 INSERT IGNORE INTO `pc_parts_picker`.mainboard VALUES ('asus-rog-strix-b550-f-gaming-(wi-fi)', 'Asus', 'ROG STRIX B550-F GAMING (WI-FI)', '3', 'AM4', '128 GB', 'Asus ROG STRIX B550-F GAMING (WI-FI)');
