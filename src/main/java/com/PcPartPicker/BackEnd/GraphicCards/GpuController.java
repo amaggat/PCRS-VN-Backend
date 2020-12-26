@@ -2,6 +2,7 @@ package com.PcPartPicker.BackEnd.GraphicCards;
 
 import com.PcPartPicker.BackEnd.Drives.HardDriveDisk.HardDiskDrive;
 import com.PcPartPicker.BackEnd.PSU.PowerSupplyUnit;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
@@ -25,12 +26,12 @@ public class GpuController {
     }
 
     @GetMapping("/api/gpu")
-    public List<gpu> list(@RequestParam(name = "name", required = false) String name,
+    public Page<gpu> list(@RequestParam(name = "name", required = false) String name,
                           @RequestParam(name = "chipset", required = false) String chipset,
                           @RequestParam(name = "manufacturer", required = false) String manufacturer,
                           @RequestParam(name = "VRam", required = false) Integer VRam,
                           Pageable pageable){
-        List<gpu> gpu = gpuRepository.findAll((Specification<gpu>) (root, cq, cb) -> {
+        Page<gpu> gpu = gpuRepository.findAll((Specification<gpu>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
             if (Objects.nonNull(chipset) ) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
@@ -46,7 +47,7 @@ public class GpuController {
             }
             cq.orderBy(cb.desc(root.get("fullname")), cb.asc(root.get("id")));
             return p;
-        }, pageable).getContent();
+        }, pageable);
         return gpu;
     }
 

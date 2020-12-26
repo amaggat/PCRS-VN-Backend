@@ -1,5 +1,6 @@
 package com.PcPartPicker.BackEnd.Drives.SolidStateDrive;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
@@ -23,12 +24,12 @@ public class SsdController {
     }
 
     @GetMapping("/api/ssd")
-    public List<SolidStateDrive> list(@RequestParam(name = "name", required = false) String name,
+    public Page<SolidStateDrive> list(@RequestParam(name = "name", required = false) String name,
                                       @RequestParam(name = "chipset", required = false) String chipset,
                                       @RequestParam(name = "manufacturer", required = false) String manufacturer,
                                       @RequestParam(name = "size", required = false) String size,
                                       Pageable pageable){
-        List<SolidStateDrive> ssd = ssdRepository.findAll((Specification<SolidStateDrive>) (root, cq, cb) -> {
+        Page<SolidStateDrive> ssd = ssdRepository.findAll((Specification<SolidStateDrive>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
             if (Objects.nonNull(chipset) ) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
@@ -44,7 +45,7 @@ public class SsdController {
             }
             cq.orderBy(cb.desc(root.get("fullname")), cb.asc(root.get("id")));
             return p;
-        }, pageable).getContent();
+        }, pageable);
         return ssd;
     }
 
