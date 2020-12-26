@@ -189,6 +189,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cpu_price_list`
     `img` TEXT NOT NULL,
     `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `logo` TEXT NOT NULL,
+    `retailer` VARCHAR(100) NOT NULL,
     `fid` VARCHAR(100) NOT NULL,
     
     FOREIGN KEY (`fid`) REFERENCES cpu(ID),
@@ -202,6 +204,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`mainboard_price_list`
     `img` TEXT NOT NULL,
     `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `logo` TEXT NOT NULL,
+    `retailer` VARCHAR(100) NOT NULL,
     `fid` VARCHAR(100) NOT NULL,
     
     FOREIGN KEY (`fid`) REFERENCES mainboard(ID),
@@ -215,6 +219,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ram_price_list`
     `img` TEXT NOT NULL,
     `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `logo` TEXT NOT NULL,
+    `retailer` VARCHAR(100) NOT NULL,
     `fid` VARCHAR(100) NOT NULL,
     
     FOREIGN KEY (`fid`) REFERENCES ram(ID),
@@ -228,6 +234,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`hdd_price_list`
     `img` TEXT NOT NULL,
     `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `logo` TEXT NOT NULL,
+    `retailer` VARCHAR(100) NOT NULL,
     `fid` VARCHAR(100) NOT NULL,
     
     FOREIGN KEY (`fid`) REFERENCES hdd(ID),
@@ -241,6 +249,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ssd_price_list`
     `img` TEXT NOT NULL,
     `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `logo` TEXT NOT NULL,
+    `retailer` VARCHAR(100) NOT NULL,
     `fid` VARCHAR(100) NOT NULL,
     
     FOREIGN KEY (`fid`) REFERENCES ssd(ID),
@@ -254,6 +264,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`gpu_price_list`
     `img` TEXT NOT NULL,
     `name` TEXT NOT NULL,
     `price` INT NOT NULL,
+    `logo` TEXT NOT NULL,
+    `retailer` VARCHAR(100) NOT NULL,
     `fid` VARCHAR(100) NOT NULL,
     
     FOREIGN KEY (`fid`) REFERENCES gpu(ID),
@@ -268,9 +280,19 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`psu_price_list`
     `name` TEXT NOT NULL,
     `price` INT NOT NULL,
     `fid` VARCHAR(100) NOT NULL,
+    `logo` TEXT NOT NULL,
+    `retailer` VARCHAR(100) NOT NULL,
     
     FOREIGN KEY (`fid`) REFERENCES psu(ID),
     PRIMARY KEY (`Id`)
+);
+
+CREATE TABLE `pc_parts_picker`.`post_pc` (
+	`PcID` VARCHAR(100) NOT NULL,
+	`PostID` INT NOT NULL,
+
+	FOREIGN KEY (`PostID`) REFERENCES post(ID),
+    FOREIGN KEY (`PcID`) REFERENCES pcprofile(ID)
 )
 
 

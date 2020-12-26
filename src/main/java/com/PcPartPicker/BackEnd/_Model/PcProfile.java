@@ -7,6 +7,7 @@ import com.PcPartPicker.BackEnd.Mainboard.Mainboard;
 import com.PcPartPicker.BackEnd.PSU.PowerSupplyUnit;
 import com.PcPartPicker.BackEnd.Processor.cpu;
 import com.PcPartPicker.BackEnd.RAM.ram;
+import com.PcPartPicker.BackEnd._UserRelate.User.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -27,6 +28,10 @@ public class PcProfile {
 //    @Column(name = "price")
 //    @NotEmpty
 //    private double PcPrice;
+
+    @ManyToOne
+    @JoinColumn(name = "UserID")
+    private User user;
 
     @ManyToMany
     @JoinTable(
@@ -169,4 +174,11 @@ public class PcProfile {
         return this.id == null;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
