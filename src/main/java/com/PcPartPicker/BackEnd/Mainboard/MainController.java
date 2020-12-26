@@ -28,6 +28,8 @@ public class MainController {
                                 @RequestParam(name = "chipset", required = false) String chipset,
                                 @RequestParam(name = "socket", required = false) String socket,
                                 @RequestParam(name = "manufacturer", required = false) String manufacturer,
+                                @RequestParam(name = "sizeofram", required = false) String sizeofram,
+                                @RequestParam(name = "memory_slot", required = false) String memorySlot,
                                 Pageable pageable){
         Page<Mainboard> mainboard = mainRepository.findAll((Specification<Mainboard>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
@@ -39,6 +41,12 @@ public class MainController {
             }
             if (Objects.nonNull(socket) ) {
                 p = cb.and(p, cb.like(root.get("socket"), "%" + socket+ "%"));
+            }
+            if (Objects.nonNull(sizeofram) ) {
+                p = cb.and(p, cb.like(root.get("sizeofram"), "%" + sizeofram+ "%"));
+            }
+            if (Objects.nonNull(memorySlot) ) {
+                p = cb.and(p, cb.equal(root.get("memory_slot"), memorySlot));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
