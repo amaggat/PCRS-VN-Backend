@@ -1,6 +1,7 @@
 package com.PcPartPicker.BackEnd.Processor;
 
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
@@ -25,13 +26,13 @@ public class CpuController {
     }
 
     @GetMapping("/api/cpu")
-    public List<cpu> list(@RequestParam(name = "name", required = false) String name,
+    public Page<cpu> list(@RequestParam(name = "name", required = false) String name,
                           @RequestParam(name = "chipset", required = false) String chipset,
                           @RequestParam(name = "manufacturer", required = false) String manufacturer,
                           @RequestParam(name = "socket", required = false) String socket,
                           Pageable pageable
                           ){
-        List<cpu> cpu = cpuRepository.findAll((Specification<cpu>) (root, cq, cb) -> {
+        Page<cpu> cpu = cpuRepository.findAll((Specification<cpu>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
             if (Objects.nonNull(chipset) ) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
@@ -47,7 +48,7 @@ public class CpuController {
             }
             cq.orderBy(cb.desc(root.get("fullname")), cb.asc(root.get("id")));
             return p;
-        }, pageable).getContent();
+        }, pageable);
         return cpu;
     }
 

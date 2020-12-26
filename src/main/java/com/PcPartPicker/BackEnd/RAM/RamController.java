@@ -4,6 +4,7 @@ package com.PcPartPicker.BackEnd.RAM;
 import com.PcPartPicker.BackEnd.PSU.PowerSupplyUnit;
 import com.PcPartPicker.BackEnd.Processor.cpu;
 import com.PcPartPicker.BackEnd._Model.PcProfile;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
@@ -26,12 +27,12 @@ public class RamController {
     }
 
     @GetMapping("/api/ram")
-    public List<ram> list(@RequestParam(name = "name", required = false) String name,
+    public Page<ram> list(@RequestParam(name = "name", required = false) String name,
                           @RequestParam(name = "chipset", required = false) String chipset,
                           @RequestParam(name = "manufacturer", required = false) String manufacturer,
                           @RequestParam(name = "sizeOfRam", required = false) String sizeOfRam,
                           Pageable pageable){
-        List<ram> ram = ramRepository.findAll((Specification<ram>) (root, cq, cb) -> {
+        Page<ram> ramPage = ramRepository.findAll((Specification<ram>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
             if (Objects.nonNull(chipset) ) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
@@ -47,8 +48,32 @@ public class RamController {
             }
             cq.orderBy(cb.desc(root.get("fullname")), cb.asc(root.get("id")));
             return p;
-        }, pageable).getContent();
-        return ram;
+        }, pageable);
+
+//        List<ram> ram = ramRepository.findAll((Specification<ram>) (root, cq, cb) -> {
+//            Predicate p = cb.conjunction();
+//            if (Objects.nonNull(chipset) ) {
+//                p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
+//            }
+//            if (Objects.nonNull(manufacturer) ) {
+//                p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+//            }
+//            if (Objects.nonNull(sizeOfRam) ) {
+//                p = cb.and(p, cb.like(root.get("sizeOfRam"), "%" + sizeOfRam+ "%"));
+//            }
+//            if (!StringUtils.isEmpty(name)) {
+//                p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
+//            }
+//            cq.orderBy(cb.desc(root.get("fullname")), cb.asc(root.get("id")));
+//            return p;
+//        }, pageable).getContent();
+//
+//        List<ram> ram = ramPage.getContent();
+//        int totalPage = ramPage.getTotalPages();
+//        long totalElements = ramPage.getTotalElements();
+//
+//        System.out.println(totalPage);
+        return ramPage;
     }
 
     @GetMapping("/api/ram/{RamID}")
