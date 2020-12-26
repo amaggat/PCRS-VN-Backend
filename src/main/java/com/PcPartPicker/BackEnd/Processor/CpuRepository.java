@@ -51,10 +51,10 @@ public interface CpuRepository extends JpaRepository<cpu, Integer>, JpaSpecifica
             "AND cpu.fullname LIKE %:fullname% " +
             "AND cpu.chipset LIKE %:chipset%")
     @Transactional(readOnly = true)
-    List<cpu> findAllParam(@RequestParam(name = "fullname", defaultValue ="") String fullname,
-                           @RequestParam(name = "socket", defaultValue ="") String socket,
-                           @RequestParam(name = "manufacturer", defaultValue ="") String manufacturer,
-                           @RequestParam(name = "chipset", defaultValue ="") String chipset);
+    List<cpu> findAllParam(@Param("fullname") String fullname,
+                           @Param("socket") String socket,
+                           @Param("manufacturer") String manufacturer,
+                           @Param("chipset") String chipset);
 
 //    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE ")
 //    @Transactional(readOnly=true)

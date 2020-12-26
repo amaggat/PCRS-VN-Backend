@@ -52,29 +52,29 @@ public class CpuController {
     }
 
 
-    @GetMapping("/api/cpu/find/name={CpuName}")
-    public List<cpu> SearchByName(@PathVariable("CpuName") String name)
-    {
-        return cpuRepository.findByName(name);
-    }
-
-    @GetMapping("/api/cpu/find/socket={CpuSocket}")
-    public List<cpu> SearchBySocket(@PathVariable("CpuSocket") String socket)
-    {
-        return cpuRepository.findBySocket(socket);
-    }
+//    @GetMapping("/api/cpu/find/name={CpuName}")
+//    public List<cpu> SearchByName(@PathVariable("CpuName") String name)
+//    {
+//        return cpuRepository.findByName(name);
+//    }
+//
+//    @GetMapping("/api/cpu/find/socket={CpuSocket}")
+//    public List<cpu> SearchBySocket(@PathVariable("CpuSocket") String socket)
+//    {
+//        return cpuRepository.findBySocket(socket);
+//    }
 
     @GetMapping("/api/cpu/{CpuID}")
     public cpu SearchById(@PathVariable("CpuID") String id)
     {
         return cpuRepository.findByID(id);
     }
-
-    @GetMapping("/api/cpu/{CpuID}/price")
-    public List<cpuPriceList> ReturnPriceList(@PathVariable("CpuID") String fid)
-    {
-        return cpuPriceListRepository.findcpuPriceListByFid(fid);
-    }
+//
+//    @GetMapping("/api/cpu/{CpuID}/price")
+//    public List<cpuPriceList> ReturnPriceList(@PathVariable("CpuID") String fid)
+//    {
+//        return cpuPriceListRepository.findcpuPriceListByFid(fid);
+//    }
 
 
 }
