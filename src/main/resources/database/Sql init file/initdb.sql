@@ -66,6 +66,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`mainboard` (
     `chipset` VARCHAR(100) NOT NULL,
     `socket` VARCHAR(100) NOT NULL,
     `size` VARCHAR(100) NOT NULL,
+    `slot` INT NOT NULL,
+    `sizeOfRam` VARCHAR(100) NOT NULL,
     `fullname` TEXT NOT NULL,
     PRIMARY KEY (`ID`)
 );
