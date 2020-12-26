@@ -1,6 +1,7 @@
 package com.PcPartPicker.BackEnd._Model;
 
 import org.hibernate.cache.spi.entry.StructuredCacheEntry;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Collection;
 import java.util.List;
 
-public interface PcProfileRepository extends Repository<PcProfile, String> {
+public interface PcProfileRepository extends JpaRepository<PcProfile, String> {
 
     @Query("SELECT DISTINCT pcProfile FROM PcProfile pcProfile WHERE pcProfile.PcName LIKE %:PcName%")
     @Transactional(readOnly = true)
@@ -21,7 +22,9 @@ public interface PcProfileRepository extends Repository<PcProfile, String> {
 
 //    PcProfile findByManufacturer(String manufacturer);
 
-    void save(PcProfile profile);
+//    void save(PcProfile profile);
+
+
 
     @Query("SELECT DISTINCT pcProfile FROM PcProfile pcProfile")
     @Transactional(readOnly = true)

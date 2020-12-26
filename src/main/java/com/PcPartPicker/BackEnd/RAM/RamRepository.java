@@ -1,6 +1,7 @@
 package com.PcPartPicker.BackEnd.RAM;
 
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
@@ -9,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Collection;
 import java.util.List;
 
-public interface RamRepository extends Repository<ram, Integer> {
+public interface RamRepository extends JpaRepository<ram, Integer> {
 
     @Query("SELECT DISTINCT ram From ram ram WHERE ram.id= :id")
     @Transactional(readOnly = true)
@@ -31,7 +32,7 @@ public interface RamRepository extends Repository<ram, Integer> {
     @Transactional(readOnly = true)
     List<ram> findByClockSpeed(@Param("clockSpeed") int clockSpeed);
 
-    void save(ram ram);
+//    void save(ram ram);
 
     @Query("SELECT DISTINCT ram From ram ram")
     List<ram> findAll();
