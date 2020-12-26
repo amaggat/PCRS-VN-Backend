@@ -13,9 +13,9 @@ import java.util.List;
 @Table(name ="ssd")
 public class SolidStateDrive extends electronicComponents {
 
-    @Column(name = "size")
+    @Column(name = "storage")
     @NotEmpty
-    private String size;
+    private String storage;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "ssd")
     private List<PcProfile> pcProfile;
@@ -28,8 +28,8 @@ public class SolidStateDrive extends electronicComponents {
 //    @NotEmpty
 //    private int readSpeed;
 
-    public String getSize() {
-        return size;
+    public String getStorage() {
+        return storage;
     }
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "ssd", fetch = FetchType.EAGER)
@@ -60,7 +60,7 @@ public class SolidStateDrive extends electronicComponents {
 //        this.writeSpeed = writeSpeed;
 //    }
 
-    public void setSize(String size) {
-        this.size = size;
+    public void setStorage(String size) {
+        this.storage = size;
     }
 }

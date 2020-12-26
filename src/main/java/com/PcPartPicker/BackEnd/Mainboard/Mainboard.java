@@ -16,9 +16,9 @@ public class Mainboard extends electronicComponents {
     @NotEmpty
     private String socket = new String();
     
-    @Column(name = "size")
+    @Column(name = "formfactor")
     @NotEmpty
-    private String size = new String();
+    private String formfactor = new String();
 
     @Column(name = "sizeofram")
     @NotEmpty
@@ -34,12 +34,12 @@ public class Mainboard extends electronicComponents {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "mainboard", fetch = FetchType.EAGER)
     private List<mainPriceList> PriceList;
 
-    public String getSize() {
-        return size;
+    public String getFormfactor() {
+        return formfactor;
     }
 
-    public void setSize(String size) {
-        this.size = size;
+    public void setFormfactor(String size) {
+        this.formfactor = size;
     }
 
     public List<com.PcPartPicker.BackEnd.Mainboard.mainPriceList> getPriceList() {

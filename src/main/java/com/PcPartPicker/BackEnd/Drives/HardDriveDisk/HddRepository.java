@@ -21,7 +21,7 @@ public interface HddRepository extends JpaRepository<HardDiskDrive, Integer>, Jp
     @Transactional(readOnly = true)
     List<HardDiskDrive> findByManufacturer(@Param("manufacturer") String manufacturer);
 
-    @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.size= :size")
+    @Query("SELECT DISTINCT hdd FROM HardDiskDrive hdd WHERE hdd.storage= :size")
     @Transactional(readOnly = true)
     List<HardDiskDrive> findBySize(@Param("size") String size);
 

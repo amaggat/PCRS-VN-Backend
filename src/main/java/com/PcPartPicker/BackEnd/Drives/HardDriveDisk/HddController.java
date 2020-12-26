@@ -26,7 +26,7 @@ public class HddController {
     public Page<HardDiskDrive> list(@RequestParam(name = "name", required = false) String name,
                                     @RequestParam(name = "chipset", required = false) String chipset,
                                     @RequestParam(name = "manufacturer", required = false) String manufacturer,
-                                    @RequestParam(name = "size", required = false) String size,
+                                    @RequestParam(name = "storage", required = false) String size,
                                     Pageable pageable){
         Page<HardDiskDrive> hdd = hddRepository.findAll((Specification<HardDiskDrive>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
@@ -37,7 +37,7 @@ public class HddController {
                 p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
             }
             if (Objects.nonNull(size) ) {
-                p = cb.and(p, cb.like(root.get("size"), "%" + size+ "%"));
+                p = cb.and(p, cb.like(root.get("storage"), "%" + size+ "%"));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));

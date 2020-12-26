@@ -11,9 +11,9 @@ import java.util.List;
 @Table(name ="hdd")
 public class HardDiskDrive extends electronicComponents {
 
-    @Column(name = "size")
+    @Column(name = "storage")
     @NotEmpty
-    private String size;
+    private String storage;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "hdd")
     private List<PcProfile> pcProfile;
@@ -51,12 +51,12 @@ public class HardDiskDrive extends electronicComponents {
 //        return readSpeed;
 //    }
 
-    public String getSize() {
-        return size;
+    public String getStorage() {
+        return storage;
     }
 
-    public void setSize(String size) {
-        this.size = size;
+    public void setStorage(String size) {
+        this.storage = size;
     }
 
 //    public void setFanSpeed(int fanSpeed) {

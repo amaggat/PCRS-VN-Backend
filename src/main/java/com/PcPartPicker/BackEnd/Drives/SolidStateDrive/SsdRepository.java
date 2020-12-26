@@ -25,7 +25,7 @@ public interface SsdRepository extends JpaRepository<SolidStateDrive, String>, J
     @Transactional(readOnly = true)
     List<SolidStateDrive> findByName(@Param("fullname") String fullname);
 
-    @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.size = :size")
+    @Query("SELECT DISTINCT ssd FROM SolidStateDrive ssd WHERE ssd.storage = :size")
     @Transactional(readOnly = true)
     List<SolidStateDrive> findBySize(@Param("size") String size);
 

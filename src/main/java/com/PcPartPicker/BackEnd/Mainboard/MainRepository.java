@@ -17,7 +17,7 @@ public interface MainRepository extends JpaRepository<Mainboard, Integer>, JpaSp
     @Transactional(readOnly = true)
     Mainboard findByID(@Param("id") String id);
 
-    @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.size LIKE %:mainSize%")
+    @Query("SELECT DISTINCT mainboard FROM Mainboard mainboard WHERE mainboard.formfactor LIKE %:mainSize%")
     @Transactional(readOnly = true)
     List<Mainboard> findBySize(@Param("mainSize") String mainSize);
 

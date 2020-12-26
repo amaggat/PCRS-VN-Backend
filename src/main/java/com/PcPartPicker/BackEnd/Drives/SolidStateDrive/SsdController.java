@@ -27,7 +27,7 @@ public class SsdController {
     public Page<SolidStateDrive> list(@RequestParam(name = "name", required = false) String name,
                                       @RequestParam(name = "chipset", required = false) String chipset,
                                       @RequestParam(name = "manufacturer", required = false) String manufacturer,
-                                      @RequestParam(name = "size", required = false) String size,
+                                      @RequestParam(name = "storage", required = false) String storage,
                                       Pageable pageable){
         Page<SolidStateDrive> ssd = ssdRepository.findAll((Specification<SolidStateDrive>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
@@ -37,8 +37,8 @@ public class SsdController {
             if (Objects.nonNull(manufacturer) ) {
                 p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
             }
-            if (Objects.nonNull(size) ) {
-                p = cb.and(p, cb.like(root.get("size"), "%" + size+ "%"));
+            if (Objects.nonNull(storage) ) {
+                p = cb.and(p, cb.like(root.get("storage"), "%" + storage+ "%"));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
