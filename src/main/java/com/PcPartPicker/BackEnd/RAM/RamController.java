@@ -40,7 +40,7 @@ public class RamController {
                 p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
             }
             if (Objects.nonNull(sizeOfRam) ) {
-                p = cb.and(p, cb.like(root.get("standard_80"), "%" + sizeOfRam+ "%"));
+                p = cb.and(p, cb.like(root.get("sizeOfRam"), "%" + sizeOfRam+ "%"));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
