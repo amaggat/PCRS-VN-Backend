@@ -29,10 +29,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`feedbacks` (
 	`ID` INT NOT NULL AUTO_INCREMENT,
     `CreationTime` DATE NOT NULL,
     `Details` TEXT NOT NULL,
-    `CreatorID` INT NOT NULL,
     `PostID` INT NOT NULL,
-    
-    FOREIGN KEY (`CreatorID`) REFERENCES user(ID),
+
     FOREIGN KEY (`PostID`) REFERENCES post(ID),
     PRIMARY KEY (`ID`)
 );

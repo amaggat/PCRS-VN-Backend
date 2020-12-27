@@ -23,9 +23,6 @@ public class User extends NameEntity {
     private String gmail = new String();
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
-    private List<Feedbacks> feedbacks;
-
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<PcProfile> pcProfile;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
@@ -55,27 +52,27 @@ public class User extends NameEntity {
         this.gmail = gmail;
     }
 
-    public List<Feedbacks> getFeedbacks() {
-        return feedbacks;
-    }
-
-    public void setFeedbacks(List<Feedbacks> feedbacks) {
-        this.feedbacks = feedbacks;
-    }
-
-//    public List<PcProfile> getPcProfile() {
-//        return pcProfile;
+//    public List<Feedbacks> getFeedbacks() {
+//        return feedbacks;
 //    }
 //
-//    public void setPcProfile(List<PcProfile> pcProfile) {
-//        this.pcProfile = pcProfile;
+//    public void setFeedbacks(List<Feedbacks> feedbacks) {
+//        this.feedbacks = feedbacks;
 //    }
 
-//    public List<Post> getPosts() {
-//        return posts;
-//    }
-//
-//    public void setPosts(List<Post> posts) {
-//        this.posts = posts;
-//    }
+    public List<PcProfile> getPcProfile() {
+        return pcProfile;
+    }
+
+    public void setPcProfile(List<PcProfile> pcProfile) {
+        this.pcProfile = pcProfile;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
 }

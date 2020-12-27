@@ -82,4 +82,12 @@ public class Post extends NameEntity {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public List<Feedbacks> getFeedbacks() {
+        return feedbacks;
+    }
+
+    public void setFeedbacks(List<Feedbacks> feedbacks) {
+        this.feedbacks = feedbacks;
+    }
 }

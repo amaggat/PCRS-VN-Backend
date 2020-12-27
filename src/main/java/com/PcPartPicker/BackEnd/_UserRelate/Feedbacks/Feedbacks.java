@@ -2,11 +2,9 @@ package com.PcPartPicker.BackEnd._UserRelate.Feedbacks;
 
 import com.PcPartPicker.BackEnd._UserRelate.Article.Post;
 import com.PcPartPicker.BackEnd._UserRelate.NameEntity;
-import com.PcPartPicker.BackEnd._UserRelate.User.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import java.util.Date;
 
 @Entity
 @Table(name = "feedbacks")
@@ -18,14 +16,18 @@ public class Feedbacks extends NameEntity {
 
     @Column(name = "creationtime")
     @NotEmpty
-    private Date CreationTime;
+    private String creationtime;
 
-    @ManyToOne
-    @JoinColumn(name = "creatorid")
-    private User user;
+//    @Column(name = "email")
+//    @NotEmpty
+//    private String email = new String();
 
-    @ManyToOne
-    @JoinColumn(name = "PostID")
+//    @ManyToOne
+//    @JoinColumn(name = "creatorid")
+//    private User user;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "postid")
     private Post post;
 
     public String getDetails() {
@@ -36,27 +38,37 @@ public class Feedbacks extends NameEntity {
         this.details = details;
     }
 
-    public Date getCreationTime() {
-        return CreationTime;
+    public String getCreationtime() {
+        return creationtime;
     }
 
-    public void setCreationTime(Date creationTime) {
-        CreationTime = creationTime;
+    public void setCreationtime(String creationtime) {
+        this.creationtime = creationtime;
     }
 
-    public User getUser() {
-        return user;
-    }
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+    //    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 
-    public Post getPost() {
-        return post;
+    public Integer getPost() {
+        return post.getId();
     }
 
     public void setPost(Post post) {
         this.post = post;
     }
+
+
 }
