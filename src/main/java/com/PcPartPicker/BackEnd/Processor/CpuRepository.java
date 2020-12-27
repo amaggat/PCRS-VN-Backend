@@ -20,41 +20,36 @@ public interface CpuRepository extends JpaRepository<cpu, Integer>, JpaSpecifica
             "cpu.id= :id")
     @Transactional(readOnly = true)
     cpu findByID(@Param("id") String id);
-
-    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
-            "cpu.manufacturer= :manufacturer")
-    @Transactional(readOnly = true)
-    List<cpu> findByManufacturer(@Param("manufacturer") String manufacturer);
-
-    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
-            "cpu.fullname LIKE %:fullname%")
-    @Transactional(readOnly = true)
-    List<cpu> findByName(@Param("fullname") String fullname);
-
-    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
-            "cpu.Cores= :Cores")
-    @Transactional(readOnly = true)
-    List<cpu> findByCores(@Param("Cores") int Cores);
-
-    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
-            "cpu.chipset= :chipset")
-    @Transactional(readOnly = true)
-    List<cpu> findByChipset(@Param("chipset") String chipset);
-
-    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
-            "cpu.socket LIKE %:socket%")
-    @Transactional(readOnly = true)
-    List<cpu> findBySocket(@Param("socket") String socket);
-
-    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE cpu.socket LIKE %:socket% " +
-            "AND cpu.manufacturer LIKE %:manufacturer% " +
-            "AND cpu.fullname LIKE %:fullname% " +
-            "AND cpu.chipset LIKE %:chipset%")
-    @Transactional(readOnly = true)
-    List<cpu> findAllParam(@Param("fullname") String fullname,
-                           @Param("socket") String socket,
-                           @Param("manufacturer") String manufacturer,
-                           @Param("chipset") String chipset);
+//
+//    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
+//            "cpu.manufacturer= :manufacturer")
+//    @Transactional(readOnly = true)
+//    List<cpu> findByManufacturer(@Param("manufacturer") String manufacturer);
+//
+//    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
+//            "cpu.fullname LIKE %:fullname%")
+//    @Transactional(readOnly = true)
+//    List<cpu> findByName(@Param("fullname") String fullname);
+//
+//    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
+//            "cpu.chipset= :chipset")
+//    @Transactional(readOnly = true)
+//    List<cpu> findByChipset(@Param("chipset") String chipset);
+//
+//    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
+//            "cpu.socket LIKE %:socket%")
+//    @Transactional(readOnly = true)
+//    List<cpu> findBySocket(@Param("socket") String socket);
+//
+//    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE cpu.socket LIKE %:socket% " +
+//            "AND cpu.manufacturer LIKE %:manufacturer% " +
+//            "AND cpu.fullname LIKE %:fullname% " +
+//            "AND cpu.chipset LIKE %:chipset%")
+//    @Transactional(readOnly = true)
+//    List<cpu> findAllParam(@Param("fullname") String fullname,
+//                           @Param("socket") String socket,
+//                           @Param("manufacturer") String manufacturer,
+//                           @Param("chipset") String chipset);
 
 //    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE ")
 //    @Transactional(readOnly=true)

@@ -30,6 +30,7 @@ public class CpuController {
                           @RequestParam(name = "chipset", required = false) String chipset,
                           @RequestParam(name = "manufacturer", required = false) String manufacturer,
                           @RequestParam(name = "socket", required = false) String socket,
+                          @RequestParam(name = "cores", required = false) Integer cores,
                           Pageable pageable
                           ){
         Page<cpu> cpu = cpuRepository.findAll((Specification<cpu>) (root, cq, cb) -> {
@@ -42,6 +43,9 @@ public class CpuController {
             }
             if (Objects.nonNull(socket) ) {
                 p = cb.and(p, cb.like(root.get("socket"), "%" + socket+ "%"));
+            }
+            if (Objects.nonNull(cores) ) {
+                p = cb.and(p, cb.equal(root.get("cores"), cores));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));

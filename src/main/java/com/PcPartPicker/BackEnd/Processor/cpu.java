@@ -20,13 +20,13 @@ public class cpu extends electronicComponents {
 //    private double BaseClock;
 //    private double BoostCLock;
 
-    @Column(name = "Cores")
+    @Column(name = "cores")
     @NotEmpty
-    private int Cores;
+    private Integer cores;
     
-    @Column(name = "Threads")
+    @Column(name = "threads")
     @NotEmpty
-    private int Threads;
+    private Integer threads;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cpu", fetch = FetchType.EAGER)
     private List<cpuPriceList> PriceList;
@@ -38,13 +38,6 @@ public class cpu extends electronicComponents {
         return socket;
     }
 
-    public int getCores() {
-        return Cores;
-    }
-
-    public int getThreads() {
-        return Threads;
-    }
 
 //    public double getBaseClock() {
 //        return BaseClock;
@@ -63,18 +56,24 @@ public class cpu extends electronicComponents {
 //    }
 
 
-
-
-    public void setCores(int cores) {
-        Cores = cores;
-    }
-
     public void setSocket(String socket) {
         this.socket = socket;
     }
 
-    public void setThreads(int threads) {
-        Threads = threads;
+    public Integer getCores() {
+        return cores;
+    }
+
+    public void setCores(Integer cores) {
+        this.cores = cores;
+    }
+
+    public Integer getThreads() {
+        return threads;
+    }
+
+    public void setThreads(Integer threads) {
+        threads = threads;
     }
 
     public List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> getPriceList() {
