@@ -41,7 +41,7 @@ CREATE TABLE `cpu` (
 
 LOCK TABLES `cpu` WRITE;
 /*!40000 ALTER TABLE `cpu` DISABLE KEYS */;
-INSERT INTO `cpu` VALUES ('amd-ryzen-3-3100','AMD','Matisse','Ryzen 3','Socket AM4',4,8,'AMD Ryzen 3 3100 Desktop Processor'),('amd-ryzen-3-3200g','AMD','Picasso','Ryzen 3','Socket AM4',4,4,'AMD Ryzen 3 3200G Desktop Processor'),('amd-ryzen-3-3300x','AMD','Matisse','Ryzen 3','Socket AM4',4,8,'AMD Ryzen 3 3300X Desktop Processor'),('amd-ryzen-5-3400g','AMD','Picasso','Ryzen 5','Socket AM4',4,8,'AMD Ryzen 5 3400G Desktop Processor'),('amd-ryzen-5-3500','AMD','Matisse','Ryzen 5','Socket AM4',6,12,'AMD Ryzen 5 3500 Desktop Processor'),('amd-ryzen-5-3500x','AMD','Matisse','Ryzen 5','Socket AM4',6,12,'AMD Ryzen 5 3500X Desktop Processor'),('amd-ryzen-5-3600','AMD','Matisse','Ryzen 5','Socket AM4',6,12,'AMD Ryzen 5 3600 Desktop Processor'),('amd-ryzen-5-3600x','AMD','Matisse','Ryzen 5','Socket AM4',6,12,'AMD Ryzen 5 3600X Desktop Processor'),('amd-ryzen-5-5600x','AMD','Vermeer','Ryzen 5','Socket AM4',6,12,'AMD Ryzen 5 5600X Desktop Processor'),('amd-ryzen-7-3700x','AMD','Matisse','Ryzen 7','Socket AM4',8,16,'AMD Ryzen 7 3700X Desktop Processor'),('amd-ryzen-7-3800x','AMD','Matisse','Ryzen 7','Socket AM4',8,16,'AMD Ryzen 7 3800X Desktop Processor'),('amd-ryzen-7-3800xt','AMD','Matisse 2','Ryzen 7','Socket AM4',8,16,'AMD Ryzen 7 3800XT Desktop Processor'),('amd-ryzen-7-5800x','AMD','Vermeer','Ryzen 7','Socket AM4',8,16,'AMD Ryzen 7 5800X Desktop Processor'),('amd-ryzen-9-3900x','AMD','Matisse','Ryzen 9','Socket AM4',12,24,'AMD Ryzen 9 3900X Desktop Processor'),('amd-ryzen-9-3900xt','AMD','Matisse 2','Ryzen 9','Socket AM4',12,24,'AMD Ryzen 9 3900XT Desktop Processor'),('amd-ryzen-9-3950x','AMD','Matisse','Ryzen 9','Socket AM4',16,32,'AMD Ryzen 9 3950X Desktop Processor'),('amd-ryzen-9-5900x','AMD','Vermeer','Ryzen 9','Socket AM4',12,24,'AMD Ryzen 9 5900X Desktop Processor'),('amd-ryzen-9-5950x','AMD','Vermeer','Ryzen 9','Socket AM4',16,32,'AMD Ryzen 9 5950X Desktop Processor'),('intel-i3-10100','Intel','Comet Lake','Core i3','LGA1200',4,8,'Intel Core i3-10100 Processor'),('intel-i3-10100F','Intel','Comet Lake','Core i3','LGA1200',4,8,'Intel Core i3-10100F Processor'),('intel-i3-8100','Intel','Coffee Lake','Core i3','LGA1151',4,4,'Intel Core i3-8100 Processor'),('intel-i3-9100','Intel','Coffee Lake','Core i3','LGA1151',4,4,'Intel Core i3-9100 Processor'),('intel-i3-9100F','Intel','Coffee Lake','Core i3','LGA1151',4,4,'Intel Core i3-9100F Processor'),('intel-i5-10400','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10400 Processor'),('intel-i5-10400F','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10400F Processor'),('intel-i5-10500','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10500 Processor'),('intel-i5-10600','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10600 Processor'),('intel-i5-10600K','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10600K Processor'),('intel-i5-10600KF','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10600KF Processor'),('intel-i5-8400','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-8400 Processor'),('intel-i5-8500','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-8500 Processor'),('intel-i5-9400','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-9400 Processor'),('intel-i5-9400F','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-9400F Processor'),('intel-i5-9600K','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-9600K Processor'),('intel-i7-10700','Intel','Comet Lake','Core i7','LGA1200',8,16,'Intel Core i7-10700 Processor'),('intel-i7-10700F','Intel','Comet Lake','Core i7','LGA1200',8,16,'Intel Core i7-10700F Processor'),('intel-i7-10700K','Intel','Comet Lake','Core i7','LGA1200',8,16,'Intel Core i7-10700K Processor'),('intel-i7-10700KF','Intel','Comet Lake','Core i7','LGA1200',8,16,'Intel Core i7-10700KF Processor'),('intel-i7-8700','Intel','Coffee Lake','Core i7','LGA1151',6,12,'Intel Core i7-8700 Processor'),('intel-i7-8700K','Intel','Coffee Lake','Core i7','LGA1151',6,12,'Intel Core i7-8700K Processor'),('intel-i7-9700','Intel','Coffee Lake','Core i7','LGA1151',8,8,'Intel Core i7-9700 Processor'),('intel-i7-9700F','Intel','Coffee Lake','Core i7','LGA1151',8,8,'Intel Core i7-9700F Processor'),('intel-i7-9700K','Intel','Coffee Lake','Core i7','LGA1151',8,8,'Intel Core i7-9700K Processor'),('intel-i7-9700KF','Intel','Coffee Lake','Core i7','LGA1151',8,8,'Intel Core i7-9700KF Processor'),('intel-i9-10850K','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10850K Processor'),('intel-i9-10900','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10900 Processor'),('intel-i9-10900F','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10900F Processor'),('intel-i9-10900K','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10900K Processor'),('intel-i9-10900KF','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10900KF Processor');
+INSERT INTO `cpu` VALUES ('amd-ryzen-3-3100','AMD','Matisse','Ryzen 3','AM4',4,8,'AMD Ryzen 3 3100 Desktop Processor'),('amd-ryzen-3-3200g','AMD','Picasso','Ryzen 3','AM4',4,4,'AMD Ryzen 3 3200G Desktop Processor'),('amd-ryzen-3-3300x','AMD','Matisse','Ryzen 3','AM4',4,8,'AMD Ryzen 3 3300X Desktop Processor'),('amd-ryzen-5-3400g','AMD','Picasso','Ryzen 5','AM4',4,8,'AMD Ryzen 5 3400G Desktop Processor'),('amd-ryzen-5-3500','AMD','Matisse','Ryzen 5','AM4',6,12,'AMD Ryzen 5 3500 Desktop Processor'),('amd-ryzen-5-3500x','AMD','Matisse','Ryzen 5','AM4',6,12,'AMD Ryzen 5 3500X Desktop Processor'),('amd-ryzen-5-3600','AMD','Matisse','Ryzen 5','AM4',6,12,'AMD Ryzen 5 3600 Desktop Processor'),('amd-ryzen-5-3600x','AMD','Matisse','Ryzen 5','AM4',6,12,'AMD Ryzen 5 3600X Desktop Processor'),('amd-ryzen-5-5600x','AMD','Vermeer','Ryzen 5','AM4',6,12,'AMD Ryzen 5 5600X Desktop Processor'),('amd-ryzen-7-3700x','AMD','Matisse','Ryzen 7','AM4',8,16,'AMD Ryzen 7 3700X Desktop Processor'),('amd-ryzen-7-3800x','AMD','Matisse','Ryzen 7','AM4',8,16,'AMD Ryzen 7 3800X Desktop Processor'),('amd-ryzen-7-3800xt','AMD','Matisse 2','Ryzen 7','AM4',8,16,'AMD Ryzen 7 3800XT Desktop Processor'),('amd-ryzen-7-5800x','AMD','Vermeer','Ryzen 7','AM4',8,16,'AMD Ryzen 7 5800X Desktop Processor'),('amd-ryzen-9-3900x','AMD','Matisse','Ryzen 9','AM4',12,24,'AMD Ryzen 9 3900X Desktop Processor'),('amd-ryzen-9-3900xt','AMD','Matisse 2','Ryzen 9','AM4',12,24,'AMD Ryzen 9 3900XT Desktop Processor'),('amd-ryzen-9-3950x','AMD','Matisse','Ryzen 9','AM4',16,32,'AMD Ryzen 9 3950X Desktop Processor'),('amd-ryzen-9-5900x','AMD','Vermeer','Ryzen 9','AM4',12,24,'AMD Ryzen 9 5900X Desktop Processor'),('amd-ryzen-9-5950x','AMD','Vermeer','Ryzen 9','AM4',16,32,'AMD Ryzen 9 5950X Desktop Processor'),('intel-i3-10100','Intel','Comet Lake','Core i3','LGA1200',4,8,'Intel Core i3-10100 Processor'),('intel-i3-10100F','Intel','Comet Lake','Core i3','LGA1200',4,8,'Intel Core i3-10100F Processor'),('intel-i3-8100','Intel','Coffee Lake','Core i3','LGA1151',4,4,'Intel Core i3-8100 Processor'),('intel-i3-9100','Intel','Coffee Lake','Core i3','LGA1151',4,4,'Intel Core i3-9100 Processor'),('intel-i3-9100F','Intel','Coffee Lake','Core i3','LGA1151',4,4,'Intel Core i3-9100F Processor'),('intel-i5-10400','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10400 Processor'),('intel-i5-10400F','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10400F Processor'),('intel-i5-10500','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10500 Processor'),('intel-i5-10600','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10600 Processor'),('intel-i5-10600K','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10600K Processor'),('intel-i5-10600KF','Intel','Comet Lake','Core i5','LGA1200',6,12,'Intel Core i5-10600KF Processor'),('intel-i5-8400','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-8400 Processor'),('intel-i5-8500','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-8500 Processor'),('intel-i5-9400','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-9400 Processor'),('intel-i5-9400F','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-9400F Processor'),('intel-i5-9600K','Intel','Coffee Lake','Core i5','LGA1151',6,6,'Intel Core i5-9600K Processor'),('intel-i7-10700','Intel','Comet Lake','Core i7','LGA1200',8,16,'Intel Core i7-10700 Processor'),('intel-i7-10700F','Intel','Comet Lake','Core i7','LGA1200',8,16,'Intel Core i7-10700F Processor'),('intel-i7-10700K','Intel','Comet Lake','Core i7','LGA1200',8,16,'Intel Core i7-10700K Processor'),('intel-i7-10700KF','Intel','Comet Lake','Core i7','LGA1200',8,16,'Intel Core i7-10700KF Processor'),('intel-i7-8700','Intel','Coffee Lake','Core i7','LGA1151',6,12,'Intel Core i7-8700 Processor'),('intel-i7-8700K','Intel','Coffee Lake','Core i7','LGA1151',6,12,'Intel Core i7-8700K Processor'),('intel-i7-9700','Intel','Coffee Lake','Core i7','LGA1151',8,8,'Intel Core i7-9700 Processor'),('intel-i7-9700F','Intel','Coffee Lake','Core i7','LGA1151',8,8,'Intel Core i7-9700F Processor'),('intel-i7-9700K','Intel','Coffee Lake','Core i7','LGA1151',8,8,'Intel Core i7-9700K Processor'),('intel-i7-9700KF','Intel','Coffee Lake','Core i7','LGA1151',8,8,'Intel Core i7-9700KF Processor'),('intel-i9-10850K','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10850K Processor'),('intel-i9-10900','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10900 Processor'),('intel-i9-10900F','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10900F Processor'),('intel-i9-10900K','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10900K Processor'),('intel-i9-10900KF','Intel','Comet Lake','Core i9','LGA1200',10,20,'Intel Core i9-10900KF Processor');
 /*!40000 ALTER TABLE `cpu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -318,7 +318,7 @@ CREATE TABLE `pcprofile` (
 
 LOCK TABLES `pcprofile` WRITE;
 /*!40000 ALTER TABLE `pcprofile` DISABLE KEYS */;
-INSERT INTO `pcprofile` VALUES ('amd-first-build',1,'First AMD PC Build'),('intel-1000$-build',1,'Intel 20tr VND Build');
+INSERT INTO `pcprofile` VALUES ('entry-level-amd-build',1,'Entry-Level AMD Build'),('entry-level-intel-build',1,'Entry-Level Intel Build'),('high-end-amd-build',1,'High-End AMD Build'),('high-end-intel-build',1,'High-End Intel Build'),('low-end-amd-build',1,'Low-End AMD Build'),('low-end-intel-build',1,'Low-End Intel Build'),('streaming-amd-build',1,'Streaming AMD Build'),('streaming-intel-build',1,'Streaming Intel Build');
 /*!40000 ALTER TABLE `pcprofile` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -347,7 +347,7 @@ CREATE TABLE `pcprofile_cpu` (
 
 LOCK TABLES `pcprofile_cpu` WRITE;
 /*!40000 ALTER TABLE `pcprofile_cpu` DISABLE KEYS */;
-INSERT INTO `pcprofile_cpu` VALUES ('amd-first-build','amd-ryzen-5-3600'),('intel-1000$-build','intel-i5-10400');
+INSERT INTO `pcprofile_cpu` VALUES ('entry-level-amd-build','amd-ryzen-5-3600'),('entry-level-intel-build','intel-i5-10400'),('high-end-intel-build','intel-i9-10900K'),('high-end-amd-build','amd-ryzen-9-5900x'),('low-end-intel-build','intel-i3-10100'),('low-end-amd-build','amd-ryzen-3-3100'),('streaming-intel-build','intel-i5-10400'),('streaming-amd-build','intel-i5-10400');
 /*!40000 ALTER TABLE `pcprofile_cpu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -376,7 +376,7 @@ CREATE TABLE `pcprofile_gpu` (
 
 LOCK TABLES `pcprofile_gpu` WRITE;
 /*!40000 ALTER TABLE `pcprofile_gpu` DISABLE KEYS */;
-INSERT INTO `pcprofile_gpu` VALUES ('amd-first-build','msi-geforce-rtx-3060-ti-gaming-x-trio'),('intel-1000$-build','msi-geforce-rtx-2060-gaming-z');
+INSERT INTO `pcprofile_gpu` VALUES ('entry-level-amd-build','gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b'),('entry-level-intel-build','msi-geforce-rtx-3060-ti-gaming-x-trio'),('high-end-intel-build','asus-geforce-rtx-3090-strix-gaming'),('high-end-amd-build','gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b'),('low-end-intel-build','asus-geforce-gtx-1650-super-tuf-gaming'),('low-end-amd-build','asus-radeon-rx-570-rog-strix'),('streaming-intel-build','msi-geforce-gtx-1050-ti-aero-itx'),('streaming-amd-build','asus-geforce-gtx-1060-6gb-strix-oc');
 /*!40000 ALTER TABLE `pcprofile_gpu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -405,7 +405,7 @@ CREATE TABLE `pcprofile_hdd` (
 
 LOCK TABLES `pcprofile_hdd` WRITE;
 /*!40000 ALTER TABLE `pcprofile_hdd` DISABLE KEYS */;
-INSERT INTO `pcprofile_hdd` VALUES ('amd-first-build','seagate-firecuda-1024-2.5sata'),('intel-1000$-build','seagate-firecuda-1024-2.5sata');
+INSERT INTO `pcprofile_hdd` VALUES ('entry-level-amd-build','seagate-firecuda-1024-2.5sata'),('entry-level-intel-build','seagate-firecuda-1024-2.5sata'),('high-end-intel-build','seagate-ironwolf-pro-4096-3.5sata'),('high-end-amd-build','seagate-ironwolf-pro-4096-3.5sata'),('low-end-intel-build','seagate-firecuda-1024-2.5sata'),('low-end-amd-build','seagate-firecuda-1024-2.5sata'),('streaming-intel-build','wd-black2-1024-2.5sata'),('streaming-amd-build','seagate-firecuda-1024-2.5sata');
 /*!40000 ALTER TABLE `pcprofile_hdd` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -434,7 +434,7 @@ CREATE TABLE `pcprofile_mainboard` (
 
 LOCK TABLES `pcprofile_mainboard` WRITE;
 /*!40000 ALTER TABLE `pcprofile_mainboard` DISABLE KEYS */;
-INSERT INTO `pcprofile_mainboard` VALUES ('amd-first-build','asrock-b450m-steel-legend'),('intel-1000$-build','asus-rog-strix-b460-f-gaming');
+INSERT INTO `pcprofile_mainboard` VALUES ('entry-level-amd-build','asrock-b450m-steel-legend'),('entry-level-intel-build','asus-rog-strix-b460-f-gaming'),('high-end-intel-build','gigabyte-z490i-aorus-ultra'),('high-end-amd-build','asus-rog-crosshair-viii-formula'),('low-end-intel-build','asrock-b460-phantom-gaming-4'),('low-end-amd-build','asus-rog-strix-b460-f-gaming'),('streaming-intel-build','asus-rog-strix-b460-f-gaming'),('streaming-amd-build','asus-rog-strix-b460-f-gaming');
 /*!40000 ALTER TABLE `pcprofile_mainboard` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -463,7 +463,7 @@ CREATE TABLE `pcprofile_psu` (
 
 LOCK TABLES `pcprofile_psu` WRITE;
 /*!40000 ALTER TABLE `pcprofile_psu` DISABLE KEYS */;
-INSERT INTO `pcprofile_psu` VALUES ('amd-first-build','cm-mwe-gold-650-gold'),('intel-1000$-build','cm-mwe-gold-650-gold');
+INSERT INTO `pcprofile_psu` VALUES ('entry-level-amd-build','cm-mwe-gold-650-gold'),('entry-level-intel-build','cm-mwe-gold-650-gold'),('high-end-intel-build','seasonic-focus-1000-gold'),('high-end-amd-build','seasonic-prime-ultra-1000-platinum'),('low-end-intel-build','cm-mwe-v2-500-white'),('low-end-amd-build','corsair-cv-550-bronze'),('streaming-intel-build','cm-mwe-gold-650-gold'),('streaming-amd-build','cm-mwe-gold-650-gold');
 /*!40000 ALTER TABLE `pcprofile_psu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -492,7 +492,7 @@ CREATE TABLE `pcprofile_ram` (
 
 LOCK TABLES `pcprofile_ram` WRITE;
 /*!40000 ALTER TABLE `pcprofile_ram` DISABLE KEYS */;
-INSERT INTO `pcprofile_ram` VALUES ('amd-first-build','corsair-dominator-platinum-2x8G-3200'),('intel-1000$-build','corsair-vengeance-RGB-pro-2x8G-3000');
+INSERT INTO `pcprofile_ram` VALUES ('entry-level-amd-build','corsair-dominator-platinum-2x8G-3200'),('entry-level-intel-build','corsair-vengeance-RGB-pro-2x8G-3000'),('high-end-intel-build','g.skill-trident-z-neo-2x16G-3600'),('high-end-amd-build','g.skill-trident-z-royal-2x8G-3200'),('low-end-intel-build','kingston-hyperx-fury-2x8G-2666'),('low-end-amd-build','corsair-vengeance-lpx-2x8G-2666'),('streaming-intel-build','corsair-vengeance-RGB-pro-2x8G-3000'),('streaming-amd-build','corsair-vengeance-RGB-pro-2x8G-3000');
 /*!40000 ALTER TABLE `pcprofile_ram` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -521,7 +521,7 @@ CREATE TABLE `pcprofile_ssd` (
 
 LOCK TABLES `pcprofile_ssd` WRITE;
 /*!40000 ALTER TABLE `pcprofile_ssd` DISABLE KEYS */;
-INSERT INTO `pcprofile_ssd` VALUES ('amd-first-build','kingston-a2000-500-m2-nvme'),('intel-1000$-build','kingston-kc600-512-m2-sata');
+INSERT INTO `pcprofile_ssd` VALUES ('entry-level-amd-build','kingston-a2000-500-m2-nvme'),('entry-level-intel-build','kingston-kc600-512-m2-sata'),('high-end-intel-build','samsung-870-qvo-1024-m2-sata'),('high-end-amd-build','samsung-870-qvo-1024-m2-sata'),('low-end-intel-build','kingston-a400-240-m2-sata'),('low-end-amd-build','kingston-a400-240-m2-sata'),('streaming-intel-build','adata-xpg-spectrix-s40g-rgb-256-m2-nvme'),('streaming-amd-build','kingston-kc600-512-m2-sata');
 /*!40000 ALTER TABLE `pcprofile_ssd` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -534,17 +534,16 @@ DROP TABLE IF EXISTS `post`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `post` (
   `ID` int NOT NULL AUTO_INCREMENT,
-  `Title` varchar(100) NOT NULL,
+  `Name` varchar(100) NOT NULL,
   `CreationTime` date NOT NULL,
   `Details` text NOT NULL,
   `CreatorID` int NOT NULL,
   `Description` varchar(100) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `FKhtqbhkd9ojw742kw66rupa28e` (`CreatorID`),
   CONSTRAINT `FKhtqbhkd9ojw742kw66rupa28e` FOREIGN KEY (`CreatorID`) REFERENCES `user` (`ID`),
   CONSTRAINT `post_ibfk_1` FOREIGN KEY (`CreatorID`) REFERENCES `user` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -553,7 +552,7 @@ CREATE TABLE `post` (
 
 LOCK TABLES `post` WRITE;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
-INSERT INTO `post` VALUES (1,'AMD Build','2020-12-27','',1,'Hello motherfucker',NULL),(2,'Intel Build','2020-12-27','',1,'Hello fuckermother',NULL);
+INSERT INTO `post` VALUES (3,'Entry-Level AMD Build','2020-12-27','',1,'Hello motherfucker'),(4,'Entry-Level Intel Build','2020-12-27','',1,'Hello fuckermother'),(5,'High-End Intel Build','2020-12-27','',1,'Fuckermother Hello'),(6,'High-End AMD Build','2020-12-27','',1,'Motherfucker Hello '),(7,'Low-End Intel Build','2020-12-27','',1,'Motherhello fucker'),(8,'Low-End AMD Build','2020-12-27','',1,'Fucker motherhello '),(9,'Streaming Intel Build','2020-12-27','',1,'Hello fuckermother'),(10,'Streaming AMD Build','2020-12-27','',1,'Hello fuckermother');
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -582,7 +581,7 @@ CREATE TABLE `post_pc` (
 
 LOCK TABLES `post_pc` WRITE;
 /*!40000 ALTER TABLE `post_pc` DISABLE KEYS */;
-INSERT INTO `post_pc` VALUES ('amd-first-build',1),('intel-1000$-build',2);
+INSERT INTO `post_pc` VALUES ('high-end-intel-build',3),('high-end-amd-build',4),('low-end-intel-build',5),('low-end-amd-build',6),('streaming-intel-build',7),('streaming-amd-build',8);
 /*!40000 ALTER TABLE `post_pc` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -805,4 +804,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-27 19:25:11
+-- Dump completed on 2020-12-27 20:15:01
