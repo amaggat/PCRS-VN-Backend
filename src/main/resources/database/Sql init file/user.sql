@@ -1,0 +1,1 @@
+INSERT IGNORE user VALUES ('','amaggat','weare123','amaggat@gmail.com','user','Amaggat')
