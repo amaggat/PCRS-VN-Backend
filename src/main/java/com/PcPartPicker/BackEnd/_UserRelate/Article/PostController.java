@@ -1,6 +1,8 @@
 package com.PcPartPicker.BackEnd._UserRelate.Article;
 
 
+import com.PcPartPicker.BackEnd._UserRelate.Feedbacks.Feedbacks;
+import com.PcPartPicker.BackEnd._UserRelate.Feedbacks.FeedbacksRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.criteria.Predicate;
+import java.util.List;
 
 @RestController
 public class PostController {
@@ -18,8 +21,11 @@ public class PostController {
 
     private final PostRepository postRepository;
 
-    public PostController(PostRepository postRepository) {
+    private final FeedbacksRepository feedbacksRepository;
+
+    public PostController(PostRepository postRepository, FeedbacksRepository feedbacksRepository) {
         this.postRepository = postRepository;
+        this.feedbacksRepository = feedbacksRepository;
     }
 
     @GetMapping("/api/post")
@@ -31,6 +37,13 @@ public class PostController {
             return p;
         }, pageable);
         return post;
+    }
+
+    @GetMapping("/api/post/{PostID}/feedbacks")
+    public List<Feedbacks> listFeedbacks(@PathVariable("PostID") Integer id)
+    {
+        List<Feedbacks> feedbacks = feedbacksRepository.findByPostID(id);
+        return feedbacks;
     }
 
     @GetMapping("/api/post/{PostID}")

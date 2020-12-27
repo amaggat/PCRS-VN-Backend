@@ -26,7 +26,7 @@ public class Feedbacks extends NameEntity {
 //    @JoinColumn(name = "creatorid")
 //    private User user;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
     @JoinColumn(name = "postid")
     private Post post;
 
@@ -62,13 +62,13 @@ public class Feedbacks extends NameEntity {
 //        this.user = user;
 //    }
 
-    public Integer getPost() {
-        return post.getId();
-    }
-
-    public void setPost(Post post) {
-        this.post = post;
-    }
+//    public Integer getPost() {
+//        return post.getId();
+//    }
+//
+//    public void setPost(Post post) {
+//        this.post = post;
+//    }
 
 
 }

@@ -14,4 +14,5 @@ public interface PostRepository extends JpaRepository<Post, Integer>, JpaSpecifi
     @Query("SELECT DISTINCT post FROM Post post WHERE post.id= :id")
     @Transactional(readOnly = true)
     Post findByID(@Param("id") Integer id);
+
 }

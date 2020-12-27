@@ -86,19 +86,15 @@ DROP TABLE IF EXISTS `feedbacks`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `feedbacks` (
   `ID` int NOT NULL AUTO_INCREMENT,
-  `CreationTime` date NOT NULL,
-  `Details` text NOT NULL,
-  `CreatorID` int NOT NULL,
-  `PostID` int NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
+  `name` text,
+  `CreationTime` text,
+  `Details` text,
+  `PostID` int DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `FKh4mjquns29nfa0shge7hiaw7e` (`PostID`),
-  KEY `FKnxs3ssbo7lcdftj22tx4p2474` (`CreatorID`),
-  CONSTRAINT `feedbacks_ibfk_1` FOREIGN KEY (`CreatorID`) REFERENCES `user` (`ID`),
-  CONSTRAINT `feedbacks_ibfk_2` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`),
-  CONSTRAINT `FKh4mjquns29nfa0shge7hiaw7e` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`),
-  CONSTRAINT `FKnxs3ssbo7lcdftj22tx4p2474` FOREIGN KEY (`CreatorID`) REFERENCES `user` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `feedbacks_ibfk_1` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`),
+  CONSTRAINT `FKh4mjquns29nfa0shge7hiaw7e` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -107,6 +103,7 @@ CREATE TABLE `feedbacks` (
 
 LOCK TABLES `feedbacks` WRITE;
 /*!40000 ALTER TABLE `feedbacks` DISABLE KEYS */;
+INSERT INTO `feedbacks` VALUES (1,'anonymus','2020-12-12','hello',3);
 /*!40000 ALTER TABLE `feedbacks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -804,4 +801,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-27 20:56:16
+-- Dump completed on 2020-12-27 23:59:16
