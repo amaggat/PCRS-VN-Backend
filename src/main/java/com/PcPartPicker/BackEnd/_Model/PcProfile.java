@@ -90,17 +90,17 @@ public class PcProfile {
     private List<PowerSupplyUnit> psu;
 
 
-    public String getId() {
-        return id;
-    }
+//    public String getId() {
+//        return id;
+//    }
 
 //    public double getPcPrice() {
 //        return PcPrice;
 //    }
 
-    public String getPcname() {
-        return pcname;
-    }
+//    public String getPcname() {
+//        return pcname;
+//    }
 
     public void setId(String id) {
         this.id = id;
@@ -115,16 +115,16 @@ public class PcProfile {
 //    }
 
 
-    public User getUser() {
-        User user1 = new User();
-        user1.setName(user.getName());
-        user1.setGmail(user.getGmail());
-        return user1;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
+//    public User getUser() {
+//        User user1 = new User();
+//        user1.setName(user.getName());
+//        user1.setGmail(user.getGmail());
+//        return user1;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 
     public List<com.PcPartPicker.BackEnd.Processor.cpu> getCpu() {
         return cpu;
