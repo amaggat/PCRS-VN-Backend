@@ -23,6 +23,10 @@ public class Post extends NameEntity {
     @NotEmpty
     private String details = new String();
 
+    @Column(name = "description")
+    @NotEmpty
+    private String description = new String();
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "creatorid")
     private User user;
@@ -69,5 +73,13 @@ public class Post extends NameEntity {
 
     public void setDetails(String details) {
         this.details = details;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
