@@ -68,8 +68,8 @@ INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-2x8G-320
 INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-2x8G-3000', 'G.Skill', 'Trident', '2x8G', 'DDR4', '3000', 'G.Skill Trident Z RGB 2x8G 3000');
 INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-1x16G-3000', 'G.Skill', 'Trident', '1x16G', 'DDR4', '3000', 'G.Skill Trident Z RGB 1x16G 3000');
 INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-2x16G-3000', 'G.Skill', 'Trident', '2x16G', 'DDR4', '3000', 'G.Skill Trident Z RGB 2x16G 3000');
-INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-2x16G-3200', 'G.Skill', 'Trident', '2x16G', 'DDR4', '3200', 'G.Skill Trident Z RGB 2x16G 3200');
-INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-2x32G-3200', 'G.Skill', 'Trident', '2x32G', 'DDR4', '3200', 'G.Skill Trident Z RGB 2x32G 3200');
+-- INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-2x16G-3200', 'G.Skill', 'Trident', '2x16G', 'DDR4', '3200', 'G.Skill Trident Z RGB 2x16G 3200');
+-- INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-2x32G-3200', 'G.Skill', 'Trident', '2x32G', 'DDR4', '3200', 'G.Skill Trident Z RGB 2x32G 3200');
 -- INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-2x16G-3600', 'G.Skill', 'Trident', '2x16G', 'DDR4', '3600', 'G.Skill Trident Z RGB 2x16G 3600');
 -- INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-4x8G-3600', 'G.Skill', 'Trident', '4x8G', 'DDR4', '3600', 'G.Skill Trident Z RGB 4x8G 3600');
 -- INSERT IGNORE INTO `pc_parts_picker`.ram VALUES ('g.skill-trident-z-RGB-2x32G-3600', 'G.Skill', 'Trident', '2x32G', 'DDR4', '3600', 'G.Skill Trident Z RGB 2x32G 3600');

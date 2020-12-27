@@ -22,7 +22,7 @@ INSERT IGNORE `pc_parts_picker`.`pcprofile_psu` VALUES ('entry-level-intel-build
 INSERT IGNORE `pc_parts_picker`.`pcprofile` VALUES ('high-end-intel-build', '1', 'High-End Intel Build');
 INSERT IGNORE `pc_parts_picker`.`pcprofile_cpu` VALUES ('high-end-intel-build', 'intel-i9-10900K');
 INSERT IGNORE `pc_parts_picker`.`pcprofile_mainboard` VALUES ('high-end-intel-build', 'gigabyte-z490i-aorus-ultra');
-INSERT IGNORE `pc_parts_picker`.`pcprofile_ram` VALUES ('high-end-intel-build', 'g.skill-trident-z-neo-2x16G-3600');
+INSERT IGNORE `pc_parts_picker`.`pcprofile_ram` VALUES ('high-end-intel-build', 'corsair-dominator-platinum-2x16G-3600');
 INSERT IGNORE `pc_parts_picker`.`pcprofile_gpu` VALUES ('high-end-intel-build', 'asus-geforce-rtx-3090-strix-gaming');
 INSERT IGNORE `pc_parts_picker`.`pcprofile_hdd` VALUES ('high-end-intel-build', 'seagate-ironwolf-pro-4096-3.5sata');
 INSERT IGNORE `pc_parts_picker`.`pcprofile_ssd` VALUES ('high-end-intel-build', 'samsung-870-qvo-1024-m2-sata');
