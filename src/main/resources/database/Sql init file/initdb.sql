@@ -88,8 +88,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ssd` (
     `ID` VARCHAR(100) NOT NULL,
     `manufacturer` VARCHAR(100) NOT NULL,
     `serieName` VARCHAR(100) NOT NULL,
-    `size` VARCHAR(100) NOT NULL,
     `chipset` VARCHAR(100) NOT NULL,
+    `storage` VARCHAR(100) NOT NULL,
     `fullname` TEXT NOT NULL,
     PRIMARY KEY (`ID`)
 );
@@ -108,8 +108,8 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`hdd` (
     `ID` VARCHAR(100) NOT NULL,
     `manufacturer` VARCHAR(100) NOT NULL,
     `serieName` VARCHAR(100) NOT NULL,
-    `size` VARCHAR(100) NOT NULL,
     `chipset` VARCHAR(100) NULL,
+    `storage` VARCHAR(100) NOT NULL,
     `fullname` TEXT NOT NULL,
     PRIMARY KEY (`ID`)
 );

@@ -37,7 +37,7 @@ public class HddController {
                 p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
             }
             if (Objects.nonNull(size) ) {
-                p = cb.and(p, cb.like(root.get("storage"), "%" + size+ "%"));
+                p = cb.and(p, cb.like(root.get("storage"), "%" + size + "%"));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
