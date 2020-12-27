@@ -26,7 +26,7 @@ public class cpu extends electronicComponents {
     
     @Column(name = "threads")
     @NotEmpty
-    private Integer threads;
+    private Integer Threads;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cpu", fetch = FetchType.EAGER)
     private List<cpuPriceList> PriceList;
@@ -69,11 +69,11 @@ public class cpu extends electronicComponents {
     }
 
     public Integer getThreads() {
-        return threads;
+        return Threads;
     }
 
     public void setThreads(Integer threads) {
-        threads = threads;
+        Threads = threads;
     }
 
     public List<com.PcPartPicker.BackEnd.Processor.cpuPriceList> getPriceList() {
