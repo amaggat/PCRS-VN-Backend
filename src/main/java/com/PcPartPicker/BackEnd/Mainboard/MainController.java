@@ -30,6 +30,7 @@ public class MainController {
                                 @RequestParam(name = "manufacturer", required = false) String manufacturer,
                                 @RequestParam(name = "sizeofram", required = false) String sizeofram,
                                 @RequestParam(name = "memory_slot", required = false) String memorySlot,
+                                @RequestParam(name = "formfactor", required = false) String formfactor,
                                 Pageable pageable){
         Page<Mainboard> mainboard = mainRepository.findAll((Specification<Mainboard>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
@@ -47,6 +48,9 @@ public class MainController {
             }
             if (Objects.nonNull(memorySlot) ) {
                 p = cb.and(p, cb.equal(root.get("memory_slot"), memorySlot));
+            }
+            if (Objects.nonNull(formfactor) ) {
+                p = cb.and(p, cb.equal(root.get("formfactor"), formfactor));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
