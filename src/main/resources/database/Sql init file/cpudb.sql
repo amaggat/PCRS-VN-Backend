@@ -1,6 +1,5 @@
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i3-10100', 'Intel', 'Comet Lake', 'Core i3', 'LGA1200', '4', '8', 'Intel Core i3-10100 Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i3-10100F', 'Intel', 'Comet Lake', 'Core i3', 'LGA1200', '4', '8', 'Intel Core i3-10100F Processor');
-INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i3-10300', 'Intel', 'Comet Lake', 'Core i3', 'LGA1200', '4', '8', 'Intel Core i3-10300 Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i5-10400', 'Intel', 'Comet Lake', 'Core i5', 'LGA1200', '6', '12', 'Intel Core i5-10400 Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i5-10400F', 'Intel', 'Comet Lake', 'Core i5', 'LGA1200', '6', '12', 'Intel Core i5-10400F Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i5-10500', 'Intel', 'Comet Lake', 'Core i5', 'LGA1200', '6', '12', 'Intel Core i5-10500 Processor');
@@ -38,7 +37,6 @@ INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3500', 'AMD', 'Mat
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3500x', 'AMD', 'Matisse', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 3500X Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3600', 'AMD', 'Matisse', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 3600 Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3600x', 'AMD', 'Matisse', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 3600X Desktop Processor');
-INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-3600xt', 'AMD', 'Matisse 2', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 3600XT Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-5600x', 'AMD', 'Vermeer', 'Ryzen', 'Socket AM4', '6', '12', 'AMD Ryzen 5 5600X Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-7-3700x', 'AMD', 'Matisse', 'Ryzen', 'Socket AM4', '8', '16', 'AMD Ryzen 7 3700X Desktop Processor');
 INSERT IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-7-3800x', 'AMD', 'Matisse', 'Ryzen', 'Socket AM4', '8', '16', 'AMD Ryzen 7 3800X Desktop Processor');
