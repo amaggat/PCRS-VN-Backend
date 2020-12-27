@@ -552,7 +552,7 @@ CREATE TABLE `post` (
 
 LOCK TABLES `post` WRITE;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
-INSERT INTO `post` VALUES (3,'Entry-Level AMD Build','2020-12-27','',1,'Hello motherfucker'),(4,'Entry-Level Intel Build','2020-12-27','',1,'Hello fuckermother'),(5,'High-End Intel Build','2020-12-27','',1,'Fuckermother Hello'),(6,'High-End AMD Build','2020-12-27','',1,'Motherfucker Hello '),(7,'Low-End Intel Build','2020-12-27','',1,'Motherhello fucker'),(8,'Low-End AMD Build','2020-12-27','',1,'Fucker motherhello '),(9,'Streaming Intel Build','2020-12-27','',1,'Hello fuckermother'),(10,'Streaming AMD Build','2020-12-27','',1,'Hello fuckermother');
+INSERT INTO `post` VALUES (1,'Entry-Level AMD Build','2020-12-27','',1,'Hello motherfucker'),(2,'Entry-Level Intel Build','2020-12-27','',1,'Hello fuckermother'),(3,'High-End Intel Build','2020-12-27','',1,'Fuckermother Hello'),(4,'High-End AMD Build','2020-12-27','',1,'Motherfucker Hello '),(5,'Low-End Intel Build','2020-12-27','',1,'Motherhello fucker'),(6,'Low-End AMD Build','2020-12-27','',1,'Fucker motherhello '),(7,'Streaming Intel Build','2020-12-27','',1,'Hello fuckermother'),(8,'Streaming AMD Build','2020-12-27','',1,'Hello fuckermother');
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -581,7 +581,7 @@ CREATE TABLE `post_pc` (
 
 LOCK TABLES `post_pc` WRITE;
 /*!40000 ALTER TABLE `post_pc` DISABLE KEYS */;
-INSERT INTO `post_pc` VALUES ('high-end-intel-build',3),('high-end-amd-build',4),('low-end-intel-build',5),('low-end-amd-build',6),('streaming-intel-build',7),('streaming-amd-build',8);
+INSERT INTO `post_pc` VALUES ('entry-level-amd-build',1),('entry-level-intel-build',2),('high-end-intel-build',3),('high-end-amd-build',4),('low-end-intel-build',5),('low-end-amd-build',6),('streaming-intel-build',7),('streaming-amd-build',8);
 /*!40000 ALTER TABLE `post_pc` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -804,4 +804,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-27 20:15:01
+-- Dump completed on 2020-12-27 20:37:49
