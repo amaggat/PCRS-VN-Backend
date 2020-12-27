@@ -13,7 +13,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "post")
-public class Article extends NameEntity {
+public class Post extends NameEntity {
 
     @Column(name = "creationtime")
     @NotEmpty
@@ -24,10 +24,10 @@ public class Article extends NameEntity {
     private String details = new String();
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "userid")
+    @JoinColumn(name = "creatorid")
     private User user;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "article")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "post")
     private List<Feedbacks> feedbacks;
 
     @OneToOne
@@ -36,7 +36,6 @@ public class Article extends NameEntity {
             joinColumns = @JoinColumn(name = "PostID"),
             inverseJoinColumns = @JoinColumn(name = "PcID")
     )
-
     private PcProfile pcProfile;
 
 

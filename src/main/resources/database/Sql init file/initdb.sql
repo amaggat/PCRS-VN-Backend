@@ -5,7 +5,7 @@ ALTER DATABASE pc_parts_picker
     DEFAULT COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`user` (
-    `ID` INT NOT NULL,
+    `ID` INT NOT NULL AUTO_INCREMENT,
     `Username` VARCHAR(100) NOT NULL,
     `password` VARCHAR(100) NOT NULL,
     `mail` VARCHAR(100) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`user` (
 );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`post` (
-	`ID` INT NOT NULL,
+	`ID` INT NOT NULL AUTO_INCREMENT,
     `Title` VARCHAR(100) NOT NULL,
     `CreationTime` DATE NOT NULL,
     `Details` TEXT NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`post` (
 );
 
 CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`feedbacks` (
-	`ID` INT NOT NULL,
+	`ID` INT NOT NULL AUTO_INCREMENT,
     `CreationTime` DATE NOT NULL,
     `Details` TEXT NOT NULL,
     `CreatorID` INT NOT NULL,

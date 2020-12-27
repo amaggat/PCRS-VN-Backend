@@ -2,7 +2,7 @@ package com.PcPartPicker.BackEnd._UserRelate.User;
 
 
 import com.PcPartPicker.BackEnd._Model.PcProfile;
-import com.PcPartPicker.BackEnd._UserRelate.Article.Article;
+import com.PcPartPicker.BackEnd._UserRelate.Article.Post;
 import com.PcPartPicker.BackEnd._UserRelate.Feedbacks.Feedbacks;
 import com.PcPartPicker.BackEnd._UserRelate.NameEntity;
 
@@ -29,7 +29,7 @@ public class User extends NameEntity {
     private List<PcProfile> pcProfile;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
-    private List<Article> articles;
+    private List<Post> posts;
 
     public String getUsername() {
         return username;
@@ -63,19 +63,19 @@ public class User extends NameEntity {
         this.feedbacks = feedbacks;
     }
 
-    public List<PcProfile> getPcProfile() {
-        return pcProfile;
-    }
+//    public List<PcProfile> getPcProfile() {
+//        return pcProfile;
+//    }
+//
+//    public void setPcProfile(List<PcProfile> pcProfile) {
+//        this.pcProfile = pcProfile;
+//    }
 
-    public void setPcProfile(List<PcProfile> pcProfile) {
-        this.pcProfile = pcProfile;
-    }
-
-    public List<Article> getArticles() {
-        return articles;
-    }
-
-    public void setArticles(List<Article> articles) {
-        this.articles = articles;
-    }
+//    public List<Post> getPosts() {
+//        return posts;
+//    }
+//
+//    public void setPosts(List<Post> posts) {
+//        this.posts = posts;
+//    }
 }

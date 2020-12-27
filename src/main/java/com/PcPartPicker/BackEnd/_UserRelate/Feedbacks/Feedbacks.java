@@ -1,6 +1,6 @@
 package com.PcPartPicker.BackEnd._UserRelate.Feedbacks;
 
-import com.PcPartPicker.BackEnd._UserRelate.Article.Article;
+import com.PcPartPicker.BackEnd._UserRelate.Article.Post;
 import com.PcPartPicker.BackEnd._UserRelate.NameEntity;
 import com.PcPartPicker.BackEnd._UserRelate.User.User;
 
@@ -26,7 +26,7 @@ public class Feedbacks extends NameEntity {
 
     @ManyToOne
     @JoinColumn(name = "PostID")
-    private Article article;
+    private Post post;
 
     public String getDetails() {
         return details;
@@ -52,11 +52,11 @@ public class Feedbacks extends NameEntity {
         this.user = user;
     }
 
-    public Article getArticle() {
-        return article;
+    public Post getPost() {
+        return post;
     }
 
-    public void setArticle(Article article) {
-        this.article = article;
+    public void setPost(Post post) {
+        this.post = post;
     }
 }
