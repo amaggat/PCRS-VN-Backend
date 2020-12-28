@@ -31,8 +31,8 @@ public interface PsuRepository extends JpaRepository<PowerSupplyUnit, Integer>, 
     @Transactional(readOnly = true)
     List<PowerSupplyUnit> findByStandard(@Param("standard") String standard);
 
-    @Query("SELECT DISTINCT psu FROM PowerSupplyUnit psu WHERE psu.Power BETWEEN :min_power AND :max_power")
-    @Transactional(readOnly = true)
-    List<PowerSupplyUnit> findByPower(@Param("min_power") int min_power, @Param("max_power") int max_power);
+//    @Query("SELECT DISTINCT psu FROM PowerSupplyUnit psu WHERE psu.Power BETWEEN :min_power AND :max_power")
+//    @Transactional(readOnly = true)
+//    List<PowerSupplyUnit> findByPower(@Param("min_power") int min_power, @Param("max_power") int max_power);
 
 }

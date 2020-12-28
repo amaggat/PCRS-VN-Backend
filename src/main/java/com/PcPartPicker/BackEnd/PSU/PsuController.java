@@ -25,6 +25,7 @@ public class PsuController {
     @GetMapping("/api/psu")
     public Page<PowerSupplyUnit> list(@RequestParam(name = "name", required = false) String name,
                                       @RequestParam(name = "chipset", required = false) String chipset,
+                                      @RequestParam(name = "power", required = false) Integer power,
                                       @RequestParam(name = "manufacturer", required = false) String manufacturer,
                                       @RequestParam(name = "standard_80", required = false) String standard_80,
                                       Pageable pageable){
@@ -35,6 +36,9 @@ public class PsuController {
             }
             if (Objects.nonNull(manufacturer) ) {
                 p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+            }
+            if (Objects.nonNull(power) ) {
+                p = cb.and(p, cb.equal(root.get("power"), power));
             }
             if (Objects.nonNull(standard_80) ) {
                 p = cb.and(p, cb.like(root.get("standard_80"), "%" + standard_80+ "%"));
@@ -48,11 +52,11 @@ public class PsuController {
         return psu;
     }
 
-    @GetMapping("/api/psu/find/size={PsuPowerMin}-{PsuPowerMax}")
-    public List<PowerSupplyUnit> SearchByPower(@PathVariable("PsuPowerMin") int min_power, @PathVariable("PsuPowerMax") int max_power)
-    {
-        return psuRepository.findByPower(min_power, max_power);
-    }
+//    @GetMapping("/api/psu/find/size={PsuPowerMin}-{PsuPowerMax}")
+//    public List<PowerSupplyUnit> SearchByPo wer(@PathVariable("PsuPowerMin") int min_power, @PathVariable("PsuPowerMax") int max_power)
+//    {
+//        return psuRepository.findByPower(min_power, max_power);
+//    }
 
     @GetMapping("/api/psu/find/name={PsuStandard}")
     public List<PowerSupplyUnit> SearchByName(@PathVariable("PsuStandard") String Standard)

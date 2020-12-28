@@ -57,18 +57,18 @@ public class Feedbacks extends NameEntity {
     //    public User getUser() {
 //        return user;
 //    }
-//
+
 //    public void setUser(User user) {
 //        this.user = user;
 //    }
 
-//    public Integer getPost() {
-//        return post.getId();
-//    }
-//
-//    public void setPost(Post post) {
-//        this.post = post;
-//    }
+    public Integer getPost() {
+        return post.getId();
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
+    }
 
 
 }

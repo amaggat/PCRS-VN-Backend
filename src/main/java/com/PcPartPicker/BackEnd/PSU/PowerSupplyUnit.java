@@ -15,7 +15,7 @@ public class PowerSupplyUnit extends electronicComponents {
 
     @Column(name = "power")
     @NotEmpty
-    private int Power;
+    private Integer power;
 
     @Column(name = "standard_80")
     @NotEmpty
@@ -47,8 +47,8 @@ public class PowerSupplyUnit extends electronicComponents {
         return standard_80;
     }
 
-    public int getPower() {
-        return Power;
+    public Integer getPower() {
+        return power;
     }
 
 //    public void setSize(String size) {
@@ -59,7 +59,7 @@ public class PowerSupplyUnit extends electronicComponents {
         this.standard_80 = standard_80;
     }
 
-    public void setPower(int power) {
-        Power = power;
+    public void setPower(Integer power) {
+        power = power;
     }
 }

@@ -373,7 +373,7 @@ CREATE TABLE `pcprofile_gpu` (
 
 LOCK TABLES `pcprofile_gpu` WRITE;
 /*!40000 ALTER TABLE `pcprofile_gpu` DISABLE KEYS */;
-INSERT INTO `pcprofile_gpu` VALUES ('entry-level-amd-build','gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b'),('entry-level-intel-build','msi-geforce-rtx-3060-ti-gaming-x-trio'),('high-end-intel-build','asus-geforce-rtx-3090-strix-gaming'),('high-end-amd-build','gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b'),('low-end-intel-build','asus-geforce-gtx-1650-super-tuf-gaming'),('low-end-amd-build','asus-radeon-rx-570-rog-strix'),('streaming-intel-build','msi-geforce-gtx-1050-ti-aero-itx'),('streaming-amd-build','asus-geforce-gtx-1060-6gb-strix-oc');
+INSERT INTO `pcprofile_gpu` VALUES ('entry-level-amd-build','gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b'),('entry-level-intel-build','msi-geforce-rtx-3060-ti-gaming-x-trio'),('high-end-intel-build','asus-geforce-rtx-3090-strix-gaming'),('high-end-amd-build','gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b'),('low-end-intel-build','asus-geforce-gtx-1650-super-tuf-gaming'),('low-end-amd-build','asus-radeon-rx-570-rog-strix'),('streaming-intel-build','msi-geforce-gtx-1050-ti-aero-itx'),('streaming-amd-build','msi-geforce-gtx-1650-d6-ventus-xs-oc');
 /*!40000 ALTER TABLE `pcprofile_gpu` ENABLE KEYS */;
 UNLOCK TABLES;
 
