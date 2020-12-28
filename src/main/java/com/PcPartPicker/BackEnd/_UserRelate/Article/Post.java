@@ -27,6 +27,11 @@ public class Post extends NameEntity {
     @NotEmpty
     private String description = new String();
 
+
+    @Column(name = "price")
+    @NotEmpty
+    private String price = new String();
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "creatorid")
     private User user;
@@ -89,5 +94,13 @@ public class Post extends NameEntity {
 
     public void setFeedbacks(List<Feedbacks> feedbacks) {
         this.feedbacks = feedbacks;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }
