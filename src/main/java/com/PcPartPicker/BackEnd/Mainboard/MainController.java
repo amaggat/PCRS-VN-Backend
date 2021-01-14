@@ -1,6 +1,5 @@
 package com.PcPartPicker.BackEnd.Mainboard;
 
-import com.PcPartPicker.BackEnd.Processor.cpu;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.criteria.Predicate;
-import java.util.List;
 import java.util.Objects;
 
 @RestController
@@ -32,31 +30,31 @@ public class MainController {
                                 @RequestParam(name = "memory_slot", required = false) String memorySlot,
                                 @RequestParam(name = "formfactor", required = false) String formfactor,
                                 Pageable pageable){
-        Page<Mainboard> mainboard = mainRepository.findAll((Specification<Mainboard>) (root, cq, cb) -> {
-            Predicate p = cb.conjunction();
+        Page<Mainboard> mainboard = mainRepository.findAll((Specification<Mainboard>) (root, criteriaQuery, criteriaBuilder) -> {
+            Predicate predicate = criteriaBuilder.conjunction();
             if (Objects.nonNull(chipset) ) {
-                p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("chipset"), "%" + chipset + "%"));
             }
             if (Objects.nonNull(manufacturer) ) {
-                p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
             }
             if (Objects.nonNull(socket) ) {
-                p = cb.and(p, cb.like(root.get("socket"), "%" + socket+ "%"));
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("socket"), "%" + socket+ "%"));
             }
             if (Objects.nonNull(sizeofram) ) {
-                p = cb.and(p, cb.like(root.get("sizeofram"), "%" + sizeofram+ "%"));
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("sizeofram"), "%" + sizeofram+ "%"));
             }
             if (Objects.nonNull(memorySlot) ) {
-                p = cb.and(p, cb.equal(root.get("memory_slot"), memorySlot));
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("memory_slot"), memorySlot));
             }
             if (Objects.nonNull(formfactor) ) {
-                p = cb.and(p, cb.equal(root.get("formfactor"), formfactor));
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("formfactor"), formfactor));
             }
             if (!StringUtils.isEmpty(name)) {
-                p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("fullname"), "%" + name + "%"));
             }
-            cq.orderBy(cb.desc(root.get("fullname")), cb.asc(root.get("id")));
-            return p;
+            criteriaQuery.orderBy(criteriaBuilder.desc(root.get("fullname")), criteriaBuilder.asc(root.get("id")));
+            return predicate;
         }, pageable);
         return mainboard;
     }

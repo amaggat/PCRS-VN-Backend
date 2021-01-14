@@ -18,11 +18,10 @@ import javax.persistence.criteria.Predicate;
 public class CpuController {
 
     private final CpuRepository cpuRepository;
-    private final cpuPriceListRepository cpuPriceListRepository;
 
-    public CpuController(CpuRepository cpuRepository, cpuPriceListRepository cpuPriceListRepository) {
+    public CpuController(CpuRepository cpuRepository) {
         this.cpuRepository = cpuRepository;
-        this.cpuPriceListRepository = cpuPriceListRepository;
+
     }
 
     @GetMapping("/api/cpu")

@@ -1,9 +1,7 @@
 package com.PcPartPicker.BackEnd._UserRelate.Feedbacks;
 
-import com.PcPartPicker.BackEnd._UserRelate.Article.Post;
+
 import com.PcPartPicker.BackEnd._UserRelate.Article.PostRepository;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

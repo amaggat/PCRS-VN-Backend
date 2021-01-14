@@ -10,10 +10,6 @@ import java.util.List;
 
 public interface FeedbacksRepository extends Repository<Feedbacks, Integer>, JpaSpecificationExecutor<Feedbacks> {
 
-    /**
-     * Save a {@link Feedbacks} to the data store, either inserting or updating it.
-     * @param feedbacks the {@link Feedbacks} to save
-     */
     void save(Feedbacks feedbacks);
 
     @Query("SELECT DISTINCT feedback from Feedbacks feedback WHERE feedback.post.id= :postid")
