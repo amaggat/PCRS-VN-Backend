@@ -16,25 +16,4 @@ public interface RamRepository extends JpaRepository<ram, Integer>, JpaSpecifica
     @Query("SELECT DISTINCT ram From ram ram WHERE ram.id= :id")
     @Transactional(readOnly = true)
     ram findByID(@Param("id") String id);
-
-    @Query("SELECT DISTINCT ram From ram ram WHERE ram.manufacturer LIKE %:manufacturer%")
-    @Transactional(readOnly = true)
-    List<ram> findByManufacturer(@Param("manufacturer") String manufacturer);
-
-    @Query("SELECT DISTINCT ram From ram ram WHERE ram.fullname LIKE %:fullname%")
-    @Transactional(readOnly = true)
-    List<ram> findByName(@Param("fullname") String fullName);
-
-    @Query("SELECT DISTINCT ram From ram ram WHERE ram.sizeOfRam= :sizeOfName")
-    @Transactional(readOnly = true)
-    List<ram> findBySize(@Param("sizeOfName") String size);
-
-    @Query("SELECT DISTINCT ram From ram ram WHERE ram.clockSpeed= :clockSpeed")
-    @Transactional(readOnly = true)
-    List<ram> findByClockSpeed(@Param("clockSpeed") int clockSpeed);
-
-//    void save(ram ram);
-
-//    @Query("SELECT DISTINCT ram From ram ram")
-//    List<ram> findAll();
 }

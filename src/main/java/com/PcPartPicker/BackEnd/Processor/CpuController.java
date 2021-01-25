@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 import java.util.Objects;
 import javax.persistence.criteria.Predicate;
 
@@ -55,30 +54,10 @@ public class CpuController {
         return cpu;
     }
 
-
-//    @GetMapping("/api/cpu/find/name={CpuName}")
-//    public List<cpu> SearchByName(@PathVariable("CpuName") String name)
-//    {
-//        return cpuRepository.findByName(name);
-//    }
-//
-//    @GetMapping("/api/cpu/find/socket={CpuSocket}")
-//    public List<cpu> SearchBySocket(@PathVariable("CpuSocket") String socket)
-//    {
-//        return cpuRepository.findBySocket(socket);
-//    }
-
     @GetMapping("/api/cpu/{CpuID}")
     public cpu SearchById(@PathVariable("CpuID") String id)
     {
         return cpuRepository.findByID(id);
     }
-//
-//    @GetMapping("/api/cpu/{CpuID}/price")
-//    public List<cpuPriceList> ReturnPriceList(@PathVariable("CpuID") String fid)
-//    {
-//        return cpuPriceListRepository.findcpuPriceListByFid(fid);
-//    }
-
 
 }
