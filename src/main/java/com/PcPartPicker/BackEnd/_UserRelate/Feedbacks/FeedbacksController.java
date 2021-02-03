@@ -19,12 +19,13 @@ public class FeedbacksController {
     }
 
     @PostMapping(path="/api/feedbacks")
-    public void addFeedback(@RequestBody Feedbacks feedbacks)
+    public ResponseEntity addFeedback(@RequestBody Feedbacks feedbacks)
     {
 //        Post one = postRepository.findByID(feedbacks.getPost());
 //        Feedbacks newFeedbacks  = new Feedbacks();
 //        newFeedbacks.setName(feedbacks.getName());
 //        newFeedbacks.setPost(one);
         feedbacksRepository.save(feedbacks);
+        return new ResponseEntity(HttpStatus.OK);
     }
 }

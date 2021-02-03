@@ -4,6 +4,7 @@ import com.PcPartPicker.BackEnd._UserRelate.Article.Post;
 import com.PcPartPicker.BackEnd._UserRelate.NameEntity;
 
 import javax.persistence.*;
+import javax.swing.text.html.Option;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
@@ -26,7 +27,7 @@ public class Feedbacks extends NameEntity {
 //    @JoinColumn(name = "creatorid")
 //    private User user;
 
-    @ManyToOne
+    @ManyToOne(optional=false)
     @JoinColumn(name = "postid")
     private Post post;
 

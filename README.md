@@ -12,7 +12,7 @@ spring.datasource.username= //username
 spring.datasource.password= //password 
 ```
 
-2. Import database_final_final.sql to MySQL.
+2. Import database.sql to MySQL.
 
 3. Run BackEndApplication.
 
