@@ -8,13 +8,13 @@ We were inspired by [PcPartPicker](http://pcpartpicker.com), a website that allo
 
 1. The dashboard:
 ![Dashboard](src/main/frontend/images/dashboard.png)
-2. The main area which allows backend.user to build their PC:
+2. The main area which allows users to build their PC:
 ![Main area](src/main/frontend/images/build-pc.png)
 3. Browsing PC item:
 ![Browsing](src/main/frontend/images/browse-product.png)
-4. We already create some finised build which backend.user can use immediately.
+4. We already create some finised build which users can use immediately.
 ![Guild](src/main/frontend/images/guild.png)
-5. All the products were crawled from different retail stores. We want to create a website where backend.user can easly check for their items for their wishlist with its price, promo from retailer ...
+5. All the products were crawled from different retail stores. We want to create a website where users can easily check for their items for their wishlist with its price, promo from retailer ...
 ![Product-detail](src/main/frontend/images/view-product.png)
 
 ## [Database](data)
