@@ -31,7 +31,7 @@ We crawl product, price, promo, ... from many retail stores such as [PhongVu](ht
 We are still working on deployment. 
 The website will avaiable someday soon, thanks for your patient.
 
-## Back-End
+## Back-end
 
 1. Add application.properties to src/main/resources with below content
 
@@ -48,12 +48,64 @@ spring.datasource.password=
 
 If you want Front-end source code, visit https://github.com/manhdung20112000/PCbuilder-frontend
 
+## Front-end
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
 ## [Our team](team)
 - Dung M. Nguyen 
 [Contact: [GitHub](https://github.com/manhdung20112000) [Facebook](https://www.facebook.com/nmd2000)]
 
 - Thanh T. Tran
-[Contact: [GitHub](https://github.com/amaggat) [Facebook](https://www.facebook.com/messages/t/100005149897099)]
+[Contact: [GitHub](https://github.com/amaggat) [Facebook](https://www.facebook.com/thanhtt.amg/)]
 
 - Hung P. Quang
 [Contact: [GitHub](https://github.com/heor2807) [Facebook](https://www.facebook.com/srw.king)]
@@ -67,5 +119,7 @@ If you want Front-end source code, visit https://github.com/manhdung20112000/PCb
 ##### *Special thanks to:*
 - Anh T. Tran
 [Contact: [GitHub](https://github.com/zzNuAzz) [Facebook](https://www.facebook.com/SoNguyenTo216/)]
+  
+- Nhat Q. Nguyen [GitHub](https://github.com/fuzeless) [Facebook](https://www.facebook.com/fuzeless/)]
 
 
