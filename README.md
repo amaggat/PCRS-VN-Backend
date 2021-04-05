@@ -103,6 +103,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - Anh T. Tran
 [Contact: [GitHub](https://github.com/zzNuAzz) [Facebook](https://www.facebook.com/SoNguyenTo216/)]
   
-- Nhat Q. Nguyen [GitHub](https://github.com/fuzeless) [Facebook](https://www.facebook.com/fuzeless/)]
+- Nhat Q. Nguyen [Contact: [GitHub](https://github.com/fuzeless) [Facebook](https://www.facebook.com/fuzeless/)]
 
 
