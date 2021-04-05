@@ -7,15 +7,15 @@ We were inspired by [PcPartPicker](http://pcpartpicker.com), a website that allo
 ## [Demo](demo)
 
 1. The dashboard:
-![Dashboard](images/dashboard.png)
+![Dashboard](src/main/frontend/images/dashboard.png)
 2. The main area which allows backend.user to build their PC:
-![Main area](images/build-pc.png)
+![Main area](src/main/frontend/images/build-pc.png)
 3. Browsing PC item:
-![Browsing](images/browse-product.png)
+![Browsing](src/main/frontend/images/browse-product.png)
 4. We already create some finised build which backend.user can use immediately.
-![Guild](images/guild.png)
+![Guild](src/main/frontend/images/guild.png)
 5. All the products were crawled from different retail stores. We want to create a website where backend.user can easly check for their items for their wishlist with its price, promo from retailer ...
-![Product-detail](images/view-product.png)
+![Product-detail](src/main/frontend/images/view-product.png)
 
 ## [Database](data)
 We crawl product, price, promo, ... from many retail stores such as [PhongVu](https://phongvu.vn/), [AnPhat](https://www.anphatpc.com.vn/), [HanoiComputer](https://www.hanoicomputer.vn/), ... that users can access easly.
@@ -23,7 +23,7 @@ We crawl product, price, promo, ... from many retail stores such as [PhongVu](ht
 *Note:* All the data we have are crawled from their public website.
 
 **The database architecture:**
-![DB-Architecture](images/database.jpg)
+![DB-Architecture](src/main/frontend/images/database.jpg)
 
 *For more detail, please checkout our backend service [here](https://github.com/amaggat/PcPartPickerVN_BackEndService)*
 
