@@ -16,10 +16,10 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `user`
+-- Table structure for table `backend.user`
 --
 
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `backend.user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
@@ -34,13 +34,13 @@ CREATE TABLE `user` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `backend.user`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'amaggat','weare123','amaggat@gmail.com','user','Amaggat');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+LOCK TABLES `backend.user` WRITE;
+/*!40000 ALTER TABLE `backend.user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'amaggat','weare123','amaggat@gmail.com','backend.user','Amaggat');
+/*!40000 ALTER TABLE `backend.user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

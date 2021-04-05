@@ -16,10 +16,10 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `feedbacks`
+-- Table structure for table `backend.feedbacks`
 --
 
-DROP TABLE IF EXISTS `feedbacks`;
+DROP TABLE IF EXISTS `backend.feedbacks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `feedbacks` (
@@ -36,13 +36,13 @@ CREATE TABLE `feedbacks` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `feedbacks`
+-- Dumping data for table `backend.feedbacks`
 --
 
-LOCK TABLES `feedbacks` WRITE;
-/*!40000 ALTER TABLE `feedbacks` DISABLE KEYS */;
+LOCK TABLES `backend.feedbacks` WRITE;
+/*!40000 ALTER TABLE `backend.feedbacks` DISABLE KEYS */;
 INSERT INTO `feedbacks` VALUES (1,'anonymus','2020-12-12','hello',3);
-/*!40000 ALTER TABLE `feedbacks` ENABLE KEYS */;
+/*!40000 ALTER TABLE `backend.feedbacks` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

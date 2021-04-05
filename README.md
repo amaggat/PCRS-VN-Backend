@@ -14,6 +14,6 @@ spring.datasource.password= //password
 
 2. Import database.sql to MySQL.
 
-3. Run BackEndApplication.
+3. Run backend.BackEndApplication.
 
 If you want Front-end source code, visit https://github.com/manhdung20112000/PCbuilder-frontend

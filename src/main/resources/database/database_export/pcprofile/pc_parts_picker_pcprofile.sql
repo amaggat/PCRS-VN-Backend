@@ -16,10 +16,10 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `pcprofile`
+-- Table structure for table `backend.pcprofile`
 --
 
-DROP TABLE IF EXISTS `pcprofile`;
+DROP TABLE IF EXISTS `backend.pcprofile`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pcprofile` (
@@ -34,13 +34,13 @@ CREATE TABLE `pcprofile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `pcprofile`
+-- Dumping data for table `backend.pcprofile`
 --
 
-LOCK TABLES `pcprofile` WRITE;
-/*!40000 ALTER TABLE `pcprofile` DISABLE KEYS */;
+LOCK TABLES `backend.pcprofile` WRITE;
+/*!40000 ALTER TABLE `backend.pcprofile` DISABLE KEYS */;
 INSERT INTO `pcprofile` VALUES ('entry-level-amd-build',1,'Entry-Level AMD Build'),('entry-level-intel-build',1,'Entry-Level Intel Build'),('high-end-amd-build',1,'High-End AMD Build'),('high-end-intel-build',1,'High-End Intel Build'),('low-end-amd-build',1,'Low-End AMD Build'),('low-end-intel-build',1,'Low-End Intel Build'),('streaming-amd-build',1,'Streaming AMD Build'),('streaming-intel-build',1,'Streaming Intel Build');
-/*!40000 ALTER TABLE `pcprofile` ENABLE KEYS */;
+/*!40000 ALTER TABLE `backend.pcprofile` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
