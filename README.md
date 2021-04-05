@@ -30,6 +30,24 @@ We crawl product, price, promo, ... from many retail stores such as [PhongVu](ht
 ## [Usage](usage)
 We are still working on deployment. 
 The website will avaiable someday soon, thanks for your patient.
+
+## Back-End
+
+1. Add application.properties to src/main/resources with below content
+
+```
+spring.jpa.hibernate.ddl-auto=none
+spring.datasource.url= jdbc:mysql://localhost:3306/pc_parts_picker
+spring.datasource.username= 
+spring.datasource.password=  
+```
+
+2. Import database.sql to MySQL.
+
+3. Run BackEndApplication.
+
+If you want Front-end source code, visit https://github.com/manhdung20112000/PCbuilder-frontend
+
 ## [Our team](team)
 - Dung M. Nguyen 
 [Contact: [GitHub](https://github.com/manhdung20112000) [Facebook](https://www.facebook.com/nmd2000)]
