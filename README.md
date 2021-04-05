@@ -85,24 +85,24 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## [Our team](team)
 - Dung M. Nguyen 
-[Contact: [GitHub](https://github.com/manhdung20112000) [Facebook](https://www.facebook.com/nmd2000)]
+[Contact: [GitHub](https://github.com/manhdung20112000) | [Facebook](https://www.facebook.com/nmd2000)]
 
 - Thanh T. Tran
-[Contact: [GitHub](https://github.com/amaggat) [Facebook](https://www.facebook.com/thanhtt.amg/)]
+[Contact: [GitHub](https://github.com/amaggat) | [Facebook](https://www.facebook.com/thanhtt.amg/)]
 
 - Hung P. Quang
-[Contact: [GitHub](https://github.com/heor2807) [Facebook](https://www.facebook.com/srw.king)]
+[Contact: [GitHub](https://github.com/heor2807) | [Facebook](https://www.facebook.com/srw.king)]
 
 - Binh M. Le
 [Contact: [Facebook](https://www.facebook.com/luke.shrek)]
 
 - Hieu V. Pham
-[Contact: [GitHub](https://github.com/hieuphamjr) [Facebook](https://www.facebook.com/HieuPhamJR11)]
+[Contact: [GitHub](https://github.com/hieuphamjr) | [Facebook](https://www.facebook.com/HieuPhamJR11)]
 
 ##### *Special thanks to:*
 - Anh T. Tran
-[Contact: [GitHub](https://github.com/zzNuAzz) [Facebook](https://www.facebook.com/SoNguyenTo216/)]
+[Contact: [GitHub](https://github.com/zzNuAzz) | [Facebook](https://www.facebook.com/SoNguyenTo216/)]
   
-- Nhat Q. Nguyen [Contact: [GitHub](https://github.com/fuzeless) [Facebook](https://www.facebook.com/fuzeless/)]
+- Nhat Q. Nguyen [Contact: [GitHub](https://github.com/fuzeless) | [Facebook](https://www.facebook.com/fuzeless/)]
 
 
