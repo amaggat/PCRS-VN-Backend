@@ -1,12 +1,12 @@
 package com.pcpartpicker.backend.model;
 
-import com.pcpartpicker.backend.drives.HardDriveDisk.HardDiskDrive;
-import com.pcpartpicker.backend.drives.SolidStateDrive.SolidStateDrive;
-import com.pcpartpicker.backend.gpu.gpu;
-import com.pcpartpicker.backend.mainboard.Mainboard;
-import com.pcpartpicker.backend.psu.PowerSupplyUnit;
-import com.pcpartpicker.backend.cpu.cpu;
-import com.pcpartpicker.backend.ram.ram;
+import com.pcpartpicker.backend.model.drives.HardDriveDisk.HardDiskDrive;
+import com.pcpartpicker.backend.model.drives.SolidStateDrive.SolidStateDrive;
+import com.pcpartpicker.backend.model.gpu.gpu;
+import com.pcpartpicker.backend.model.mainboard.Mainboard;
+import com.pcpartpicker.backend.model.psu.PowerSupplyUnit;
+import com.pcpartpicker.backend.model.cpu.cpu;
+import com.pcpartpicker.backend.model.ram.ram;
 import com.pcpartpicker.backend.user.User.User;
 
 import javax.persistence.*;
