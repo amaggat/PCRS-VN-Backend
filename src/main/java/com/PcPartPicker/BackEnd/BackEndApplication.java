@@ -1,4 +1,4 @@
-package com.PcPartPicker.BackEnd;
+package com.pcpartpicker.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
