@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import Footer from '../../../../Components/Footer/Footer';
 import Header from '../../../../Components/Header/Header';
 import img from './motherboard-demo.jpeg';
 
 import '../ProductSample.css';
 import ImageSlider from '../../../../Components/Page/ImageSlider';
-import { useParams } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import MotherboardService from '../../../../Client/MotherboardService';
 import formatMoney from '../../../../Components/Page/CurrencyFormat';
 
-function MotherboardTemplate () {
+function MotherboardTemplate() {
     const {id} = useParams();
     const [motherboard, setMotherboard] = useState({});
     useEffect(() => {
         MotherboardService.getMotherboardbyID(id).then(response => {
             setMotherboard(response.data)
         })
-        .catch(console.log);
-    },[id])
+            .catch(console.log);
+    }, [id])
 
     return (
         <div className="product-detail white-back">
-            <Header />
+            <Header/>
             <div className="banner text-center">
                 <p className="banner-title">PRODUCT DETAIL</p>
                 <p className="banner-name">{motherboard.fullname}</p>
@@ -31,11 +31,16 @@ function MotherboardTemplate () {
                 <div className="row">
                     <div className="col-lg-4 left">
                         <div className="block img">
-                            <ImageSlider arr={motherboard.priceList?.map(element => {return (element)})} img={img}/>
+                            <ImageSlider arr={motherboard.priceList?.map(element => {
+                                return (element)
+                            })} img={img}/>
                         </div>
                         <div className="block action form-group row justify-content-md-center">
                             <div className="col-lg action-function">
-                                <button type="button" className="btn btn-primary" onClick={()=>MotherboardService.setMotherboard2List(motherboard)}>Add to your Build</button>
+                                <button type="button" className="btn btn-primary"
+                                        onClick={() => MotherboardService.setMotherboard2List(motherboard)}>Add to your
+                                    Build
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -45,13 +50,13 @@ function MotherboardTemplate () {
                             <div className="detail-price row">
                                 <table className="table table-hover detail-table">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">Retailer</th>
-                                            <th scope="col">Base</th>
-                                            <th scope="col">Promo</th>
-                                            <th scope="col">Total</th>
-                                            <th scope="col"></th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">Retailer</th>
+                                        <th scope="col">Base</th>
+                                        <th scope="col">Promo</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col"></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                     {
@@ -73,18 +78,21 @@ function MotherboardTemplate () {
                                                     </td>
                                                     <td className="total vertical-container">
                                                         <div className="vertical">
-                                                            {element.promo ? formatMoney(+(element.promo*element.price)) : formatMoney(+element.price) }
+                                                            {element.promo ? formatMoney(+(element.promo * element.price)) : formatMoney(+element.price)}
                                                         </div>
                                                     </td>
                                                     <td className="buy-button vertical-container">
-                                                        <a target="_blank" rel="noreferrer" className="btn btn-success vertical" href={element.link}>Buy</a>
-                                                    </td>   
+                                                        <a target="_blank" rel="noreferrer"
+                                                           className="btn btn-success vertical"
+                                                           href={element.link}>Buy</a>
+                                                    </td>
                                                 </tr>
-                                            )})
-                                        }
+                                            )
+                                        })
+                                    }
                                     </tbody>
                                 </table>
-                            </div>  
+                            </div>
 
                             <div className="block detail-text">
                                 <ul>
@@ -131,7 +139,7 @@ function MotherboardTemplate () {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     )
 }

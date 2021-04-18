@@ -22,16 +22,17 @@
 DROP TABLE IF EXISTS `backend.feedbacks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `feedbacks` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `name` text,
-  `CreationTime` text,
-  `Details` text,
-  `PostID` int DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `FKh4mjquns29nfa0shge7hiaw7e` (`PostID`),
-  CONSTRAINT `feedbacks_ibfk_1` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`),
-  CONSTRAINT `FKh4mjquns29nfa0shge7hiaw7e` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`)
+CREATE TABLE `feedbacks`
+(
+    `ID`           int NOT NULL AUTO_INCREMENT,
+    `name`         text,
+    `CreationTime` text,
+    `Details`      text,
+    `PostID`       int DEFAULT NULL,
+    PRIMARY KEY (`ID`),
+    KEY            `FKh4mjquns29nfa0shge7hiaw7e` (`PostID`),
+    CONSTRAINT `feedbacks_ibfk_1` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`),
+    CONSTRAINT `FKh4mjquns29nfa0shge7hiaw7e` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -39,11 +40,14 @@ CREATE TABLE `feedbacks` (
 -- Dumping data for table `backend.feedbacks`
 --
 
-LOCK TABLES `backend.feedbacks` WRITE;
+LOCK
+TABLES `backend.feedbacks` WRITE;
 /*!40000 ALTER TABLE `backend.feedbacks` DISABLE KEYS */;
-INSERT INTO `feedbacks` VALUES (1,'anonymus','2020-12-12','hello',3);
+INSERT INTO `feedbacks`
+VALUES (1, 'anonymus', '2020-12-12', 'hello', 3);
 /*!40000 ALTER TABLE `backend.feedbacks` ENABLE KEYS */;
-UNLOCK TABLES;
+UNLOCK
+TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

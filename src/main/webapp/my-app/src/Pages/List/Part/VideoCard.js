@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import '../List.css'
 
 import formatMoney from '../../../Components/Page/CurrencyFormat';
@@ -15,7 +15,7 @@ class GPUCard extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0,-100000);
+        window.scrollTo(0, -100000);
     }
 
     remove = () => {
@@ -29,21 +29,22 @@ class GPUCard extends Component {
 
         return (
             <tr className="product-card">
-                <td className="row-title"><Link className="vertical-center" id="" to="/products/video-card">Videocard</Link></td>
+                <td className="row-title"><Link className="vertical-center" id=""
+                                                to="/products/video-card">Videocard</Link></td>
                 <td>
-                { videocard ?
-                    <Link className="wrap-product-img" to={`/products/video-card/${videocard.id}`}>
-                        <img className="product-img" src={videocard.img ? videocard.img : img} alt={videocard.id}/> 
-                        <span>
+                    {videocard ?
+                        <Link className="wrap-product-img" to={`/products/video-card/${videocard.id}`}>
+                            <img className="product-img" src={videocard.img ? videocard.img : img} alt={videocard.id}/>
+                            <span>
                             {videocard.fullname}
                         </span>
-                    </Link>
-                    :
-                    <Link type="button" className="btn btn-primary btn-sm" to="/products/video-card">
-                        <i className="fas fa-plus" />
-                        Choose a Videocard
-                    </Link>
-                }
+                        </Link>
+                        :
+                        <Link type="button" className="btn btn-primary btn-sm" to="/products/video-card">
+                            <i className="fas fa-plus"/>
+                            Choose a Videocard
+                        </Link>
+                    }
                 </td>
                 <td className="base row-title">
                     <div className="vertical-center">{videocard ? formatMoney(videocard.price) + "VND" : null}</div>
@@ -51,45 +52,45 @@ class GPUCard extends Component {
                 <td className="promo row-title">
                     <div className="vertical-center">{
                         videocard ?
-                            videocard.promo ? 
+                            videocard.promo ?
                                 videocard.promo
                                 :
                                 null
                             :
-                        null
-                        }</div>
+                            null
+                    }</div>
                 </td>
                 <td className="snipping row-title">
                     <div className="vertical-center">{
                         videocard ?
-                        videocard.snipping ? 
-                            videocard.snipping
+                            videocard.snipping ?
+                                videocard.snipping
+                                :
+                                null
                             :
                             null
-                        :
-                    null
                     }</div>
                 </td>
                 <td className="tax row-title">
                     <div className="vertical-center">{
                         videocard ?
-                        videocard.tax ? 
-                            videocard.tax
+                            videocard.tax ?
+                                videocard.tax
+                                :
+                                null
                             :
                             null
-                        :
-                    null
                     }</div>
                 </td>
                 <td className="price row-title">
                     <div className="vertical-center">{
                         videocard ?
-                            videocard.promo ? 
+                            videocard.promo ?
                                 formatMoney(videocard.price * videocard.promo) + "VND"
                                 :
                                 formatMoney(videocard.price) + "VND"
                             :
-                        null
+                            null
                     }</div>
                 </td>
                 <td className="where">
@@ -97,18 +98,19 @@ class GPUCard extends Component {
                         {
                             videocard ?
                                 <Link className="contain-img" to={videocard.link}>
-                                    <img className="product-img" src={videocard.logo ? videocard.logo : img} alt={videocard.id}/>
+                                    <img className="product-img" src={videocard.logo ? videocard.logo : img}
+                                         alt={videocard.id}/>
                                 </Link>
-                            : null
+                                : null
                         }
                     </div>
                 </td>
                 <td className="delete">
                     {
-                    videocard ?
-                        <div onClick={this.remove}><i class="delete fas fa-times"></i></div>
-                        :
-                        null
+                        videocard ?
+                            <div onClick={this.remove}><i class="delete fas fa-times"></i></div>
+                            :
+                            null
                     }
                 </td>
             </tr>

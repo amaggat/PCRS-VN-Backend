@@ -22,15 +22,16 @@
 DROP TABLE IF EXISTS `pcprofile_psu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pcprofile_psu` (
-  `PcID` varchar(100) NOT NULL,
-  `PsuID` varchar(100) NOT NULL,
-  KEY `FK8tumuxe3jvu70ukbxnr36rai` (`PsuID`),
-  KEY `FKi0nqeyu5h3gsbljxjiym0177h` (`PcID`),
-  CONSTRAINT `FK8tumuxe3jvu70ukbxnr36rai` FOREIGN KEY (`PsuID`) REFERENCES `psu` (`ID`),
-  CONSTRAINT `FKi0nqeyu5h3gsbljxjiym0177h` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
-  CONSTRAINT `pcprofile_psu_ibfk_1` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
-  CONSTRAINT `pcprofile_psu_ibfk_2` FOREIGN KEY (`PsuID`) REFERENCES `psu` (`ID`)
+CREATE TABLE `pcprofile_psu`
+(
+    `PcID`  varchar(100) NOT NULL,
+    `PsuID` varchar(100) NOT NULL,
+    KEY     `FK8tumuxe3jvu70ukbxnr36rai` (`PsuID`),
+    KEY     `FKi0nqeyu5h3gsbljxjiym0177h` (`PcID`),
+    CONSTRAINT `FK8tumuxe3jvu70ukbxnr36rai` FOREIGN KEY (`PsuID`) REFERENCES `psu` (`ID`),
+    CONSTRAINT `FKi0nqeyu5h3gsbljxjiym0177h` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
+    CONSTRAINT `pcprofile_psu_ibfk_1` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
+    CONSTRAINT `pcprofile_psu_ibfk_2` FOREIGN KEY (`PsuID`) REFERENCES `psu` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,11 +39,21 @@ CREATE TABLE `pcprofile_psu` (
 -- Dumping data for table `pcprofile_psu`
 --
 
-LOCK TABLES `pcprofile_psu` WRITE;
+LOCK
+TABLES `pcprofile_psu` WRITE;
 /*!40000 ALTER TABLE `pcprofile_psu` DISABLE KEYS */;
-INSERT INTO `pcprofile_psu` VALUES ('entry-level-amd-build','cm-mwe-gold-650-gold'),('entry-level-intel-build','cm-mwe-gold-650-gold'),('high-end-intel-build','seasonic-focus-1000-gold'),('high-end-amd-build','seasonic-prime-ultra-1000-platinum'),('low-end-intel-build','cm-mwe-v2-500-white'),('low-end-amd-build','corsair-cv-550-bronze'),('streaming-intel-build','cm-mwe-gold-650-gold'),('streaming-amd-build','cm-mwe-gold-650-gold');
+INSERT INTO `pcprofile_psu`
+VALUES ('entry-level-amd-build', 'cm-mwe-gold-650-gold'),
+       ('entry-level-intel-build', 'cm-mwe-gold-650-gold'),
+       ('high-end-intel-build', 'seasonic-focus-1000-gold'),
+       ('high-end-amd-build', 'seasonic-prime-ultra-1000-platinum'),
+       ('low-end-intel-build', 'cm-mwe-v2-500-white'),
+       ('low-end-amd-build', 'corsair-cv-550-bronze'),
+       ('streaming-intel-build', 'cm-mwe-gold-650-gold'),
+       ('streaming-amd-build', 'cm-mwe-gold-650-gold');
 /*!40000 ALTER TABLE `pcprofile_psu` ENABLE KEYS */;
-UNLOCK TABLES;
+UNLOCK
+TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

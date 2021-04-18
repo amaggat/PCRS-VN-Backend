@@ -29,8 +29,7 @@ public class PostController {
     }
 
     @GetMapping("/api/post")
-    public Page<Post> list(Pageable pageable)
-    {
+    public Page<Post> list(Pageable pageable) {
         Page<Post> post = postRepository.findAll((Specification<Post>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
             cq.orderBy(cb.desc(root.get("name")), cb.asc(root.get("id")));
@@ -40,15 +39,13 @@ public class PostController {
     }
 
     @GetMapping("/api/post/{PostID}/feedbacks")
-    public List<Feedbacks> listFeedbacks(@PathVariable("PostID") Integer id)
-    {
+    public List<Feedbacks> listFeedbacks(@PathVariable("PostID") Integer id) {
         List<Feedbacks> feedbacks = feedbacksRepository.findByPostID(id);
         return feedbacks;
     }
 
     @GetMapping("/api/post/{PostID}")
-    public Post SearchById(@PathVariable("PostID") Integer id)
-    {
+    public Post SearchById(@PathVariable("PostID") Integer id) {
         return postRepository.findByID(id);
     }
 

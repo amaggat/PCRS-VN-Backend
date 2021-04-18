@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Footer from '../../../../../Components/Footer/Footer';
 import Header from '../../../../../Components/Header/Header';
 import img from './case-demo.jpeg';
@@ -6,10 +6,10 @@ import img from './case-demo.jpeg';
 import '../../ProductSample.css';
 
 class CaseTemplate extends Component {
-    render () {
+    render() {
         return (
             <div className="product-detail white-back">
-                <Header />
+                <Header/>
                 <div className="banner text-center">
                     <p className="banner-title">PRODUCT DETAIL</p>
                     <p className="banner-name">Phanteks Eclipse P300A Mesh</p>
@@ -80,7 +80,7 @@ class CaseTemplate extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
+                <Footer/>
             </div>
         )
     }

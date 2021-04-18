@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Footer from '../../../../Components/Footer/Footer';
 import Header from '../../../../Components/Header/Header';
 import img from './cpu-demo.jpeg';
 
 import '../ProductSample.css';
 
-import { Link, useParams } from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import CPUService from '../../../../Client/CPUService';
 
 import ImageSlider from '../../../../Components/Page/ImageSlider'
 import formatMoney from '../../../../Components/Page/CurrencyFormat';
 
-function CPUTemplate () {
+function CPUTemplate() {
     const {id} = useParams();
     const [cpu, setCPU] = useState({});
     useEffect(() => {
         CPUService.getCPUbyID(id).then(response => {
             setCPU(response.data)
         })
-        .catch(console.log);
-    },[id])
-    
+            .catch(console.log);
+    }, [id])
+
     return (
         <div className="product-detail white-back">
-            <Header />
+            <Header/>
             <div className="banner text-center">
                 <p className="banner-title">PRODUCT DETAIL</p>
                 <p className="banner-name">{cpu.fullname}</p>
@@ -32,11 +32,15 @@ function CPUTemplate () {
             <div className="w-container">
                 <div className="row">
                     <div className="col-lg-4 left">
-                        <ImageSlider arr={cpu.priceList?.map(element => {return (element)})} img={img}/>
-                        
+                        <ImageSlider arr={cpu.priceList?.map(element => {
+                            return (element)
+                        })} img={img}/>
+
                         <div className="block action form-group row justify-content-md-center">
                             <div className="col-lg action-function">
-                                <button type="button" className="btn btn-primary" onClick={()=>CPUService.setCPU2List(cpu)}>Add to your Build</button>
+                                <button type="button" className="btn btn-primary"
+                                        onClick={() => CPUService.setCPU2List(cpu)}>Add to your Build
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -46,13 +50,13 @@ function CPUTemplate () {
                             <div className="detail-price row">
                                 <table className="table table-hover detail-table">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">Retailer</th>
-                                            <th scope="col">Base</th>
-                                            <th scope="col">Promo</th>
-                                            <th scope="col">Total</th>
-                                            <th scope="col"></th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">Retailer</th>
+                                        <th scope="col">Base</th>
+                                        <th scope="col">Promo</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col"></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                     {
@@ -60,7 +64,7 @@ function CPUTemplate () {
                                             return (
                                                 <tr>
                                                     <td className="retailer-img vertical-container">
-                                                        <img className="" src={element.logo}  alt="retailer"/>
+                                                        <img className="" src={element.logo} alt="retailer"/>
                                                     </td>
                                                     <td className="base vertical-container">
                                                         <div className="vertical">
@@ -74,15 +78,18 @@ function CPUTemplate () {
                                                     </td>
                                                     <td className="total vertical-container">
                                                         <div className="vertical">
-                                                            {element.promo ? formatMoney(+(element.promo*element.price)) : formatMoney(+element.price) }
+                                                            {element.promo ? formatMoney(+(element.promo * element.price)) : formatMoney(+element.price)}
                                                         </div>
                                                     </td>
                                                     <td className="buy-button vertical-container">
-                                                        <a target="_blank" rel="noreferrer" className="btn btn-success vertical" href={element.link}>Buy</a>
-                                                    </td>   
+                                                        <a target="_blank" rel="noreferrer"
+                                                           className="btn btn-success vertical"
+                                                           href={element.link}>Buy</a>
+                                                    </td>
                                                 </tr>
-                                            )})
-                                        }
+                                            )
+                                        })
+                                    }
                                     </tbody>
                                 </table>
                             </div>
@@ -125,7 +132,7 @@ function CPUTemplate () {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     )
 }

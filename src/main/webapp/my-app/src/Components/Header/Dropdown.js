@@ -1,5 +1,5 @@
-import React, { Component } from 'react'; 
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 import Case from './img/nav-case.png'
 import CPU from './img/nav-cpu.png'
@@ -31,7 +31,7 @@ class Dropdown extends Component {
                             </div>
                             <div className="col-3 prodcut-catrgory">
                                 <Link className="product-category__item" to="/products/hdd">
-                                    <img className="product-category__item-img" alt="cc" src={HDD} />
+                                    <img className="product-category__item-img" alt="cc" src={HDD}/>
                                     <span className="product-category__item-title">Hard Disk Drive</span>
                                 </Link>
                             </div>
@@ -41,7 +41,7 @@ class Dropdown extends Component {
                                     <span className="product-category__item-title">Memory</span>
                                 </Link>
                             </div>
-                            
+
                             <div className="col-3 prodcut-catrgory">
                                 <Link className="product-category__item" to="/products/power">
                                     <img className="product-category__item-img" alt="power" src={Power}/>
@@ -171,12 +171,12 @@ class Dropdown extends Component {
                                 </div>
                                 <div className="block">
                                     <div className="title">Other</div>
-                                    <div className="link"> 
+                                    <div className="link">
                                         <Link className="extra-link" to="/">Laptops</Link>
                                     </div>
                                 </div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>

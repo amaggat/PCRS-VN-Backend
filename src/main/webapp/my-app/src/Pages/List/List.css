@@ -97,7 +97,7 @@
     border-top: none !important;
 }
 
-.delete div i{
+.delete div i {
     cursor: pointer;
     transition: 0.25s;
 }

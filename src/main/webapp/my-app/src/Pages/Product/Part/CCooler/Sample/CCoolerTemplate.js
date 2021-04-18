@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Footer from '../../../../../Components/Footer/Footer';
 import Header from '../../../../../Components/Header/Header';
 import img from './cpu-cooler-demo.jpeg';
@@ -6,10 +6,10 @@ import img from './cpu-cooler-demo.jpeg';
 import '../../ProductSample.css';
 
 class CCoolerTemplate extends Component {
-    render () {
+    render() {
         return (
             <div className="product-detail white-back">
-                <Header />
+                <Header/>
                 <div className="banner text-center">
                     <p className="banner-title">PRODUCT DETAIL</p>
                     <p className="banner-name">Cooler Master Hyper 212 EVO</p>
@@ -80,7 +80,7 @@ class CCoolerTemplate extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
+                <Footer/>
             </div>
         )
     }

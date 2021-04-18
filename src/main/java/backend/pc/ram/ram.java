@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name ="ram")
+@Table(name = "ram")
 public class ram extends electronicComponents {
 
 //    @Column(name = "ddr")
@@ -35,8 +35,16 @@ public class ram extends electronicComponents {
         return clockSpeed;
     }
 
+    public void setClockSpeed(int clockSpeed) {
+        this.clockSpeed = clockSpeed;
+    }
+
     public String getSizeOfRam() {
         return sizeOfRam;
+    }
+
+    public void setSizeOfRam(String sizeOfRam) {
+        this.sizeOfRam = sizeOfRam;
     }
 
     public List<ramPriceList> getPriceList() {
@@ -47,17 +55,6 @@ public class ram extends electronicComponents {
         this.PriceList = ramPriceList;
 
 
-    }
-
-
-
-
-    public void setClockSpeed(int clockSpeed) {
-        this.clockSpeed = clockSpeed;
-    }
-
-    public void setSizeOfRam(String sizeOfRam) {
-        this.sizeOfRam = sizeOfRam;
     }
 
 //    public void setDDR(String DDR) {

@@ -151,12 +151,15 @@
     flex-direction: column;
     align-items: center;
 }
+
 .product-browsing__item-link:hover {
-    
+
 }
+
 .product-browsing__item-img {
     height: 100px;
 }
+
 .product-browsing__item-title {
 
 }

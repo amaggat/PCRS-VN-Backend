@@ -11,7 +11,7 @@ public abstract class electronicComponents {
     @NotEmpty
     private String serieName = new String();
 
-    @Column(name ="chipset")
+    @Column(name = "chipset")
     @NotEmpty
     private String chipset = new String();
 
@@ -32,16 +32,16 @@ public abstract class electronicComponents {
         return chipset;
     }
 
-    public String getManufacturer() {
-        return manufacturer;
+    public void setChipset(String chipset) {
+        this.chipset = chipset;
     }
 
 //    public double getPrice() {
 //        return price;
 //    }
 
-    public String getSerieName() {
-        return serieName;
+    public String getManufacturer() {
+        return manufacturer;
     }
 
     public void setManufacturer(String manufacturer) {
@@ -52,8 +52,8 @@ public abstract class electronicComponents {
 //        this.price = price;
 //    }
 
-    public void setChipset(String chipset) {
-        this.chipset = chipset;
+    public String getSerieName() {
+        return serieName;
     }
 
     public void setSerieName(String serieName) {

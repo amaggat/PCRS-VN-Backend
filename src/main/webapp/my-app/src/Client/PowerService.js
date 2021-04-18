@@ -6,7 +6,7 @@ class Service {
     static setPower2List(power) {
         var minPower = power
         minPower.price = 10000000000
-        
+
         // eslint-disable-next-line array-callback-return
         power.priceList?.map(e => {
             if (e.price < minPower.price) {
@@ -25,17 +25,17 @@ class Service {
     }
 
     static getPowerbyID(id) {
-        return axios.get(POWER_REST_API_URL+'/'+id)
+        return axios.get(POWER_REST_API_URL + '/' + id)
     }
 
-    static getSearchPower({searchList={}, pageNumber=0, pageSize=20}) {
-        var request = POWER_REST_API_URL+'?'
-        request += 'page='+ pageNumber + '&size=' + pageSize;
+    static getSearchPower({searchList = {}, pageNumber = 0, pageSize = 20}) {
+        var request = POWER_REST_API_URL + '?'
+        request += 'page=' + pageNumber + '&size=' + pageSize;
         // console.log(searchList)
 
         // eslint-disable-next-line array-callback-return
         Object.entries(searchList).map(e => {
-            if(e[1] !== "") {
+            if (e[1] !== "") {
                 request += '&' + e[0] + "=" + e[1] + '&'
             }
         })

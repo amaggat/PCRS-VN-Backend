@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name ="cpu")
+@Table(name = "cpu")
 public class cpu extends electronicComponents {
 
     @Column(name = "socket")
@@ -23,7 +23,7 @@ public class cpu extends electronicComponents {
     @Column(name = "cores")
     @NotEmpty
     private Integer cores;
-    
+
     @Column(name = "threads")
     @NotEmpty
     private Integer Threads;

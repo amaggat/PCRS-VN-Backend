@@ -1,5 +1,5 @@
-import { React, Component } from 'react';
-import { Link } from 'react-router-dom';
+import {React, Component} from 'react';
+import {Link} from 'react-router-dom';
 import logo from '../Sources/Icon/logo_final2.png';
 import './Header.css';
 
@@ -20,7 +20,8 @@ class TopNav extends Component {
                         <div className="col-sm-2">
                             <nav className="nav text-center">
                                 <li className="nav-item">
-                                    <a target="_blank" rel="noreferrer" className="nav-link" href="https://github.com/manhdung20112000/app-front-end">Github</a>
+                                    <a target="_blank" rel="noreferrer" className="nav-link"
+                                       href="https://github.com/manhdung20112000/app-front-end">Github</a>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/about">About Us</Link>
@@ -30,7 +31,7 @@ class TopNav extends Component {
                                 </li>
                             </nav>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
 

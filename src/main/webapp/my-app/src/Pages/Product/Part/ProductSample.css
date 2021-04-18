@@ -32,8 +32,8 @@
     font-size: 18px !important;
 }
 
-.product-detail .detail-text p{
-    font-family: 'Rubik', sans-serif; 
+.product-detail .detail-text p {
+    font-family: 'Rubik', sans-serif;
     font-size: 14px;
 }
 
@@ -77,8 +77,8 @@
     margin: 0;
 }
 
-.product-detail .base div,.product-detail .promo div{
-    font-family: 'Roboto', sans-serif ;
+.product-detail .base div, .product-detail .promo div {
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
@@ -128,7 +128,7 @@
     padding-bottom: 2px;
 }
 
-.product-detail .detail-block tbody tr td{
+.product-detail .detail-block tbody tr td {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 18px;

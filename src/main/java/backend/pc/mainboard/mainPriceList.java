@@ -23,6 +23,18 @@ public class mainPriceList {
     @Column(name = "retailer")
     @NotEmpty
     private String retailer;
+    @Column(name = "link")
+    @NotEmpty
+    private String link = new String();
+    @Column(name = "img")
+    @NotEmpty
+    private String img = new String();
+    @Column(name = "name")
+    @NotEmpty
+    private String name = new String();
+    @Column(name = "price")
+    @NotEmpty
+    private int price;
 
     public String getLogo() {
         return logo;
@@ -39,22 +51,6 @@ public class mainPriceList {
     public void setRetailer(String retailer) {
         this.retailer = retailer;
     }
-
-    @Column(name= "link")
-    @NotEmpty
-    private String link = new String();
-
-    @Column(name= "img")
-    @NotEmpty
-    private String img = new String();
-
-    @Column(name= "name")
-    @NotEmpty
-    private String name = new String();
-
-    @Column(name= "price")
-    @NotEmpty
-    private int price;
 
     public int getId() {
         return Id;

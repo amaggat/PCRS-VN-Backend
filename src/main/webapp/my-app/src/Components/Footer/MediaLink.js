@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './Footer.css';
 
 class MediaLink extends Component {
-    render () {
+    render() {
         return (
             <div className="col">
                 <Link to="/" className="fab fa-facebook icon"></Link>

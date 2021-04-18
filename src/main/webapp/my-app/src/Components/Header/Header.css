@@ -85,12 +85,12 @@
 
 .item-img {
     width: 25px;
-    display: inline-block;    
+    display: inline-block;
 }
 
 .sub-nav .nav-item .nav-link {
     display: inline;
-} 
+}
 
 .sub-nav .nav-item:hover {
     background-color: rgb(38, 41, 60);
@@ -111,6 +111,7 @@
 .prodcut-catrgory {
     padding: 3px;
 }
+
 .product-category__item {
     display: flex;
     flex-direction: column;
@@ -121,6 +122,7 @@
     padding: 10px;
     transition: 0.2s;
 }
+
 .product-category__item:hover {
     color: #E0A82C;
     background-color: rgba(237, 169, 32, 0.15);
@@ -133,6 +135,7 @@
     margin: 0 12px 8px 12px;
     height: 85px;
 }
+
 .product-category__item-title {
     display: block;
     font-size: 12px;

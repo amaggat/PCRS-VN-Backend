@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './Footer.css';
 
 class Info extends Component {
@@ -11,7 +11,7 @@ class Info extends Component {
                         <div className="card-text">
                             <ul className="card-title white-text">
                                 <li>
-                                    <h5 className="footer-title">PROJECT TEAM</h5> 
+                                    <h5 className="footer-title">PROJECT TEAM</h5>
                                 </li>
                                 <li>
                                     <Link className="link" to="/about">About us</Link>

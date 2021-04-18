@@ -3,9 +3,9 @@ import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 
 function About() {
-    return(
+    return (
         <div>
-            <Header />
+            <Header/>
             <div className="white-back">
                 <h2>ABOUT US</h2>
                 <h2>ABOUT US</h2>
@@ -15,7 +15,7 @@ function About() {
                 <h2>ABOUT US</h2>
                 <h2>ABOUT US</h2>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 }

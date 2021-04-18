@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import formatCurrency from '../../Components/Page/CurrencyFormat'
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
@@ -34,12 +34,12 @@ class List extends Component {
         this.removeAll = this.removeAll.bind(this);
     }
 
-    removeAll () {
+    removeAll() {
         localStorage.clear();
         window.location.reload();
     }
 
-    render () {
+    render() {
         const {cpu, motherboard} = this.state
         var socket = null;
 
@@ -59,7 +59,7 @@ class List extends Component {
                 <div className="col-lg-9 no-issue">
                     <i class="tick far fa-check-circle"></i>
                     <span className="title">Compatibility: </span>
-                    <span className="text">Dunno.</span> 
+                    <span className="text">Dunno.</span>
                 </div>
                 <div className="col-lg-3 wattage">
                     <i class="lightning fas fa-bolt"></i>
@@ -85,7 +85,7 @@ class List extends Component {
         )
         return (
             <div className="system-build white-back">
-                <Header />
+                <Header/>
                 <div className="banner">
                     <h1 className="text-center">SYSTEM BUILD</h1>
                 </div>
@@ -101,16 +101,19 @@ class List extends Component {
 
                 <div className="tab-content sb-table w-container block" id="pills-tabContent">
                     {
-                        this.state ? 
+                        this.state ?
                             <div className="text-right">
-                                <button type="button" className="btn btn-primary btn-sm" onClick={this.removeAll}>Remove all</button>
+                                <button type="button" className="btn btn-primary btn-sm" onClick={this.removeAll}>Remove
+                                    all
+                                </button>
                             </div>
-                        : null
+                            : null
 
                     }
-                    <div className="tab-pane fade show active" id="pills-system" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <table className="table title">
-                        <thead>
+                    <div className="tab-pane fade show active" id="pills-system" role="tabpanel"
+                         aria-labelledby="pills-home-tab">
+                        <table className="table title">
+                            <thead>
                             <tr>
                                 <th scope="col">Component</th>
                                 <th scope="col">Selection</th>
@@ -121,20 +124,20 @@ class List extends Component {
                                 <th scope="col-2">Price</th>
                                 <th scope="col">Where</th>
                             </tr>
-                        </thead>
-                        <tbody className="attribute">
-                            <CPUCard />
-                            <MotherBoardCard />
-                            <MemoryCard />
-                            <HDDCard />
-                            <SSDCard />
-                            <GPUCard />
-                            <PowerCard />
+                            </thead>
+                            <tbody className="attribute">
+                            <CPUCard/>
+                            <MotherBoardCard/>
+                            <MemoryCard/>
+                            <HDDCard/>
+                            <SSDCard/>
+                            <GPUCard/>
+                            <PowerCard/>
                             {/* <CCCCard /> */}
                             {/* <StorageCard /> */}
                             {/* <CaseCard /> */}
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
@@ -153,7 +156,7 @@ class List extends Component {
                         <span className="content">Some physical dimension restrictions cannot (yet) be automatically checked, such as cpu cooler / RAM clearance with modules using tall heat spreaders. </span>
                     </dir>
                 </div>
-                
+
                 <Footer/>
             </div>
         )

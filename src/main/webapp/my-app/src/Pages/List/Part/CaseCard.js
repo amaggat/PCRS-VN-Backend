@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import '../List.css'
 
 class CaseCard extends Component {
@@ -9,7 +9,7 @@ class CaseCard extends Component {
                 <td className="row-title"><Link className="component" id="" to="/products/case">Case</Link></td>
                 <td>
                     <Link type="button" className="btn btn-primary btn-sm" to="/products/case">
-                        <i className="fas fa-plus" />
+                        <i className="fas fa-plus"/>
                         Choose a Case
                     </Link>
                 </td>

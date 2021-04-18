@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name ="psu")
+@Table(name = "psu")
 public class PowerSupplyUnit extends electronicComponents {
 
     @Column(name = "power")
@@ -47,16 +47,16 @@ public class PowerSupplyUnit extends electronicComponents {
         return standard_80;
     }
 
-    public Integer getPower() {
-        return power;
+    public void setStandard_80(String standard_80) {
+        this.standard_80 = standard_80;
     }
 
 //    public void setSize(String size) {
 //        this.size = size;
 //    }
 
-    public void setStandard_80(String standard_80) {
-        this.standard_80 = standard_80;
+    public Integer getPower() {
+        return power;
     }
 
     public void setPower(Integer power) {

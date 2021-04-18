@@ -22,14 +22,15 @@
 DROP TABLE IF EXISTS `backend.user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `Username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `mail` varchar(100) NOT NULL,
-  `UserType` varchar(100) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  PRIMARY KEY (`ID`)
+CREATE TABLE `user`
+(
+    `ID`       int          NOT NULL AUTO_INCREMENT,
+    `Username` varchar(100) NOT NULL,
+    `password` varchar(100) NOT NULL,
+    `mail`     varchar(100) NOT NULL,
+    `UserType` varchar(100) NOT NULL,
+    `name`     varchar(255) NOT NULL,
+    PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -37,11 +38,14 @@ CREATE TABLE `user` (
 -- Dumping data for table `backend.user`
 --
 
-LOCK TABLES `backend.user` WRITE;
+LOCK
+TABLES `backend.user` WRITE;
 /*!40000 ALTER TABLE `backend.user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'amaggat','weare123','amaggat@gmail.com','backend.user','Amaggat');
+INSERT INTO `user`
+VALUES (1, 'amaggat', 'weare123', 'amaggat@gmail.com', 'backend.user', 'Amaggat');
 /*!40000 ALTER TABLE `backend.user` ENABLE KEYS */;
-UNLOCK TABLES;
+UNLOCK
+TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

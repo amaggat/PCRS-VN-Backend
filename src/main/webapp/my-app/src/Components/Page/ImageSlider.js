@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
-const ImageSlider = ({ arr, img=null }) => {
+const ImageSlider = ({arr, img = null}) => {
     const [current, setCurrent] = useState(0);
     // const arr =  cpu.cpuPriceList?.map(e => {return (e)})
 
@@ -13,7 +13,7 @@ const ImageSlider = ({ arr, img=null }) => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     }
 
-     console.log(arr?.length);
+    console.log(arr?.length);
 
     if (!Array.isArray(arr) || arr.length <= 0) {
         return (
@@ -21,10 +21,8 @@ const ImageSlider = ({ arr, img=null }) => {
                 <img className="detail-img" src={img} alt="img-demo"/>
             </div>
         )
-    }
+    } else if (arr?.length <= 1) {
 
-    else if (arr?.length <= 1) {
-        
         arr.map(element => {
             return (
                 <div class="block img">
@@ -45,7 +43,8 @@ const ImageSlider = ({ arr, img=null }) => {
                             <img className="detail-img" src={element.img} alt={element.name}/>
                         )}
                     </div>
-                )})}
+                )
+            })}
         </div>
     )
 }

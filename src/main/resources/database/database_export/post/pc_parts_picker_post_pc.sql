@@ -22,15 +22,16 @@
 DROP TABLE IF EXISTS `post_pc`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `post_pc` (
-  `PcID` varchar(100) NOT NULL,
-  `PostID` int NOT NULL,
-  KEY `FKtm5o0y54yxj8d8j5kj572rbiv` (`PcID`),
-  KEY `FK8le1n0od31bft4a2l2iscy2ql` (`PostID`),
-  CONSTRAINT `FK8le1n0od31bft4a2l2iscy2ql` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`),
-  CONSTRAINT `FKtm5o0y54yxj8d8j5kj572rbiv` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
-  CONSTRAINT `post_pc_ibfk_1` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`),
-  CONSTRAINT `post_pc_ibfk_2` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`)
+CREATE TABLE `post_pc`
+(
+    `PcID`   varchar(100) NOT NULL,
+    `PostID` int          NOT NULL,
+    KEY      `FKtm5o0y54yxj8d8j5kj572rbiv` (`PcID`),
+    KEY      `FK8le1n0od31bft4a2l2iscy2ql` (`PostID`),
+    CONSTRAINT `FK8le1n0od31bft4a2l2iscy2ql` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`),
+    CONSTRAINT `FKtm5o0y54yxj8d8j5kj572rbiv` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
+    CONSTRAINT `post_pc_ibfk_1` FOREIGN KEY (`PostID`) REFERENCES `post` (`ID`),
+    CONSTRAINT `post_pc_ibfk_2` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,11 +39,21 @@ CREATE TABLE `post_pc` (
 -- Dumping data for table `post_pc`
 --
 
-LOCK TABLES `post_pc` WRITE;
+LOCK
+TABLES `post_pc` WRITE;
 /*!40000 ALTER TABLE `post_pc` DISABLE KEYS */;
-INSERT INTO `post_pc` VALUES ('entry-level-amd-build',1),('entry-level-intel-build',2),('high-end-intel-build',3),('high-end-amd-build',4),('low-end-intel-build',5),('low-end-amd-build',6),('streaming-intel-build',7),('streaming-amd-build',8);
+INSERT INTO `post_pc`
+VALUES ('entry-level-amd-build', 1),
+       ('entry-level-intel-build', 2),
+       ('high-end-intel-build', 3),
+       ('high-end-amd-build', 4),
+       ('low-end-intel-build', 5),
+       ('low-end-amd-build', 6),
+       ('streaming-intel-build', 7),
+       ('streaming-amd-build', 8);
 /*!40000 ALTER TABLE `post_pc` ENABLE KEYS */;
-UNLOCK TABLES;
+UNLOCK
+TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

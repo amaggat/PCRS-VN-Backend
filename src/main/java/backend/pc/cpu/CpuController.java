@@ -30,19 +30,19 @@ public class CpuController {
                           @RequestParam(name = "socket", required = false) String socket,
                           @RequestParam(name = "cores", required = false) Integer cores,
                           Pageable pageable
-                          ){
+    ) {
         Page<cpu> cpu = cpuRepository.findAll((Specification<cpu>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
-            if (Objects.nonNull(chipset) ) {
+            if (Objects.nonNull(chipset)) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
             }
-            if (Objects.nonNull(manufacturer) ) {
-                p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+            if (Objects.nonNull(manufacturer)) {
+                p = cb.and(p, cb.like(root.get("manufacturer"), "%" + manufacturer + "%"));
             }
-            if (Objects.nonNull(socket) ) {
-                p = cb.and(p, cb.like(root.get("socket"), "%" + socket+ "%"));
+            if (Objects.nonNull(socket)) {
+                p = cb.and(p, cb.like(root.get("socket"), "%" + socket + "%"));
             }
-            if (Objects.nonNull(cores) ) {
+            if (Objects.nonNull(cores)) {
                 p = cb.and(p, cb.equal(root.get("cores"), cores));
             }
             if (!StringUtils.isEmpty(name)) {
@@ -55,8 +55,7 @@ public class CpuController {
     }
 
     @GetMapping("/api/cpu/{CpuID}")
-    public cpu SearchById(@PathVariable("CpuID") String id)
-    {
+    public cpu SearchById(@PathVariable("CpuID") String id) {
         return cpuRepository.findByID(id);
     }
 

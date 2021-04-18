@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name ="ssd")
+@Table(name = "ssd")
 public class SolidStateDrive extends electronicComponents {
 
     @Column(name = "storage")
@@ -27,20 +27,19 @@ public class SolidStateDrive extends electronicComponents {
 //    @Column(name = "readSpeed")
 //    @NotEmpty
 //    private int readSpeed;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ssd", fetch = FetchType.EAGER)
+    private List<ssdPriceList> PriceList;
 
     public String getStorage() {
         return storage;
     }
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ssd", fetch = FetchType.EAGER)
-    private List<ssdPriceList> PriceList;
+    public void setStorage(String size) {
+        this.storage = size;
+    }
 
     public List<ssdPriceList> getPriceList() {
         return PriceList;
-    }
-
-    public void setPriceList(List<ssdPriceList> ssdPriceList) {
-        this.PriceList = ssdPriceList;
     }
 
     //    public int getReadSpeed() {
@@ -60,7 +59,7 @@ public class SolidStateDrive extends electronicComponents {
 //        this.writeSpeed = writeSpeed;
 //    }
 
-    public void setStorage(String size) {
-        this.storage = size;
+    public void setPriceList(List<ssdPriceList> ssdPriceList) {
+        this.PriceList = ssdPriceList;
     }
 }

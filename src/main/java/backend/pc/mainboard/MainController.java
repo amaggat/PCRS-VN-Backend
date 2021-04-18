@@ -29,25 +29,25 @@ public class MainController {
                                 @RequestParam(name = "sizeofram", required = false) String sizeofram,
                                 @RequestParam(name = "memory_slot", required = false) String memorySlot,
                                 @RequestParam(name = "formfactor", required = false) String formfactor,
-                                Pageable pageable){
+                                Pageable pageable) {
         Page<Mainboard> mainboard = mainRepository.findAll((Specification<Mainboard>) (root, criteriaQuery, criteriaBuilder) -> {
             Predicate predicate = criteriaBuilder.conjunction();
-            if (Objects.nonNull(chipset) ) {
+            if (Objects.nonNull(chipset)) {
                 predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("chipset"), "%" + chipset + "%"));
             }
-            if (Objects.nonNull(manufacturer) ) {
-                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+            if (Objects.nonNull(manufacturer)) {
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("manufacturer"), "%" + manufacturer + "%"));
             }
-            if (Objects.nonNull(socket) ) {
-                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("socket"), "%" + socket+ "%"));
+            if (Objects.nonNull(socket)) {
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("socket"), "%" + socket + "%"));
             }
-            if (Objects.nonNull(sizeofram) ) {
-                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("sizeofram"), "%" + sizeofram+ "%"));
+            if (Objects.nonNull(sizeofram)) {
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(root.get("sizeofram"), "%" + sizeofram + "%"));
             }
-            if (Objects.nonNull(memorySlot) ) {
+            if (Objects.nonNull(memorySlot)) {
                 predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("memory_slot"), memorySlot));
             }
-            if (Objects.nonNull(formfactor) ) {
+            if (Objects.nonNull(formfactor)) {
                 predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("formfactor"), formfactor));
             }
             if (!StringUtils.isEmpty(name)) {
@@ -60,7 +60,7 @@ public class MainController {
     }
 
     @GetMapping("/api/mainboard/{id}")
-    public Mainboard SearchByID(@PathVariable("id") String id){
+    public Mainboard SearchByID(@PathVariable("id") String id) {
         return mainRepository.findByID(id);
     }
 

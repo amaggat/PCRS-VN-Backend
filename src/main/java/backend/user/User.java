@@ -1,15 +1,19 @@
 package backend.user;
 
-
 import backend.article.Post;
-import backend.pcprofile.PcProfile;
 import backend.model.NameEntity;
+import backend.pcprofile.PcProfile;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.List;
 
 @Entity
-@Table(name = "backend.user")
+@Table(name = "user")
 public class User extends NameEntity {
 
     @Column(name = "username")
@@ -21,11 +25,38 @@ public class User extends NameEntity {
     @Column(name = "mail")
     private String gmail = new String();
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "backend/user")
+    @Column(name = "role")
+    private String role = new String();
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<PcProfile> pcProfile;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "backend/user")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<Post> posts;
+
+    public String getGmail() {
+        return gmail;
+    }
+
+    public void setGmail(String gmail) {
+        this.gmail = gmail;
+    }
+
+    public List<PcProfile> getPcProfile() {
+        return pcProfile;
+    }
+
+    public void setPcProfile(List<PcProfile> pcProfile) {
+        this.pcProfile = pcProfile;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
 
     public String getUsername() {
         return username;
@@ -43,35 +74,11 @@ public class User extends NameEntity {
         this.password = password;
     }
 
-    public String getGmail() {
-        return gmail;
+    public String getRole() {
+        return role;
     }
 
-    public void setGmail(String gmail) {
-        this.gmail = gmail;
-    }
-
-//    public List<Feedbacks> getFeedbacks() {
-//        return backend.feedbacks;
-//    }
-//
-//    public void setFeedbacks(List<Feedbacks> backend.feedbacks) {
-//        this.backend.feedbacks = backend.feedbacks;
-//    }
-
-    public List<PcProfile> getPcProfile() {
-        return pcProfile;
-    }
-
-    public void setPcProfile(List<PcProfile> pcProfile) {
-        this.pcProfile = pcProfile;
-    }
-
-    public List<Post> getPosts() {
-        return posts;
-    }
-
-    public void setPosts(List<Post> posts) {
-        this.posts = posts;
+    public void setRole(String role) {
+        this.role = role;
     }
 }

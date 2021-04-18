@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import '../List.css'
 
 import img from '../../Product/Part/Memory/memory-demo.jpeg'
@@ -14,7 +14,7 @@ class MemoryCard extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0,-100000);
+        window.scrollTo(0, -100000);
     }
 
     remove = () => {
@@ -28,21 +28,22 @@ class MemoryCard extends Component {
 
         return (
             <tr className="product-card">
-                <td className="row-title"><Link className="vertical-center" id="" to="/products/memory">Memory</Link></td>
+                <td className="row-title"><Link className="vertical-center" id="" to="/products/memory">Memory</Link>
+                </td>
                 <td>
-                { memory ?
-                    <Link className="wrap-product-img" to={`/products/memory/${memory.id}`}>
-                        <img className="product-img" src={memory.img ? memory.img : img} alt={memory.id}/> 
-                        <span>
+                    {memory ?
+                        <Link className="wrap-product-img" to={`/products/memory/${memory.id}`}>
+                            <img className="product-img" src={memory.img ? memory.img : img} alt={memory.id}/>
+                            <span>
                             {memory.fullname}
                         </span>
-                    </Link>
-                    :
-                    <Link type="button" className="btn btn-primary btn-sm" to="/products/memory">
-                        <i className="fas fa-plus" />
-                        Choose a Memory
-                    </Link>
-                }
+                        </Link>
+                        :
+                        <Link type="button" className="btn btn-primary btn-sm" to="/products/memory">
+                            <i className="fas fa-plus"/>
+                            Choose a Memory
+                        </Link>
+                    }
                 </td>
                 <td className="base row-title">
                     <div className="vertical-center">{memory ? formatMoney(memory.price) + "VND" : null}</div>
@@ -50,45 +51,45 @@ class MemoryCard extends Component {
                 <td className="promo row-title">
                     <div className="vertical-center">{
                         memory ?
-                            memory.promo ? 
+                            memory.promo ?
                                 memory.promo
                                 :
                                 null
                             :
-                        null
-                        }</div>
+                            null
+                    }</div>
                 </td>
                 <td className="snipping row-title">
                     <div className="vertical-center">{
                         memory ?
-                        memory.snipping ? 
-                            memory.snipping
+                            memory.snipping ?
+                                memory.snipping
+                                :
+                                null
                             :
                             null
-                        :
-                    null
                     }</div>
                 </td>
                 <td className="tax row-title">
                     <div className="vertical-center">{
                         memory ?
-                        memory.tax ? 
-                            memory.tax
+                            memory.tax ?
+                                memory.tax
+                                :
+                                null
                             :
                             null
-                        :
-                    null
                     }</div>
                 </td>
                 <td className="price row-title">
                     <div className="vertical-center">{
                         memory ?
-                            memory.promo ? 
+                            memory.promo ?
                                 formatMoney(memory.price * memory.promo) + "VND"
                                 :
                                 formatMoney(memory.price) + "VND"
                             :
-                        null
+                            null
                     }</div>
                 </td>
                 <td className="where">
@@ -98,16 +99,16 @@ class MemoryCard extends Component {
                                 <Link className="contain-img" to={memory.link}>
                                     <img className="product-img" src={memory.logo ? memory.logo : img} alt={memory.id}/>
                                 </Link>
-                            : null
+                                : null
                         }
                     </div>
                 </td>
                 <td className="delete">
                     {
-                    memory ?
-                        <div onClick={this.remove}><i class="delete fas fa-times"></i></div>
-                        :
-                        null
+                        memory ?
+                            <div onClick={this.remove}><i class="delete fas fa-times"></i></div>
+                            :
+                            null
                     }
                 </td>
             </tr>

@@ -2,12 +2,13 @@ package backend.feedbacks;
 
 import backend.article.Post;
 import backend.model.NameEntity;
+import backend.user.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name = "backend.feedbacks")
+@Table(name = "feedbacks")
 public class Feedbacks extends NameEntity {
 
     @Column(name = "details")
@@ -18,15 +19,11 @@ public class Feedbacks extends NameEntity {
     @NotEmpty
     private String creationtime;
 
-//    @Column(name = "email")
-//    @NotEmpty
-//    private String email = new String();
+    @ManyToOne
+    @JoinColumn(name = "creatorid")
+    private User user;
 
-//    @ManyToOne
-//    @JoinColumn(name = "creatorid")
-//    private User backend.user;
-
-    @ManyToOne(optional=false)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "postid")
     private Post post;
 
@@ -46,20 +43,12 @@ public class Feedbacks extends NameEntity {
         this.creationtime = creationtime;
     }
 
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public void setEmail(String email) {
-//        this.email = email;
+//    public User getUser() {
+//        return user;
 //    }
 
-    //    public User getUser() {
-//        return backend.user;
-//    }
-
-//    public void setUser(User backend.user) {
-//        this.backend.user = backend.user;
+//    public void setUser(User user) {
+//        this.user = user;
 //    }
 
     public Integer getPost() {

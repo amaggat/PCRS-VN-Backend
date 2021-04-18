@@ -22,12 +22,12 @@ public class PcProfileController {
     }
 
     @GetMapping("/api/pcprofile")
-    public Page<PcProfile> list(@RequestParam(name = "name", required = false) String name, Pageable pageable){
+    public Page<PcProfile> list(@RequestParam(name = "name", required = false) String name, Pageable pageable) {
 
         Page<PcProfile> pcProfiles = pcProfileRepository.findAll((Specification<PcProfile>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
-            if (Objects.nonNull(name) ) {
-                p = cb.and(p, cb.like(root.get("pcname"), "%" + name+ "%"));
+            if (Objects.nonNull(name)) {
+                p = cb.and(p, cb.like(root.get("pcname"), "%" + name + "%"));
             }
             cq.orderBy(cb.desc(root.get("pcname")), cb.asc(root.get("id")));
             return p;
@@ -38,7 +38,7 @@ public class PcProfileController {
 
 
     @GetMapping("/api/pcProfiles/{PcID}")
-    public PcProfile findByID(@PathVariable("PcID") String id){
+    public PcProfile findByID(@PathVariable("PcID") String id) {
         return pcProfileRepository.findByID(id);
     }
 }

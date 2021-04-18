@@ -17,8 +17,7 @@ import java.util.Objects;
 public class HddController {
     private final HddRepository hddRepository;
 
-    public HddController(HddRepository hddRepository)
-    {
+    public HddController(HddRepository hddRepository) {
         this.hddRepository = hddRepository;
     }
 
@@ -27,16 +26,16 @@ public class HddController {
                                     @RequestParam(name = "chipset", required = false) String chipset,
                                     @RequestParam(name = "manufacturer", required = false) String manufacturer,
                                     @RequestParam(name = "storage", required = false) String size,
-                                    Pageable pageable){
+                                    Pageable pageable) {
         Page<HardDiskDrive> hdd = hddRepository.findAll((Specification<HardDiskDrive>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
-            if (Objects.nonNull(chipset) ) {
+            if (Objects.nonNull(chipset)) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
             }
-            if (Objects.nonNull(manufacturer) ) {
-                p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+            if (Objects.nonNull(manufacturer)) {
+                p = cb.and(p, cb.like(root.get("manufacturer"), "%" + manufacturer + "%"));
             }
-            if (Objects.nonNull(size) ) {
+            if (Objects.nonNull(size)) {
                 p = cb.and(p, cb.like(root.get("storage"), "%" + size + "%"));
             }
             if (!StringUtils.isEmpty(name)) {
@@ -49,7 +48,7 @@ public class HddController {
     }
 
     @GetMapping("/api/hdd/{id}")
-    public HardDiskDrive SearchByID(@PathVariable("id") String id){
+    public HardDiskDrive SearchByID(@PathVariable("id") String id) {
         return hddRepository.findByID(id);
     }
 

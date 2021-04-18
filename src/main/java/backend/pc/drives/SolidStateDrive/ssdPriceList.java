@@ -24,19 +24,19 @@ public class ssdPriceList {
     @JoinColumn(name = "fid")
     private SolidStateDrive ssd;
 
-    @Column(name= "link")
+    @Column(name = "link")
     @NotEmpty
     private String link = new String();
 
-    @Column(name= "img")
+    @Column(name = "img")
     @NotEmpty
     private String img = new String();
 
-    @Column(name= "name")
+    @Column(name = "name")
     @NotEmpty
     private String name = new String();
 
-    @Column(name= "price")
+    @Column(name = "price")
     @NotEmpty
     private int price;
 

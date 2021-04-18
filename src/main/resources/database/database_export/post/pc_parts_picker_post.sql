@@ -22,18 +22,19 @@
 DROP TABLE IF EXISTS `post`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `post` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(100) NOT NULL,
-  `CreationTime` date NOT NULL,
-  `Details` text NOT NULL,
-  `CreatorID` int NOT NULL,
-  `Description` varchar(100) NOT NULL,
-  `price` text NOT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `FKhtqbhkd9ojw742kw66rupa28e` (`CreatorID`),
-  CONSTRAINT `FKhtqbhkd9ojw742kw66rupa28e` FOREIGN KEY (`CreatorID`) REFERENCES `user` (`ID`),
-  CONSTRAINT `post_ibfk_1` FOREIGN KEY (`CreatorID`) REFERENCES `user` (`ID`)
+CREATE TABLE `post`
+(
+    `ID`           int          NOT NULL AUTO_INCREMENT,
+    `Name`         varchar(100) NOT NULL,
+    `CreationTime` date         NOT NULL,
+    `Details`      text         NOT NULL,
+    `CreatorID`    int          NOT NULL,
+    `Description`  varchar(100) NOT NULL,
+    `price`        text         NOT NULL,
+    PRIMARY KEY (`ID`),
+    KEY            `FKhtqbhkd9ojw742kw66rupa28e` (`CreatorID`),
+    CONSTRAINT `FKhtqbhkd9ojw742kw66rupa28e` FOREIGN KEY (`CreatorID`) REFERENCES `user` (`ID`),
+    CONSTRAINT `post_ibfk_1` FOREIGN KEY (`CreatorID`) REFERENCES `user` (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -41,11 +42,21 @@ CREATE TABLE `post` (
 -- Dumping data for table `post`
 --
 
-LOCK TABLES `post` WRITE;
+LOCK
+TABLES `post` WRITE;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
-INSERT INTO `post` VALUES (1,'Entry-Level AMD Build','2020-12-27','',1,'Hello motherfucker','20.000.000+ VND'),(2,'Entry-Level Intel Build','2020-12-27','',1,'Hello fuckermother','20.000.000+ VND'),(3,'High-End Intel Build','2020-12-27','',1,'Fuckermother Hello','80.000.000+ VND'),(4,'High-End AMD Build','2020-12-27','',1,'Motherfucker Hello ','80.000.000+ VND'),(5,'Low-End Intel Build','2020-12-27','',1,'Motherhello fucker','20.000.000+ VND'),(6,'Low-End AMD Build','2020-12-27','',1,'Fucker motherhello ','20.000.000+ VND'),(7,'Streaming Intel Build','2020-12-27','',1,'Hello fuckermother','20.000.000+ VND'),(8,'Streaming AMD Build','2020-12-27','',1,'Hello fuckermother','20.000.000+ VND');
+INSERT INTO `post`
+VALUES (1, 'Entry-Level AMD Build', '2020-12-27', '', 1, 'Hello motherfucker', '20.000.000+ VND'),
+       (2, 'Entry-Level Intel Build', '2020-12-27', '', 1, 'Hello fuckermother', '20.000.000+ VND'),
+       (3, 'High-End Intel Build', '2020-12-27', '', 1, 'Fuckermother Hello', '80.000.000+ VND'),
+       (4, 'High-End AMD Build', '2020-12-27', '', 1, 'Motherfucker Hello ', '80.000.000+ VND'),
+       (5, 'Low-End Intel Build', '2020-12-27', '', 1, 'Motherhello fucker', '20.000.000+ VND'),
+       (6, 'Low-End AMD Build', '2020-12-27', '', 1, 'Fucker motherhello ', '20.000.000+ VND'),
+       (7, 'Streaming Intel Build', '2020-12-27', '', 1, 'Hello fuckermother', '20.000.000+ VND'),
+       (8, 'Streaming AMD Build', '2020-12-27', '', 1, 'Hello fuckermother', '20.000.000+ VND');
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
-UNLOCK TABLES;
+UNLOCK
+TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

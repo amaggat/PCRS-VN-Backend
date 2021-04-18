@@ -17,8 +17,7 @@ public class GpuController {
 
     private final GpuRepository gpuRepository;
 
-    public GpuController(GpuRepository gpuRepository)
-    {
+    public GpuController(GpuRepository gpuRepository) {
         this.gpuRepository = gpuRepository;
     }
 
@@ -27,16 +26,16 @@ public class GpuController {
                           @RequestParam(name = "chipset", required = false) String chipset,
                           @RequestParam(name = "manufacturer", required = false) String manufacturer,
                           @RequestParam(name = "VRam", required = false) Integer VRam,
-                          Pageable pageable){
+                          Pageable pageable) {
         Page<gpu> gpu = gpuRepository.findAll((Specification<gpu>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
-            if (Objects.nonNull(chipset) ) {
+            if (Objects.nonNull(chipset)) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
             }
-            if (Objects.nonNull(manufacturer) ) {
-                p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+            if (Objects.nonNull(manufacturer)) {
+                p = cb.and(p, cb.like(root.get("manufacturer"), "%" + manufacturer + "%"));
             }
-            if (Objects.nonNull(VRam) ) {
+            if (Objects.nonNull(VRam)) {
                 p = cb.and(p, cb.equal(root.get("VRam"), VRam));
             }
             if (!StringUtils.isEmpty(name)) {
@@ -49,8 +48,7 @@ public class GpuController {
     }
 
     @GetMapping("/api/gpu/{id}")
-    public gpu SearchById(@PathVariable("id") String id)
-    {
+    public gpu SearchById(@PathVariable("id") String id) {
         return gpuRepository.findByID(id);
     }
 

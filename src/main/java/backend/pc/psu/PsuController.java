@@ -26,17 +26,17 @@ public class PsuController {
                                       @RequestParam(name = "chipset", required = false) String chipset,
                                       @RequestParam(name = "manufacturer", required = false) String manufacturer,
                                       @RequestParam(name = "standard_80", required = false) String standard_80,
-                                      Pageable pageable){
-        Page<PowerSupplyUnit> psu= psuRepository.findAll((Specification<PowerSupplyUnit>) (root, cq, cb) -> {
+                                      Pageable pageable) {
+        Page<PowerSupplyUnit> psu = psuRepository.findAll((Specification<PowerSupplyUnit>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
-            if (Objects.nonNull(chipset) ) {
+            if (Objects.nonNull(chipset)) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
             }
-            if (Objects.nonNull(manufacturer) ) {
-                p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+            if (Objects.nonNull(manufacturer)) {
+                p = cb.and(p, cb.like(root.get("manufacturer"), "%" + manufacturer + "%"));
             }
-            if (Objects.nonNull(standard_80) ) {
-                p = cb.and(p, cb.like(root.get("standard_80"), "%" + standard_80+ "%"));
+            if (Objects.nonNull(standard_80)) {
+                p = cb.and(p, cb.like(root.get("standard_80"), "%" + standard_80 + "%"));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
@@ -48,8 +48,7 @@ public class PsuController {
     }
 
     @GetMapping("/api/psu/{id}")
-    public PowerSupplyUnit SearchById(@PathVariable("id") String id)
-    {
+    public PowerSupplyUnit SearchById(@PathVariable("id") String id) {
         return psuRepository.findByID(id);
     }
 

@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'; 
-import { useMergeState } from '../../../Hook';
+import React, {useEffect} from 'react';
+import {useMergeState} from '../../../Hook';
 import '../Product.css'
 
-export default function TopFunctionProduct (props) {
+export default function TopFunctionProduct(props) {
     const [filters, setFilters] = useMergeState({});
     const search = props.search
-    
+
     function handleSubmit(e) {
         e.preventDefault();
     }
@@ -20,7 +20,7 @@ export default function TopFunctionProduct (props) {
         search(filters)
     }, [filters, search])
 
-    return(
+    return (
         <div className="top-bar form-row align-items-center">
             <div className="col-5">
                 <div className="col align-items-center">
@@ -40,8 +40,8 @@ export default function TopFunctionProduct (props) {
                             <div className="input-group-text"><i className="fa fa-search"></i></div>
                         </div> */}
                         <input type="text" name="name" className="form-control  form-control-sm"
-                            id="inlineFormInputGroup" onChange={handleChange}
-                            placeholder="Keyword..."/>
+                               id="inlineFormInputGroup" onChange={handleChange}
+                               placeholder="Keyword..."/>
                     </form>
                 </div>
             </div>

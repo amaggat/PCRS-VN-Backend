@@ -27,7 +27,6 @@ public class Post extends NameEntity {
     @NotEmpty
     private String description = new String();
 
-
     @Column(name = "price")
     @NotEmpty
     private String price = new String();
@@ -49,11 +48,11 @@ public class Post extends NameEntity {
 
 
 //    public User getUser() {
-//        return backend.user;
+//        return user;
 //    }
 //
-//    public void setUser(User backend.user) {
-//        this.backend.user = backend.user;
+//    public void setUser(User user) {
+//        this.user = user;
 //    }
 
     public PcProfile getPcProfile() {

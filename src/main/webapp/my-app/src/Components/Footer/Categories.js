@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './Footer.css';
 
 class Categories extends Component {
@@ -11,7 +11,7 @@ class Categories extends Component {
                         <div className="card-text">
                             <ul className="footer-list">
                                 <li>
-                                    <h5 className="footer-title">CATEGORIES</h5> 
+                                    <h5 className="footer-title">CATEGORIES</h5>
                                 </li>
                                 <li>
                                     <Link className="link" to="/list">System Builds</Link>

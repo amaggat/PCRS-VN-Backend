@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Sologan from './Sologan';
 import Categories from './Categories';
 import Info from './Info';
@@ -7,18 +7,18 @@ import MediaLink from './MediaLink';
 import './Footer.css';
 
 class Footer extends Component {
-    render (){
+    render() {
         return (
             <div className="footer">
                 <div className="w-container">
                     <div className="row top-footer">
-                        <Sologan />
-                        <Categories />
-                        <Info />
+                        <Sologan/>
+                        <Categories/>
+                        <Info/>
                     </div>
 
                     <div className="row text-center">
-                        <MediaLink />
+                        <MediaLink/>
                     </div>
 
                     <div className="row text-center">

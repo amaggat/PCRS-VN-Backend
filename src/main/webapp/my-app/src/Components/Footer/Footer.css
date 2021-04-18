@@ -16,7 +16,7 @@
 
 .footer-title {
     padding-bottom: .5rem;
-    border-bottom: solid 2px white ;
+    border-bottom: solid 2px white;
 }
 
 .footer .icon {
@@ -29,6 +29,7 @@
     color: #3c99db;
     text-decoration: none;
 }
+
 .footer .logo {
     display: block;
     height: 80px;

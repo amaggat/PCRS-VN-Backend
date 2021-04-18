@@ -1,24 +1,31 @@
 # [PcPartPickerVN](name)
 
 ## [Introduction](#introduction)
-PcPartPickerVN is our project on Web application development course at [VNU University of Engineering and Technology](http://uet.vnu.edu.vn/).
-We were inspired by [PcPartPicker](http://pcpartpicker.com), a website that allows users create their own PC and check their compatibility, it also allow users to compare price from different retail stores.
+
+PcPartPickerVN is our project on Web application development course
+at [VNU University of Engineering and Technology](http://uet.vnu.edu.vn/). We were inspired
+by [PcPartPicker](http://pcpartpicker.com), a website that allows users create their own PC and check their
+compatibility, it also allow users to compare price from different retail stores.
 
 ## [Demo](demo)
 
 1. The dashboard:
-![Dashboard](src/main/webapp/images/dashboard.png)
+   ![Dashboard](src/main/webapp/images/dashboard.png)
 2. The main area which allows users to build their PC:
-![Main area](src/main/webapp/images/build-pc.png)
+   ![Main area](src/main/webapp/images/build-pc.png)
 3. Browsing PC item:
-![Browsing](src/main/webapp/images/browse-product.png)
+   ![Browsing](src/main/webapp/images/browse-product.png)
 4. We already create some finised build which users can use immediately.
-![Guild](src/main/webapp/images/guild.png)
-5. All the products were crawled from different retail stores. We want to create a website where users can easily check for their items for their wishlist with its price, promo from retailer ...
-![Product-detail](src/main/webapp/images/view-product.png)
+   ![Guild](src/main/webapp/images/guild.png)
+5. All the products were crawled from different retail stores. We want to create a website where users can easily check
+   for their items for their wishlist with its price, promo from retailer ...
+   ![Product-detail](src/main/webapp/images/view-product.png)
 
 ## [Database](data)
-We crawl product, price, promo, ... from many retail stores such as [PhongVu](https://phongvu.vn/), [AnPhat](https://www.anphatpc.com.vn/), [HanoiComputer](https://www.hanoicomputer.vn/), ... that users can access easly.
+
+We crawl product, price, promo, ... from many retail stores such as [PhongVu](https://phongvu.vn/)
+, [AnPhat](https://www.anphatpc.com.vn/), [HanoiComputer](https://www.hanoicomputer.vn/), ... that users can access
+easly.
 
 *Note:* All the data we have are crawled from their public website.
 
@@ -28,8 +35,8 @@ We crawl product, price, promo, ... from many retail stores such as [PhongVu](ht
 *For more detail, please checkout our backend service [here](https://github.com/amaggat/PcPartPickerVN_BackEndService)*
 
 ## [Usage](usage)
-We are still working on deployment. 
-The website will avaiable someday soon, thanks for your patient.
+
+We are still working on deployment. The website will avaiable someday soon, thanks for your patient.
 
 ## Back-end
 
@@ -63,7 +70,8 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
+information.
 
 ### `npm run build`
 
@@ -75,34 +83,35 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more in
+the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
 ## [Our team](team)
-- Dung M. Nguyen 
-[Contact: [GitHub](https://github.com/manhdung20112000) | [Facebook](https://www.facebook.com/nmd2000)]
+
+- Dung M. Nguyen
+  [Contact: [GitHub](https://github.com/manhdung20112000) | [Facebook](https://www.facebook.com/nmd2000)]
 
 - Thanh T. Tran
-[Contact: [GitHub](https://github.com/amaggat) | [Facebook](https://www.facebook.com/thanhtt.amg/)]
+  [Contact: [GitHub](https://github.com/amaggat) | [Facebook](https://www.facebook.com/thanhtt.amg/)]
 
 - Hung P. Quang
-[Contact: [GitHub](https://github.com/heor2807) | [Facebook](https://www.facebook.com/srw.king)]
+  [Contact: [GitHub](https://github.com/heor2807) | [Facebook](https://www.facebook.com/srw.king)]
 
 - Binh M. Le
-[Contact: [Facebook](https://www.facebook.com/luke.shrek)]
+  [Contact: [Facebook](https://www.facebook.com/luke.shrek)]
 
 - Hieu V. Pham
-[Contact: [GitHub](https://github.com/hieuphamjr) | [Facebook](https://www.facebook.com/HieuPhamJR11)]
+  [Contact: [GitHub](https://github.com/hieuphamjr) | [Facebook](https://www.facebook.com/HieuPhamJR11)]
 
 ##### *Special thanks to:*
+
 - Anh T. Tran
-[Contact: [GitHub](https://github.com/zzNuAzz) | [Facebook](https://www.facebook.com/SoNguyenTo216/)]
-  
+  [Contact: [GitHub](https://github.com/zzNuAzz) | [Facebook](https://www.facebook.com/SoNguyenTo216/)]
+
 - Nhat Q. Nguyen [Contact: [GitHub](https://github.com/fuzeless) | [Facebook](https://www.facebook.com/fuzeless/)]
 
 

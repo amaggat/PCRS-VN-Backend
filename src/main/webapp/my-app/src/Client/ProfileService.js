@@ -8,12 +8,12 @@ class Service {
     }
 
     static getProfilebyID(id) {
-        console.log(PROFILE_REST_API_URL+'/'+id)
-        return axios.get(PROFILE_REST_API_URL+'/'+id);
+        console.log(PROFILE_REST_API_URL + '/' + id)
+        return axios.get(PROFILE_REST_API_URL + '/' + id);
     }
 
     static getPostsbyID(id) {
-        return axios.get(PROFILE_REST_API_URL.concat('/',id,'/backend.feedbacks'));
+        return axios.get(PROFILE_REST_API_URL.concat('/', id, '/backend.feedbacks'));
     }
 
     static postFeedback(id, details) {
@@ -23,7 +23,7 @@ class Service {
             url: '/api/feedbacks',
             headers: {
                 'Content-Type': 'application/json'
-            }, 
+            },
             data: {
                 creationtime: date.toLocaleDateString(),
                 name: 'Anonymous',

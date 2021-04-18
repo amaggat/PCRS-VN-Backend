@@ -17,8 +17,7 @@ public class SsdController {
 
     private final SsdRepository ssdRepository;
 
-    public SsdController(SsdRepository ssdRepository)
-    {
+    public SsdController(SsdRepository ssdRepository) {
         this.ssdRepository = ssdRepository;
     }
 
@@ -27,17 +26,17 @@ public class SsdController {
                                       @RequestParam(name = "chipset", required = false) String chipset,
                                       @RequestParam(name = "manufacturer", required = false) String manufacturer,
                                       @RequestParam(name = "storage", required = false) String storage,
-                                      Pageable pageable){
+                                      Pageable pageable) {
         Page<SolidStateDrive> ssd = ssdRepository.findAll((Specification<SolidStateDrive>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
-            if (Objects.nonNull(chipset) ) {
+            if (Objects.nonNull(chipset)) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
             }
-            if (Objects.nonNull(manufacturer) ) {
-                p = cb.and(p, cb.like(root.get("manufacturer"), "%" +manufacturer+ "%"));
+            if (Objects.nonNull(manufacturer)) {
+                p = cb.and(p, cb.like(root.get("manufacturer"), "%" + manufacturer + "%"));
             }
-            if (Objects.nonNull(storage) ) {
-                p = cb.and(p, cb.like(root.get("storage"), "%" + storage+ "%"));
+            if (Objects.nonNull(storage)) {
+                p = cb.and(p, cb.like(root.get("storage"), "%" + storage + "%"));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
@@ -49,7 +48,7 @@ public class SsdController {
     }
 
     @GetMapping("/api/ssd/{id}")
-    public SolidStateDrive SearchById(@PathVariable("id") String id){
+    public SolidStateDrive SearchById(@PathVariable("id") String id) {
         return ssdRepository.findByID(id);
     }
 

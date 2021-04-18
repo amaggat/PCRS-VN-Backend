@@ -22,15 +22,16 @@
 DROP TABLE IF EXISTS `pcprofile_cpu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pcprofile_cpu` (
-  `PcID` varchar(100) NOT NULL,
-  `CpuID` varchar(100) NOT NULL,
-  KEY `FK2ee2iieg93gujoo985cw5wysa` (`CpuID`),
-  KEY `FKajiygmqemxfai80yee65illou` (`PcID`),
-  CONSTRAINT `FK2ee2iieg93gujoo985cw5wysa` FOREIGN KEY (`CpuID`) REFERENCES `cpu` (`ID`),
-  CONSTRAINT `FKajiygmqemxfai80yee65illou` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
-  CONSTRAINT `pcprofile_cpu_ibfk_1` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
-  CONSTRAINT `pcprofile_cpu_ibfk_2` FOREIGN KEY (`CpuID`) REFERENCES `cpu` (`ID`)
+CREATE TABLE `pcprofile_cpu`
+(
+    `PcID`  varchar(100) NOT NULL,
+    `CpuID` varchar(100) NOT NULL,
+    KEY     `FK2ee2iieg93gujoo985cw5wysa` (`CpuID`),
+    KEY     `FKajiygmqemxfai80yee65illou` (`PcID`),
+    CONSTRAINT `FK2ee2iieg93gujoo985cw5wysa` FOREIGN KEY (`CpuID`) REFERENCES `cpu` (`ID`),
+    CONSTRAINT `FKajiygmqemxfai80yee65illou` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
+    CONSTRAINT `pcprofile_cpu_ibfk_1` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
+    CONSTRAINT `pcprofile_cpu_ibfk_2` FOREIGN KEY (`CpuID`) REFERENCES `cpu` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,11 +39,21 @@ CREATE TABLE `pcprofile_cpu` (
 -- Dumping data for table `pcprofile_cpu`
 --
 
-LOCK TABLES `pcprofile_cpu` WRITE;
+LOCK
+TABLES `pcprofile_cpu` WRITE;
 /*!40000 ALTER TABLE `pcprofile_cpu` DISABLE KEYS */;
-INSERT INTO `pcprofile_cpu` VALUES ('entry-level-amd-build','amd-ryzen-5-3600'),('entry-level-intel-build','intel-i5-10400'),('high-end-intel-build','intel-i9-10900K'),('high-end-amd-build','amd-ryzen-9-5900x'),('low-end-intel-build','intel-i3-10100'),('low-end-amd-build','amd-ryzen-3-3100'),('streaming-intel-build','intel-i5-10400'),('streaming-amd-build','intel-i5-10400');
+INSERT INTO `pcprofile_cpu`
+VALUES ('entry-level-amd-build', 'amd-ryzen-5-3600'),
+       ('entry-level-intel-build', 'intel-i5-10400'),
+       ('high-end-intel-build', 'intel-i9-10900K'),
+       ('high-end-amd-build', 'amd-ryzen-9-5900x'),
+       ('low-end-intel-build', 'intel-i3-10100'),
+       ('low-end-amd-build', 'amd-ryzen-3-3100'),
+       ('streaming-intel-build', 'intel-i5-10400'),
+       ('streaming-amd-build', 'intel-i5-10400');
 /*!40000 ALTER TABLE `pcprofile_cpu` ENABLE KEYS */;
-UNLOCK TABLES;
+UNLOCK
+TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

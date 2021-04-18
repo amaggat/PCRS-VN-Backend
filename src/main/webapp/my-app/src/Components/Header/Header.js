@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 import TopNav from './TopNav';
 import SubNav from './SubNav';
@@ -16,32 +16,33 @@ class Header extends Component {
 
     handleDropdown = (event) => {
         let {dropdown} = this.state;
-        if(event === 'focus') {
+        if (event === 'focus') {
             dropdown = true;
         }
-        if(event === 'blur') {
+        if (event === 'blur') {
             dropdown = false;
         }
         this.setState({
             dropdown,
         })
     }
+
     render() {
         const {dropdown} = this.state;
         const dropdownElement = (
-        <div>
-            <div className={`system-builder-dropdown ${dropdown ? "" : "hide"}`}>   
-                <Dropdown />
+            <div>
+                <div className={`system-builder-dropdown ${dropdown ? "" : "hide"}`}>
+                    <Dropdown/>
+                </div>
             </div>
-        </div>
         );
 
         return (
             <div className="header">
-                <TopNav />
+                <TopNav/>
                 <div className="sub-nav">
                     <nav className="nav-container navbar navbar-expand-lg sticky-top container-fluid">
-                        <SubNav handleDropdown={this.handleDropdown} />
+                        <SubNav handleDropdown={this.handleDropdown}/>
                     </nav>
                     {dropdownElement}
                 </div>

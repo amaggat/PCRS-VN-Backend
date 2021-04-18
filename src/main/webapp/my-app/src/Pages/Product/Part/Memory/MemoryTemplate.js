@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import Footer from '../../../../Components/Footer/Footer';
 import Header from '../../../../Components/Header/Header';
 import img from './memory-demo.jpeg';
 
 import '../ProductSample.css';
 import ImageSlider from '../../../../Components/Page/ImageSlider';
-import { useParams } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import MemoryService from '../../../../Client/MemoryService';
 import formatMoney from '../../../../Components/Page/CurrencyFormat';
 
-function MemoryTemplate () {
+function MemoryTemplate() {
     const {id} = useParams();
     const [memory, setMemory] = useState({});
     useEffect(() => {
         MemoryService.getMemorybyID(id).then(response => {
             setMemory(response.data)
         })
-        .catch(console.log);
-    },[id])
+            .catch(console.log);
+    }, [id])
 
     return (
         <div className="product-detail white-back">
-            <Header />
+            <Header/>
             <div className="banner text-center">
                 <p className="banner-title">PRODUCT DETAIL</p>
                 <p className="banner-name">{memory.fullname}</p>
@@ -31,11 +31,15 @@ function MemoryTemplate () {
                 <div className="row">
                     <div className="col-lg-4 left">
                         <div className="block img">
-                            <ImageSlider arr={memory.priceList?.map(element => {return (element)})} img={img}/>
+                            <ImageSlider arr={memory.priceList?.map(element => {
+                                return (element)
+                            })} img={img}/>
                         </div>
                         <div className="block action form-group row justify-content-md-center">
                             <div className="col-lg action-function">
-                                <button type="button" className="btn btn-primary" onClick={()=>MemoryService.setMemory2List(memory)}>Add to your Build</button>
+                                <button type="button" className="btn btn-primary"
+                                        onClick={() => MemoryService.setMemory2List(memory)}>Add to your Build
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -45,13 +49,13 @@ function MemoryTemplate () {
                             <div className="detail-price row">
                                 <table className="table table-hover detail-table">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">Retailer</th>
-                                            <th scope="col">Base</th>
-                                            <th scope="col">Promo</th>
-                                            <th scope="col">Total</th>
-                                            <th scope="col"></th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">Retailer</th>
+                                        <th scope="col">Base</th>
+                                        <th scope="col">Promo</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col"></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                     {
@@ -73,15 +77,18 @@ function MemoryTemplate () {
                                                     </td>
                                                     <td className="total vertical-container">
                                                         <div className="vertical">
-                                                            {element.promo ? formatMoney(+(element.promo*element.price)) : formatMoney(+element.price) }
+                                                            {element.promo ? formatMoney(+(element.promo * element.price)) : formatMoney(+element.price)}
                                                         </div>
                                                     </td>
                                                     <td className="buy-button vertical-container">
-                                                        <a target="_blank" rel="noreferrer" className="btn btn-success vertical" href={element.link}>Buy</a>
-                                                    </td>   
+                                                        <a target="_blank" rel="noreferrer"
+                                                           className="btn btn-success vertical"
+                                                           href={element.link}>Buy</a>
+                                                    </td>
                                                 </tr>
-                                            )})
-                                        }
+                                            )
+                                        })
+                                    }
                                     </tbody>
                                 </table>
                             </div>
@@ -126,7 +133,7 @@ function MemoryTemplate () {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     )
 }

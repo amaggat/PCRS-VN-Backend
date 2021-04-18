@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 @Entity
-@Table(name ="hdd")
+@Table(name = "hdd")
 public class HardDiskDrive extends electronicComponents {
 
     @Column(name = "storage")

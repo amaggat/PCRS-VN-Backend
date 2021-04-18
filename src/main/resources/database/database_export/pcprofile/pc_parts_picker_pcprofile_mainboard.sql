@@ -22,15 +22,16 @@
 DROP TABLE IF EXISTS `pcprofile_mainboard`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pcprofile_mainboard` (
-  `PcID` varchar(100) NOT NULL,
-  `MainID` varchar(100) NOT NULL,
-  KEY `FK17u5liyjp8myqcs4754802a9s` (`MainID`),
-  KEY `FKss6nuiptw48x7931loq18upjw` (`PcID`),
-  CONSTRAINT `FK17u5liyjp8myqcs4754802a9s` FOREIGN KEY (`MainID`) REFERENCES `mainboard` (`ID`),
-  CONSTRAINT `FKss6nuiptw48x7931loq18upjw` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
-  CONSTRAINT `pcprofile_mainboard_ibfk_1` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
-  CONSTRAINT `pcprofile_mainboard_ibfk_2` FOREIGN KEY (`MainID`) REFERENCES `mainboard` (`ID`)
+CREATE TABLE `pcprofile_mainboard`
+(
+    `PcID`   varchar(100) NOT NULL,
+    `MainID` varchar(100) NOT NULL,
+    KEY      `FK17u5liyjp8myqcs4754802a9s` (`MainID`),
+    KEY      `FKss6nuiptw48x7931loq18upjw` (`PcID`),
+    CONSTRAINT `FK17u5liyjp8myqcs4754802a9s` FOREIGN KEY (`MainID`) REFERENCES `mainboard` (`ID`),
+    CONSTRAINT `FKss6nuiptw48x7931loq18upjw` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
+    CONSTRAINT `pcprofile_mainboard_ibfk_1` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
+    CONSTRAINT `pcprofile_mainboard_ibfk_2` FOREIGN KEY (`MainID`) REFERENCES `mainboard` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,11 +39,21 @@ CREATE TABLE `pcprofile_mainboard` (
 -- Dumping data for table `pcprofile_mainboard`
 --
 
-LOCK TABLES `pcprofile_mainboard` WRITE;
+LOCK
+TABLES `pcprofile_mainboard` WRITE;
 /*!40000 ALTER TABLE `pcprofile_mainboard` DISABLE KEYS */;
-INSERT INTO `pcprofile_mainboard` VALUES ('entry-level-amd-build','asrock-b450m-steel-legend'),('entry-level-intel-build','asus-rog-strix-b460-f-gaming'),('high-end-intel-build','gigabyte-z490i-aorus-ultra'),('high-end-amd-build','asus-rog-crosshair-viii-formula'),('low-end-intel-build','asrock-b460-phantom-gaming-4'),('low-end-amd-build','asus-rog-strix-b460-f-gaming'),('streaming-intel-build','asus-rog-strix-b460-f-gaming'),('streaming-amd-build','asus-rog-strix-b460-f-gaming');
+INSERT INTO `pcprofile_mainboard`
+VALUES ('entry-level-amd-build', 'asrock-b450m-steel-legend'),
+       ('entry-level-intel-build', 'asus-rog-strix-b460-f-gaming'),
+       ('high-end-intel-build', 'gigabyte-z490i-aorus-ultra'),
+       ('high-end-amd-build', 'asus-rog-crosshair-viii-formula'),
+       ('low-end-intel-build', 'asrock-b460-phantom-gaming-4'),
+       ('low-end-amd-build', 'asus-rog-strix-b460-f-gaming'),
+       ('streaming-intel-build', 'asus-rog-strix-b460-f-gaming'),
+       ('streaming-amd-build', 'asus-rog-strix-b460-f-gaming');
 /*!40000 ALTER TABLE `pcprofile_mainboard` ENABLE KEYS */;
-UNLOCK TABLES;
+UNLOCK
+TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

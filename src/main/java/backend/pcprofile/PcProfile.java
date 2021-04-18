@@ -14,17 +14,17 @@ import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 @Entity
-@Table(name ="backend.pcprofile")
+@Table(name = "pcprofile")
 public class PcProfile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id = new String();
-    
+
     @Column(name = "pcname")
     @NotEmpty
     private String pcname = new String();
-    
+
 //    @Column(name = "price")
 //    @NotEmpty
 //    private double PcPrice;

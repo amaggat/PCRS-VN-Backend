@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 import ProfileService from '../../Client/ProfileService';
 
@@ -13,7 +13,7 @@ import memory from './img/nav-memory.png'
 import ssd from './img/nav-ssd.png'
 import power from './img/nav-powersupply.png'
 import videocard from './img/nav-videocard.png'
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function Home() {
     const [posts, setPosts] = useState([])
@@ -32,21 +32,24 @@ function Home() {
 
     console.log(posts);
 
-    return(
+    return (
         <div className="home">
-            <Header />
+            <Header/>
             <div className="grey-back build-home">
                 <div className="row w-container block">
                     <div className="col text-content">
                         <div className="text-banner-wrap vertical-center">
                             <div className="text banner-title">Build Guides</div>
-                            <div className="text banner-content">Building your own PC and need ideas on where to get started? 
-                            Explore our build guides which cover systems for a variety of use-cases and budgets.</div>
-                            <div className="button"><a type="button" href="/list" className="btn btn-primary btn-lg">View the Build Guilde</a></div>
+                            <div className="text banner-content">Building your own PC and need ideas on where to get
+                                started?
+                                Explore our build guides which cover systems for a variety of use-cases and budgets.
+                            </div>
+                            <div className="button"><a type="button" href="/list" className="btn btn-primary btn-lg">View
+                                the Build Guilde</a></div>
                         </div>
                     </div>
                     {
-                        posts?.map(e => 
+                        posts?.map(e =>
                             <div className="col">
                                 <BuildTag post={e}/>
                             </div>
@@ -139,7 +142,7 @@ function Home() {
             <div className="product-browsing grey-back">
                 <ProductBrowsing />
             </div> */}
-            <Footer />
+            <Footer/>
         </div>
     );
 }

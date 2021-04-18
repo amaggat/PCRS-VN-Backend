@@ -9,13 +9,13 @@ import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 @Entity
-@Table(name ="mainboard")
+@Table(name = "mainboard")
 public class Mainboard extends electronicComponents {
 
     @Column(name = "socket")
     @NotEmpty
     private String socket = new String();
-    
+
     @Column(name = "formfactor")
     @NotEmpty
     private String formfactor = new String();
