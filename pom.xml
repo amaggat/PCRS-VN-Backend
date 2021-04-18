@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.PcPartPicker</groupId>
-    <artifactId>BackEnd</artifactId>
+    <artifactId>PCRS-VN</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>BackEnd</name>
+    <name>PCRS-VN</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
