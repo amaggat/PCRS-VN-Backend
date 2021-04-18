@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "backend.user")
+@Table(name = "user")
 public class User extends NameEntity {
 
     @Column(name = "username")
@@ -21,10 +21,10 @@ public class User extends NameEntity {
     @Column(name = "mail")
     private String gmail = new String();
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "backend/user")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<PcProfile> pcProfile;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "backend/user")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<Post> posts;
 
     public String getUsername() {

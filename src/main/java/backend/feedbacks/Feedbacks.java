@@ -7,7 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name = "backend.feedbacks")
+@Table(name = "feedbacks")
 public class Feedbacks extends NameEntity {
 
     @Column(name = "details")
@@ -24,7 +24,7 @@ public class Feedbacks extends NameEntity {
 
 //    @ManyToOne
 //    @JoinColumn(name = "creatorid")
-//    private User backend.user;
+//    private User user;
 
     @ManyToOne(optional=false)
     @JoinColumn(name = "postid")

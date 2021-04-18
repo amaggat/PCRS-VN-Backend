@@ -14,7 +14,7 @@ import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 @Entity
-@Table(name ="backend.pcprofile")
+@Table(name ="pcprofile")
 public class PcProfile {
 
     @Id
