@@ -35,10 +35,8 @@ public class UserController {
     public ResponseEntity<?> createAuthenticationToken(
             @RequestBody AuthenticationRequest authenticationRequest) throws Exception {
         try {
-            logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), authenticationRequest.getUsername() + " " + authenticationRequest.getPassword());
-            authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(authenticationRequest.getPassword(),
-                            authenticationRequest.getPassword())
+//            logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), authenticationRequest.getUsername() + " " + authenticationRequest.getPassword());
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
             );
         } catch (BadCredentialsException e) {
             throw new Exception("Incorrect username or password", e);
@@ -47,11 +45,10 @@ public class UserController {
         final UserDetails userDetails = userDetailService
                 .loadUserByUsername(authenticationRequest.getUsername());
 
-        logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), userDetails.getUsername());
-
         final String jwt = jwtTokenUtil.generateToken(userDetails);
 
-        logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), jwt);
+//        logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), userDetails.getUsername());
+//        logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), jwt);
 
         return ResponseEntity.ok(new AuthenticationResponse(jwt));
     }

@@ -2,6 +2,7 @@ package backend.security.service;
 
 import backend.user.User;
 import backend.user.UserRepository;
+import backend.util.ClientLevel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class UserDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findUserByUsername(username);
-        logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), user.getUsername() + " " + user.getPassword());
+//        logger.log(ClientLevel.CLIENT, user.getUsername() + " " + user.getPassword());
 
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), new ArrayList<>());
     }
