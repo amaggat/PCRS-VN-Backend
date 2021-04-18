@@ -15,6 +15,10 @@ public abstract class electronicComponents {
     @NotEmpty
     private String chipset = new String();
 
+    @Column(name= "image")
+    @NotEmpty
+    private String image = new String();
+
 //    @Column(name = "price")
 //    @NotEmpty
 //    @Digits(fraction = 2, integer = 4)
@@ -23,6 +27,14 @@ public abstract class electronicComponents {
     @Column(name = "fullname")
     @NotEmpty
     private String fullname = new String();
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,10 +48,6 @@ public abstract class electronicComponents {
         this.chipset = chipset;
     }
 
-//    public double getPrice() {
-//        return price;
-//    }
-
     public String getManufacturer() {
         return manufacturer;
     }
@@ -47,10 +55,6 @@ public abstract class electronicComponents {
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
-
-//    public void setPrice(double price) {
-//        this.price = price;
-//    }
 
     public String getSerieName() {
         return serieName;

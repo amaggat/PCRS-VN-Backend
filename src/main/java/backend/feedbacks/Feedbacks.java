@@ -19,9 +19,9 @@ public class Feedbacks extends NameEntity {
     @NotEmpty
     private String creationtime;
 
-    @ManyToOne
-    @JoinColumn(name = "creatorid")
-    private User user;
+//    @ManyToOne
+//    @JoinColumn(name = "creatorid")
+//    private User user;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "postid")

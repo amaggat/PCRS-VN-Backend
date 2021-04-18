@@ -12,6 +12,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,6 +31,12 @@ public class UserController {
 
     @Autowired
     private UserDetailService userDetailService;
+
+    UserRepository userRepository;
+
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(
@@ -51,6 +58,12 @@ public class UserController {
 //        logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), jwt);
 
         return ResponseEntity.ok(new AuthenticationResponse(jwt));
+    }
+
+    @PostMapping("/api/register")
+    public ResponseEntity<?> register(@RequestBody User user) throws Exception {
+        userRepository.save(user);
+        return ResponseEntity.ok(new AuthenticationResponse("Registered"));
     }
 
 }

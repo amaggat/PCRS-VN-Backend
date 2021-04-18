@@ -293,7 +293,7 @@ VALUES (1, 'https://gearvn.com/products/intel-core-i3-8100-6m-3-6ghz-4-nhan-4-lu
         'CPU AMD Ryzen 9 3900XT / 64MB / 3.8GHz / 12 nhân 24 luồng', 12590000,
         'https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422', 'GearVN', 'amd-ryzen-9-3900xt'),
        (45, 'https://gearvn.com/products/amd-ryzen-9-3950x-socket-am4',
-        'https://product.hstatic.net/1000026716/product/gearvn-amd-ryzen-9-3950x-am4_60d2472773c841509fc1ff7fb2432796_large.jpg',
+        'https://product.hstatic.net/1000026716/product/gnv_edbed977e1794fe5964bd2a8b7b33ada.png',
         'AMD Ryzen™ 9 3950X / 64MB /3.5Ghz / 16 nhân 32 luồng', 18990000,
         'https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422', 'GearVN', 'amd-ryzen-9-3950x'),
        (46, 'https://gearvn.com/products/amd-ryzen-5-5600x-32mb-3-7ghz-boost-4-6ghz-6-nhan-12-luong',

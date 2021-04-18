@@ -23,7 +23,7 @@ public class User extends NameEntity {
     private String password = new String();
 
     @Column(name = "mail")
-    private String gmail = new String();
+    private String mail = new String();
 
     @Column(name = "role")
     private String role = new String();
@@ -34,12 +34,12 @@ public class User extends NameEntity {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<Post> posts;
 
-    public String getGmail() {
-        return gmail;
+    public String getMail() {
+        return mail;
     }
 
-    public void setGmail(String gmail) {
-        this.gmail = gmail;
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
     public List<PcProfile> getPcProfile() {
