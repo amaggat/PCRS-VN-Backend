@@ -62,6 +62,9 @@ public class UserController {
 
     @PostMapping("/api/register")
     public ResponseEntity<?> register(@RequestBody User user) throws Exception {
+        if(userRepository.findUserByUsername(user.getUsername()) != null) {
+            return ResponseEntity.ok(new AuthenticationResponse("Already use"));
+        }
         userRepository.save(user);
         return ResponseEntity.ok(new AuthenticationResponse("Registered"));
     }
