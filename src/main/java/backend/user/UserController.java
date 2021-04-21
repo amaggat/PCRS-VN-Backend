@@ -42,7 +42,6 @@ public class UserController {
     public ResponseEntity<?> createAuthenticationToken(
             @RequestBody AuthenticationRequest authenticationRequest) throws Exception {
         try {
-//            logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), authenticationRequest.getUsername() + " " + authenticationRequest.getPassword());
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
             );
         } catch (BadCredentialsException e) {
@@ -53,9 +52,6 @@ public class UserController {
                 .loadUserByUsername(authenticationRequest.getUsername());
 
         final String jwt = jwtTokenUtil.generateToken(userDetails);
-
-//        logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), userDetails.getUsername());
-//        logger.log(org.apache.logging.log4j.Level.forName("CLIENT", 90), jwt);
 
         return ResponseEntity.ok(new AuthenticationResponse(jwt));
     }
