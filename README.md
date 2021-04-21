@@ -10,16 +10,16 @@ compatibility, it also allow users to compare price from different retail stores
 ## [Demo](demo)
 
 1. The dashboard:
-   ![Dashboard](src/main/webapp/images/dashboard.png)
+   ![Dashboard](images/dashboard.png)
 2. The main area which allows users to build their PC:
-   ![Main area](src/main/webapp/images/build-pc.png)
+   ![Main area](images/build-pc.png)
 3. Browsing PC item:
-   ![Browsing](src/main/webapp/images/browse-product.png)
+   ![Browsing](images/browse-product.png)
 4. We already create some finised build which users can use immediately.
-   ![Guild](src/main/webapp/images/guild.png)
+   ![Guild](images/guild.png)
 5. All the products were crawled from different retail stores. We want to create a website where users can easily check
    for their items for their wishlist with its price, promo from retailer ...
-   ![Product-detail](src/main/webapp/images/view-product.png)
+   ![Product-detail](images/view-product.png)
 
 ## [Database](data)
 
@@ -30,7 +30,7 @@ easly.
 *Note:* All the data we have are crawled from their public website.
 
 **The database architecture:**
-![DB-Architecture](src/main/webapp/images/database.jpg)
+![DB-Architecture](images/database.jpg)
 
 *For more detail, please checkout our backend service [here](https://github.com/amaggat/PcPartPickerVN_BackEndService)*
 
