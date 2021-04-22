@@ -14,7 +14,7 @@ public class ramPriceList {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fid")
-    private ram ram;
+    private Ram ram;
 
     @Column(name = "logo")
     @NotEmpty

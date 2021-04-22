@@ -1,17 +1,17 @@
 INSERT
-IGNORE INTO `pc_parts_picker`.cpu VALUES ('id', 'manufacturer', 'serie', 'chipset', 'socket', '1', '2', 'fullname');
+IGNORE INTO `pc_parts_picker`.CentralProcessor VALUES ('id', 'manufacturer', 'serie', 'chipset', 'socket', '1', '2', 'fullname');
 INSERT
-IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i7-10700', 'Intel', 'Core i7', 'Comet Lake', 'LGA1200', '8', '16', 'Intel Core i7-10700 Processor');
+IGNORE INTO `pc_parts_picker`.CentralProcessor VALUES ('intel-i7-10700', 'Intel', 'Core i7', 'Comet Lake', 'LGA1200', '8', '16', 'Intel Core i7-10700 CentralProcessor');
 INSERT
-IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i5-10400', 'Intel', 'Core i5', 'Comet Lake', 'LGA1200', '6', '12', 'Intel Core i5-10400 Processor');
+IGNORE INTO `pc_parts_picker`.CentralProcessor VALUES ('intel-i5-10400', 'Intel', 'Core i5', 'Comet Lake', 'LGA1200', '6', '12', 'Intel Core i5-10400 CentralProcessor');
 INSERT
-IGNORE INTO `pc_parts_picker`.cpu VALUES ('intel-i3-10100', 'Intel', 'Core i3', 'Comet Lake', 'LGA1200', '4', '8', 'Intel Core i3-10100 Processor');
+IGNORE INTO `pc_parts_picker`.CentralProcessor VALUES ('intel-i3-10100', 'Intel', 'Core i3', 'Comet Lake', 'LGA1200', '4', '8', 'Intel Core i3-10100 CentralProcessor');
 INSERT
-IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-5-5600x', 'AMD', 'Ryzen', 'Vermeer', 'FGAAM4', '6', '12', 'AMD Ryzen 5 5600X Desktop Processors');
+IGNORE INTO `pc_parts_picker`.CentralProcessor VALUES ('amd-ryzen-5-5600x', 'AMD', 'Ryzen', 'Vermeer', 'FGAAM4', '6', '12', 'AMD Ryzen 5 5600X Desktop Processors');
 INSERT
-IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-3-3300x', 'AMD', 'Ryzen', 'Matisse', 'FGAAM4', '4', '8', 'AMD Ryzen 3 3300X Desktop Processor');
+IGNORE INTO `pc_parts_picker`.CentralProcessor VALUES ('amd-ryzen-3-3300x', 'AMD', 'Ryzen', 'Matisse', 'FGAAM4', '4', '8', 'AMD Ryzen 3 3300X Desktop CentralProcessor');
 INSERT
-IGNORE INTO `pc_parts_picker`.cpu VALUES ('amd-ryzen-3-3100', 'AMD', 'Ryzen', 'Matisse', 'FGAAM4', '4', '8', 'AMD Ryzen 3 3100 Desktop Processor');
+IGNORE INTO `pc_parts_picker`.CentralProcessor VALUES ('amd-ryzen-3-3100', 'AMD', 'Ryzen', 'Matisse', 'FGAAM4', '4', '8', 'AMD Ryzen 3 3100 Desktop CentralProcessor');
 
 
 INSERT
@@ -67,19 +67,19 @@ INSERT
 IGNORE INTO `pc_parts_picker`.hdd VALUES ('seagate-barracuda-2048-3.5sata', 'Seagate', 'Barracuda', '1 TB', '3.5 SATA', 'HDD Seagate Barracuda 2TB');
 
 INSERT
-IGNORE INTO `pc_parts_picker`.gpu VALUES ('id', 'manufacturer', 'serie', 'chipset', 'Vram', 'fullname');
+IGNORE INTO `pc_parts_picker`.GraphicProcessor VALUES ('id', 'manufacturer', 'serie', 'chipset', 'Vram', 'fullname');
 INSERT
-IGNORE INTO `pc_parts_picker`.gpu VALUES ('asus-kogaming-rtx3060ti', 'Asus', 'NVIDIA', 'RTX 3060 ti', '6', 'VGA ASUS RTX 3060 Ti 8GB KO GAMING');
+IGNORE INTO `pc_parts_picker`.GraphicProcessor VALUES ('asus-kogaming-rtx3060ti', 'Asus', 'NVIDIA', 'RTX 3060 ti', '6', 'VGA ASUS RTX 3060 Ti 8GB KO GAMING');
 INSERT
-IGNORE INTO `pc_parts_picker`.gpu VALUES ('galax-exgamerwhite-rtx3070', 'GALAX', 'NVIDIA', 'RTX 3070', '8', 'GALAX GeForce RTX™ 3070 EX Gamer White (1-Click OC)');
+IGNORE INTO `pc_parts_picker`.GraphicProcessor VALUES ('galax-exgamerwhite-rtx3070', 'GALAX', 'NVIDIA', 'RTX 3070', '8', 'GALAX GeForce RTX™ 3070 EX Gamer White (1-Click OC)');
 INSERT
-IGNORE INTO `pc_parts_picker`.gpu VALUES ('msi-gamingx-rx5600xt', 'MSI', 'AMD', 'RX5600XT', '8', 'MSI RX 5600 XT GAMING X');
+IGNORE INTO `pc_parts_picker`.GraphicProcessor VALUES ('msi-gamingx-rx5600xt', 'MSI', 'AMD', 'RX5600XT', '8', 'MSI RX 5600 XT GAMING X');
 INSERT
-IGNORE INTO `pc_parts_picker`.gpu VALUES ('zotac-amp!edition-gtx1060', 'Zotac', 'NVIDIA', 'GTX 1060', '6', 'ZOTAC GeForce GTX 1060 AMP! Edition');
+IGNORE INTO `pc_parts_picker`.GraphicProcessor VALUES ('zotac-amp!edition-gtx1060', 'Zotac', 'NVIDIA', 'GTX 1060', '6', 'ZOTAC GeForce GTX 1060 AMP! Edition');
 INSERT
-IGNORE INTO `pc_parts_picker`.gpu VALUES ('evga-koultragaming-rtx2060', 'EVGA', 'NVIDIA', 'RTX 2060', '6', 'EVGA GeForce RTX 2060 KO ULTRA GAMING');
+IGNORE INTO `pc_parts_picker`.GraphicProcessor VALUES ('evga-koultragaming-rtx2060', 'EVGA', 'NVIDIA', 'RTX 2060', '6', 'EVGA GeForce RTX 2060 KO ULTRA GAMING');
 INSERT
-IGNORE INTO `pc_parts_picker`.gpu VALUES ('gigabyte-radeon-rx6800xt', 'Gigabyte', 'AMD', 'RX6800XT', '16', 'Gigabyte Radeon RX 6800 XT 16G');
+IGNORE INTO `pc_parts_picker`.GraphicProcessor VALUES ('gigabyte-radeon-rx6800xt', 'Gigabyte', 'AMD', 'RX6800XT', '16', 'Gigabyte Radeon RX 6800 XT 16G');
 
 
 INSERT

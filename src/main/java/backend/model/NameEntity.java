@@ -3,7 +3,7 @@ package backend.model;
 import javax.persistence.*;
 
 @MappedSuperclass
-public abstract class NameEntity {
+public class NameEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

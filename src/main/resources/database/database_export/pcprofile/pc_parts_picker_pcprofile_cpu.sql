@@ -28,10 +28,10 @@ CREATE TABLE `pcprofile_cpu`
     `CpuID` varchar(100) NOT NULL,
     KEY     `FK2ee2iieg93gujoo985cw5wysa` (`CpuID`),
     KEY     `FKajiygmqemxfai80yee65illou` (`PcID`),
-    CONSTRAINT `FK2ee2iieg93gujoo985cw5wysa` FOREIGN KEY (`CpuID`) REFERENCES `cpu` (`ID`),
+    CONSTRAINT `FK2ee2iieg93gujoo985cw5wysa` FOREIGN KEY (`CpuID`) REFERENCES `CentralProcessor` (`ID`),
     CONSTRAINT `FKajiygmqemxfai80yee65illou` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
     CONSTRAINT `pcprofile_cpu_ibfk_1` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
-    CONSTRAINT `pcprofile_cpu_ibfk_2` FOREIGN KEY (`CpuID`) REFERENCES `cpu` (`ID`)
+    CONSTRAINT `pcprofile_cpu_ibfk_2` FOREIGN KEY (`CpuID`) REFERENCES `CentralProcessor` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

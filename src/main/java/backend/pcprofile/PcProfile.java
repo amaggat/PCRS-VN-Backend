@@ -1,12 +1,12 @@
 package backend.pcprofile;
 
-import backend.pc.cpu.cpu;
+import backend.pc.cpu.CentralProcessor;
 import backend.pc.drives.HardDriveDisk.HardDiskDrive;
 import backend.pc.drives.SolidStateDrive.SolidStateDrive;
-import backend.pc.gpu.gpu;
+import backend.pc.gpu.GraphicProcessor;
 import backend.pc.mainboard.Mainboard;
 import backend.pc.psu.PowerSupplyUnit;
-import backend.pc.ram.ram;
+import backend.pc.ram.Ram;
 import backend.user.User;
 
 import javax.persistence.*;
@@ -25,10 +25,6 @@ public class PcProfile {
     @NotEmpty
     private String pcname = new String();
 
-//    @Column(name = "price")
-//    @NotEmpty
-//    private double PcPrice;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userid")
     private User user;
@@ -39,7 +35,7 @@ public class PcProfile {
             joinColumns = {@JoinColumn(name = "pcid")},
             inverseJoinColumns = {@JoinColumn(name = "cpuid")}
     )
-    private List<backend.pc.cpu.cpu> cpu;
+    private List<CentralProcessor> CentralProcessor;
 
     @ManyToMany
     @JoinTable(
@@ -55,7 +51,7 @@ public class PcProfile {
             joinColumns = @JoinColumn(name = "pcid"),
             inverseJoinColumns = @JoinColumn(name = "ramid")
     )
-    private List<backend.pc.ram.ram> ram;
+    private List<Ram> ram;
 
     @ManyToMany
     @JoinTable(
@@ -79,7 +75,7 @@ public class PcProfile {
             joinColumns = @JoinColumn(name = "pcid"),
             inverseJoinColumns = @JoinColumn(name = "gpuid")
     )
-    private List<backend.pc.gpu.gpu> gpu;
+    private List<GraphicProcessor> graphicProcessor;
 
     @ManyToMany
     @JoinTable(
@@ -90,17 +86,9 @@ public class PcProfile {
     private List<PowerSupplyUnit> psu;
 
 
-//    public String getId() {
-//        return id;
-//    }
-
-//    public double getPcPrice() {
-//        return PcPrice;
-//    }
-
-//    public String getPcname() {
-//        return pcname;
-//    }
+    public String getId() {
+        return id;
+    }
 
     public void setId(String id) {
         this.id = id;
@@ -110,28 +98,12 @@ public class PcProfile {
         this.pcname = pcname;
     }
 
-//    public void setPcPrice(double pcPrice) {
-//        PcPrice = pcPrice;
-//    }
-
-
-//    public User getUser() {
-//        User user1 = new User();
-//        user1.setName(backend.user.getName());
-//        user1.setGmail(backend.user.getGmail());
-//        return user1;
-//    }
-//
-//    public void setUser(User backend.user) {
-//        this.backend.user = backend.user;
-//    }
-
-    public List<cpu> getCpu() {
-        return cpu;
+    public List<CentralProcessor> getCpu() {
+        return CentralProcessor;
     }
 
-    public void setCpu(List<cpu> cpu) {
-        this.cpu = cpu;
+    public void setCpu(List<CentralProcessor> CentralProcessor) {
+        this.CentralProcessor = CentralProcessor;
     }
 
     public List<Mainboard> getMain() {
@@ -142,11 +114,11 @@ public class PcProfile {
         this.main = main;
     }
 
-    public List<ram> getRam() {
+    public List<Ram> getRam() {
         return ram;
     }
 
-    public void setRam(List<ram> ram) {
+    public void setRam(List<Ram> ram) {
         this.ram = ram;
     }
 
@@ -166,12 +138,12 @@ public class PcProfile {
         this.hdd = hdd;
     }
 
-    public List<gpu> getGpu() {
-        return gpu;
+    public List<GraphicProcessor> getGpu() {
+        return graphicProcessor;
     }
 
-    public void setGpu(List<gpu> gpu) {
-        this.gpu = gpu;
+    public void setGpu(List<GraphicProcessor> GraphicProcessor) {
+        this.graphicProcessor = GraphicProcessor;
     }
 
     public List<PowerSupplyUnit> getPsu() {

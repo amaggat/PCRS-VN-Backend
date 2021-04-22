@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `gpu`
+-- Table structure for table `GraphicProcessor`
 --
 
-DROP TABLE IF EXISTS `gpu`;
+DROP TABLE IF EXISTS `GraphicProcessor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `gpu`
+CREATE TABLE `GraphicProcessor`
 (
     `ID`           varchar(100) NOT NULL,
     `manufacturer` varchar(100) NOT NULL,
@@ -35,13 +35,13 @@ CREATE TABLE `gpu`
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `gpu`
+-- Dumping data for table `GraphicProcessor`
 --
 
 LOCK
-TABLES `gpu` WRITE;
-/*!40000 ALTER TABLE `gpu` DISABLE KEYS */;
-INSERT INTO `gpu`
+TABLES `GraphicProcessor` WRITE;
+/*!40000 ALTER TABLE `GraphicProcessor` DISABLE KEYS */;
+INSERT INTO `GraphicProcessor`
 VALUES ('asus-geforce-gt-710-gt710-sl-2gd5', 'Asus', 'GT710-SL-2GD5', 'GT 710', 2, 'Asus GeForce GT 710 GT710-SL-2GD5'),
        ('asus-geforce-gtx-1060-6gb-strix-oc', 'Asus', 'STRIX OC', 'GTX 1060 6GB', 6,
         'Asus GeForce GTX 1060 6GB STRIX OC'),
@@ -231,7 +231,7 @@ VALUES ('asus-geforce-gt-710-gt710-sl-2gd5', 'Asus', 'GT710-SL-2GD5', 'GT 710', 
         'MSI GeForce RTX 3090 VENTUS 3X OC'),
        ('msi-radeon-rx-5600-xt-gaming-x', 'MSI', 'GAMING X', 'RX 5600 XT', 6, 'MSI Radeon RX 5600 XT GAMING X'),
        ('msi-radeon-rx-5600-xt-mech-oc', 'MSI', 'MECH OC', 'RX 5600 XT', 6, 'MSI Radeon RX 5600 XT MECH OC');
-/*!40000 ALTER TABLE `gpu` ENABLE KEYS */;
+/*!40000 ALTER TABLE `GraphicProcessor` ENABLE KEYS */;
 UNLOCK
 TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

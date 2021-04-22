@@ -1,10 +1,15 @@
-package backend.pc;
+package backend.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 @MappedSuperclass
-public abstract class electronicComponents {
+public class ElectronicComponents {
+
+    @Id
+    private String id = new String();
+
+    @Column(name = "manufacturer")
     private String manufacturer = new String();
 
     @Column(name = "seriename")
@@ -19,11 +24,6 @@ public abstract class electronicComponents {
     @NotEmpty
     private String image = new String();
 
-//    @Column(name = "price")
-//    @NotEmpty
-//    @Digits(fraction = 2, integer = 4)
-//    private double price = 0.0;
-
     @Column(name = "fullname")
     @NotEmpty
     private String fullname = new String();
@@ -35,10 +35,6 @@ public abstract class electronicComponents {
     public void setImage(String image) {
         this.image = image;
     }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id = new String();
 
     public String getChipset() {
         return chipset;

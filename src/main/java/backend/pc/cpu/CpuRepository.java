@@ -7,11 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-public interface CpuRepository extends JpaRepository<cpu, Integer>, JpaSpecificationExecutor<cpu> {
+public interface CpuRepository extends JpaRepository<CentralProcessor, Integer>, JpaSpecificationExecutor<CentralProcessor> {
 
-    @Query("SELECT DISTINCT cpu FROM cpu cpu WHERE " +
-            "cpu.id= :id")
+    @Query("SELECT DISTINCT cpu FROM CentralProcessor cpu WHERE cpu.id= :id")
     @Transactional(readOnly = true)
-    cpu findByID(@Param("id") String id);
+    CentralProcessor findByID(@Param("id") String id);
 
 }

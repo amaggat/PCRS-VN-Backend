@@ -1,7 +1,6 @@
 package backend.pc.psu;
 
-
-import backend.pc.electronicComponents;
+import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 
 import javax.persistence.*;
@@ -11,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "psu")
-public class PowerSupplyUnit extends electronicComponents {
+public class PowerSupplyUnit extends ElectronicComponents {
 
     @Column(name = "power")
     @NotEmpty

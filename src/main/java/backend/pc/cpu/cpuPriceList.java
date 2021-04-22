@@ -14,7 +14,7 @@ public class cpuPriceList {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fid")
-    private cpu cpu;
+    private CentralProcessor CentralProcessor;
 
     @Column(name = "logo")
     @NotEmpty

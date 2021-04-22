@@ -1,6 +1,6 @@
 package backend.pc.drives.HardDriveDisk;
 
-import backend.pc.electronicComponents;
+import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 
 import javax.persistence.*;
@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "hdd")
-public class HardDiskDrive extends electronicComponents {
+public class HardDiskDrive extends ElectronicComponents {
 
     @Column(name = "storage")
     @NotEmpty

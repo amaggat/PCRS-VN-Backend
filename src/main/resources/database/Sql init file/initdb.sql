@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`psu`
 )
     );
 
-CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cpu`
+CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`CentralProcessor`
 (
     `ID` VARCHAR
 (
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`ssd`
 )
     );
 
-CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`gpu`
+CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`GraphicProcessor`
 (
     `ID` VARCHAR
 (
@@ -385,7 +385,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile_cpu`
     FOREIGN KEY
 (
     `CpuID`
-) REFERENCES cpu
+) REFERENCES CentralProcessor
 (
     ID
 )
@@ -437,7 +437,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`pcprofile_gpu`
     FOREIGN KEY
 (
     `GpuID`
-) REFERENCES gpu
+) REFERENCES GraphicProcessor
 (
     ID
 )
@@ -560,7 +560,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`cpu_price_list`
     FOREIGN KEY
 (
     `fid`
-) REFERENCES cpu
+) REFERENCES CentralProcessor
 (
     ID
 ),
@@ -805,7 +805,7 @@ CREATE TABLE IF NOT EXISTS `pc_parts_picker`.`gpu_price_list`
     FOREIGN KEY
 (
     `fid`
-) REFERENCES gpu
+) REFERENCES GraphicProcessor
 (
     ID
 ),

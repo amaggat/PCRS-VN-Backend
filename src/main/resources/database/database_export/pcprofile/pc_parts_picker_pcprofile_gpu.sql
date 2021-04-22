@@ -28,10 +28,10 @@ CREATE TABLE `pcprofile_gpu`
     `GpuID` varchar(100) NOT NULL,
     KEY     `FK27ym360rk3t4ibvxbd7xfg3ly` (`GpuID`),
     KEY     `FK43grct2277fq9rx72til5wyux` (`PcID`),
-    CONSTRAINT `FK27ym360rk3t4ibvxbd7xfg3ly` FOREIGN KEY (`GpuID`) REFERENCES `gpu` (`ID`),
+    CONSTRAINT `FK27ym360rk3t4ibvxbd7xfg3ly` FOREIGN KEY (`GpuID`) REFERENCES `GraphicProcessor` (`ID`),
     CONSTRAINT `FK43grct2277fq9rx72til5wyux` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
     CONSTRAINT `pcprofile_gpu_ibfk_1` FOREIGN KEY (`PcID`) REFERENCES `pcprofile` (`ID`),
-    CONSTRAINT `pcprofile_gpu_ibfk_2` FOREIGN KEY (`GpuID`) REFERENCES `gpu` (`ID`)
+    CONSTRAINT `pcprofile_gpu_ibfk_2` FOREIGN KEY (`GpuID`) REFERENCES `GraphicProcessor` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

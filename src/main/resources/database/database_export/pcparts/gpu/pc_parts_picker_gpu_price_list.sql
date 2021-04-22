@@ -34,7 +34,7 @@ CREATE TABLE `gpu_price_list`
     `fid`      varchar(100) NOT NULL,
     PRIMARY KEY (`Id`),
     KEY        `fid` (`fid`),
-    CONSTRAINT `gpu_price_list_ibfk_1` FOREIGN KEY (`fid`) REFERENCES `gpu` (`ID`)
+    CONSTRAINT `gpu_price_list_ibfk_1` FOREIGN KEY (`fid`) REFERENCES `GraphicProcessor` (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

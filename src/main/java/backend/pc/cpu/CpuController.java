@@ -24,14 +24,14 @@ public class CpuController {
     }
 
     @GetMapping("/api/cpu")
-    public Page<cpu> list(@RequestParam(name = "name", required = false) String name,
-                          @RequestParam(name = "chipset", required = false) String chipset,
-                          @RequestParam(name = "manufacturer", required = false) String manufacturer,
-                          @RequestParam(name = "socket", required = false) String socket,
-                          @RequestParam(name = "cores", required = false) Integer cores,
-                          Pageable pageable
+    public Page<CentralProcessor> list(@RequestParam(name = "name", required = false) String name,
+                                       @RequestParam(name = "chipset", required = false) String chipset,
+                                       @RequestParam(name = "manufacturer", required = false) String manufacturer,
+                                       @RequestParam(name = "socket", required = false) String socket,
+                                       @RequestParam(name = "cores", required = false) Integer cores,
+                                       Pageable pageable
     ) {
-        Page<cpu> cpu = cpuRepository.findAll((Specification<cpu>) (root, cq, cb) -> {
+        Page<CentralProcessor> cpu = cpuRepository.findAll((Specification<CentralProcessor>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
             if (Objects.nonNull(chipset)) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
@@ -55,7 +55,7 @@ public class CpuController {
     }
 
     @GetMapping("/api/cpu/{CpuID}")
-    public cpu SearchById(@PathVariable("CpuID") String id) {
+    public CentralProcessor SearchById(@PathVariable("CpuID") String id) {
         return cpuRepository.findByID(id);
     }
 

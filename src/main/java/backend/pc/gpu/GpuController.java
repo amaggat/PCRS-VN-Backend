@@ -22,12 +22,12 @@ public class GpuController {
     }
 
     @GetMapping("/api/gpu")
-    public Page<gpu> list(@RequestParam(name = "name", required = false) String name,
-                          @RequestParam(name = "chipset", required = false) String chipset,
-                          @RequestParam(name = "manufacturer", required = false) String manufacturer,
-                          @RequestParam(name = "VRam", required = false) Integer VRam,
-                          Pageable pageable) {
-        Page<gpu> gpu = gpuRepository.findAll((Specification<gpu>) (root, cq, cb) -> {
+    public Page<GraphicProcessor> list(@RequestParam(name = "name", required = false) String name,
+                                       @RequestParam(name = "chipset", required = false) String chipset,
+                                       @RequestParam(name = "manufacturer", required = false) String manufacturer,
+                                       @RequestParam(name = "VRam", required = false) Integer VRam,
+                                       Pageable pageable) {
+        Page<GraphicProcessor> gpu = gpuRepository.findAll((Specification<GraphicProcessor>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
             if (Objects.nonNull(chipset)) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
@@ -48,7 +48,7 @@ public class GpuController {
     }
 
     @GetMapping("/api/gpu/{id}")
-    public gpu SearchById(@PathVariable("id") String id) {
+    public GraphicProcessor SearchById(@PathVariable("id") String id) {
         return gpuRepository.findByID(id);
     }
 

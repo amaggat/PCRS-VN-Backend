@@ -23,13 +23,13 @@ public class RamController {
     }
 
     @GetMapping("/api/ram")
-    public Page<ram> list(@RequestParam(name = "name", required = false) String name,
+    public Page<Ram> list(@RequestParam(name = "name", required = false) String name,
                           @RequestParam(name = "chipset", required = false) String chipset,
                           @RequestParam(name = "manufacturer", required = false) String manufacturer,
                           @RequestParam(name = "sizeOfRam", required = false) String sizeOfRam,
                           @RequestParam(name = "clockSpeed", required = false) Integer clockSpeed,
                           Pageable pageable) {
-        Page<ram> ramPage = ramRepository.findAll((Specification<ram>) (root, cq, cb) -> {
+        Page<Ram> ramPage = ramRepository.findAll((Specification<Ram>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
             if (Objects.nonNull(chipset)) {
                 p = cb.and(p, cb.like(root.get("chipset"), "%" + chipset + "%"));
@@ -54,7 +54,7 @@ public class RamController {
     }
 
     @GetMapping("/api/ram/{RamID}")
-    public ram SearchByID(@PathVariable("RamID") String id) {
+    public Ram SearchByID(@PathVariable("RamID") String id) {
         return ramRepository.findByID(id);
     }
 }

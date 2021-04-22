@@ -1,17 +1,24 @@
 package backend.pc.cpu;
 
 
-import backend.pc.electronicComponents;
+import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 
-import javax.persistence.*;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 
 @Entity
 @Table(name = "cpu")
-public class cpu extends electronicComponents {
+public class CentralProcessor extends ElectronicComponents {
 
     @Column(name = "socket")
     @NotEmpty
@@ -28,33 +35,15 @@ public class cpu extends electronicComponents {
     @NotEmpty
     private Integer Threads;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cpu", fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "CentralProcessor", fetch = FetchType.EAGER)
     private List<cpuPriceList> PriceList;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "cpu")
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "CentralProcessor")
     private List<PcProfile> pcProfile;
 
     public String getSocket() {
         return socket;
     }
-
-
-//    public double getBaseClock() {
-//        return BaseClock;
-//    }
-//
-//    public double getBoostCLock() {
-//        return BoostCLock;
-//    }
-//
-//    public void setBaseClock(double baseClock) {
-//        BaseClock = baseClock;
-//    }
-//
-//    public void setBoostCLock(double boostCLock) {
-//        BoostCLock = boostCLock;
-//    }
-
 
     public void setSocket(String socket) {
         this.socket = socket;
@@ -84,11 +73,4 @@ public class cpu extends electronicComponents {
         this.PriceList = cpuPriceList;
     }
 
-//    public List<PcProfile> getPcProfile() {
-//        return pcProfile;
-//    }
-//
-//    public void setPcProfile(List<PcProfile> pcProfile) {
-//        this.pcProfile = pcProfile;
-//    }
 }

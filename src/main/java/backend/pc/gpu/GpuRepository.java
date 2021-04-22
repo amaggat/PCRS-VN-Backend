@@ -6,10 +6,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-public interface GpuRepository extends JpaRepository<gpu, Integer>, JpaSpecificationExecutor<gpu> {
+public interface GpuRepository extends JpaRepository<GraphicProcessor, Integer>, JpaSpecificationExecutor<GraphicProcessor> {
 
-    @Query("SELECT DISTINCT gpu FROM gpu gpu WHERE gpu.id =:id")
+    @Query("SELECT DISTINCT gpu FROM GraphicProcessor gpu WHERE gpu.id =:id")
     @Transactional(readOnly = true)
-    gpu findByID(@Param("id") String id);
+    GraphicProcessor findByID(@Param("id") String id);
 
 }

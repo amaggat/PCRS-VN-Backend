@@ -19,18 +19,23 @@ public class gpuPriceList {
     @Column(name = "retailer")
     @NotEmpty
     private String retailer;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fid")
-    private gpu gpu;
+    private GraphicProcessor graphicProcessor;
+
     @Column(name = "link")
     @NotEmpty
     private String link = new String();
+
     @Column(name = "img")
     @NotEmpty
     private String img = new String();
+
     @Column(name = "name")
     @NotEmpty
     private String name = new String();
+
     @Column(name = "price")
     @NotEmpty
     private int price;

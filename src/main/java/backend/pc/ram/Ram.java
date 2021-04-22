@@ -1,7 +1,7 @@
 package backend.pc.ram;
 
 
-import backend.pc.electronicComponents;
+import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 
 import javax.persistence.*;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "ram")
-public class ram extends electronicComponents {
+public class Ram extends ElectronicComponents {
 
 //    @Column(name = "ddr")
 //    @NotEmpty

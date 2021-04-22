@@ -1,7 +1,7 @@
 package backend.pc.mainboard;
 
 
-import backend.pc.electronicComponents;
+import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 
 import javax.persistence.*;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "mainboard")
-public class Mainboard extends electronicComponents {
+public class Mainboard extends ElectronicComponents {
 
     @Column(name = "socket")
     @NotEmpty
