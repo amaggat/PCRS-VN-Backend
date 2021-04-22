@@ -28,7 +28,7 @@ public class SolidStateDrive extends ElectronicComponents {
 //    @NotEmpty
 //    private int readSpeed;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "ssd", fetch = FetchType.EAGER)
-    private List<ssdPriceList> PriceList;
+    private List<SsdPriceList> PriceList;
 
     public String getStorage() {
         return storage;
@@ -38,7 +38,7 @@ public class SolidStateDrive extends ElectronicComponents {
         this.storage = size;
     }
 
-    public List<ssdPriceList> getPriceList() {
+    public List<SsdPriceList> getPriceList() {
         return PriceList;
     }
 
@@ -59,7 +59,7 @@ public class SolidStateDrive extends ElectronicComponents {
 //        this.writeSpeed = writeSpeed;
 //    }
 
-    public void setPriceList(List<ssdPriceList> ssdPriceList) {
+    public void setPriceList(List<SsdPriceList> ssdPriceList) {
         this.PriceList = ssdPriceList;
     }
 }

@@ -3,6 +3,8 @@ package backend.pc.cpu;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
+import backend.recommendation.type.rating.CpuRating;
+import backend.util.Utility;
 
 
 import javax.persistence.CascadeType;
@@ -24,9 +26,6 @@ public class CentralProcessor extends ElectronicComponents {
     @NotEmpty
     private String socket = new String();
 
-//    private double BaseClock;
-//    private double BoostCLock;
-
     @Column(name = "cores")
     @NotEmpty
     private Integer cores;
@@ -35,11 +34,14 @@ public class CentralProcessor extends ElectronicComponents {
     @NotEmpty
     private Integer Threads;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "CentralProcessor", fetch = FetchType.EAGER)
-    private List<cpuPriceList> PriceList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "centralProcessor", fetch = FetchType.EAGER)
+    private List<CpuPriceList> PriceList;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "CentralProcessor")
-    private List<PcProfile> pcProfile;
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "centralProcessor")
+    private List<PcProfile> pcProfileList;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "centralProcessor")
+    private List<CpuRating> cpuRatingList;
 
     public String getSocket() {
         return socket;
@@ -65,12 +67,27 @@ public class CentralProcessor extends ElectronicComponents {
         Threads = threads;
     }
 
-    public List<cpuPriceList> getPriceList() {
+    public List<CpuPriceList> getPriceList() {
         return PriceList;
     }
 
-    public void setPriceList(List<cpuPriceList> cpuPriceList) {
+    public void setPriceList(List<CpuPriceList> cpuPriceList) {
         this.PriceList = cpuPriceList;
     }
 
+    public List<String> getPcProfileList() {
+        return Utility.returnPcProfileID(this.pcProfileList);
+    }
+
+    public void setPcProfileList(List<PcProfile> pcProfileList) {
+        this.pcProfileList = pcProfileList;
+    }
+
+    public List<CpuRating> getCpuRatingList() {
+        return cpuRatingList;
+    }
+
+    public void setCpuRatingList(List<CpuRating> cpuRatingList) {
+        this.cpuRatingList = cpuRatingList;
+    }
 }

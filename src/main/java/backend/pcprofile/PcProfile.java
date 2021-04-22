@@ -29,13 +29,22 @@ public class PcProfile {
     @JoinColumn(name = "userid")
     private User user;
 
+    @Column(name = "type")
+    private String type;
+
+    @Column(name = "budget")
+    private String budget;
+
+    @Column(name = "target")
+    private String target;
+
     @ManyToMany
     @JoinTable(
             name = "pcprofile_cpu",
             joinColumns = {@JoinColumn(name = "pcid")},
             inverseJoinColumns = {@JoinColumn(name = "cpuid")}
     )
-    private List<CentralProcessor> CentralProcessor;
+    private List<CentralProcessor> centralProcessor;
 
     @ManyToMany
     @JoinTable(
@@ -99,11 +108,11 @@ public class PcProfile {
     }
 
     public List<CentralProcessor> getCpu() {
-        return CentralProcessor;
+        return centralProcessor;
     }
 
     public void setCpu(List<CentralProcessor> CentralProcessor) {
-        this.CentralProcessor = CentralProcessor;
+        this.centralProcessor = CentralProcessor;
     }
 
     public List<Mainboard> getMain() {
@@ -152,5 +161,29 @@ public class PcProfile {
 
     public void setPsu(List<PowerSupplyUnit> psu) {
         this.psu = psu;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getBudget() {
+        return budget;
+    }
+
+    public void setBudget(String budget) {
+        this.budget = budget;
+    }
+
+    public String getTarget() {
+        return target;
+    }
+
+    public void setTarget(String target) {
+        this.target = target;
     }
 }

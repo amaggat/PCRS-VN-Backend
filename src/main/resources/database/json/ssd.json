@@ -2,191 +2,153 @@
   {
     "fid": "samsung-870-qvo-1024-m2-sata",
     "link": "https://www.anphatpc.com.vn/o-cung-ssd-samsung-870-qvo-1tb-2-5-inch-sata-iii_id34479.html",
-    "img": "https://anphat.com.vn/media/product/250_34479_1593755653_534_o_cung_ssd_1tb_samsung_870_qvo_25_inch_sata_iii_6.jpg",
     "name": "Ổ cứng SSD Samsung 870 QVO 1TB 2.5-Inch SATA III",
     "price": "3080000",
     "path": "ssd_price_list",
-    "retailer": "AnPhatPC",
-    "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
+    "retailer": "3"
   },
   {
     "fid": "samsung-870-qvo-4096-m2-sata",
     "link": "https://www.anphatpc.com.vn/o-cung-ssd-samsung-870-qvo-4tb-2-5-inch-sata-iii_id34481.html",
-    "img": "https://anphat.com.vn/media/product/250_34481_1593755684_986_o_cung_ssd_2tb_samsung_870_qvo_25_inch_sata_iii_2.jpg",
     "name": "Ổ cứng SSD Samsung 870 QVO 4TB 2.5-Inch SATA III",
     "price": "12240000",
     "path": "ssd_price_list",
-    "retailer": "AnPhatPC",
-    "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
+    "retailer": "3"
   },
   {
     "fid": "samsung-870-qvo-8192-m2-sata",
     "link": "https://www.anphatpc.com.vn/o-cung-ssd-samsung-870-qvo-8tb-2-5-inch-sata-iii_id34482.html",
-    "img": "https://anphat.com.vn/media/product/250_34482_1593755729_753_o_cung_ssd_8tb_samsung_870_qvo_25_inch_sata_iii_6.jpg",
     "name": "Ổ cứng SSD Samsung 870 QVO 8TB 2.5-Inch SATA III",
     "price": "22990000",
     "path": "ssd_price_list",
-    "retailer": "AnPhatPC",
-    "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
+    "retailer": "3"
   },
   {
     "fid": "adata-xpg-spectrix-s40g-rgb-256-m2-nvme",
     "link": "https://www.anphatpc.com.vn/o-cung-ssd-adata-xpg-spectrix-s40g-rgb-256gb-nvme-m.2-2280-pcie-gen-3.0-x4_id29720.html",
-    "img": "https://anphat.com.vn/media/product/250_29720_adata_xpg_spectrix_s40g_rgb_256gb_pcie_m_2_2280_ssd_solid_state_drive_netstorecommy_1906_15_netstorecommy_9.jpg",
     "name": "Ổ cứng SSD ADATA XPG SPECTRIX S40G RGB 256GB NVMe M.2 2280 PCIe Gen 3.0 x4",
     "price": "1399000",
     "path": "ssd_price_list",
-    "retailer": "AnPhatPC",
-    "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
+    "retailer": "3"
   },
   {
     "fid": "adata-xpg-spectrix-s40g-rgb-512-m2-nvme",
     "link": "https://www.anphatpc.com.vn/o-cung-ssd-adata-xpg-spectrix-s40g-rgb-512gb-nvme-m.2-2280-pcie-gen-3.0-x4_id29721.html",
-    "img": "https://anphat.com.vn/media/product/250_29721_",
     "name": "Ổ cứng SSD ADATA XPG SPECTRIX S40G RGB 512GB NVMe M.2 2280 PCIe Gen 3.0 x4",
     "price": "2349000",
     "path": "ssd_price_list",
-    "retailer": "AnPhatPC",
-    "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
+    "retailer": "3"
   },
   {
     "fid": "samsung-870-qvo-2048-m2-sata",
     "link": "https://www.anphatpc.com.vn/o-cung-ssd-samsung-870-qvo-2tb-2-5-inch-sata-iii_id34480.html",
-    "img": "https://anphat.com.vn/media/product/250_34480_1593755684_932_o_cung_ssd_2tb_samsung_870_qvo_25_inch_sata_iii_6.jpg",
     "name": "Ổ cứng SSD Samsung 870 QVO 2TB 2.5-Inch SATA III",
     "price": "6060000",
     "path": "ssd_price_list",
-    "retailer": "AnPhatPC",
-    "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png"
+    "retailer": "3"
   },
   {
     "fid": "adata-xpg-spectrix-s40g-rgb-256-m2-nvme",
     "link": "https://gearvn.com/products/ssd-xpg-spectrix-s40g-rgb-led-256gb",
-    "img": "https://product.hstatic.net/1000026716/product/ssd_adata_s40g_gearvn00_e12f3019dac0488d988a89fcecb7c517_large.jpg",
     "name": "SSD ADATA XPG SPECTRIX S40G RGB 256GB",
     "price": "1490000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "adata-xpg-spectrix-s40g-rgb-512-m2-nvme",
     "link": "https://gearvn.com/products/ssd-adata-xpg-spectrix-s40g-rgb-512gb",
-    "img": "https://product.hstatic.net/1000026716/product/ssd_adata_s40g_gearvn00_9c96b977c6cf4a8ca511b1eb5775fa33_large.jpg",
     "name": "SSD ADATA XPG SPECTRIX S40G RGB 512GB",
     "price": "2390000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-kc600-256-m2-sata",
     "link": "https://gearvn.com/products/ssd-kingston-kc600-256gb-2-5-sata3",
-    "img": "https://product.hstatic.net/1000026716/product/gearvn-product-ssd-kc600-1_7d2f9a65e5b14003ac34247a3255407c_large.jpg",
     "name": "SSD Kingston KC600 256GB 2.5\" SATA3",
     "price": "1290000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-kc600-512-m2-sata",
     "link": "https://gearvn.com/products/ssd-kingston-kc600-512gb-2-5-sata3",
-    "img": "https://product.hstatic.net/1000026716/product/gearvn-product-ssd-kc600-1_def5e519aecb4e0888c066c5bbc37876_large.jpg",
     "name": "SSD Kingston KC600 512GB 2.5\" SATA3",
     "price": "2290000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "seagate-firecuda-500-2.5sata",
     "link": "https://gearvn.com/products/ssd-seagate-firecuda-520-500gb-512gb-gen4",
-    "img": "https://product.hstatic.net/1000026716/product/gearvn-ssd-seagate-firecuda-520-500gb-512gb-gen4-13323_a6e2b44d063f46279c0a80c8be76d2c0_large.jpg",
     "name": "SSD Seagate Firecuda 520 500GB Gen4",
     "price": "3990000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-a400-120-m2-sata",
     "link": "https://gearvn.com/products/ssd-kingston-a400-120gb-m-2-sata-3",
-    "img": "https://product.hstatic.net/1000026716/product/ssd-kingston-a400_1cb57dcbd5024f9da1e8b8f8a3fb9cbc_large.png",
     "name": "SSD KINGSTON A400 120GB M.2 Sata 3",
     "price": "590000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-a400-240-m2-sata",
     "link": "https://gearvn.com/products/ssd-kingston-a400-240gb-m-2-sata-3",
-    "img": "https://product.hstatic.net/1000026716/product/ssd-kingston-a400_c8d62280cba64e48935410993f606b12_large.png",
     "name": "SSD KINGSTON A400 240GB M.2 Sata 3",
     "price": "890000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-a2000-500-m2-nvme",
     "link": "https://gearvn.com/products/ssd-kingston-a2000-500gb-m-2-nvme-sa2000m8-500g",
-    "img": "https://product.hstatic.net/1000026716/product/gearvn.com-ssd-kingston-a2000-3_1500f2de07574538a78886c4ac2e8aa0_large.jpg",
     "name": "SSD KINGSTON A2000 500GB M.2 NVMe - SA2000M8/500G",
     "price": "2190000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-a2000-250-m2-nvme",
     "link": "https://gearvn.com/products/ssd-kingston-a2000-250gb-m-2-nvme-sa2000m8-250g",
-    "img": "https://product.hstatic.net/1000026716/product/gearvn.com-ssd-kingston-a2000-3_0f0d754eadf1458d813150f1dcd894e5_large.jpg",
     "name": "SSD KINGSTON A2000 250GB M.2 NVMe - SA2000M8/250G",
     "price": "1010000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-a2000-1024-m2-nvme",
     "link": "https://gearvn.com/products/ssd-kingston-a2000-1tb-m-2-nvme-sa2000m8-1000g",
-    "img": "https://product.hstatic.net/1000026716/product/gearvn.com-ssd-kingston-a2000-3_fb9a4fd14a38408a88efed8effb4125e_large.jpg",
     "name": "SSD KINGSTON A2000 1TB M.2 NVMe - SA2000M8/1000G",
     "price": "3290000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-hyperx-fury-rgb-240-m2-sata",
     "link": "https://gearvn.com/products/hyperx-ssd-fury-rgb-240gb-2-5-sata-3",
-    "img": "https://product.hstatic.net/1000026716/product/ssd_kingston_hyperx_fury_rgb_large.jpg",
     "name": "HyperX SSD Fury RGB 240GB 2.5\" Sata 3",
     "price": "1990000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-hyperx-fury-rgb-480-m2-sata",
     "link": "https://gearvn.com/products/hyperx-ssd-fury-rgb-480gb-2-5-sata-3",
-    "img": "https://product.hstatic.net/1000026716/product/ssd_kingston_hyperx_fury_rgb_039917d65b514a569c528de3a75111db_large.jpg",
     "name": "HyperX SSD Fury RGB 480GB 2.5\" Sata 3",
     "price": "3350000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   },
   {
     "fid": "kingston-hyperx-fury-rgb-960-m2-sata",
     "link": "https://gearvn.com/products/hyperx-ssd-fury-rgb-960gb-2-5-sata-iii",
-    "img": "https://product.hstatic.net/1000026716/product/hx-product-ssd-fury-rgb-shfr200-1-zm-lg_6d4fa528a68c47bda9702863383b5f53_large.jpg",
     "name": "HyperX SSD Fury RGB 960GB 2.5\" SATA III",
     "price": "5850000",
     "path": "ssd_price_list",
-    "retailer": "GearVN",
-    "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422"
+    "retailer": "1"
   }
 ]

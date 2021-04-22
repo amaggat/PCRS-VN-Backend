@@ -19,9 +19,9 @@ public class Feedbacks extends NameEntity {
     @NotEmpty
     private String creationtime;
 
-//    @ManyToOne
-//    @JoinColumn(name = "creatorid")
-//    private User user;
+    @ManyToOne
+    @JoinColumn(name = "creatorid")
+    private User user;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "postid")
@@ -43,13 +43,13 @@ public class Feedbacks extends NameEntity {
         this.creationtime = creationtime;
     }
 
-//    public User getUser() {
-//        return user;
-//    }
+    public Integer getUser() {
+        return user.getId();
+    }
 
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public Integer getPost() {
         return post.getId();

@@ -3,6 +3,8 @@ package backend.pc.ram;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
+import backend.recommendation.type.rating.RamRating;
+import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -22,20 +24,23 @@ public class Ram extends ElectronicComponents {
     private Integer clockSpeed;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "ram")
-    private List<PcProfile> pcProfile;
+    private List<PcProfile> pcProfileList;
 
     @Column(name = "sizeofram")
     @NotEmpty
     private String sizeOfRam = new String();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "ram", fetch = FetchType.EAGER)
-    private List<ramPriceList> PriceList;
+    private List<RamPriceList> PriceList;
 
-    public int getClockSpeed() {
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "ram")
+    private List<RamRating> ramRatingList;
+
+    public Integer getClockSpeed() {
         return clockSpeed;
     }
 
-    public void setClockSpeed(int clockSpeed) {
+    public void setClockSpeed(Integer clockSpeed) {
         this.clockSpeed = clockSpeed;
     }
 
@@ -47,18 +52,27 @@ public class Ram extends ElectronicComponents {
         this.sizeOfRam = sizeOfRam;
     }
 
-    public List<ramPriceList> getPriceList() {
+    public List<RamPriceList> getPriceList() {
         return PriceList;
     }
 
-    public void setPriceList(List<ramPriceList> ramPriceList) {
+    public void setPriceList(List<RamPriceList> ramPriceList) {
         this.PriceList = ramPriceList;
-
-
     }
 
-//    public void setDDR(String DDR) {
-//        this.DDR = DDR;
-//    }
+    public List<String> getPcProfileList() {
+        return Utility.returnPcProfileID(this.pcProfileList);
+    }
 
+    public void setPcProfileList(List<PcProfile> pcProfileList) {
+        this.pcProfileList = pcProfileList;
+    }
+
+    public List<RamRating> getRamRatingList() {
+        return ramRatingList;
+    }
+
+    public void setRamRatingList(List<RamRating> ramRatingList) {
+        this.ramRatingList = ramRatingList;
+    }
 }

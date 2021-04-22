@@ -3,6 +3,8 @@ package backend.pc.mainboard;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
+import backend.recommendation.type.rating.MainboardRating;
+import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -28,25 +30,28 @@ public class Mainboard extends ElectronicComponents {
     @NotEmpty
     private Integer memory_slot;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "main")
-    private List<PcProfile> pcProfile;
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "mainboard", fetch = FetchType.EAGER)
-    private List<mainPriceList> PriceList;
+    private List<MainPriceList> PriceList;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "main")
+    private List<PcProfile> pcProfileList;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "mainboard", fetch = FetchType.LAZY)
+    private List<MainboardRating> mainboardRatingList;
 
     public String getFormfactor() {
-        return formfactor;
+        return this.formfactor;
     }
 
     public void setFormfactor(String size) {
         this.formfactor = size;
     }
 
-    public List<mainPriceList> getPriceList() {
+    public List<MainPriceList> getPriceList() {
         return PriceList;
     }
 
-    public void setPriceList(List<mainPriceList> mainPriceList) {
+    public void setPriceList(List<MainPriceList> mainPriceList) {
         this.PriceList = mainPriceList;
     }
 
@@ -72,5 +77,21 @@ public class Mainboard extends ElectronicComponents {
 
     public void setMemory_slot(Integer memory_slot) {
         this.memory_slot = memory_slot;
+    }
+
+    public List<String> getPcProfileList() {
+        return Utility.returnPcProfileID(this.pcProfileList);
+    }
+
+    public void setPcProfileList(List<PcProfile> pcProfileList) {
+        this.pcProfileList = pcProfileList;
+    }
+
+    public List<MainboardRating> getMainboardRatingList() {
+        return mainboardRatingList;
+    }
+
+    public void setMainboardRatingList(List<MainboardRating> mainboardRatingList) {
+        this.mainboardRatingList = mainboardRatingList;
     }
 }

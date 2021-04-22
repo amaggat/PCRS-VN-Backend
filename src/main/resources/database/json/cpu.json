@@ -5,7 +5,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel_core_i7_8700_gearvn_large.jpg",
     "name": "Intel Core i7 8700 / 12M / 3.2GHz / 6 nhân 12 luồng",
     "price": "Liên hệ",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -15,7 +15,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel_core_i3_8100_gearvn_large.jpg",
     "name": "Intel Core i3 8100 / 6M / 3.6GHz / 4 nhân 4 luồng",
     "price": "3250000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -25,7 +25,7 @@
     "img": "https://product.hstatic.net/1000026716/product/untitled-1_6e92f263a5c1446f98f837bf820cdb12_large.jpg",
     "name": "Intel Core i5 8400 / 9M / 2.8GHz / 6 nhân 6 luồng",
     "price": "5310000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -35,7 +35,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel_core_i5_8500_gearvn_large.jpg",
     "name": "Intel Core i5 8500 / 9M / 3.0GHz / 6 nhân 6 luồng",
     "price": "5990000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -45,7 +45,7 @@
     "img": "https://product.hstatic.net/1000026716/product/core-i7-8700-1_b154767d6b8b44aca08fa21cd18e9acf_large.jpg",
     "name": "Intel Core i7 8700k / 12M / 3.7GHz / 6 nhân 12 luồng",
     "price": "9550000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -55,7 +55,7 @@
     "img": "https://product.hstatic.net/1000026716/product/core_i3_9100f_gearvn_98843f2706c34169909a1aed9675bdfa_large.jpg",
     "name": "Core i3 9100F / 6M / 3.6GHz upto 4.20GHz / 4 nhân 4 luồng",
     "price": "1990000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -65,7 +65,7 @@
     "img": "https://product.hstatic.net/1000026716/product/12666040_1_204861d6be874ddbb62d2591da96a08b_large.png",
     "name": "Core i3 9100 / 6M / 3.6GHz upto 4.20GHz / 4 nhân 4 luồng",
     "price": "3190000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -75,7 +75,7 @@
     "img": "https://product.hstatic.net/1000026716/product/core_i5_9400_gearvn_20ee3e58fd7147fd83467cc904f0a937_large.jpg",
     "name": "Core i5 9400F / 9M / 2.9GHz / 6 nhân 6 luồng",
     "price": "3490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -85,7 +85,7 @@
     "img": "https://product.hstatic.net/1000026716/product/core_i5_9400_gearvn_bbcea53cc4484731a58c16ac0aa4582c_large.jpg",
     "name": "Core i5 9400 / 9M / 2.9GHz upto 4.1GHz / 6 nhân 6 luồng",
     "price": "4490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -95,7 +95,7 @@
     "img": "https://product.hstatic.net/1000026716/product/core_i5_9600k_gearvn_5d989d1b65b546d99bc277def82ab46d_large.jpg",
     "name": "Intel Core i5 9600k / 9M / 3.7GHz / 6 nhân 6 luồng",
     "price": "6290000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -105,7 +105,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn-i7-9700f_d562e4a04d4f48368a4b215a0c02406e_large.jpg",
     "name": "Intel Core i7 9700F / 12M / 3.0 GHz / 8 nhân 8 luồng",
     "price": "7990000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -115,7 +115,7 @@
     "img": "https://product.hstatic.net/1000026716/product/core_i7_9700k_154ed79ad6de4e68ba69f96bd7be5dc6_large.jpg",
     "name": "Intel Core i7 9700k / 12M / 3.6GHz / 8 nhân 8 luồng",
     "price": "7990000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -125,7 +125,7 @@
     "img": "https://product.hstatic.net/1000026716/product/i7-9700-gearvn_effce1dd1dc44616acf69067eb8a3b36_large.jpeg",
     "name": "Core i7 9700 / 12M / 3.0GHz upto 4.70GHz / 8 nhân 8 luồng",
     "price": "8800000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -135,7 +135,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn_2b68e7ab299c4a82bb5a918748d1f3fc_large.png",
     "name": "Intel Core i9 9900k / 16M / 3.60GHz / 8 nhân 16 luồng",
     "price": "11590000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -145,7 +145,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn-intel-core-i9-9900_bbee9ea00aeb4cf1b266af520c00bdca_large.png",
     "name": "Intel Core i9 9900 / 16MB / 3.60GHz / 8 nhân 16 luồng",
     "price": "12490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -155,7 +155,7 @@
     "img": "https://product.hstatic.net/1000026716/product/9900kf_gearvn_6af58f62a4a54e338816a123a83136a2_large.jpg",
     "name": "Intel Core i9 9900KF / 16M / 3.60GHz / 8 nhân 16 luồng",
     "price": "12490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -165,7 +165,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn-core-i3-10100f-6mb-4-3ghz-4-nhan-8-luong-4-666_b69c321b09f44952a22253dc39df2432_large.jpg",
     "name": "Core i3 10100F / 6MB / 4.3GHZ / 4 nhân 8 luồng",
     "price": "2090000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -175,7 +175,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i3_218199ebdf8541e0bd13bfb28aefd228_large.png",
     "name": "Intel Core i3 10100 / 6MB / 3.6GHz / 4 Nhân 8 Luồng / LGA 1200",
     "price": "2990000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -185,7 +185,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i5_60901db380294886bb480c71d6e867fc_large.jpg",
     "name": "Intel Core i5 10400F / 12MB / 2.9GHz / 6 Nhân 12 Luồng / LGA 1200",
     "price": "4090000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -195,7 +195,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i5_b49456b113fb43d7a8fda94bcca1947e_large.jpg",
     "name": "Intel Core i5 10400 / 12MB / 2.9GHz / 6 Nhân 12 Luồng / LGA 1200",
     "price": "4790000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -205,7 +205,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i5_bcd8923197104f5a926e894d53a2aaed_large.jpg",
     "name": "Intel Core i5 10500 / 12MB / 3.1GHz / 6 Nhân 12 Luồng / LGA 1200",
     "price": "5490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -215,7 +215,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i5_677e5c7735334e5688f00128c79cdd52_large.jpg",
     "name": "Intel Core i5 10600 / 12MB / 3.3GHz / 6 Nhân 12 Luồng / LGA 1200",
     "price": "5990000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -225,7 +225,7 @@
     "img": "https://product.hstatic.net/1000026716/product/e-i5-10600ka-avengers-edition-12mb-4.1ghz-6-nhan-12-luong-lga-1200-666_cf8855fbdfa049e4b60360371a982123_large.jpg",
     "name": "Intel Core i5 10600KA Avengers Edition / 12MB / 4.1GHz / 6 Nhân 12 Luồng / LGA 1200",
     "price": "7290000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -235,7 +235,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i7_376583b7238b4eb8b0cd2c81355d3bce_large.jpg",
     "name": "Intel Core i7 10700F / 16MB / 2.9GHz / 8 Nhân 16 Luồng / LGA 1200",
     "price": "8290000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -245,7 +245,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i7_ce12bc05c12845ceb6e6cd76e14d33a1_large.jpg",
     "name": "Intel Core i7 10700 / 16MB / 2.9GHz / 8 Nhân 16 Luồng / LGA 1200",
     "price": "9490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -255,7 +255,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i7_d5d67532426743018fe7d234b4843dbd_large.jpg",
     "name": "Intel Core i7 10700KF / 16MB / 3.8GHz / 8 Nhân 16 Luồng / LGA 1200",
     "price": "9890000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -265,7 +265,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn-intel-core-i7-10700ka-avengers-edition-666_90f5feeca9224ae8a4a408f401ad2a73_large.jpg",
     "name": "Intel Core i7-10700KA Avengers Edition / 16MB / 3.8GHz / 8 Nhân 16 Luồng / LGA 1200",
     "price": "10490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -275,7 +275,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i7_18ec4fe046ba47e6914ef8a12b294630_large.jpg",
     "name": "Intel Core i7 10700K / 16MB / 3.8GHz / 8 Nhân 16 Luồng / LGA 1200",
     "price": "10490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -285,7 +285,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn_a5dc2085102d4842bace094b607e8a87_large.png",
     "name": "Intel Core i9 10900F/ 20MB / 2.8GHz / 10 Nhân 20 Luồng / LGA 1200",
     "price": "11790000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -295,7 +295,7 @@
     "img": "https://product.hstatic.net/1000026716/product/6875_cpu_intel_core_i9_10900_chinh_hang_ffb9dae46fb64ed6a09a23302139a489_large.jpg",
     "name": "Intel Core i9 10900 / 20MB / 2.8GHz / 10 Nhân 20 Luồng / LGA 1200",
     "price": "12490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -305,7 +305,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i9-10850ka-01_7dc7c097a62c40a0be1b728c85aec1b1_large.jpg",
     "name": "Intel Core i9-10850KA / 20MB / 3.6GHz / 10 Nhân 20 Luồng",
     "price": "12590000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -315,7 +315,7 @@
     "img": "https://product.hstatic.net/1000026716/product/intel-core-i9-comet-lake-s_bf8d9132386e42e48846d70d2f20fb8e_large.jpg",
     "name": "Intel Core i9 10900K / 20MB / 3.7GHz / 10 Nhân 20 Luồng / LGA 1200",
     "price": "13490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -325,7 +325,7 @@
     "img": "https://product.hstatic.net/1000026716/product/ryzen_5_3200g_gearvn_e799782ec0cd4d46b675a04c2a399a45_large.jpg",
     "name": "AMD Ryzen 3 3200G /6MB /3.6GHz /4 nhân 4 luồng",
     "price": "2490000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -335,7 +335,7 @@
     "img": "https://product.hstatic.net/1000026716/product/amd-ryzen-3-3100_b17cab22e8964140b7883479a7e49c69_large.png",
     "name": "AMD Ryzen 3 3100 /16MB /3.6GHz /4 nhân 8 luồng",
     "price": "2590000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -345,7 +345,7 @@
     "img": "https://product.hstatic.net/1000026716/product/b8b29bef394e54-25139_2018_05_16_product-111_a3a3d64564574b6b8b9ce079ea39c0d8_large.png",
     "name": "CPU Ryzen 5 3500 /16MB /3.6GHz /6 nhân 6 luồng",
     "price": "2990000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -355,7 +355,7 @@
     "img": "https://product.hstatic.net/1000026716/product/amd-ryzen-3-3100_40c54ff2c14f4561ba2ccc226107a9fd_large.png",
     "name": "AMD Ryzen 3 3300X /16MB /3.8GHz /4 nhân 8 luồng",
     "price": "3190000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -365,7 +365,7 @@
     "img": "https://product.hstatic.net/1000026716/product/ryzen_5_3600_gearvn__f01ed63d2d9f4dabb176d1e6a46426ce_grande_da09d179734d4afa96385f08142ad7e3_large.jpg",
     "name": "AMD Ryzen 5 3500x /32MB /3.6GHz /6 nhân 6 luồng",
     "price": "3790000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -375,7 +375,7 @@
     "img": "https://product.hstatic.net/1000026716/product/ryzen_5_3400g_gearvn__4e97afc81deb458db0731dceac013ff1_large.jpg",
     "name": "AMD Ryzen 5 3400G /6MB /3.7GHz /4 nhân 8 luồng",
     "price": "3900000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -385,7 +385,7 @@
     "img": "https://product.hstatic.net/1000026716/product/ryzen_5_3600_gearvn__4628836526414a7381292cb5a3acc649_large.jpg",
     "name": "AMD Ryzen 5 3600 /36MB /3.6GHz /6 nhân 12 luồng",
     "price": "4990000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -395,7 +395,7 @@
     "img": "https://product.hstatic.net/1000026716/product/ryzen_5_3600_gearvn__f01ed63d2d9f4dabb176d1e6a46426ce_large.jpg",
     "name": "AMD Ryzen 5 3600x /36MB /3.8GHz /6 nhân 12 luồng",
     "price": "5690000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -405,7 +405,7 @@
     "img": "https://product.hstatic.net/1000026716/product/ryzen_7_gen3_gearvn_e57dcfb17d714ba290fda9c2bb970916_large.jpg",
     "name": "AMD Ryzen 7 3700x /36MB /3.6GHz /8 nhân 16 luồng",
     "price": "8290000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -415,7 +415,7 @@
     "img": "https://product.hstatic.net/1000026716/product/ryzen_7_gen3_gearvn_62f76ac67754446a9a32113a3c722f7d_large.jpg",
     "name": "AMD Ryzen 7 3800x /36MB /3.9GHz /8 nhân 16 luồng",
     "price": "9300000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -425,7 +425,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn-cpu-amd-ryzen-7-3800xt-32mb-3-8ghz-8-nhan-16-luong-666_9deccd1369294b259f7ffa2f16ef2e46_large.png",
     "name": "CPU AMD Ryzen 7 3800XT / 32MB / 3.8GHz / 8 nhân 16 luồng",
     "price": "9590000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -435,7 +435,7 @@
     "img": "https://product.hstatic.net/1000026716/product/ryzen_9_gen3_gearvn_e5d4fc47094e44d7af5a6bed5e2e8fe8_large.jpg",
     "name": "AMD Ryzen 9 3900x /70MB /3.8GHz /12 nhân 24 luồng",
     "price": "12290000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -445,7 +445,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn-cpu-amd-ryzen-9-3900xt-64mb-3-8ghz-12-nhan-24-luong-666_37b2283aa09d448d8b65fa161001222b_large.jpg",
     "name": "CPU AMD Ryzen 9 3900XT / 64MB / 3.8GHz / 12 nhân 24 luồng",
     "price": "12590000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -455,7 +455,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn-amd-ryzen-9-3950x-am4_60d2472773c841509fc1ff7fb2432796_large.jpg",
     "name": "AMD Ryzen™ 9 3950X / 64MB /3.5Ghz / 16 nhân 32 luồng",
     "price": "18990000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -465,7 +465,7 @@
     "img": "https://product.hstatic.net/1000026716/product/rvn-cpu-amd-ryzen-5-5600x-32mb-3-7ghz-boost-4-6ghz-6-nhan-12-luong-666_3b5a025f1f714369aafea19db090ebeb_large.png",
     "name": "CPU AMD Ryzen 5 5600X / 32MB / 3.7GHz Boost 4.6GHz / 6 nhân 12 luồng",
     "price": "7900000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -475,7 +475,7 @@
     "img": "https://product.hstatic.net/1000026716/product/rvn-cpu-amd-ryzen-7-5800x-32mb-3-8ghz-boost-4-7ghz-8-nhan-16-luong-666_675f75aeff4149f1bd15189673faf87e_large.png",
     "name": "AMD Ryzen 7 5800X / 32MB / 3.8GHz Boost 4.7GHz / 8 nhân 16 luồng",
     "price": "11600000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -485,7 +485,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn-amd-ryzen-9-5900x-64mb-3-7ghz-boost-4-8ghz-12-nhan-24-luong-666_c768e9d619a0477ca7433bd76ffc073c_large.png",
     "name": "AMD Ryzen 9 5900X / 64MB / 3.7GHz Boost 4.8GHz / 12 nhân 24 luồng",
     "price": "14690000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -495,7 +495,7 @@
     "img": "https://product.hstatic.net/1000026716/product/gearvn-amd-ryzen-9-5950x-64md-3-4ghz-boost-4-9ghz-16-nhan-32-luong_44080d881bbc4828b07fde3d76fd7955_large.jpg",
     "name": "AMD Ryzen 9 5950X / 64MD / 3.4GHz Boost 4.9GHz / 16 nhân 32 luồng",
     "price": "20900000",
-    "retailer": "GearVN",
+    "retailer": "1",
     "logo": "https://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=16422",
     "path": "cpu_price_list"
   },
@@ -505,7 +505,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_44010_hnc_intel_i3_9100_right_facing_850x850.jpg",
     "name": "CPU Intel Core i3-9100 (3.6GHz turbo up to 4.2GHz, 4 nhân 4 luồng, 6MB Cache, 65W) - Socket Intel LGA 1151-v2 ",
     "price": "3199000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -515,7 +515,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_37771_hnc_intel_i3_8100_right_face_850x850.jpg",
     "name": "CPU Intel Core i3-8100 (3.6GHz, 4 nhân, 4 luồng, 6MB Cache, 65W) - Socket Intel LGA 1151-v2",
     "price": "2799000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -525,7 +525,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_45170_hnc_intel_core_i3_9100f_right_face_850x850.jpg",
     "name": "CPU Intel Core i3-9100F (3.6Ghz, 4 nhân 4 luồng, 6MB Cache, 65W) - Socket Intel LGA 1151-v2",
     "price": "1899000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -535,7 +535,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52615_i3_10100_1000.jpg",
     "name": "CPU Intel Core i3-10100 (3.6GHz turbo up to 4.3Ghz, 4 nhân 8 luồng, 6MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "3159000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -545,7 +545,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_55894_cpu_intel_core_i3_10100f.jpg",
     "name": "CPU Intel Core i3-10100F (3.6GHz turbo up to 4.3Ghz, 4 nhân 8 luồng, 6MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "2199000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -555,7 +555,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_44011_hnc_intel_core_i5_9400_right_face_850x850.jpg",
     "name": "CPU Intel Core i5-9400 (2.9GHz turbo up to 4.1GHz, 6 nhân 6 luồng, 9MB Cache, 65W) - Socket Intel LGA 1151-v2 ",
     "price": "4299000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -565,7 +565,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_45157_hnc_intel_i5_9400f_right_facing_850x850.jpg",
     "name": "CPU Intel Core i5-9400F (2.9GHz turbo up to 4.1GHz, 6 nhân 6 luồng, 9MB Cache, 65W) - Socket Intel LGA 1151-v2 ",
     "price": "3599000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -575,7 +575,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52364_intel_core_i5_10400_100.jpg",
     "name": "CPU Intel Core i5-10400 (2.9GHz turbo up to 4.3GHz, 6 nhân 12 luồng, 12MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "4899000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -585,7 +585,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52365_intel_core_i5_10400.jpg",
     "name": "CPU Intel Core i5-10400F (2.9GHz turbo up to 4.3Ghz, 6 nhân 12 luồng, 12MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "4199000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -595,7 +595,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52362_intel_core_i5_10600kf.jpg",
     "name": "CPU Intel Core i5-10600K (4.1GHz turbo up to 4.8GHz, 6 nhân 12 luồng, 12MB Cache, 125W) - Socket Intel LGA 1200",
     "price": "7499000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -605,7 +605,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52613_intel_core_i5_10500.jpg",
     "name": "CPU Intel Core i5-10500 (3.1GHz turbo up to 4.5Ghz, 6 nhân 12 luồng, 12MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "5499000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -615,7 +615,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52658_intel_core_i5_10600_100.jpg",
     "name": "CPU Intel Core i5-10600 (3.3GHz turbo up to 4.8GHz, 6 nhân 12 luồng, 12MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "5999000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -625,7 +625,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_53069_intel_core_i5_8400.jpg",
     "name": "CPU Intel Core i5-8400 (2.8GHz turbo up to 4.0GHz, 6 nhân 6 luồng, 9MB Cache, 65W) - Socket Intel LGA 1151 v2",
     "price": "4999000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -635,7 +635,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_54635_i5_10600k_avengers_850x850_2.jpg",
     "name": "CPU Intel Core i5-10600K Avengers Edition (4.1GHz turbo up to 4.8GHz, 6 nhân 12 luồng, 12MB Cache, 125W) - Socket Intel LGA 1200",
     "price": "7299000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -645,7 +645,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52363_intel_core_i5_10600kf_real.jpg",
     "name": "CPU Intel Core i5-10600KF (4.1GHz turbo up to 4.8GHz, 6 nhân 12 luồng, 12MB Cache, 125W) - Socket Intel LGA 1200",
     "price": "6599000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -655,7 +655,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_49004_hnc_intel_i7_9700_right_facing_850x850.jpg",
     "name": "CPU Intel Core i7-9700F (3.0GHz turbo up to 4.7Ghz, 8 nhân 8 luồng, 12MB Cache, 65W) - Socket Intel LGA 1151-v2 ",
     "price": "7999000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -665,7 +665,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_44015_hnc_intel_i7_9700k_right_facing_850x850.jpg",
     "name": "CPU Intel Core i7-9700K (3.6GHz turbo up to 4.9GHz, 8 nhân 8 luồng, 12MB Cache, 95W) - Socket Intel LGA 1151-v2",
     "price": "8599000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -675,7 +675,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52360_intel_core_i5_10700k.jpg",
     "name": "CPU Intel Core i7-10700K (3.8GHz turbo up to 5.1GHz, 8 nhân 16 luồng, 16MB Cache, 125W) - Socket Intel LGA 1200",
     "price": "10499000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -685,7 +685,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52361_intel_core_i5_10700kf.jpg",
     "name": "CPU Intel Core i7-10700KF (3.8GHz turbo up to 5.1Ghz, 8 nhân 16 luồng, 16MB Cache, 125W) - Socket Intel LGA 1200",
     "price": "9899000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -695,7 +695,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52656_intel_core_i7_10700.jpg",
     "name": "CPU Intel Core i7-10700 (2.9GHz turbo up to 4.8GHz, 8 nhân 16 luồng, 16MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "8899000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -705,7 +705,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52657_intel_core_i7_10700.jpg",
     "name": "CPU Intel Core i7-10700F (2.9GHz turbo up to 4.8GHz, 8 nhân 16 luồng, 16MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "8299000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -715,7 +715,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_54634_i7_10700k_avengers_850x850_2.jpg",
     "name": "CPU Intel Core i7-10700K Avengers Edition (3.8GHz turbo up to 5.1GHz, 8 nhân 16 luồng, 16MB Cache, 125W) - Socket Intel LGA 1200",
     "price": "10499000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -725,7 +725,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_37776_hnc_intel_i7_8700k_right_face_850x850.jpg",
     "name": "CPU Intel Core i7-8700K (3.7GHz turbo up to 4.7Ghz, 6 nhân 12 luồng, 12MB Cache, 95W) - Socket Intel LGA 1151-v2",
     "price": "9599000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -735,7 +735,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_37775_hnc_intel_i7_8700_right_face_850x850.jpg",
     "name": "CPU Intel Core i7-8700 (3.2GHz turbo up to 4.6Ghz, 6 nhân 12 luồng, 12MB Cache, 65W) - Socket Intel LGA 1151-v2",
     "price": "7899000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -745,7 +745,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_45159_hnc_intel_i7_9700kf_right_facing_850x850.jpg",
     "name": "CPU Intel Core i7-9700KF (3.6GHz turbo up to 4.9GHz, 8 nhân 8 luồng, 12MB Cache, 95W) - Socket Intel LGA 1151-v2 ",
     "price": "9399000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -755,7 +755,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_48603_hnc_intel_i7_9700_right_facing_850x850.jpg",
     "name": "CPU Intel Core i7-9700 (3.0GHz turbo up to 4.7Ghz, 8 nhân 8 luồng, 12MB Cache, 65W) - Socket Intel LGA 1151-v2",
     "price": "7599000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -765,7 +765,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_45160_hnc_intel_i9_9900kf_right_facing_850x850.jpg",
     "name": "CPU Intel Core i9-9900KF (3.6GHz turbo up to 5.0GHz, 8 nhân 16 luồng, 16MB Cache, 95W) - Socket Intel LGA 1151-v2",
     "price": "11999000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -775,7 +775,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_44016_hnc_intel_i9_9900k_right_facing_850x850.jpg",
     "name": "CPU Intel Core i9-9900K (3.6GHz turbo up to 5.0GHz, 8 nhân 16 luồng, 16MB Cache, 95W) - Socket Intel LGA 1151-v2",
     "price": "10599000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -785,7 +785,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52107_core_i9_9900.jpg",
     "name": "CPU Intel Core i9-9900 (3.1GHz turbo up to 5.0Ghz, 8 nhân 16 luồng, 16MB Cache, 65W) - LGA 1151-v2",
     "price": "9599000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -795,7 +795,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52358_intel_i9_10900k.jpg",
     "name": "CPU Intel Core i9-10900K (3.7GHz turbo up to 5.3GHz, 10 nhân 20 luồng, 20MB Cache, 125W) - Socket Intel LGA 1200",
     "price": "13899000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -805,7 +805,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52359_intel_i9_10900kf.jpg",
     "name": "CPU Intel Core i9-10900KF (3.7GHz turbo up to 5.3GHz, 10 nhân 20 luồng, 20MB Cache, 125W) - Socket Intel LGA 1200",
     "price": "12799000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -815,7 +815,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52654_intel_i9_10900.jpg",
     "name": "CPU Intel Core i9-10900 (2.8GHz turbo up to 5.2GHz, 10 nhân 20 luồng, 20MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "12299000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -825,7 +825,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_52655_intel_i9_10900f.jpg",
     "name": "CPU Intel Core i9-10900F (2.8GHz turbo up to 5.2GHz, 10 nhân 20 luồng, 20MB Cache, 65W) - Socket Intel LGA 1200",
     "price": "11799000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -835,7 +835,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_54632_i9_10850k_real.jpg",
     "name": "CPU Intel Core i9-10850K Avengers Edition (3.6GHz turbo up to 5.2GHz, 10 nhân 20 luồng, 20MB Cache, 95W) - Socket Intel LGA 1200",
     "price": "12499000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -845,7 +845,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_54633_i9_10900k_real.jpg",
     "name": "CPU Intel Core i9-10900K Avengers Edition (3.7GHz turbo up to 5.3GHz, 10 nhân 20 luồng, 20MB Cache, 125W) - Socket Intel LGA 1200",
     "price": "13899000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -855,7 +855,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_49097_hnc_intel_i9_9900ks_right_facing_850x850.jpg",
     "name": "CPU Intel Core i9-9900KS (4.0GHz turbo up to 5.0GHz, 8 nhân 16 luồng, 16MB Cache, 127W) - Socket Intel LGA 1151-v2",
     "price": "13899000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -865,7 +865,7 @@
     "img": "https://hanoicomputercdn.com/media/product/250_54171_intel_core_i9_10850k.jpg",
     "name": "CPU Intel Core i9-10850K (3.6GHz turbo up to 5.2GHz, 10 nhân 20 luồng, 20MB Cache, 95W) - Socket Intel LGA 1200",
     "price": "12899000",
-    "retailer": "HanoiComputer",
+    "retailer": "2",
     "logo": "https://hanoicomputercdn.com/media/lib/logo-trang.png",
     "path": "cpu_price_list"
   },
@@ -875,7 +875,7 @@
     "img": "https://anphat.com.vn/media/product/250_29353_29522_core_i3_8100_1_450x450.jpg",
     "name": "CPU Intel Core i3 -9100F (3.6 GHzTurbo up to 4.20GHz / 4 nhân 4 luồng/ 6MB /Socket 1151)",
     "price": "1899000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -885,7 +885,7 @@
     "img": "https://anphat.com.vn/media/product/250_35028_i3_10th.jpg",
     "name": "CPU Intel Core i3-10100F (6M Cache, 3.60 GHz up to 4.30 GHz, 4C8T, Socket 1200, Comet Lake-S)",
     "price": "2149000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -895,7 +895,7 @@
     "img": "https://anphat.com.vn/media/product/250_32917_i3.jpg",
     "name": "CPU Intel Core i3-10100 (6M Cache, 3.60 GHz up to 4.30 GHz, 4C8T, Socket 1200, Comet Lake-S)",
     "price": "3190000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -905,7 +905,7 @@
     "img": "https://anphat.com.vn/media/product/250_26882_cpu_intel_core_i3_9100_37_ghz_4_cores_4_threads6mbsocket_1151coffee_lake_refres_3161.jpg",
     "name": "CPU Intel Core i3-9100 (3.6GHz/ 4C4T/ 6MB/ Coffee Lake-R)",
     "price": "3090000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -915,7 +915,7 @@
     "img": "https://anphat.com.vn/media/product/250_28531_techzones_intel_core_i5_9400.jpg",
     "name": "CPU Intel Core i5-9400F ( 2.90 GHz upto  4.10 GHz, 6 nhân 6 luồng, 9MB)",
     "price": "3590000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -925,7 +925,7 @@
     "img": "https://anphat.com.vn/media/product/250_26877_34235_71i66qev_hl__sl1500_.jpg",
     "name": "CPU Intel Core i5-9400 (2.9 Upto 4.1GHz/ 6C6T/ 9MB/ Coffee Lake-R)",
     "price": "4299000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -935,7 +935,7 @@
     "img": "https://anphat.com.vn/media/product/250_32925_i5.jpg",
     "name": "CPU Intel Core i5-10400 (12M Cache, 2.90 GHz up to 4.30 GHz, 6C12T, Socket 1200, Comet Lake-S)",
     "price": "4890000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -945,7 +945,7 @@
     "img": "https://anphat.com.vn/media/product/250_32926_i5.jpg",
     "name": "CPU Intel Core i5-10500 (12M Cache, 3.10 GHz up to 4.50 GHz, 6C12T, Socket 1200, Comet Lake-S)",
     "price": "5499000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -955,7 +955,7 @@
     "img": "https://anphat.com.vn/media/product/250_32929_i5.jpg",
     "name": "CPU Intel Core i5-10600 (12M Cache, 3.30 GHz up to 4.80 GHz, 6C12T, Socket 1200, Comet Lake-S)",
     "price": "5990000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -965,7 +965,7 @@
     "img": "https://anphat.com.vn/media/product/250_32937_i7.jpg",
     "name": "CPU Intel Core i7-10700 (16M Cache, 2.90 GHz up to 4.80 GHz, 8C16T, Socket 1200, Comet Lake-S)",
     "price": "8990000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -975,7 +975,7 @@
     "img": "https://anphat.com.vn/media/product/250_32944_i7.jpg",
     "name": "CPU Intel Core i7-10700K (16M Cache, 3.80 GHz up to 5.10 GHz, 8C16T, Socket 1200, Comet Lake-S)",
     "price": "10490000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -985,7 +985,7 @@
     "img": "https://anphat.com.vn/media/product/250_32935_i7.jpg",
     "name": "CPU Intel Core i7-10700F (16M Cache, 2.90 GHz up to 4.80 GHz, 8C16T, Socket 1200, Comet Lake-S)",
     "price": "8290000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -995,7 +995,7 @@
     "img": "https://anphat.com.vn/media/product/250_30760_i7_9700f_1.jpg",
     "name": "CPU Intel Core i7-9700F (3.0 Upto 4.7GHz/ 8C8T/ 12MB/ Coffee Lake-R) ",
     "price": "7390000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1005,7 +1005,7 @@
     "img": "https://anphat.com.vn/media/product/250_26197_i7_9700_1.jpg",
     "name": "CPU Intel Core i7-9700 (8 Cores 8 Threads/ 12MB/ Coffee Lake R)",
     "price": "7690000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1015,7 +1015,7 @@
     "img": "https://anphat.com.vn/media/product/250_32939_i7.jpg",
     "name": "CPU Intel Core i7-10700KF (16M Cache, 3.80 GHz up to 5.10 GHz, 8C16T, Socket 1200, Comet Lake-S)",
     "price": "9890000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1025,7 +1025,7 @@
     "img": "https://anphat.com.vn/media/product/250_29891_r32.png",
     "name": "CPU AMD Ryzen 3 3200G, with Wraith Stealth cooler/ 3.6 GHz (4.0 GHz with boost) / 6MB / 4 cores 4 threads / Radeon Vega 8 /  65W / Socket AM4",
     "price": "2599000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1035,7 +1035,7 @@
     "img": "https://anphat.com.vn/media/product/250_33043_9455_02_amd_ryzen_3_3100_3300x_cpu_review.jpg",
     "name": "CPU AMD Ryzen 3 3100, Wraith Stealth cooler/ 3.6 GHz (3.9 GHz with boost) / 18MB / 4 cores 8 threads / 65W / Socket AM4",
     "price": "2549000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1045,7 +1045,7 @@
     "img": "https://anphat.com.vn/media/product/250_33044_9455_02_amd_ryzen_3_3100_3300x_cpu_review.jpg",
     "name": "CPU AMD Ryzen 3 3300X, Wraith Stealth cooler/ 3.8 GHz (4.3 GHz with boost) / 18MB / 4 cores 8 threads / 65W / Socket AM4",
     "price": "3189000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1055,7 +1055,7 @@
     "img": "https://anphat.com.vn/media/product/250_29889_r52.png",
     "name": "CPU AMD Ryzen 5 3600, with Wraith Stealth cooler/ 3.6 GHz (4.2GHz Max Boost) / 36MB Cache / 6 cores / 12 threads / 65W / Socket AM4",
     "price": "5199000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1065,7 +1065,7 @@
     "img": "https://anphat.com.vn/media/product/250_29890_r52.png",
     "name": "CPU AMD Ryzen 5 3400G, with Wraith Spire cooler/ 3.7 GHz (4.2 GHz with boost) / 6MB / 4 cores 8 threads / Radeon Vega 11 / 65W / Socket AM4",
     "price": "3899000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1075,7 +1075,7 @@
     "img": "https://anphat.com.vn/media/product/250_31037_29889_r52.png",
     "name": "CPU AMD Ryzen 5 3500 3.6 GHz (4.1 GHz with boost) / 16MB cache / 6 cores 6 threads / socket AM4 / 65W / Wraith Stealth Cooler / No Integrated Graphics",
     "price": "3099000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1085,7 +1085,7 @@
     "img": "https://anphat.com.vn/media/product/250_34979_ryzen_5_5600x.jpg",
     "name": "CPU AMD Ryzen 5 5600X, with Wraith Stealth cooler / 3.7 GHz (4.6GHz Max Boost) / 35MB Cache / 6 cores, 12 threads / 65W / Socket AM4",
     "price": "7899000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1095,7 +1095,7 @@
     "img": "https://anphat.com.vn/media/product/250_29887_r72.jpg",
     "name": "CPU AMD Ryzen 7 3700X, with Wraith Prism cooler/ 3.6 GHz (4.4GHz Max Boost) / 36MB Cache / 8 cores / 16 threads / 65W / Socket AM4",
     "price": "7799000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1105,7 +1105,7 @@
     "img": "https://anphat.com.vn/media/product/250_29885_r92.jpg",
     "name": "CPU AMD Ryzen 9 3900X, with Wraith Prism cooler/ 3.8 GHz (4.6GHz Max Boost) / 70MB Cache / 12 cores / 24 threads / 105W / Socket AM4",
     "price": "12299000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1115,7 +1115,7 @@
     "img": "https://anphat.com.vn/media/product/250_31421_29885_r92.jpg",
     "name": "CPU AMD Ryzen 9 3950X / 3.5 GHz (4.7GHz Max Boost) / 72MB Cache / 16 cores / 32 threads / 105W / Socket AM4 / (No Fan)",
     "price": "19299000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1125,7 +1125,7 @@
     "img": "https://anphat.com.vn/media/product/250_34976_ryzen_9_5950x.jpg",
     "name": "CPU AMD Ryzen 9 5950X / 3.4 GHz (4.9GHz Max Boost) / 72MB Cache / 16 cores, 32 threads / 105W / Socket AM4",
     "price": "20899000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1135,7 +1135,7 @@
     "img": "https://anphat.com.vn/media/product/250_34977_ryzen_9_5950x.jpg",
     "name": "CPU AMD Ryzen 9 5900X / 3.7 GHz (4.8GHz Max Boost) / 70MB Cache / 12 cores, 24 threads / 105W / Socket AM4",
     "price": "14299000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   },
@@ -1145,7 +1145,7 @@
     "img": "https://anphat.com.vn/media/product/250_34978_r7_5000.jpg",
     "name": "CPU AMD Ryzen 7 5800X / 3.8 GHz (4.7GHz Max Boost) / 36MB Cache / 8 cores, 16 threads / 105W / Socket AM4",
     "price": "11599000",
-    "retailer": "AnPhatPC",
+    "retailer": "3",
     "logo": "https://www.anphatpc.com.vn/template/anphat_2020/images/anphatpc.png",
     "path": "cpu_price_list"
   }

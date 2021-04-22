@@ -19,13 +19,13 @@ public class HardDiskDrive extends ElectronicComponents {
     private List<PcProfile> pcProfile;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hdd", fetch = FetchType.EAGER)
-    private List<hddPriceList> PriceList;
+    private List<HddPriceList> PriceList;
 
-    public List<hddPriceList> getPriceList() {
+    public List<HddPriceList> getPriceList() {
         return PriceList;
     }
 
-    public void setPriceList(List<hddPriceList> PriceList) {
+    public void setPriceList(List<HddPriceList> PriceList) {
         this.PriceList = PriceList;
     }
 

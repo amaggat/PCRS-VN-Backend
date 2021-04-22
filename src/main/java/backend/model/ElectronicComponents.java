@@ -17,7 +17,6 @@ public class ElectronicComponents {
     private String serieName = new String();
 
     @Column(name = "chipset")
-    @NotEmpty
     private String chipset = new String();
 
     @Column(name= "image")
@@ -27,6 +26,7 @@ public class ElectronicComponents {
     @Column(name = "fullname")
     @NotEmpty
     private String fullname = new String();
+
 
     public String getImage() {
         return image;

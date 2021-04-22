@@ -2,6 +2,8 @@ package backend.pc.psu;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
+import backend.recommendation.type.rating.PsuRating;
+import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -21,26 +23,21 @@ public class PowerSupplyUnit extends ElectronicComponents {
     private String standard_80 = new String();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "psu", fetch = FetchType.EAGER)
-    private List<psuPriceList> PriceList;
+    private List<PsuPriceList> PriceList;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "psu")
-    private List<PcProfile> pcProfile;
+    private List<PcProfile> pcProfileList;
 
-    public List<psuPriceList> getPriceList() {
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "psu")
+    private List<PsuRating> psuRatingList;
+
+    public List<PsuPriceList> getPriceList() {
         return PriceList;
     }
 
-    public void setPriceList(List<psuPriceList> psuPriceList) {
+    public void setPriceList(List<PsuPriceList> psuPriceList) {
         this.PriceList = psuPriceList;
     }
-
-    //    @Column(name = "size")
-//    @NotEmpty
-//    private String size = new String();
-
-//    public String getSize() {
-//        return size;
-//    }
 
     public String getStandard_80() {
         return standard_80;
@@ -50,15 +47,27 @@ public class PowerSupplyUnit extends ElectronicComponents {
         this.standard_80 = standard_80;
     }
 
-//    public void setSize(String size) {
-//        this.size = size;
-//    }
-
     public Integer getPower() {
         return power;
     }
 
     public void setPower(Integer power) {
         power = power;
+    }
+
+    public List<String> getPcProfileList() {
+        return Utility.returnPcProfileID(this.pcProfileList);
+    }
+
+    public void setPcProfileList(List<PcProfile> pcProfileList) {
+        this.pcProfileList = pcProfileList;
+    }
+
+    public List<PsuRating> getPsuRatingList() {
+        return psuRatingList;
+    }
+
+    public void setPsuRatingList(List<PsuRating> psuRatingList) {
+        this.psuRatingList = psuRatingList;
     }
 }

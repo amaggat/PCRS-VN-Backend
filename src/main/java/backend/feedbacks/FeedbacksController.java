@@ -20,7 +20,7 @@ public class FeedbacksController {
         this.postRepository = postRepository;
     }
 
-    @PostMapping(path = "/api/feedbacks")
+    @PostMapping(path = "/user/feedbacks")
     public ResponseEntity addFeedback(@RequestBody Feedbacks feedbacks) {
         feedbacksRepository.save(feedbacks);
         return new ResponseEntity(HttpStatus.OK);
