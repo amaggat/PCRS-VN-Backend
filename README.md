@@ -30,7 +30,7 @@ easly.
 *Note:* All the data we have are crawled from their public website.
 
 **The database architecture:**
-![DB-Architecture](images/database.jpg)
+![DB-Architecture](images/database.png)
 
 *For more detail, please checkout our backend service [here](https://github.com/amaggat/PcPartPickerVN_BackEndService)*
 
