@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.OneToOne;
 
 @MappedSuperclass
 public class Rating {
@@ -21,6 +20,12 @@ public class Rating {
 
     @Column(name = "rating")
     private double rating;
+
+    @Column(name = "favorite")
+    private boolean isFavorite = false;
+
+    @Column(name= "visit")
+    private int visit;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,5 +56,21 @@ public class Rating {
 
     public Integer getId() {
         return id;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public int getVisit() {
+        return visit;
+    }
+
+    public void setVisit(int visit) {
+        this.visit = visit;
     }
 }

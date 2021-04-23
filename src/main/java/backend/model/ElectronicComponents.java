@@ -1,5 +1,7 @@
 package backend.model;
 
+import backend.recommendation.type.category.Category;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
@@ -27,6 +29,9 @@ public class ElectronicComponents {
     @NotEmpty
     private String fullname = new String();
 
+    @ManyToOne
+    @JoinColumn(name= "categoryid")
+    private Category category;
 
     public String getImage() {
         return image;
@@ -78,5 +83,13 @@ public class ElectronicComponents {
 
     public void setFullname(String fullname) {
         this.fullname = fullname;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

@@ -7,6 +7,7 @@ import backend.pc.gpu.GraphicProcessor;
 import backend.pc.mainboard.Mainboard;
 import backend.pc.psu.PowerSupplyUnit;
 import backend.pc.ram.Ram;
+import backend.recommendation.type.category.Category;
 import backend.user.User;
 
 import javax.persistence.*;
@@ -29,14 +30,9 @@ public class PcProfile {
     @JoinColumn(name = "userid")
     private User user;
 
-    @Column(name = "type")
-    private String type;
-
-    @Column(name = "budget")
-    private String budget;
-
-    @Column(name = "target")
-    private String target;
+    @ManyToOne
+    @JoinColumn(name = "categoryid")
+    private Category category;
 
     @ManyToMany
     @JoinTable(
@@ -163,27 +159,11 @@ public class PcProfile {
         this.psu = psu;
     }
 
-    public String getType() {
-        return type;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getBudget() {
-        return budget;
-    }
-
-    public void setBudget(String budget) {
-        this.budget = budget;
-    }
-
-    public String getTarget() {
-        return target;
-    }
-
-    public void setTarget(String target) {
-        this.target = target;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
