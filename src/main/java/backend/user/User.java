@@ -9,7 +9,6 @@ import backend.recommendation.type.rating.HddRating;
 import backend.recommendation.type.rating.MainboardRating;
 import backend.recommendation.type.rating.PsuRating;
 import backend.recommendation.type.rating.RamRating;
-import backend.recommendation.type.rating.Rating;
 import backend.recommendation.type.rating.SsdRating;
 
 import javax.persistence.CascadeType;

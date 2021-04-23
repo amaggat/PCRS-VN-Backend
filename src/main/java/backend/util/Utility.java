@@ -2,7 +2,6 @@ package backend.util;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.Rating;
 
 import java.util.ArrayList;
 import java.util.List;

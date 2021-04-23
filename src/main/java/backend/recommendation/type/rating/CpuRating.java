@@ -1,8 +1,8 @@
 package backend.recommendation.type.rating;
 
 import backend.pc.cpu.CentralProcessor;
+import backend.recommendation.type.score.Rating;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;

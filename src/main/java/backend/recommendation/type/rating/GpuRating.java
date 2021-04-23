@@ -1,6 +1,7 @@
 package backend.recommendation.type.rating;
 
 import backend.pc.gpu.GraphicProcessor;
+import backend.recommendation.type.score.Rating;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -9,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "gpu_rating")
-public class GpuRating extends Rating{
+public class GpuRating extends Rating {
 
     @ManyToOne
     @JoinColumn(name = "gpuid")

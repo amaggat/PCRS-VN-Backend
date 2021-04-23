@@ -1,5 +1,6 @@
 package backend.recommendation.type.rating;
 
+import backend.recommendation.type.score.Rating;
 import backend.retailer.Retailer;
 
 import javax.persistence.Entity;
@@ -10,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "retailer_rating")
-public class RetailerRating extends Rating{
+public class RetailerRating extends Rating {
 
     @ManyToOne
     @JoinColumn(name = "retailerid")

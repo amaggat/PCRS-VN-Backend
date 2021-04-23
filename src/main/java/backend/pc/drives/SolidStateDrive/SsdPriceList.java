@@ -26,10 +26,6 @@ public class SsdPriceList {
     @NotEmpty
     private String link = new String();
 
-    @Column(name = "name")
-    @NotEmpty
-    private String name = new String();
-
     @Column(name = "price")
     @NotEmpty
     private int price;
@@ -44,17 +40,6 @@ public class SsdPriceList {
 
     public String getLink() {
         return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getPrice() {
