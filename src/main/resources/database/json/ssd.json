@@ -1,0 +1,162 @@
+[
+  {
+    "ID": "adata-xpg-spectrix-s40g-rgb-256-m2-nvme",
+    "manufacturer": "ADATA",
+    "serieName": "XPG SPECTRIX S40G RGB",
+    "chipset": "M2 NVMe",
+    "storage": "256 GB",
+    "fullname": "SSD ADATA XPG SPECTRIX S40G RGB 256 GB",
+    "image": "https://product.hstatic.net/1000026716/product/ssd_adata_s40g_gearvn00_e12f3019dac0488d988a89fcecb7c517_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "adata-xpg-spectrix-s40g-rgb-512-m2-nvme",
+    "manufacturer": "ADATA",
+    "serieName": "XPG SPECTRIX S40G RGB",
+    "chipset": "M2 NVMe",
+    "storage": "512 GB",
+    "fullname": "SSD ADATA XPG SPECTRIX S40G RGB 512 GB",
+    "image": "https://product.hstatic.net/1000026716/product/ssd_adata_s40g_gearvn00_9c96b977c6cf4a8ca511b1eb5775fa33_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-a2000-1024-m2-nvme",
+    "manufacturer": "Kingston",
+    "serieName": "A2000",
+    "chipset": "M2 NVMe",
+    "storage": "1 TB",
+    "fullname": "SSD Kingston A2000 1 TB",
+    "image": "https://product.hstatic.net/1000026716/product/gearvn.com-ssd-kingston-a2000-3_fb9a4fd14a38408a88efed8effb4125e_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-a2000-250-m2-nvme",
+    "manufacturer": "Kingston",
+    "serieName": "A2000",
+    "chipset": "M2 NVMe",
+    "storage": "250 GB",
+    "fullname": "SSD Kingston A2000 250 GB",
+    "image": "https://product.hstatic.net/1000026716/product/gearvn.com-ssd-kingston-a2000-3_0f0d754eadf1458d813150f1dcd894e5_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-a2000-500-m2-nvme",
+    "manufacturer": "Kingston",
+    "serieName": "A2000",
+    "chipset": "M2 NVMe",
+    "storage": "500 GB",
+    "fullname": "SSD Kingston A2000 500 GB",
+    "image": "https://product.hstatic.net/1000026716/product/gearvn.com-ssd-kingston-a2000-3_1500f2de07574538a78886c4ac2e8aa0_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-a400-120-m2-sata",
+    "manufacturer": "Kingston",
+    "serieName": "A400",
+    "chipset": "M2 SATA",
+    "storage": "120 GB",
+    "fullname": "SSD Kingston A400 120 GB",
+    "image": "https://product.hstatic.net/1000026716/product/ssd-kingston-a400_1cb57dcbd5024f9da1e8b8f8a3fb9cbc_large.png",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-a400-240-m2-sata",
+    "manufacturer": "Kingston",
+    "serieName": "A400",
+    "chipset": "M2 SATA",
+    "storage": "240 GB",
+    "fullname": "SSD Kingston A400 240 GB",
+    "image": "https://product.hstatic.net/1000026716/product/ssd-kingston-a400_c8d62280cba64e48935410993f606b12_large.png",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-hyperx-fury-rgb-240-m2-sata",
+    "manufacturer": "Kingston",
+    "serieName": "HyperX FURY RGB",
+    "chipset": "M2 SATA",
+    "storage": "240 GB",
+    "fullname": "SSD Kingston HyperX FURY RGB 240 GB",
+    "image": "https://product.hstatic.net/1000026716/product/ssd_kingston_hyperx_fury_rgb_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-hyperx-fury-rgb-480-m2-sata",
+    "manufacturer": "Kingston",
+    "serieName": "HyperX FURY RGB",
+    "chipset": "M2 SATA",
+    "storage": "480 GB",
+    "fullname": "SSD Kingston HyperX FURY RGB 480 GB",
+    "image": "https://product.hstatic.net/1000026716/product/ssd_kingston_hyperx_fury_rgb_039917d65b514a569c528de3a75111db_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-hyperx-fury-rgb-960-m2-sata",
+    "manufacturer": "Kingston",
+    "serieName": "HyperX FURY RGB",
+    "chipset": "M2 SATA",
+    "storage": "960 GB",
+    "fullname": "SSD Kingston HyperX FURY RGB 960 GB",
+    "image": "https://product.hstatic.net/1000026716/product/hx-product-ssd-fury-rgb-shfr200-1-zm-lg_6d4fa528a68c47bda9702863383b5f53_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-kc600-256-m2-sata",
+    "manufacturer": "Kingston",
+    "serieName": "KC600",
+    "chipset": "M2 SATA",
+    "storage": "256 GB",
+    "fullname": "SSD Kingston KC600 256 GB",
+    "image": "https://product.hstatic.net/1000026716/product/gearvn-product-ssd-kc600-1_7d2f9a65e5b14003ac34247a3255407c_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "kingston-kc600-512-m2-sata",
+    "manufacturer": "Kingston",
+    "serieName": "KC600",
+    "chipset": "M2 SATA",
+    "storage": "512 GB",
+    "fullname": "SSD Kingston KC600 512 GB",
+    "image": "https://product.hstatic.net/1000026716/product/gearvn-product-ssd-kc600-1_def5e519aecb4e0888c066c5bbc37876_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "samsung-870-qvo-1024-m2-sata",
+    "manufacturer": "Samsung",
+    "serieName": "870 QVO",
+    "chipset": "M2 SATA",
+    "storage": "1 TB",
+    "fullname": "SSD Samsung 870 QVO 1 TB",
+    "image": "https://anphat.com.vn/media/product/250_34479_1593755653_534_o_cung_ssd_1tb_samsung_870_qvo_25_inch_sata_iii_6.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "samsung-870-qvo-2048-m2-sata",
+    "manufacturer": "Samsung",
+    "serieName": "870 QVO",
+    "chipset": "M2 SATA",
+    "storage": "2 TB",
+    "fullname": "SSD Samsung 870 QVO 2 TB",
+    "image": "https://anphat.com.vn/media/product/250_34480_1593755684_932_o_cung_ssd_2tb_samsung_870_qvo_25_inch_sata_iii_6.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "samsung-870-qvo-4096-m2-sata",
+    "manufacturer": "Samsung",
+    "serieName": "870 QVO",
+    "chipset": "M2 SATA",
+    "storage": "4 TB",
+    "fullname": "SSD Samsung 870 QVO 4 TB",
+    "image": "https://anphat.com.vn/media/product/250_34481_1593755684_986_o_cung_ssd_2tb_samsung_870_qvo_25_inch_sata_iii_2.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "samsung-870-qvo-8192-m2-sata",
+    "manufacturer": "Samsung",
+    "serieName": "870 QVO",
+    "chipset": "M2 SATA",
+    "storage": "8 TB",
+    "fullname": "SSD Samsung 870 QVO 8 TB",
+    "image": "https://anphat.com.vn/media/product/250_34482_1593755729_753_o_cung_ssd_8tb_samsung_870_qvo_25_inch_sata_iii_6.jpg",
+    "categoryid": 0
+  }
+]

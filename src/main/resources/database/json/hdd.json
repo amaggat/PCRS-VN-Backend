@@ -1,0 +1,262 @@
+[
+  {
+    "ID": "seagate-barracuda-3072-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "Barracuda",
+    "chipset": "3.5 SATA",
+    "storage": "3 TB",
+    "fullname": "HDD Seagate Barracuda 3 TB",
+    "image": "https://product.hstatic.net/1000026716/product/hdd_seagate_baracuda_3tb_c71d13e7103a4749ac75660e3eda341d_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-barracuda-4096-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "BarraCuda",
+    "chipset": "3.5 SATA",
+    "storage": "4 TB",
+    "fullname": "HDD Seagate BarraCuda 4 TB",
+    "image": "https://product.hstatic.net/1000026716/product/hdd_seagate_baracuda_4tb_gearvn00_efd02c4f0c3844d1a9fa38f83c59e11c_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-barracuda-6144-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "Barracuda",
+    "chipset": "3.5 SATA",
+    "storage": "6 TB",
+    "fullname": "HDD Seagate Barracuda 6 TB",
+    "image": "https://product.hstatic.net/1000026716/product/hdd_seagate_baracuda_6tb_gearvn00_fb59e26dc92c43edb73cdefeab17427c_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-firecuda-1024-2.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "FireCuda",
+    "chipset": "2.5 SATA",
+    "storage": "1 TB",
+    "fullname": "HDD Seagate FireCuda 1 TB",
+    "image": "https://anphat.com.vn/media/product/250_22622_____c___ng_seagate_firecuda_1tb_st1000dx002_1.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-firecuda-500-2.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "FireCuda",
+    "chipset": "2.5 SATA",
+    "storage": "500 GB",
+    "fullname": "HDD Seagate FireCuda 500 GB",
+    "image": "",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-ironwolf-pro-10240-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "IronWolf Pro",
+    "chipset": "3.5 SATA",
+    "storage": "10 TB",
+    "fullname": "HDD Seagate IronWolf Pro 10 TB",
+    "image": "https://product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_10tb_b59a30485fbc430bb7fcceacabfe4d5c_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-ironwolf-pro-12288-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "IronWolf Pro",
+    "chipset": "3.5 SATA",
+    "storage": "12 TB",
+    "fullname": "HDD Seagate IronWolf Pro 12 TB",
+    "image": "https://product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_12tb_gearrvn00_94ca9ec381254ecba9b76db749eb84ea_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-ironwolf-pro-14336-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "IronWolf Pro",
+    "chipset": "3.5 SATA",
+    "storage": "14 TB",
+    "fullname": "HDD Seagate IronWolf Pro 14 TB",
+    "image": "https://product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_14tb_gearvn00_db80430925ad487b97f5715d9b2b0cd8_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-ironwolf-pro-16384-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "IronWolf Pro",
+    "chipset": "3.5 SATA",
+    "storage": "16 TB",
+    "fullname": "HDD Seagate IronWolf Pro 16 TB",
+    "image": "https://anphat.com.vn/media/product/250_33895_51409_hdd_nas_seagate_ironwolf_pro_16tb.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-ironwolf-pro-4096-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "IronWolf Pro",
+    "chipset": "3.5 SATA",
+    "storage": "4 TB",
+    "fullname": "HDD Seagate IronWolf Pro 4 TB",
+    "image": "https://product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_4tb_09ba2e0b7a52403c857123e1183c1448_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-ironwolf-pro-6144-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "IronWolf Pro",
+    "chipset": "3.5 SATA",
+    "storage": "6 TB",
+    "fullname": "HDD Seagate IronWolf Pro 6 TB",
+    "image": "https://product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_6tb_gearvn00_494ae91539ee4b4193508d4d619ca70f_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-ironwolf-pro-8192-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "IronWolf Pro",
+    "chipset": "3.5 SATA",
+    "storage": "8 TB",
+    "fullname": "HDD Seagate IronWolf Pro 8 TB",
+    "image": "https://product.hstatic.net/1000026716/product/hdd_seagate_ironwolf_8tb_gearvn00_356fda9588be4753aea0286830244006_large.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-pipeline-hd-1024-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "Pipeline HD",
+    "chipset": "3.5 SATA",
+    "storage": "1 TB",
+    "fullname": "HDD Seagate Pipeline HD 1 TB",
+    "image": "https://anphat.com.vn/media/product/250_16191_.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-pipeline-hd-2048-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "Pipeline HD",
+    "chipset": "3.5 SATA",
+    "storage": "2 TB",
+    "fullname": "HDD Seagate Pipeline HD 2 TB",
+    "image": "https://anphat.com.vn/media/product/250_16192_.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-pipeline-hd-500-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "Pipeline HD",
+    "chipset": "3.5 SATA",
+    "storage": "500 GB",
+    "fullname": "HDD Seagate Pipeline HD 500 GB",
+    "image": "https://anphat.com.vn/media/product/250_16190_.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-skyhawk-ai-10240-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "SkyHawk AI",
+    "chipset": "3.5 SATA",
+    "storage": "10 TB",
+    "fullname": "HDD Seagate SkyHawk AI 10 TB",
+    "image": "https://anphat.com.vn/media/product/250_30809_st10000ve0008__1.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "seagate-skyhawk-ai-8192-3.5sata",
+    "manufacturer": "Seagate",
+    "serieName": "Skyhawk AI",
+    "chipset": "3.5 SATA",
+    "storage": "8 TB",
+    "fullname": "HDD Seagate Skyhawk AI 8 TB",
+    "image": "https://hanoicomputercdn.com/media/product/250_47156_____c___ng_g___n_trong_seagate_skyhawk_ai_8tb.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "wd-black2-1024-2.5sata",
+    "manufacturer": "Western Digital",
+    "serieName": "Black2",
+    "chipset": "2.5 SATA",
+    "storage": "1 TB",
+    "fullname": "HDD Western Digital Black2 1 TB",
+    "image": "https://anphat.com.vn/media/product/250_11263_black_1t.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "wd-re-1024-3.5sata",
+    "manufacturer": "Western Digital",
+    "serieName": "Re",
+    "chipset": "3.5 SATA",
+    "storage": "1 TB",
+    "fullname": "HDD Western Digital Re 1 TB",
+    "image": "https://anphat.com.vn/media/product/250_11270_en_1tb.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "wd-re-2048-3.5sata",
+    "manufacturer": "Western Digital",
+    "serieName": "RE",
+    "chipset": "3.5 SATA",
+    "storage": "2 TB",
+    "fullname": "HDD Western Digital RE 2 TB",
+    "image": "https://anphat.com.vn/media/product/250_11271_en_2tb.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "wd-re-3072-3.5sata",
+    "manufacturer": "Western Digital",
+    "serieName": "RE",
+    "chipset": "3.5 SATA",
+    "storage": "3 TB",
+    "fullname": "HDD Western Digital RE 3 TB",
+    "image": "https://anphat.com.vn/media/product/250_20345_wd3000fyyz.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "wd-re-4096-3.5sata",
+    "manufacturer": "Western Digital",
+    "serieName": "RE",
+    "chipset": "3.5 SATA",
+    "storage": "4 TB",
+    "fullname": "HDD Western Digital RE 4 TB",
+    "image": "https://anphat.com.vn/media/product/250_20347_hd_w4000re.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "wd-re-500-3.5sata",
+    "manufacturer": "Western Digital",
+    "serieName": "Re",
+    "chipset": "3.5 SATA",
+    "storage": "500 GB",
+    "fullname": "HDD Western Digital Re 500 GB",
+    "image": "https://anphat.com.vn/media/product/250_11269_en_500.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "wd-re4-1024-3.5sata",
+    "manufacturer": "Western Digital",
+    "serieName": "RE4",
+    "chipset": "3.5 SATA",
+    "storage": "1 TB",
+    "fullname": "HDD Western Digital RE4 1 TB",
+    "image": "https://anphat.com.vn/media/product/250_11265_red_1tb.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "wd-re4-2048-3.5sata",
+    "manufacturer": "Western Digital",
+    "serieName": "RE4",
+    "chipset": "3.5 SATA",
+    "storage": "2 TB",
+    "fullname": "HDD Western Digital RE4 2 TB",
+    "image": "https://anphat.com.vn/media/product/250_11266_2tbred.jpg",
+    "categoryid": 0
+  },
+  {
+    "ID": "wd-se-1024-3.5sata",
+    "manufacturer": "Western Digital",
+    "serieName": "Se",
+    "chipset": "3.5 SATA",
+    "storage": "1 TB",
+    "fullname": "HDD Western Digital Se 1 TB",
+    "image": "https://anphat.com.vn/media/product/250_20348_wd1002f9yz.jpg",
+    "categoryid": 0
+  }
+]
