@@ -60,4 +60,7 @@ public class GraphicProcessor extends ElectronicComponents {
     public void setPcProfileList(List<PcProfile> pcProfile) {
         this.pcProfileList = pcProfile;
     }
+
+    public GraphicProcessor() {
+    }
 }
