@@ -1,14 +1,23 @@
 package backend.pc.ram;
 
 
+import backend.pc.cpu.CpuController;
+import backend.pc.psu.PowerSupplyUnit;
+import backend.security.model.AuthenticationResponse;
+import backend.security.utils.JwtUtils;
+import backend.user.User;
+import backend.user.UserActivity;
+import backend.user.UserActivityRepository;
+import backend.user.UserRepository;
+import backend.util.ClientLevel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.Predicate;
 import java.util.Objects;
@@ -16,9 +25,17 @@ import java.util.Objects;
 @RestController
 public class RamController {
 
+    private static final Logger logger = LogManager.getLogger(RamController.class);
+
+    @Autowired
+    private JwtUtils jwtUtil;
+    private final UserActivityRepository userActivityRepository;
+    private final UserRepository userRepository;
     private final RamRepository ramRepository;
 
-    public RamController(RamRepository ramRepository) {
+    public RamController(UserActivityRepository userActivityRepository, UserRepository userRepository, RamRepository ramRepository) {
+        this.userActivityRepository = userActivityRepository;
+        this.userRepository = userRepository;
         this.ramRepository = ramRepository;
     }
 
@@ -54,8 +71,22 @@ public class RamController {
     }
 
     @GetMapping("/api/ram/{RamID}")
-    public Ram SearchByID(@PathVariable("RamID") String id) {
-        ramRepository.update(id);
-        return ramRepository.findByID(id);
+    public Ram SearchByID(@PathVariable("RamID") String id, @RequestBody AuthenticationResponse jwt) {
+        Ram ram = ramRepository.findByID(id);
+
+        try {
+            String username = jwtUtil.extractUsername(jwt.getJwt());
+            User user = userRepository.findUserByUsername(username);
+            if(user != null) {
+                userActivityRepository.save(new UserActivity(user, "view", ram.getId()));
+                ramRepository.update(id);
+            }
+            logger.log(ClientLevel.CLIENT, "Success");
+            return ram;
+
+        } catch (Exception e) {
+            logger.log(ClientLevel.CLIENT, "Unsuccess");
+            return ram;
+        }
     }
 }

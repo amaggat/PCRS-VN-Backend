@@ -75,7 +75,7 @@ public class PowerSupplyUnit extends ElectronicComponents {
     @Override
     public Double getAverageRating(){
 
-        if(PriceList.isEmpty()) {
+        if(psuRatingList.isEmpty()) {
             return null;
         }
         else {

@@ -1,13 +1,22 @@
 package backend.pc.mainboard;
 
+import backend.pc.cpu.CentralProcessor;
+import backend.pc.cpu.CpuController;
+import backend.security.model.AuthenticationResponse;
+import backend.security.utils.JwtUtils;
+import backend.user.User;
+import backend.user.UserActivity;
+import backend.user.UserActivityRepository;
+import backend.user.UserRepository;
+import backend.util.ClientLevel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.Predicate;
 import java.util.Objects;
@@ -15,9 +24,18 @@ import java.util.Objects;
 @RestController
 public class MainController {
 
+    private static final Logger logger = LogManager.getLogger(MainController.class);
+
+    @Autowired
+    private JwtUtils jwtUtil;
+    private final UserActivityRepository userActivityRepository;
+    private final UserRepository userRepository;
+
     private final MainRepository mainRepository;
 
-    public MainController(MainRepository mainRepository) {
+    public MainController(UserActivityRepository userActivityRepository, UserRepository userRepository, MainRepository mainRepository) {
+        this.userActivityRepository = userActivityRepository;
+        this.userRepository = userRepository;
         this.mainRepository = mainRepository;
     }
 
@@ -60,9 +78,24 @@ public class MainController {
     }
 
     @GetMapping("/api/mainboard/{id}")
-    public Mainboard SearchByID(@PathVariable("id") String id) {
-        mainRepository.update(id);
-        return mainRepository.findByID(id);
+    public Mainboard SearchByID(@PathVariable("id") String id, @RequestBody AuthenticationResponse jwt) {
+        Mainboard mainboard = mainRepository.findByID(id);
+        try {
+            String username = jwtUtil.extractUsername(jwt.getJwt());
+            User user = userRepository.findUserByUsername(username);
+
+            if(user != null) {
+                userActivityRepository.save(new UserActivity(user, "view", mainboard.getId()));
+                mainRepository.update(id);
+            }
+
+            logger.log(ClientLevel.CLIENT, "Success");
+            return mainboard;
+
+        } catch (Exception e) {
+            logger.log(ClientLevel.CLIENT, "Unsuccess");
+            return mainboard;
+        }
     }
 
 }

@@ -7,7 +7,6 @@ import backend.recommendation.type.repository.MainRatingRepository;
 import backend.recommendation.type.repository.PsuRatingRepository;
 import backend.recommendation.type.repository.RamRatingRepository;
 import backend.recommendation.type.repository.SsdRatingRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

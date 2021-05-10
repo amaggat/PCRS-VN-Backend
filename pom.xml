@@ -23,18 +23,22 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -94,36 +98,6 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.mahout</groupId>
-            <artifactId>mahout-core</artifactId>
-            <version>0.9</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.mahout</groupId>
-            <artifactId>mahout-math</artifactId>
-            <version>0.9</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.mahout</groupId>
-            <artifactId>mahout-utils</artifactId>
-            <version>0.5</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.mahout</groupId>
-            <artifactId>mahout-integration</artifactId>
-            <version>0.13.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.mahout</groupId>
-            <artifactId>mahout-buildtools</artifactId>
-            <version>0.13.0</version>
         </dependency>
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>

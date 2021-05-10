@@ -1,16 +1,18 @@
 package backend.pc.cpu;
 
 
+import backend.security.model.AuthenticationResponse;
+import backend.security.utils.JwtUtils;
+import backend.user.*;
+import backend.util.ClientLevel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Objects;
 import javax.persistence.criteria.Predicate;
@@ -18,10 +20,19 @@ import javax.persistence.criteria.Predicate;
 @RestController
 public class CpuController {
 
+    private static final Logger logger = LogManager.getLogger(CpuController.class);
+
+    @Autowired
+    private JwtUtils jwtUtil;
+    private final UserActivityRepository userActivityRepository;
+    private final UserRepository userRepository;
+
     private final CpuRepository cpuRepository;
 
-    public CpuController(CpuRepository cpuRepository) {
+    public CpuController(CpuRepository cpuRepository, UserActivityRepository userActivityRepository, UserRepository userRepository) {
         this.cpuRepository = cpuRepository;
+        this.userActivityRepository = userActivityRepository;
+        this.userRepository = userRepository;
     }
 
     @GetMapping("/api/cpu")
@@ -56,9 +67,25 @@ public class CpuController {
     }
 
     @GetMapping("/api/cpu/{CpuID}")
-    public CentralProcessor SearchById(@PathVariable("CpuID") String id) {
-        cpuRepository.update(id);
-        return cpuRepository.findByID(id);
+    public CentralProcessor SearchById(@PathVariable("CpuID") String id, @RequestBody AuthenticationResponse jwt) {
+        CentralProcessor cpu = cpuRepository.findByID(id);
+        try {
+            String username = jwtUtil.extractUsername(jwt.getJwt());
+            User user = userRepository.findUserByUsername(username);
+
+            if(user != null) {
+                userActivityRepository.save(new UserActivity(user, "view", cpu.getId()));
+                cpuRepository.update(id);
+            }
+
+            logger.log(ClientLevel.CLIENT, "Success");
+            return cpu;
+
+        } catch (Exception e) {
+            logger.log(ClientLevel.CLIENT, "Unsuccess");
+            return cpu;
+        }
+
     }
 
 }

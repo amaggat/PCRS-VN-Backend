@@ -46,7 +46,7 @@ public class HardDiskDrive extends ElectronicComponents {
     @Override
     public Double getAverageRating(){
 
-        if(PriceList.isEmpty()) {
+        if(hddRatingList.isEmpty()) {
             return null;
         }
         else {

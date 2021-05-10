@@ -16,10 +16,6 @@ import java.util.List;
 @Table(name = "ram")
 public class Ram extends ElectronicComponents {
 
-//    @Column(name = "ddr")
-//    @NotEmpty
-//    private String DDR = new String();
-
     @Column(name = "clockspeed")
     @NotEmpty
     private Integer clockSpeed;
@@ -80,7 +76,7 @@ public class Ram extends ElectronicComponents {
     @Override
     public Double getAverageRating(){
 
-        if(PriceList.isEmpty()) {
+        if(ramRatingList.isEmpty()) {
             return null;
         }
         else {

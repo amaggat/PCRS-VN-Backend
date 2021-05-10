@@ -65,7 +65,7 @@ public class GraphicProcessor extends ElectronicComponents {
     @Override
     public Double getAverageRating(){
 
-        if(PriceList.isEmpty()) {
+        if(gpuRatingList.isEmpty()) {
             return null;
         }
         else {

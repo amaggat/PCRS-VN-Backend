@@ -1,13 +1,22 @@
 package backend.pc.gpu;
 
+import backend.pc.cpu.CpuController;
+import backend.security.model.AuthenticationRequest;
+import backend.security.model.AuthenticationResponse;
+import backend.security.utils.JwtUtils;
+import backend.user.User;
+import backend.user.UserActivity;
+import backend.user.UserActivityRepository;
+import backend.user.UserRepository;
+import backend.util.ClientLevel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.Predicate;
 import java.util.Objects;
@@ -15,9 +24,18 @@ import java.util.Objects;
 @RestController
 public class GpuController {
 
+    private static final Logger logger = LogManager.getLogger(GpuController.class);
+
+    @Autowired
+    private JwtUtils jwtUtil;
+    private final UserActivityRepository userActivityRepository;
+    private final UserRepository userRepository;
+
     private final GpuRepository gpuRepository;
 
-    public GpuController(GpuRepository gpuRepository) {
+    public GpuController(UserActivityRepository userActivityRepository, UserRepository userRepository, GpuRepository gpuRepository) {
+        this.userActivityRepository = userActivityRepository;
+        this.userRepository = userRepository;
         this.gpuRepository = gpuRepository;
     }
 
@@ -48,9 +66,23 @@ public class GpuController {
     }
 
     @GetMapping("/api/gpu/{id}")
-    public GraphicProcessor SearchById(@PathVariable("id") String id) {
-        gpuRepository.update(id);
-        return gpuRepository.findByID(id);
+    public GraphicProcessor SearchById(@PathVariable("id") String id, @RequestBody AuthenticationResponse jwt) {
+        GraphicProcessor gpu = gpuRepository.findByID(id);
+
+        try {
+            String username = jwtUtil.extractUsername(jwt.getJwt());
+            User user = userRepository.findUserByUsername(username);
+            if(user != null) {
+                userActivityRepository.save(new UserActivity(user, "view", gpu.getId()));
+                gpuRepository.update(id);
+            }
+            logger.log(ClientLevel.CLIENT, "Success");
+            return gpu;
+
+        } catch (Exception e) {
+            logger.log(ClientLevel.CLIENT, "Unsuccess");
+            return gpu;
+        }
     }
 
 }

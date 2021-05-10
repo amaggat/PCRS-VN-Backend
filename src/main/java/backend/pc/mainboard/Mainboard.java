@@ -99,7 +99,7 @@ public class Mainboard extends ElectronicComponents {
     @Override
     public Double getAverageRating(){
 
-        if(PriceList.isEmpty()) {
+        if(mainboardRatingList.isEmpty()) {
             return null;
         }
         else {

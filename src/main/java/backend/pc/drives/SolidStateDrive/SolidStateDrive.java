@@ -48,7 +48,7 @@ public class SolidStateDrive extends ElectronicComponents {
     @Override
     public Double getAverageRating(){
 
-        if(PriceList.isEmpty()) {
+        if(ssdRatingList.isEmpty()) {
             return null;
         }
         else {
