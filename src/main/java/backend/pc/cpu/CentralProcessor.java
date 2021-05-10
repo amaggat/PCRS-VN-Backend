@@ -43,6 +43,27 @@ public class CentralProcessor extends ElectronicComponents {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "centralProcessor")
     private List<CpuRating> cpuRatingList;
 
+    @Override
+    public Double getAverageRating(){
+
+        if(cpuRatingList.isEmpty()) {
+            return null;
+        }
+        else {
+            double avg = 0.0;
+            for(CpuRating obj : this.cpuRatingList) {
+                avg += obj.getRating();
+            }
+            return (avg/this.cpuRatingList.size());
+        }
+
+    }
+
+    @Override
+    public Integer getNumberOfRating(){
+        return this.cpuRatingList.size();
+    }
+
     public String getSocket() {
         return socket;
     }

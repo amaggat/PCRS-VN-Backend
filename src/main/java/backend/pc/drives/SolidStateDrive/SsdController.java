@@ -49,6 +49,7 @@ public class SsdController {
 
     @GetMapping("/api/ssd/{id}")
     public SolidStateDrive SearchById(@PathVariable("id") String id) {
+        ssdRepository.update(id);
         return ssdRepository.findByID(id);
     }
 

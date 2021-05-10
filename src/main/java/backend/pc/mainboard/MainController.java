@@ -61,6 +61,7 @@ public class MainController {
 
     @GetMapping("/api/mainboard/{id}")
     public Mainboard SearchByID(@PathVariable("id") String id) {
+        mainRepository.update(id);
         return mainRepository.findByID(id);
     }
 

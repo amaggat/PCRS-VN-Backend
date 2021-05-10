@@ -2,6 +2,7 @@ package backend.recommendation.type.score;
 
 
 import backend.user.User;
+import javafx.util.Pair;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -14,6 +15,9 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class Rating {
 
+    @Id
+    private String id;
+
     @ManyToOne
     @JoinColumn(name = "userid")
     private User user;
@@ -24,18 +28,20 @@ public class Rating {
     @Column(name = "favorite")
     private boolean isFavorite = false;
 
-    @Column(name= "visit")
-    private int visit;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
     public Rating() {
     }
 
-    public Integer getUser() {
-        return user.getId();
+    public Pair<Integer, String> getUser() {
+        return new Pair<>(this.user.getId(), this.user.getName());
+    }
+
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public void setUser(User user) {
@@ -50,14 +56,6 @@ public class Rating {
         this.rating = rating;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
     public boolean isFavorite() {
         return isFavorite;
     }
@@ -66,11 +64,4 @@ public class Rating {
         isFavorite = favorite;
     }
 
-    public int getVisit() {
-        return visit;
-    }
-
-    public void setVisit(int visit) {
-        this.visit = visit;
-    }
 }

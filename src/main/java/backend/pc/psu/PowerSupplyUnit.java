@@ -2,6 +2,7 @@ package backend.pc.psu;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
+import backend.recommendation.type.rating.MainboardRating;
 import backend.recommendation.type.rating.PsuRating;
 import backend.util.Utility;
 
@@ -69,5 +70,26 @@ public class PowerSupplyUnit extends ElectronicComponents {
 
     public void setPsuRatingList(List<PsuRating> psuRatingList) {
         this.psuRatingList = psuRatingList;
+    }
+
+    @Override
+    public Double getAverageRating(){
+
+        if(PriceList.isEmpty()) {
+            return null;
+        }
+        else {
+            double avg = 0.0;
+            for(PsuRating obj : this.psuRatingList) {
+                avg += obj.getRating();
+            }
+            return (avg/this.psuRatingList.size());
+        }
+
+    }
+
+    @Override
+    public Integer getNumberOfRating(){
+        return this.psuRatingList.size();
     }
 }

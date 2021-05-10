@@ -1,7 +1,6 @@
 package backend.recommendation.type.similarity;
 
 import backend.recommendation.type.score.Category;
-import backend.recommendation.type.score.SimilarityKey;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;

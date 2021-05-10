@@ -16,4 +16,12 @@ public class RetailerRating extends Rating {
     @ManyToOne
     @JoinColumn(name = "retailerid")
     private Retailer retailer;
+
+    public Integer getRetailer() {
+        return retailer.getId();
+    }
+
+    public void setRetailer(Retailer retailer) {
+        this.retailer = retailer;
+    }
 }

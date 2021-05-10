@@ -3,6 +3,7 @@ package backend.pc.gpu;
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.type.rating.GpuRating;
+import backend.recommendation.type.rating.SsdRating;
 import backend.util.Utility;
 
 import javax.persistence.*;
@@ -59,6 +60,27 @@ public class GraphicProcessor extends ElectronicComponents {
 
     public void setPcProfileList(List<PcProfile> pcProfile) {
         this.pcProfileList = pcProfile;
+    }
+
+    @Override
+    public Double getAverageRating(){
+
+        if(PriceList.isEmpty()) {
+            return null;
+        }
+        else {
+            double avg = 0.0;
+            for(GpuRating obj : this.gpuRatingList) {
+                avg += obj.getRating();
+            }
+            return (avg/this.gpuRatingList.size());
+        }
+
+    }
+
+    @Override
+    public Integer getNumberOfRating(){
+        return this.gpuRatingList.size();
     }
 
     public GraphicProcessor() {

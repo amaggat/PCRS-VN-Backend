@@ -3,6 +3,7 @@ package backend.pc.ram;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
+import backend.recommendation.type.rating.PsuRating;
 import backend.recommendation.type.rating.RamRating;
 import backend.util.Utility;
 
@@ -74,5 +75,26 @@ public class Ram extends ElectronicComponents {
 
     public void setRamRatingList(List<RamRating> ramRatingList) {
         this.ramRatingList = ramRatingList;
+    }
+
+    @Override
+    public Double getAverageRating(){
+
+        if(PriceList.isEmpty()) {
+            return null;
+        }
+        else {
+            double avg = 0.0;
+            for(RamRating obj : this.ramRatingList) {
+                avg += obj.getRating();
+            }
+            return (avg/this.ramRatingList.size());
+        }
+
+    }
+
+    @Override
+    public Integer getNumberOfRating(){
+        return this.ramRatingList.size();
     }
 }

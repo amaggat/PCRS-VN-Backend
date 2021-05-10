@@ -16,4 +16,11 @@ public class CpuRating extends Rating {
     @JoinColumn(name = "cpuid")
     private CentralProcessor centralProcessor;
 
+    public String getCentralProcessor() {
+        return centralProcessor.getId();
+    }
+
+    public void setCentralProcessor(CentralProcessor centralProcessor) {
+        this.centralProcessor = centralProcessor;
+    }
 }

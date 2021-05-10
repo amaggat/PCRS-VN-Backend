@@ -55,6 +55,7 @@ public class RamController {
 
     @GetMapping("/api/ram/{RamID}")
     public Ram SearchByID(@PathVariable("RamID") String id) {
+        ramRepository.update(id);
         return ramRepository.findByID(id);
     }
 }

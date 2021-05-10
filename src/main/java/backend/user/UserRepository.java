@@ -10,4 +10,8 @@ public interface UserRepository extends JpaRepository<User, Integer>, JpaSpecifi
     @Query("SELECT DISTINCT user from User user WHERE user.username= :username")
     @Transactional
     User findUserByUsername(String username);
+
+    @Query("SELECT DISTINCT user from User user WHERE user.id= :id")
+    @Transactional
+    User findByID(Integer id);
 }

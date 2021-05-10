@@ -16,5 +16,11 @@ public class GpuRating extends Rating {
     @JoinColumn(name = "gpuid")
     private GraphicProcessor graphicProcessor;
 
+    public String getGraphicProcessor() {
+        return graphicProcessor.getId();
+    }
 
+    public void setGraphicProcessor(GraphicProcessor graphicProcessor) {
+        this.graphicProcessor = graphicProcessor;
+    }
 }

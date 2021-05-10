@@ -30,6 +30,8 @@ public class CpuPriceList {
     @NotEmpty
     private int price;
 
+
+
     public int getId() {
         return Id;
     }

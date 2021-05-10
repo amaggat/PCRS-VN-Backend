@@ -2,6 +2,9 @@ package backend.pc.drives.HardDriveDisk;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
+import backend.recommendation.type.rating.CpuRating;
+import backend.recommendation.type.rating.HddRating;
+import backend.recommendation.type.rating.SsdRating;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -21,6 +24,9 @@ public class HardDiskDrive extends ElectronicComponents {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hdd", fetch = FetchType.EAGER)
     private List<HddPriceList> PriceList;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hdd", fetch = FetchType.LAZY)
+    private List<HddRating> hddRatingList;
+
     public List<HddPriceList> getPriceList() {
         return PriceList;
     }
@@ -28,28 +34,6 @@ public class HardDiskDrive extends ElectronicComponents {
     public void setPriceList(List<HddPriceList> PriceList) {
         this.PriceList = PriceList;
     }
-
-    //    @Column(name = "writeSpeed")
-//    @NotEmpty
-//    private int writeSpeed;
-//
-//    @Column(name = "readSpeed")
-//    @NotEmpty
-//    private int readSpeed;
-//
-//    private int fanSpeed;
-
-//    public int getFanSpeed() {
-//        return fanSpeed;
-//    }
-//
-//    public int getWriteSpeed() {
-//        return writeSpeed;
-//    }
-//
-//    public int getReadSpeed() {
-//        return readSpeed;
-//    }
 
     public String getStorage() {
         return storage;
@@ -59,15 +43,25 @@ public class HardDiskDrive extends ElectronicComponents {
         this.storage = size;
     }
 
-//    public void setFanSpeed(int fanSpeed) {
-//        this.fanSpeed = fanSpeed;
-//    }
-//
-//    public void setWriteSpeed(int writeSpeed) {
-//        this.writeSpeed = writeSpeed;
-//    }
-//
-//    public void setReadSpeed(int readSpeed) {
-//        this.readSpeed = readSpeed;
-//    }
+    @Override
+    public Double getAverageRating(){
+
+        if(PriceList.isEmpty()) {
+            return null;
+        }
+        else {
+            double avg = 0.0;
+            for(HddRating obj : this.hddRatingList) {
+                avg += obj.getRating();
+            }
+            return (avg/this.hddRatingList.size());
+        }
+
+    }
+
+    @Override
+    public Integer getNumberOfRating(){
+        return this.hddRatingList.size();
+    }
+
 }

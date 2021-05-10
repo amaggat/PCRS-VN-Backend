@@ -12,10 +12,13 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -50,10 +53,11 @@ public class UserController {
 
         final UserDetails userDetails = userDetailService
                 .loadUserByUsername(authenticationRequest.getUsername());
+        User userInfo = userRepository.findUserByUsername(authenticationRequest.getUsername());
 
         final String jwt = jwtTokenUtil.generateToken(userDetails);
 
-        return ResponseEntity.ok(new AuthenticationResponse(jwt));
+        return ResponseEntity.ok(new AuthenticationResponse(jwt, userInfo.getUsername(), userInfo.getId()));
     }
 
     @PostMapping("/api/register")
@@ -63,6 +67,13 @@ public class UserController {
         }
         userRepository.save(user);
         return ResponseEntity.ok(new AuthenticationResponse("Registered"));
+    }
+
+    @GetMapping("/api/user/{UserID}")
+    public User findByID(@PathVariable("UserID") Integer id) {
+        User user = userRepository.findByID(id);
+        user.setPassword(null);
+        return user;
     }
 
 }

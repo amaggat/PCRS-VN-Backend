@@ -1,4 +1,4 @@
-package backend.recommendation.type.score;
+package backend.recommendation.type.similarity;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

@@ -4,9 +4,11 @@ package backend.pc.cpu;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +22,6 @@ public class CpuController {
 
     public CpuController(CpuRepository cpuRepository) {
         this.cpuRepository = cpuRepository;
-
     }
 
     @GetMapping("/api/cpu")
@@ -56,6 +57,7 @@ public class CpuController {
 
     @GetMapping("/api/cpu/{CpuID}")
     public CentralProcessor SearchById(@PathVariable("CpuID") String id) {
+        cpuRepository.update(id);
         return cpuRepository.findByID(id);
     }
 

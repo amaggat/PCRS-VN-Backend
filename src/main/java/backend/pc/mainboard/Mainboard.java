@@ -3,6 +3,7 @@ package backend.pc.mainboard;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
+import backend.recommendation.type.rating.GpuRating;
 import backend.recommendation.type.rating.MainboardRating;
 import backend.util.Utility;
 
@@ -93,5 +94,26 @@ public class Mainboard extends ElectronicComponents {
 
     public void setMainboardRatingList(List<MainboardRating> mainboardRatingList) {
         this.mainboardRatingList = mainboardRatingList;
+    }
+
+    @Override
+    public Double getAverageRating(){
+
+        if(PriceList.isEmpty()) {
+            return null;
+        }
+        else {
+            double avg = 0.0;
+            for(MainboardRating obj : this.mainboardRatingList) {
+                avg += obj.getRating();
+            }
+            return (avg/this.mainboardRatingList.size());
+        }
+
+    }
+
+    @Override
+    public Integer getNumberOfRating(){
+        return this.mainboardRatingList.size();
     }
 }

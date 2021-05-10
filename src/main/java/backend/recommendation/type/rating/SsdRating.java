@@ -15,4 +15,12 @@ public class SsdRating extends Rating {
     @ManyToOne
     @JoinColumn(name = "ssdid")
     private SolidStateDrive ssd;
+
+    public String getSsd() {
+        return ssd.getId();
+    }
+
+    public void setSsd(SolidStateDrive ssd) {
+        this.ssd = ssd;
+    }
 }

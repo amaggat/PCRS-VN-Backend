@@ -49,6 +49,7 @@ public class PsuController {
 
     @GetMapping("/api/psu/{id}")
     public PowerSupplyUnit SearchById(@PathVariable("id") String id) {
+        psuRepository.update(id);
         return psuRepository.findByID(id);
     }
 

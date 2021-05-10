@@ -5,6 +5,7 @@ import backend.feedbacks.Feedbacks;
 import backend.model.NameEntity;
 import backend.pcprofile.PcProfile;
 import backend.user.User;
+import javafx.util.Pair;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -29,7 +30,14 @@ public class Post extends NameEntity {
 
     @Column(name = "price")
     @NotEmpty
-    private String price = new String();
+    private Integer price;
+
+    @Column(name = "view")
+    @NotEmpty
+    private Integer view;
+
+    @Column(name = "type")
+    public String type;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "creatorid")
@@ -44,16 +52,8 @@ public class Post extends NameEntity {
             joinColumns = @JoinColumn(name = "PostID"),
             inverseJoinColumns = @JoinColumn(name = "PcID")
     )
+
     private PcProfile pcProfile;
-
-
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
 
     public PcProfile getPcProfile() {
         return pcProfile;
@@ -95,11 +95,35 @@ public class Post extends NameEntity {
         this.feedbacks = feedbacks;
     }
 
-    public String getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public Integer getView() {
+        return view;
+    }
+
+    public void setView(Integer view) {
+        this.view = view;
+    }
+
+    public Pair<Integer, String> getUser() {
+        return new Pair<>(this.user.getId(), this.user.getName());
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

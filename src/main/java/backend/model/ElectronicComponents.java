@@ -33,6 +33,32 @@ public class ElectronicComponents {
     @JoinColumn(name= "categoryid")
     private Category category;
 
+    @Column(name = "view")
+    @NotEmpty
+    private Integer view;
+
+    @Transient
+    private Double averageRating;
+
+    @Transient
+    private Integer numberOfRating;
+
+    public Double getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(Double averageRating) {
+        this.averageRating = averageRating;
+    }
+
+    public Integer getNumberOfRating() {
+        return numberOfRating;
+    }
+
+    public void setNumberOfRating(Integer numberOfRating) {
+        this.numberOfRating = numberOfRating;
+    }
+
     public String getImage() {
         return image;
     }
@@ -91,5 +117,13 @@ public class ElectronicComponents {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public Integer getView() {
+        return view;
+    }
+
+    public void setView(Integer view) {
+        this.view = view;
     }
 }

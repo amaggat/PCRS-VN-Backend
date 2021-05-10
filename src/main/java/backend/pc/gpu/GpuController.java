@@ -49,6 +49,7 @@ public class GpuController {
 
     @GetMapping("/api/gpu/{id}")
     public GraphicProcessor SearchById(@PathVariable("id") String id) {
+        gpuRepository.update(id);
         return gpuRepository.findByID(id);
     }
 

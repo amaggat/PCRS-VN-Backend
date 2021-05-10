@@ -15,4 +15,12 @@ public class RamRating extends Rating {
     @ManyToOne
     @JoinColumn(name = "ramid")
     private Ram ram;
+
+    public String getRam() {
+        return ram.getId();
+    }
+
+    public void setRam(Ram ram) {
+        this.ram = ram;
+    }
 }

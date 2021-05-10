@@ -49,6 +49,7 @@ public class HddController {
 
     @GetMapping("/api/hdd/{id}")
     public HardDiskDrive SearchByID(@PathVariable("id") String id) {
+        hddRepository.update(id);
         return hddRepository.findByID(id);
     }
 

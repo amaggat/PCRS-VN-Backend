@@ -13,6 +13,14 @@ import javax.persistence.Table;
 public class MainboardRating extends Rating {
 
     @ManyToOne
-    @JoinColumn(name = "mainboardId")
+    @JoinColumn(name = "mainid")
     private Mainboard mainboard;
+
+    public String getMainboard() {
+        return mainboard.getId();
+    }
+
+    public void setMainboard(Mainboard mainboard) {
+        this.mainboard = mainboard;
+    }
 }

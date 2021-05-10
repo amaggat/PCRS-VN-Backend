@@ -15,4 +15,12 @@ public class HddRating extends Rating {
     @ManyToOne
     @JoinColumn(name ="hddid")
     private HardDiskDrive hdd;
+
+    public String getHdd() {
+        return hdd.getId();
+    }
+
+    public void setHdd(HardDiskDrive hdd) {
+        this.hdd = hdd;
+    }
 }

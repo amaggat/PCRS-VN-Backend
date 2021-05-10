@@ -17,19 +17,25 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import java.util.List;
 
 @Entity
 @Table(name = "user")
 public class User extends NameEntity {
 
-    @Column(name = "username")
+    public User(String username, Integer id) {
+        this.username = username;
+        super.setId(id);
+    }
+
+    @Column(name = "username", unique = true)
     private String username = new String();
 
     @Column(name = "password")
     private String password = new String();
 
-    @Column(name = "mail")
+    @Column(name = "mail", unique = true)
     private String mail = new String();
 
     @Column(name = "role")
@@ -61,6 +67,10 @@ public class User extends NameEntity {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<RamRating> ramRatingList;
+
+    public User() {
+
+    }
 
     public String getMail() {
         return mail;
