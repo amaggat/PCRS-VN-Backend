@@ -129,5 +129,4 @@ public class RatingController {
             userActivityRepository.save(new UserActivity(user, "rate " + rating, componentId));
         }
     }
-
 }

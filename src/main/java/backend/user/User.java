@@ -35,7 +35,7 @@ public class User extends NameEntity {
     @Column(name = "password")
     private String password = new String();
 
-    @Column(name = "mail", unique = true)
+    @Column(name = "mail")
     private String mail = new String();
 
     @Column(name = "role")
