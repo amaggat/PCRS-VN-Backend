@@ -8,6 +8,7 @@ import backend.pc.gpu.GpuPriceList;
 import backend.pc.mainboard.MainPriceList;
 import backend.pc.psu.PsuPriceList;
 import backend.pc.ram.RamPriceList;
+import backend.recommendation.type.rating.HddRating;
 import backend.recommendation.type.rating.RetailerRating;
 
 import javax.persistence.CascadeType;
@@ -96,6 +97,25 @@ public class Retailer extends NameEntity {
 
     public void setRetailerRatingList(List<RetailerRating> retailerRatingList) {
         this.retailerRatingList = retailerRatingList;
+    }
+
+    public void setAvgRetailerRating(Double avgRetailerRating) {
+        this.avgRetailerRating = avgRetailerRating;
+    }
+
+    public Double setAvgRetailerRating() {
+        if(retailerRatingList.isEmpty()) {
+            return null;
+        }
+        else {
+            double avg = 0.0;
+            for(RetailerRating obj : this.retailerRatingList) {
+                avg += obj.getRating();
+            }
+            avg = avg/this.retailerRatingList.size();
+            double average = (((int)avg)*100)/100;
+            return average;
+        }
     }
 
     public String getLogo() {
