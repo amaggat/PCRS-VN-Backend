@@ -42,6 +42,9 @@ public class Retailer extends NameEntity {
     @Transient
     private Optional<RetailerRating> retailerRating;
 
+    @Transient
+    private Double avgRating;
+
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "retailer")
     private List<CpuPriceList> cpuList;
 

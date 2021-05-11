@@ -9,6 +9,7 @@ import backend.pc.psu.PowerSupplyUnit;
 import backend.pc.ram.Ram;
 import backend.recommendation.type.score.Category;
 import backend.user.User;
+import javafx.util.Pair;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -19,12 +20,11 @@ import java.util.List;
 public class PcProfile {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id = new String();
 
     @Column(name = "pcname")
     @NotEmpty
-    private String pcname = new String();
+    private String name = new String();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userid")
@@ -90,7 +90,6 @@ public class PcProfile {
     )
     private List<PowerSupplyUnit> psu;
 
-
     public String getId() {
         return id;
     }
@@ -99,8 +98,19 @@ public class PcProfile {
         this.id = id;
     }
 
-    public void setPcname(String pcname) {
-        this.pcname = pcname;
+    public Pair<Integer, String> getUser () {
+        return new Pair<>(this.user.getId(), this.user.getName());
+    }
+    public void setUser(User user){
+        this.user = user;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String pcName) {
+        this.name = pcName;
     }
 
     public List<CentralProcessor> getCpu() {

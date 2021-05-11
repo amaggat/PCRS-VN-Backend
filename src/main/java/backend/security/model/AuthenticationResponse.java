@@ -15,6 +15,12 @@ public class AuthenticationResponse {
         this.success = true;
     }
 
+    public AuthenticationResponse(String jwt, String username) {
+        this.jwt = jwt;
+        this.username = username;
+        this.success = true;
+    }
+
     public AuthenticationResponse(String jwt) {
         this.jwt = jwt;
         this.success = false;
