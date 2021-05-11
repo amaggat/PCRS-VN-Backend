@@ -73,7 +73,6 @@ public class RamController {
     @GetMapping("/api/ram/{RamID}")
     public Ram SearchByID(@PathVariable("RamID") String id, @CookieValue(value = "username", required = false) String username) {
         Ram ram = ramRepository.findByID(id);
-
         try {
             User user = userRepository.findUserByUsername(username);
             if(user != null) {

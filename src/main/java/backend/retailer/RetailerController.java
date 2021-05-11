@@ -1,29 +1,38 @@
 package backend.retailer;
 
-import backend.recommendation.type.rating.RetailerRating;
-import backend.security.model.AuthenticationResponse;
+import backend.pc.ram.RamController;
+import backend.user.User;
+import backend.user.UserActivity;
+import backend.user.UserActivityRepository;
+import backend.user.UserRepository;
+import backend.util.ClientLevel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.criteria.Predicate;
-import java.util.Objects;
 
 @RestController
 public class RetailerController {
 
-    RetailerRepository retailerRepository;
-    RetailerRatingRepository retailerRatingRepository;
+    private static final Logger logger = LogManager.getLogger(RetailerController.class);
 
-    public RetailerController(RetailerRepository retailerRepository, RetailerRatingRepository retailerRatingRepository) {
+    private final UserActivityRepository userActivityRepository;
+    private final UserRepository userRepository;
+    private final RetailerRepository retailerRepository;
+    private final RetailerRatingRepository retailerRatingRepository;
+
+    public RetailerController(UserActivityRepository userActivityRepository, UserRepository userRepository, RetailerRepository retailerRepository, RetailerRatingRepository retailerRatingRepository) {
+        this.userActivityRepository = userActivityRepository;
+        this.userRepository = userRepository;
         this.retailerRepository = retailerRepository;
         this.retailerRatingRepository = retailerRatingRepository;
     }
@@ -43,14 +52,19 @@ public class RetailerController {
         return retailers;
     }
 
-    @GetMapping("/api/retailer/{id}")
-    public Retailer findByID(@PathVariable("id") Integer id) {
-        return retailerRepository.findByID(id);
+    @GetMapping("/api/retailer/{retailerId}")
+    public Retailer findByID(@PathVariable("retailerId") Integer id, @CookieValue(value = "username", required = false) String username) {
+        Retailer retailer = retailerRepository.findByID(id);
+
+        try {
+            User user = userRepository.findUserByUsername(username);
+            retailer.setRetailerRating(retailerRatingRepository.findById(user.getId() + "-" + id));
+            logger.log(ClientLevel.CLIENT, "Success");
+            return retailer;
+        } catch (Exception e) {
+            logger.log(ClientLevel.CLIENT, "Unsuccess");
+            return retailer;
+        }
     }
 
-    @PostMapping("/user/rating/retailer")
-    public ResponseEntity<?> rating(@RequestBody RetailerRating retailerRating) {
-        retailerRatingRepository.save(retailerRating);
-        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
-    }
 }

@@ -6,6 +6,7 @@ import backend.recommendation.type.rating.HddRating;
 import backend.recommendation.type.rating.MainboardRating;
 import backend.recommendation.type.rating.PsuRating;
 import backend.recommendation.type.rating.RamRating;
+import backend.recommendation.type.rating.RetailerRating;
 import backend.recommendation.type.rating.SsdRating;
 import backend.recommendation.type.repository.CpuRatingRepository;
 import backend.recommendation.type.repository.GpuRatingRepository;
@@ -14,7 +15,7 @@ import backend.recommendation.type.repository.MainRatingRepository;
 import backend.recommendation.type.repository.PsuRatingRepository;
 import backend.recommendation.type.repository.RamRatingRepository;
 import backend.recommendation.type.repository.SsdRatingRepository;
-import backend.recommendation.type.score.Rating;
+import backend.retailer.RetailerRatingRepository;
 import backend.security.model.AuthenticationResponse;
 import backend.user.User;
 import backend.user.UserActivity;
@@ -44,6 +45,7 @@ public class RatingController {
     private final SsdRatingRepository ssdRatingRepository;
     private final HddRatingRepository hddRatingRepository;
     private final PsuRatingRepository psuRatingRepository;
+    private final RetailerRatingRepository retailerRatingRepository;
     private final UserRepository userRepository;
     private final UserActivityRepository userActivityRepository;
 
@@ -53,7 +55,7 @@ public class RatingController {
                             RamRatingRepository ramRatingRepository,
                             SsdRatingRepository ssdRatingRepository,
                             HddRatingRepository hddRatingRepository,
-                            PsuRatingRepository psuRatingRepository, UserRepository userRepository, UserActivityRepository userActivityRepository) {
+                            PsuRatingRepository psuRatingRepository, RetailerRatingRepository retailerRatingRepository, UserRepository userRepository, UserActivityRepository userActivityRepository) {
         this.cpuRatingRepository = cpuRatingRepository;
         this.gpuRatingRepository = gpuRatingRepository;
         this.mainRatingRepository = mainRatingRepository;
@@ -61,6 +63,7 @@ public class RatingController {
         this.ssdRatingRepository = ssdRatingRepository;
         this.hddRatingRepository = hddRatingRepository;
         this.psuRatingRepository = psuRatingRepository;
+        this.retailerRatingRepository = retailerRatingRepository;
         this.userRepository = userRepository;
         this.userActivityRepository = userActivityRepository;
     }
@@ -123,6 +126,12 @@ public class RatingController {
     public ResponseEntity<?> rating(@RequestBody PsuRating psuRating, @CookieValue(value = "username", required = false) String username) {
         psuRatingRepository.save(psuRating);
         updateLog(username, psuRating.getPsu(), psuRating.getRating() + " star");
+        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+    }
+
+    @PostMapping("/user/rating/retailer")
+    public ResponseEntity<?> rating(@RequestBody RetailerRating retailerRating, @CookieValue(value = "username", required = false) String username) {
+        retailerRatingRepository.save(retailerRating);
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 

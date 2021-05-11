@@ -16,7 +16,9 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(name = "retailer")
@@ -36,6 +38,9 @@ public class Retailer extends NameEntity {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "retailer")
     private List<RetailerRating> retailerRatingList;
+
+    @Transient
+    private Optional<RetailerRating> retailerRating;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "retailer")
     private List<CpuPriceList> cpuList;
@@ -96,5 +101,13 @@ public class Retailer extends NameEntity {
 
     public void setLogo(String logo) {
         this.logo = logo;
+    }
+
+    public Optional<RetailerRating> getRetailerRating() {
+        return retailerRating;
+    }
+
+    public void setRetailerRating(Optional<RetailerRating> retailerRating) {
+        this.retailerRating = retailerRating;
     }
 }
