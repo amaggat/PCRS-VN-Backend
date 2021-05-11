@@ -11,5 +11,8 @@ public interface PcProfileRepository extends JpaRepository<PcProfile, String>, J
     @Transactional(readOnly = true)
     PcProfile findByID(String id);
 
+    @Query("SELECT DISTINCT pcProfile FROM PcProfile pcProfile WHERE pcProfile.user.id = :id")
+    @Transactional(readOnly = true)
+    PcProfile findByUserID(Integer id);
 
 }

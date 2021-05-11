@@ -9,6 +9,7 @@ import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -96,7 +97,9 @@ public class Ram extends ElectronicComponents {
             for(RamRating obj : this.ramRatingList) {
                 avg += obj.getRating();
             }
-            return (avg/this.ramRatingList.size());
+            avg = avg/this.ramRatingList.size();
+            double average = (((int)avg)*100)/100;
+            return average;
         }
 
     }

@@ -38,7 +38,7 @@ public class PostController {
             Predicate p = cb.conjunction();
             cq.orderBy(cb.desc(root.get("name")), cb.asc(root.get("id")));
             if (Objects.nonNull(type)) {
-                p = cb.and(p, cb.like(root.get("budget"), "%" + type + "%"));
+                p = cb.and(p, cb.like(root.get("type"), "%" + type + "%"));
             }
             return p;
         }, pageable);

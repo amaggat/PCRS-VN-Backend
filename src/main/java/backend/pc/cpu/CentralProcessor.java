@@ -16,6 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotEmpty;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -59,9 +60,10 @@ public class CentralProcessor extends ElectronicComponents {
             for(CpuRating obj : this.cpuRatingList) {
                 avg += obj.getRating();
             }
-            return (avg/this.cpuRatingList.size());
+            avg = avg/this.cpuRatingList.size();
+            double average = (((int)avg)*100)/100;
+            return average;
         }
-
     }
 
     @Override

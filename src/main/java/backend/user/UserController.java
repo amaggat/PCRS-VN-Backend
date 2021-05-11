@@ -66,7 +66,7 @@ public class UserController {
             return ResponseEntity.ok(new AuthenticationResponse("Already use"));
         }
         userRepository.save(user);
-        return ResponseEntity.ok(new AuthenticationResponse("Registered"));
+        return ResponseEntity.ok(new AuthenticationResponse("Registered", user.getUsername()));
     }
 
     @GetMapping("/api/user/{UserID}")

@@ -9,6 +9,7 @@ import backend.recommendation.type.rating.SsdRating;
 import javax.persistence.*;
 import javax.swing.text.html.Option;
 import javax.validation.constraints.NotEmpty;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -59,7 +60,9 @@ public class HardDiskDrive extends ElectronicComponents {
             for(HddRating obj : this.hddRatingList) {
                 avg += obj.getRating();
             }
-            return (avg/this.hddRatingList.size());
+            avg = avg/this.hddRatingList.size();
+            double average = (((int)avg)*100)/100;
+            return average;
         }
 
     }

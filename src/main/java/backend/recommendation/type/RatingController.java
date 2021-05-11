@@ -72,42 +72,42 @@ public class RatingController {
     public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating, @CookieValue(value = "username", required = false) String username) {
         cpuRatingRepository.save(cpuRating);
         updateLog(username, cpuRating.getCentralProcessor(), cpuRating.getRating() + " star");
-        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/ssd")
     public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating, @CookieValue(value = "username", required = false) String username) {
         ssdRatingRepository.save(ssdRating);
         updateLog(username, ssdRating.getSsd(), ssdRating.getRating() + " star");
-        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/gpu")
     public ResponseEntity<?> rating(@RequestBody GpuRating gpuRating, @CookieValue(value = "username", required = false) String username) {
         gpuRatingRepository.save(gpuRating);
         updateLog(username, gpuRating.getGraphicProcessor(), gpuRating.getRating() + " star");
-        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/mainboard")
     public ResponseEntity<?> rating(@RequestBody MainboardRating mainboardRating, @CookieValue(value = "username", required = false) String username) {
         mainRatingRepository.save(mainboardRating);
         updateLog(username, mainboardRating.getMainboard(), mainboardRating.getRating() + " star");
-        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/ram")
     public ResponseEntity<?> rating(@RequestBody RamRating ramRating, @CookieValue(value = "username", required = false) String username) {
         ramRatingRepository.save(ramRating);
         updateLog(username, ramRating.getRam(), ramRating.getRating() + " star");
-        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/hdd")
     public ResponseEntity<?> rating(@RequestBody HddRating hddRating, @CookieValue(value = "username", required = false) String username) {
         hddRatingRepository.save(hddRating);
         updateLog(username, hddRating.getHdd(), hddRating.getRating() + " star");
-        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/psu")
@@ -120,7 +120,7 @@ public class RatingController {
     @PostMapping("/user/rating/retailer")
     public ResponseEntity<?> rating(@RequestBody RetailerRating retailerRating, @CookieValue(value = "username", required = false) String username) {
         retailerRatingRepository.save(retailerRating);
-        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     void updateLog(String username, String componentId, String rating) {

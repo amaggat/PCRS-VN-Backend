@@ -9,6 +9,7 @@ import backend.util.Utility;
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotEmpty;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -85,7 +86,9 @@ public class GraphicProcessor extends ElectronicComponents {
             for(GpuRating obj : this.gpuRatingList) {
                 avg += obj.getRating();
             }
-            return (avg/this.gpuRatingList.size());
+            avg = avg/this.gpuRatingList.size();
+            double average = (((int)avg)*100)/100;
+            return average;
         }
 
     }

@@ -8,6 +8,7 @@ import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -95,7 +96,9 @@ public class PowerSupplyUnit extends ElectronicComponents {
             for(PsuRating obj : this.psuRatingList) {
                 avg += obj.getRating();
             }
-            return (avg/this.psuRatingList.size());
+            avg = avg/this.psuRatingList.size();
+            double average = (((int)avg)*100)/100;
+            return average;
         }
 
     }

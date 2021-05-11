@@ -9,6 +9,7 @@ import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -119,7 +120,9 @@ public class Mainboard extends ElectronicComponents {
             for(MainboardRating obj : this.mainboardRatingList) {
                 avg += obj.getRating();
             }
-            return (avg/this.mainboardRatingList.size());
+            avg = avg/this.mainboardRatingList.size();
+            double average = (((int)avg)*100)/100;
+            return average;
         }
 
     }

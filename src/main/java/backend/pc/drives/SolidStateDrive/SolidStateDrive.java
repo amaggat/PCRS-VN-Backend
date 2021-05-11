@@ -10,6 +10,7 @@ import backend.recommendation.type.rating.SsdRating;
 import javax.persistence.*;
 import javax.swing.text.html.Option;
 import javax.validation.constraints.NotEmpty;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -61,7 +62,9 @@ public class SolidStateDrive extends ElectronicComponents {
             for(SsdRating obj : this.ssdRatingList) {
                 avg += obj.getRating();
             }
-            return (avg/this.ssdRatingList.size());
+            avg = avg/this.ssdRatingList.size();
+            double average = (((int)avg)*100)/100;
+            return average;
         }
 
     }
