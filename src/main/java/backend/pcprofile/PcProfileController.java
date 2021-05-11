@@ -29,8 +29,6 @@ public class PcProfileController {
     @GetMapping("/api/pcprofile")
     public Page<PcProfile> list(@RequestParam(name = "pcname", required = false) String name,
                                 @RequestParam(name = "type", required = false) String type,
-                                @RequestParam(name = "budget", required = false) String budget,
-                                @RequestParam(name = "target", required = false) String target,
                                 Pageable pageable) {
 
         Page<PcProfile> pcProfiles = pcProfileRepository.findAll((Specification<PcProfile>) (root, cq, cb) -> {
@@ -40,9 +38,6 @@ public class PcProfileController {
             }
             if (Objects.nonNull(type)) {
                 p = cb.and(p, cb.like(root.get("type"), "%" + type + "%"));
-            }
-            if (Objects.nonNull(budget)) {
-                p = cb.and(p, cb.like(root.get("budget"), "%" + budget + "%"));
             }
             cq.orderBy(cb.desc(root.get("pcname")), cb.asc(root.get("id")));
             return p;

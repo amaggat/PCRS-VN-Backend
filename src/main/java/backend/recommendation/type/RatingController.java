@@ -14,10 +14,16 @@ import backend.recommendation.type.repository.MainRatingRepository;
 import backend.recommendation.type.repository.PsuRatingRepository;
 import backend.recommendation.type.repository.RamRatingRepository;
 import backend.recommendation.type.repository.SsdRatingRepository;
+import backend.recommendation.type.score.Rating;
 import backend.security.model.AuthenticationResponse;
+import backend.user.User;
+import backend.user.UserActivity;
+import backend.user.UserActivityRepository;
+import backend.user.UserRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,6 +44,8 @@ public class RatingController {
     private final SsdRatingRepository ssdRatingRepository;
     private final HddRatingRepository hddRatingRepository;
     private final PsuRatingRepository psuRatingRepository;
+    private final UserRepository userRepository;
+    private final UserActivityRepository userActivityRepository;
 
     public RatingController(CpuRatingRepository cpuRatingRepository,
                             GpuRatingRepository gpuRatingRepository,
@@ -45,7 +53,7 @@ public class RatingController {
                             RamRatingRepository ramRatingRepository,
                             SsdRatingRepository ssdRatingRepository,
                             HddRatingRepository hddRatingRepository,
-                            PsuRatingRepository psuRatingRepository) {
+                            PsuRatingRepository psuRatingRepository, UserRepository userRepository, UserActivityRepository userActivityRepository) {
         this.cpuRatingRepository = cpuRatingRepository;
         this.gpuRatingRepository = gpuRatingRepository;
         this.mainRatingRepository = mainRatingRepository;
@@ -53,53 +61,75 @@ public class RatingController {
         this.ssdRatingRepository = ssdRatingRepository;
         this.hddRatingRepository = hddRatingRepository;
         this.psuRatingRepository = psuRatingRepository;
+        this.userRepository = userRepository;
+        this.userActivityRepository = userActivityRepository;
     }
 
     @GetMapping("/api/rating/{CpuID}")
-    public Optional<HddRating> findById(@PathVariable("CpuID") String id) {
+    public Optional<HddRating> findById(@PathVariable("CpuID") String id, @CookieValue(value = "username", required = false) String username) {
         return hddRatingRepository.findById(id);
     }
 
     @PostMapping("/user/rating/cpu")
-    public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating) {
+    public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating, @CookieValue(value = "username", required = false) String username) {
         cpuRatingRepository.save(cpuRating);
+
+
+        updateLog(username, cpuRating.getCentralProcessor(), cpuRating.getRating() + " star");
+
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
     @PostMapping("/user/rating/ssd")
-    public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating) {
+    public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating, @CookieValue(value = "username", required = false) String username) {
         ssdRatingRepository.save(ssdRating);
+
+        updateLog(username, ssdRating.getSsd(), ssdRating.getRating() + " star");
+
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
     @PostMapping("/user/rating/gpu")
-    public ResponseEntity<?> rating(@RequestBody GpuRating cpuRating) {
-        gpuRatingRepository.save(cpuRating);
+    public ResponseEntity<?> rating(@RequestBody GpuRating gpuRating, @CookieValue(value = "username", required = false) String username) {
+        gpuRatingRepository.save(gpuRating);
+
+        updateLog(username, gpuRating.getGraphicProcessor(), gpuRating.getRating() + " star");
+
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
     @PostMapping("/user/rating/mainboard")
-    public ResponseEntity<?> rating(@RequestBody MainboardRating mainboardRating) {
+    public ResponseEntity<?> rating(@RequestBody MainboardRating mainboardRating, @CookieValue(value = "username", required = false) String username) {
         mainRatingRepository.save(mainboardRating);
+        updateLog(username, mainboardRating.getMainboard(), mainboardRating.getRating() + " star");
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
     @PostMapping("/user/rating/ram")
-    public ResponseEntity<?> rating(@RequestBody RamRating ramRating) {
+    public ResponseEntity<?> rating(@RequestBody RamRating ramRating, @CookieValue(value = "username", required = false) String username) {
         ramRatingRepository.save(ramRating);
+        updateLog(username, ramRating.getRam(), ramRating.getRating() + " star");
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
     @PostMapping("/user/rating/hdd")
-    public ResponseEntity<?> rating(@RequestBody HddRating hddRating) {
+    public ResponseEntity<?> rating(@RequestBody HddRating hddRating, @CookieValue(value = "username", required = false) String username) {
         hddRatingRepository.save(hddRating);
+
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
     @PostMapping("/user/rating/psu")
-    public ResponseEntity<?> rating(@RequestBody PsuRating psuRating) {
+    public ResponseEntity<?> rating(@RequestBody PsuRating psuRating, @CookieValue(value = "username", required = false) String username) {
         psuRatingRepository.save(psuRating);
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+    }
+
+    void updateLog(String username, String componentId, String rating) {
+        User user = userRepository.findUserByUsername(username);
+        if(user != null) {
+            userActivityRepository.save(new UserActivity(user, "rate " + rating, componentId));
+        }
     }
 
 }
