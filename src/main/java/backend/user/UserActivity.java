@@ -21,7 +21,7 @@ public class UserActivity {
     private String componentId;
 
     public UserActivity(User user, String action, String componentId) {
-        this.id = user.getId() + "-" + componentId;
+        this.id = user.getId() + "-" + componentId + "-" + action;
         this.user = user;
         this.action = action;
         this.componentId = componentId;

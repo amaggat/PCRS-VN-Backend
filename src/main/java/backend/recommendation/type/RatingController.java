@@ -68,36 +68,24 @@ public class RatingController {
         this.userActivityRepository = userActivityRepository;
     }
 
-    @GetMapping("/api/rating/{CpuID}")
-    public Optional<HddRating> findById(@PathVariable("CpuID") String id, @CookieValue(value = "username", required = false) String username) {
-        return hddRatingRepository.findById(id);
-    }
-
     @PostMapping("/user/rating/cpu")
     public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating, @CookieValue(value = "username", required = false) String username) {
         cpuRatingRepository.save(cpuRating);
-
-
         updateLog(username, cpuRating.getCentralProcessor(), cpuRating.getRating() + " star");
-
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
     @PostMapping("/user/rating/ssd")
     public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating, @CookieValue(value = "username", required = false) String username) {
         ssdRatingRepository.save(ssdRating);
-
         updateLog(username, ssdRating.getSsd(), ssdRating.getRating() + " star");
-
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
     @PostMapping("/user/rating/gpu")
     public ResponseEntity<?> rating(@RequestBody GpuRating gpuRating, @CookieValue(value = "username", required = false) String username) {
         gpuRatingRepository.save(gpuRating);
-
         updateLog(username, gpuRating.getGraphicProcessor(), gpuRating.getRating() + " star");
-
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
