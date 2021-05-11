@@ -115,13 +115,14 @@ public class RatingController {
     @PostMapping("/user/rating/hdd")
     public ResponseEntity<?> rating(@RequestBody HddRating hddRating, @CookieValue(value = "username", required = false) String username) {
         hddRatingRepository.save(hddRating);
-
+        updateLog(username, hddRating.getHdd(), hddRating.getRating() + " star");
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 
     @PostMapping("/user/rating/psu")
     public ResponseEntity<?> rating(@RequestBody PsuRating psuRating, @CookieValue(value = "username", required = false) String username) {
         psuRatingRepository.save(psuRating);
+        updateLog(username, psuRating.getPsu(), psuRating.getRating() + " star");
         return ResponseEntity.ok(new AuthenticationResponse("Rated"));
     }
 

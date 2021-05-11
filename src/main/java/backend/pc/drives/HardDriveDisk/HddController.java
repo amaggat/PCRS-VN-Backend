@@ -1,9 +1,7 @@
 package backend.pc.drives.HardDriveDisk;
 
 
-import backend.pc.cpu.CpuController;
-import backend.pc.drives.SolidStateDrive.SolidStateDrive;
-import backend.security.model.AuthenticationResponse;
+import backend.recommendation.type.repository.HddRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;
@@ -31,11 +29,13 @@ public class HddController {
     private final UserActivityRepository userActivityRepository;
     private final UserRepository userRepository;
     private final HddRepository hddRepository;
+    private final HddRatingRepository hddRatingRepository;
 
-    public HddController(UserActivityRepository userActivityRepository, UserRepository userRepository, HddRepository hddRepository) {
+    public HddController(UserActivityRepository userActivityRepository, UserRepository userRepository, HddRepository hddRepository, HddRatingRepository hddRatingRepository) {
         this.userActivityRepository = userActivityRepository;
         this.userRepository = userRepository;
         this.hddRepository = hddRepository;
+        this.hddRatingRepository = hddRatingRepository;
     }
 
     @GetMapping("/api/hdd")
@@ -66,20 +66,21 @@ public class HddController {
 
     @GetMapping("/api/hdd/{id}")
     public HardDiskDrive SearchByID(@PathVariable("id") String id, @CookieValue(value = "username", required = false) String username) {
-        HardDiskDrive ssd = hddRepository.findByID(id);
+        HardDiskDrive hdd = hddRepository.findByID(id);
 
         try {
             User user = userRepository.findUserByUsername(username);
             if(user != null) {
-                userActivityRepository.save(new UserActivity(user, "view", ssd.getId()));
+                userActivityRepository.save(new UserActivity(user, "view", hdd.getId()));
                 hddRepository.update(id);
             }
+            hdd.setHddRating(hddRatingRepository.findById(user.getId() + "-" + id));
             logger.log(ClientLevel.CLIENT, "Success");
-            return ssd;
+            return hdd;
 
         } catch (Exception e) {
             logger.log(ClientLevel.CLIENT, "Unsuccess");
-            return ssd;
+            return hdd;
         }
     }
 

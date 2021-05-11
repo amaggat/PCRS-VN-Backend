@@ -10,6 +10,7 @@ import backend.util.Utility;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(name = "mainboard")
@@ -39,6 +40,17 @@ public class Mainboard extends ElectronicComponents {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "mainboard", fetch = FetchType.LAZY)
     private List<MainboardRating> mainboardRatingList;
+
+    @Transient
+    private Optional<MainboardRating> mainboardRating;
+
+    public Optional<MainboardRating> getMainboardRating() {
+        return mainboardRating;
+    }
+
+    public void setMainboardRating(Optional<MainboardRating> mainboardRating) {
+        this.mainboardRating = mainboardRating;
+    }
 
     public String getFormfactor() {
         return this.formfactor;

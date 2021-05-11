@@ -10,6 +10,7 @@ import backend.util.Utility;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
+import java.util.Optional;
 
 
 @Entity
@@ -32,6 +33,17 @@ public class Ram extends ElectronicComponents {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "ram")
     private List<RamRating> ramRatingList;
+
+    @Transient
+    private Optional<RamRating> ramRating;
+
+    public Optional<RamRating> getRamRating() {
+        return ramRating;
+    }
+
+    public void setRamRating(Optional<RamRating> ramRating) {
+        this.ramRating = ramRating;
+    }
 
     public Integer getClockSpeed() {
         return clockSpeed;

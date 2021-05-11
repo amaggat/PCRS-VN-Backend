@@ -7,8 +7,10 @@ import backend.recommendation.type.rating.HddRating;
 import backend.recommendation.type.rating.SsdRating;
 
 import javax.persistence.*;
+import javax.swing.text.html.Option;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(name = "hdd")
@@ -17,6 +19,9 @@ public class HardDiskDrive extends ElectronicComponents {
     @Column(name = "storage")
     @NotEmpty
     private String storage;
+
+    @Transient
+    Optional<HddRating> hddRating;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "hdd")
     private List<PcProfile> pcProfile;
@@ -57,6 +62,14 @@ public class HardDiskDrive extends ElectronicComponents {
             return (avg/this.hddRatingList.size());
         }
 
+    }
+
+    public Optional<HddRating> getHddRating() {
+        return hddRating;
+    }
+
+    public void setHddRating(Optional<HddRating> hddRating) {
+        this.hddRating = hddRating;
     }
 
     @Override

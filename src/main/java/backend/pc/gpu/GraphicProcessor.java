@@ -10,6 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
+import java.util.Optional;
 
 
 @Entity
@@ -29,6 +30,9 @@ public class GraphicProcessor extends ElectronicComponents {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "graphicProcessor", fetch = FetchType.LAZY)
     private List<GpuRating> gpuRatingList;
+
+    @Transient
+    Optional<GpuRating> gpuRating;
 
     public List<GpuRating> getGpuRatingList() {
         return gpuRatingList;
@@ -60,6 +64,14 @@ public class GraphicProcessor extends ElectronicComponents {
 
     public void setPcProfileList(List<PcProfile> pcProfile) {
         this.pcProfileList = pcProfile;
+    }
+
+    public Optional<GpuRating> getGpuRating() {
+        return gpuRating;
+    }
+
+    public void setGpuRating(Optional<GpuRating> gpuRating) {
+        this.gpuRating = gpuRating;
     }
 
     @Override

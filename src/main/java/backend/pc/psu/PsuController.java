@@ -1,8 +1,7 @@
 package backend.pc.psu;
 
 
-import backend.pc.cpu.CpuController;
-import backend.security.model.AuthenticationResponse;
+import backend.recommendation.type.repository.PsuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;
@@ -31,11 +30,13 @@ public class PsuController {
     private final UserActivityRepository userActivityRepository;
     private final UserRepository userRepository;
     private final PsuRepository psuRepository;
+    private final PsuRatingRepository psuRatingRepository;
 
-    public PsuController(UserActivityRepository userActivityRepository, UserRepository userRepository, PsuRepository psuRepository) {
+    public PsuController(UserActivityRepository userActivityRepository, UserRepository userRepository, PsuRepository psuRepository, PsuRatingRepository psuRatingRepository) {
         this.userActivityRepository = userActivityRepository;
         this.userRepository = userRepository;
         this.psuRepository = psuRepository;
+        this.psuRatingRepository = psuRatingRepository;
     }
 
     @GetMapping("/api/psu")
@@ -74,6 +75,7 @@ public class PsuController {
                 userActivityRepository.save(new UserActivity(user, "view", psu.getId()));
                 psuRepository.update(id);
             }
+            psu.setPsuRating(psuRatingRepository.findById(user.getId() + "-" + id));
             logger.log(ClientLevel.CLIENT, "Success");
             return psu;
 

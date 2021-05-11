@@ -1,8 +1,6 @@
 package backend.pc.drives.SolidStateDrive;
 
-import backend.pc.cpu.CpuController;
-import backend.pc.ram.Ram;
-import backend.security.model.AuthenticationResponse;
+import backend.recommendation.type.repository.SsdRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;
@@ -31,11 +29,13 @@ public class SsdController {
     private final UserActivityRepository userActivityRepository;
     private final UserRepository userRepository;
     private final SsdRepository ssdRepository;
+    private final SsdRatingRepository ssdRatingRepository;
 
-    public SsdController(UserActivityRepository userActivityRepository, UserRepository userRepository, SsdRepository ssdRepository) {
+    public SsdController(UserActivityRepository userActivityRepository, UserRepository userRepository, SsdRepository ssdRepository, SsdRatingRepository ssdRatingRepository) {
         this.userActivityRepository = userActivityRepository;
         this.userRepository = userRepository;
         this.ssdRepository = ssdRepository;
+        this.ssdRatingRepository = ssdRatingRepository;
     }
 
     @GetMapping("/api/ssd")
@@ -74,6 +74,7 @@ public class SsdController {
                 userActivityRepository.save(new UserActivity(user, "view", ssd.getId()));
                 ssdRepository.update(id);
             }
+            ssd.setSsdRating(ssdRatingRepository.findById(user.getId() + "-" + id));
             logger.log(ClientLevel.CLIENT, "Success");
             return ssd;
 

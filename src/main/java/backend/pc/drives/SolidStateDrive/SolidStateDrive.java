@@ -8,8 +8,10 @@ import backend.recommendation.type.rating.HddRating;
 import backend.recommendation.type.rating.SsdRating;
 
 import javax.persistence.*;
+import javax.swing.text.html.Option;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
+import java.util.Optional;
 
 
 @Entity
@@ -28,6 +30,9 @@ public class SolidStateDrive extends ElectronicComponents {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "ssd", fetch = FetchType.LAZY)
     private List<SsdRating> ssdRatingList;
+
+    @Transient
+    private Optional<SsdRating> ssdRating;
 
     public String getStorage() {
         return storage;
@@ -64,5 +69,13 @@ public class SolidStateDrive extends ElectronicComponents {
     @Override
     public Integer getNumberOfRating(){
         return this.ssdRatingList.size();
+    }
+
+    public Optional<SsdRating> getSsdRating() {
+        return ssdRating;
+    }
+
+    public void setSsdRating(Optional<SsdRating> ssdRating) {
+        this.ssdRating = ssdRating;
     }
 }

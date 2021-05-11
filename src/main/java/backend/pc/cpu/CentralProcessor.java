@@ -14,8 +14,10 @@ import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
+import java.util.Optional;
 
 
 @Entity
@@ -42,6 +44,9 @@ public class CentralProcessor extends ElectronicComponents {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "centralProcessor")
     private List<CpuRating> cpuRatingList;
+
+    @Transient
+    private Optional<CpuRating> cpuRating;
 
     @Override
     public Double getAverageRating(){
@@ -110,5 +115,13 @@ public class CentralProcessor extends ElectronicComponents {
 
     public void setCpuRatingList(List<CpuRating> cpuRatingList) {
         this.cpuRatingList = cpuRatingList;
+    }
+
+    public  Optional<CpuRating> getCpuRating() {
+        return cpuRating;
+    }
+
+    public void setCpuRating( Optional<CpuRating> cpuRating) {
+        this.cpuRating = cpuRating;
     }
 }

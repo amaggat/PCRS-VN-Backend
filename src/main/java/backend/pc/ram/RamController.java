@@ -1,9 +1,7 @@
 package backend.pc.ram;
 
 
-import backend.pc.cpu.CpuController;
-import backend.pc.psu.PowerSupplyUnit;
-import backend.security.model.AuthenticationResponse;
+import backend.recommendation.type.repository.RamRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;
@@ -32,11 +30,13 @@ public class RamController {
     private final UserActivityRepository userActivityRepository;
     private final UserRepository userRepository;
     private final RamRepository ramRepository;
+    private final RamRatingRepository ramRatingRepository;
 
-    public RamController(UserActivityRepository userActivityRepository, UserRepository userRepository, RamRepository ramRepository) {
+    public RamController(UserActivityRepository userActivityRepository, UserRepository userRepository, RamRepository ramRepository, RamRatingRepository ramRatingRepository) {
         this.userActivityRepository = userActivityRepository;
         this.userRepository = userRepository;
         this.ramRepository = ramRepository;
+        this.ramRatingRepository = ramRatingRepository;
     }
 
     @GetMapping("/api/ram")
@@ -80,6 +80,7 @@ public class RamController {
                 userActivityRepository.save(new UserActivity(user, "view", ram.getId()));
                 ramRepository.update(id);
             }
+            ram.setRamRating(ramRatingRepository.findById(user.getId() + "-" + id));
             logger.log(ClientLevel.CLIENT, "Success");
             return ram;
 

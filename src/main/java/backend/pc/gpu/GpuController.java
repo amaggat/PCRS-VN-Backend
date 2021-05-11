@@ -1,8 +1,6 @@
 package backend.pc.gpu;
 
-import backend.pc.cpu.CpuController;
-import backend.security.model.AuthenticationRequest;
-import backend.security.model.AuthenticationResponse;
+import backend.recommendation.type.repository.GpuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;
@@ -30,13 +28,14 @@ public class GpuController {
     private JwtUtils jwtUtil;
     private final UserActivityRepository userActivityRepository;
     private final UserRepository userRepository;
-
     private final GpuRepository gpuRepository;
+    private final GpuRatingRepository gpuRatingRepository;
 
-    public GpuController(UserActivityRepository userActivityRepository, UserRepository userRepository, GpuRepository gpuRepository) {
+    public GpuController(UserActivityRepository userActivityRepository, UserRepository userRepository, GpuRepository gpuRepository, GpuRatingRepository gpuRatingRepository) {
         this.userActivityRepository = userActivityRepository;
         this.userRepository = userRepository;
         this.gpuRepository = gpuRepository;
+        this.gpuRatingRepository = gpuRatingRepository;
     }
 
     @GetMapping("/api/gpu")
@@ -75,6 +74,7 @@ public class GpuController {
                 userActivityRepository.save(new UserActivity(user, "view", gpu.getId()));
                 gpuRepository.update(id);
             }
+            gpu.setGpuRating(gpuRatingRepository.findById(user.getId() + "-" + id));
             logger.log(ClientLevel.CLIENT, "Success");
             return gpu;
 

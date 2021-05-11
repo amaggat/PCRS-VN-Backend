@@ -9,6 +9,7 @@ import backend.util.Utility;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
+import java.util.Optional;
 
 
 @Entity
@@ -31,6 +32,17 @@ public class PowerSupplyUnit extends ElectronicComponents {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "psu")
     private List<PsuRating> psuRatingList;
+
+    @Transient
+    Optional<PsuRating> psuRating;
+
+    public Optional<PsuRating> getPsuRating() {
+        return psuRating;
+    }
+
+    public void setPsuRating(Optional<PsuRating> psuRating) {
+        this.psuRating = psuRating;
+    }
 
     public List<PsuPriceList> getPriceList() {
         return PriceList;

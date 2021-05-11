@@ -1,7 +1,8 @@
 package backend.pc.cpu;
 
 
-import backend.security.model.AuthenticationResponse;
+import backend.recommendation.type.rating.CpuRating;
+import backend.recommendation.type.repository.CpuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.*;
 import backend.util.ClientLevel;
@@ -15,6 +16,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Objects;
+import java.util.Optional;
 import javax.persistence.criteria.Predicate;
 
 @RestController
@@ -26,13 +28,15 @@ public class CpuController {
     private JwtUtils jwtUtil;
     private final UserActivityRepository userActivityRepository;
     private final UserRepository userRepository;
+    private final CpuRatingRepository cpuRatingRepository;
 
     private final CpuRepository cpuRepository;
 
-    public CpuController(CpuRepository cpuRepository, UserActivityRepository userActivityRepository, UserRepository userRepository) {
+    public CpuController(CpuRepository cpuRepository, UserActivityRepository userActivityRepository, UserRepository userRepository, CpuRatingRepository cpuRatingRepository) {
         this.cpuRepository = cpuRepository;
         this.userActivityRepository = userActivityRepository;
         this.userRepository = userRepository;
+        this.cpuRatingRepository = cpuRatingRepository;
     }
 
     @GetMapping("/api/cpu")
@@ -71,12 +75,12 @@ public class CpuController {
         CentralProcessor cpu = cpuRepository.findByID(id);
         try {
             User user = userRepository.findUserByUsername(username);
-
             if(user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", cpu.getId()));
                 cpuRepository.update(id);
             }
 
+            cpu.setCpuRating(cpuRatingRepository.findById(user.getId() + "-" + id));
             logger.log(ClientLevel.CLIENT, "Success");
             return cpu;
 
@@ -84,7 +88,5 @@ public class CpuController {
             logger.log(ClientLevel.CLIENT, "Unsuccess");
             return cpu;
         }
-
     }
-
 }

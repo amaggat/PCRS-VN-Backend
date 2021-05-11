@@ -1,8 +1,6 @@
 package backend.pc.mainboard;
 
-import backend.pc.cpu.CentralProcessor;
-import backend.pc.cpu.CpuController;
-import backend.security.model.AuthenticationResponse;
+import backend.recommendation.type.repository.MainRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;
@@ -30,13 +28,14 @@ public class MainController {
     private JwtUtils jwtUtil;
     private final UserActivityRepository userActivityRepository;
     private final UserRepository userRepository;
-
     private final MainRepository mainRepository;
+    private final MainRatingRepository mainRatingRepository;
 
-    public MainController(UserActivityRepository userActivityRepository, UserRepository userRepository, MainRepository mainRepository) {
+    public MainController(UserActivityRepository userActivityRepository, UserRepository userRepository, MainRepository mainRepository, MainRatingRepository mainRatingRepository) {
         this.userActivityRepository = userActivityRepository;
         this.userRepository = userRepository;
         this.mainRepository = mainRepository;
+        this.mainRatingRepository = mainRatingRepository;
     }
 
     @GetMapping("/api/mainboard")
@@ -87,7 +86,7 @@ public class MainController {
                 userActivityRepository.save(new UserActivity(user, "view", mainboard.getId()));
                 mainRepository.update(id);
             }
-
+            mainboard.setMainboardRating(mainRatingRepository.findById(user.getId() + "-" + id));
             logger.log(ClientLevel.CLIENT, "Success");
             return mainboard;
 
