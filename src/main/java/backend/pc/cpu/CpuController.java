@@ -67,10 +67,9 @@ public class CpuController {
     }
 
     @GetMapping("/api/cpu/{CpuID}")
-    public CentralProcessor SearchById(@PathVariable("CpuID") String id, @RequestBody AuthenticationResponse jwt) {
+    public CentralProcessor SearchById(@PathVariable("CpuID") String id, @CookieValue(value = "username", required = false) String username) {
         CentralProcessor cpu = cpuRepository.findByID(id);
         try {
-            String username = jwtUtil.extractUsername(jwt.getJwt());
             User user = userRepository.findUserByUsername(username);
 
             if(user != null) {

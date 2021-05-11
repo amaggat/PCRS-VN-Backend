@@ -78,10 +78,9 @@ public class MainController {
     }
 
     @GetMapping("/api/mainboard/{id}")
-    public Mainboard SearchByID(@PathVariable("id") String id, @RequestBody AuthenticationResponse jwt) {
+    public Mainboard SearchByID(@PathVariable("id") String id, @CookieValue(value = "username", required = false) String username) {
         Mainboard mainboard = mainRepository.findByID(id);
         try {
-            String username = jwtUtil.extractUsername(jwt.getJwt());
             User user = userRepository.findUserByUsername(username);
 
             if(user != null) {

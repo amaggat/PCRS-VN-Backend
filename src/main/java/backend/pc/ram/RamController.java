@@ -71,11 +71,10 @@ public class RamController {
     }
 
     @GetMapping("/api/ram/{RamID}")
-    public Ram SearchByID(@PathVariable("RamID") String id, @RequestBody AuthenticationResponse jwt) {
+    public Ram SearchByID(@PathVariable("RamID") String id, @CookieValue(value = "username", required = false) String username) {
         Ram ram = ramRepository.findByID(id);
 
         try {
-            String username = jwtUtil.extractUsername(jwt.getJwt());
             User user = userRepository.findUserByUsername(username);
             if(user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", ram.getId()));

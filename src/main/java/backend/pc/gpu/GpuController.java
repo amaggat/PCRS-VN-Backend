@@ -66,11 +66,10 @@ public class GpuController {
     }
 
     @GetMapping("/api/gpu/{id}")
-    public GraphicProcessor SearchById(@PathVariable("id") String id, @RequestBody AuthenticationResponse jwt) {
+    public GraphicProcessor SearchById(@PathVariable("id") String id, @CookieValue(value = "username", required = false) String username) {
         GraphicProcessor gpu = gpuRepository.findByID(id);
 
         try {
-            String username = jwtUtil.extractUsername(jwt.getJwt());
             User user = userRepository.findUserByUsername(username);
             if(user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", gpu.getId()));
