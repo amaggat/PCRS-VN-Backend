@@ -68,6 +68,13 @@ public class User extends NameEntity {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<RamRating> ramRatingList;
 
+    public User(String username, String password, String mail, String role) {
+        this.username = username;
+        this.password = password;
+        this.mail = mail;
+        this.role = role;
+    }
+
     public User() {
 
     }

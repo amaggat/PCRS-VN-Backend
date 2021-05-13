@@ -63,10 +63,15 @@ public class UserController {
     @PostMapping("/api/register")
     public ResponseEntity<?> register(@RequestBody User user) throws Exception {
         if(userRepository.findUserByUsername(user.getUsername()) != null) {
-            return ResponseEntity.ok(new AuthenticationResponse("Already use"));
+            return ResponseEntity.ok(new AuthenticationResponse("Username is already used!"));
         }
-        userRepository.save(user);
-        return ResponseEntity.ok(new AuthenticationResponse("Registered", user.getUsername()));
+        user.setRole("user");
+        try{
+            userRepository.save(user);
+            return ResponseEntity.ok(new AuthenticationResponse("Registered", user.getUsername()));
+        } catch (Exception e) {
+            return ResponseEntity.ok(new AuthenticationResponse("Mail is already use!"));
+        }
     }
 
     @GetMapping("/api/user/{UserID}")
