@@ -44,6 +44,7 @@ public class PsuController {
                                       @RequestParam(name = "chipset", required = false) String chipset,
                                       @RequestParam(name = "manufacturer", required = false) String manufacturer,
                                       @RequestParam(name = "standard_80", required = false) String standard_80,
+                                      @RequestParam(name = "power", required = false) Integer power,
                                       Pageable pageable) {
         Page<PowerSupplyUnit> psu = psuRepository.findAll((Specification<PowerSupplyUnit>) (root, cq, cb) -> {
             Predicate p = cb.conjunction();
@@ -55,6 +56,9 @@ public class PsuController {
             }
             if (Objects.nonNull(standard_80)) {
                 p = cb.and(p, cb.like(root.get("standard_80"), "%" + standard_80 + "%"));
+            }
+            if (Objects.nonNull(power)) {
+                p = cb.and(p, cb.equal(root.get("power"), power));
             }
             if (!StringUtils.isEmpty(name)) {
                 p = cb.and(p, cb.like(root.get("fullname"), "%" + name + "%"));
