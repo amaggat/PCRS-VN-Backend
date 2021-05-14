@@ -103,7 +103,7 @@ public class Retailer extends NameEntity {
         this.avgRetailerRating = avgRetailerRating;
     }
 
-    public Double setAvgRetailerRating() {
+    public Double getAvgRetailerRating() {
         if(retailerRatingList.isEmpty()) {
             return null;
         }

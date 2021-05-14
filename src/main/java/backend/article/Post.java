@@ -52,7 +52,6 @@ public class Post extends NameEntity {
             joinColumns = @JoinColumn(name = "PostID"),
             inverseJoinColumns = @JoinColumn(name = "PcID")
     )
-
     private PcProfile pcProfile;
 
     public PcProfile getPcProfile() {
