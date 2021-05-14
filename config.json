@@ -1,13 +1,14 @@
 {
-  "engineId": "pcrs",
+  "engineId": "pcrs_change",
   "engineFactory": "com.actionml.engines.ur.UREngine",
   "sparkConf": {
+    "master":"local",
     "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
     "spark.kryo.registrator": "org.apache.mahout.sparkbindings.io.MahoutKryoRegistrator",
     "spark.kryo.referenceTracking": "false",
     "spark.kryoserializer.buffer": "300m",
-    "spark.executor.memory": "<3g>",
-    "spark.driver.memory": "<3g>",
+    "spark.executor.memory": "3g",
+    "spark.driver.memory": "3g",
     "spark.es.index.auto.create": "true",
     "spark.es.nodes": "elasticsearch",
     "spark.es.nodes.wan.only": "true"
@@ -15,23 +16,32 @@
   "algorithm":{
     "indicators": [
       {
-        "name": "<view>"
+        "name": "view"
       },
       {
-        "name": "<rate 1 star>"
+        "name": "favorite"
       },
       {
-        "name": "<rate 2 star>"
+        "name": "add to collection"
       },
       {
-        "name": "<rate 3 star>"
+        "name": "rate 4 star"
       },
       {
-        "name": "<rate 4 star>"
+        "name": "rate 5 star"
       },
       {
-        "name": "<rate 5 star>"
+        "name": "rate 3 star"
+      },
+      {
+        "name": "rate 2 star"
+      },
+      {
+        "name": "rate 1 star"
       }
     ]
-  }
+  },
+  "blacklistIndicators": [
+    
+  ]
 }
