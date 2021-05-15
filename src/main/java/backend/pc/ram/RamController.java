@@ -1,6 +1,7 @@
 package backend.pc.ram;
 
 
+import backend.pc.psu.PowerSupplyUnit;
 import backend.recommendation.type.repository.RamRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -8,16 +9,22 @@ import backend.user.UserActivity;
 import backend.user.UserActivityRepository;
 import backend.user.UserRepository;
 import backend.util.ClientLevel;
+import backend.util.Recommender;
+import backend.util.Result;
+import backend.util.Utility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.Predicate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @RestController
@@ -77,6 +84,7 @@ public class RamController {
             User user = userRepository.findUserByUsername(username);
             if(user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", ram.getId()));
+                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), ram.getId());
                 ramRepository.update(id);
             }
             ram.setRamRating(ramRatingRepository.findById(user.getId() + "-" + id));
@@ -86,6 +94,27 @@ public class RamController {
         } catch (Exception e) {
             logger.log(ClientLevel.CLIENT, "Unsuccess");
             return ram;
+        }
+    }
+
+    @GetMapping("/api/recommend/ram/{id}")
+    public Page<Ram> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+        Ram ram = ramRepository.findByID(id);
+        List<Ram> rams = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", ram.getId(), "ram", userId);
+            for(Recommender recommender : result.getResult()) {
+                if(recommender.getScore() > 0) {
+                    System.out.println(recommender.getItem());
+                    rams.add(ramRepository.findByID(recommender.getItem()));
+                }
+            }
+            Page<Ram> psuPage = new PageImpl<>(rams);
+            return psuPage;
+        } catch (Exception e) {
+            Page<Ram> psuPage = new PageImpl<>(rams);
+            return psuPage;
         }
     }
 }

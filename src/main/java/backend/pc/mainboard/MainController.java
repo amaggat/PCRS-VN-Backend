@@ -1,5 +1,6 @@
 package backend.pc.mainboard;
 
+import backend.pc.gpu.GraphicProcessor;
 import backend.recommendation.type.repository.MainRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -7,16 +8,22 @@ import backend.user.UserActivity;
 import backend.user.UserActivityRepository;
 import backend.user.UserRepository;
 import backend.util.ClientLevel;
+import backend.util.Recommender;
+import backend.util.Result;
+import backend.util.Utility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.Predicate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @RestController
@@ -84,6 +91,7 @@ public class MainController {
 
             if(user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", mainboard.getId()));
+                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), mainboard.getId());
                 mainRepository.update(id);
             }
             mainboard.setMainboardRating(mainRatingRepository.findById(user.getId() + "-" + id));
@@ -93,6 +101,27 @@ public class MainController {
         } catch (Exception e) {
             logger.log(ClientLevel.CLIENT, "Unsuccess");
             return mainboard;
+        }
+    }
+
+    @GetMapping("/api/recommend/mainboard/{id}")
+    public Page<Mainboard> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+        Mainboard mainboard = mainRepository.findByID(id);
+        List<Mainboard> mainboards = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", mainboard.getId(), "mainboard", userId);
+            for(Recommender recommender : result.getResult()) {
+                if(recommender.getScore() > 0) {
+                    System.out.println(recommender.getItem());
+                    mainboards.add(mainRepository.findByID(recommender.getItem()));
+                }
+            }
+            Page<Mainboard> mainboardPage = new PageImpl<>(mainboards);
+            return mainboardPage;
+        } catch (Exception e) {
+            Page<Mainboard> mainboardPage = new PageImpl<>(mainboards);
+            return mainboardPage;
         }
     }
 

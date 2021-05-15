@@ -21,6 +21,8 @@ import backend.user.User;
 import backend.user.UserActivity;
 import backend.user.UserActivityRepository;
 import backend.user.UserRepository;
+import backend.util.ClientLevel;
+import backend.util.Utility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +33,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.util.Optional;
 
 @RestController
@@ -69,64 +72,70 @@ public class RatingController {
     }
 
     @PostMapping("/user/rating/cpu")
-    public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating, @CookieValue(value = "username", required = false) String username) {
+    public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating, @CookieValue(value = "username", required = true) String username) {
         cpuRatingRepository.save(cpuRating);
-        updateLog(username, cpuRating.getCentralProcessor(), cpuRating.getRating() + " star");
+        updateLog(username, cpuRating.getCentralProcessor(), cpuRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/ssd")
-    public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating, @CookieValue(value = "username", required = false) String username) {
+    public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating, @CookieValue(value = "username", required = true) String username) {
         ssdRatingRepository.save(ssdRating);
-        updateLog(username, ssdRating.getSsd(), ssdRating.getRating() + " star");
+        updateLog(username, ssdRating.getSsd(), ssdRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/gpu")
-    public ResponseEntity<?> rating(@RequestBody GpuRating gpuRating, @CookieValue(value = "username", required = false) String username) {
+    public ResponseEntity<?> rating(@RequestBody GpuRating gpuRating, @CookieValue(value = "username", required = true) String username) {
         gpuRatingRepository.save(gpuRating);
-        updateLog(username, gpuRating.getGraphicProcessor(), gpuRating.getRating() + " star");
+        updateLog(username, gpuRating.getGraphicProcessor(), gpuRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/mainboard")
-    public ResponseEntity<?> rating(@RequestBody MainboardRating mainboardRating, @CookieValue(value = "username", required = false) String username) {
+    public ResponseEntity<?> rating(@RequestBody MainboardRating mainboardRating, @CookieValue(value = "username", required = true) String username) {
         mainRatingRepository.save(mainboardRating);
-        updateLog(username, mainboardRating.getMainboard(), mainboardRating.getRating() + " star");
+        updateLog(username, mainboardRating.getMainboard(), mainboardRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/ram")
-    public ResponseEntity<?> rating(@RequestBody RamRating ramRating, @CookieValue(value = "username", required = false) String username) {
+    public ResponseEntity<?> rating(@RequestBody RamRating ramRating, @CookieValue(value = "username", required = true) String username) {
         ramRatingRepository.save(ramRating);
-        updateLog(username, ramRating.getRam(), ramRating.getRating() + " star");
+        updateLog(username, ramRating.getRam(), ramRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/hdd")
-    public ResponseEntity<?> rating(@RequestBody HddRating hddRating, @CookieValue(value = "username", required = false) String username) {
+    public ResponseEntity<?> rating(@RequestBody HddRating hddRating, @CookieValue(value = "username", required = true) String username) {
         hddRatingRepository.save(hddRating);
-        updateLog(username, hddRating.getHdd(), hddRating.getRating() + " star");
+        updateLog(username, hddRating.getHdd(), hddRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/psu")
-    public ResponseEntity<?> rating(@RequestBody PsuRating psuRating, @CookieValue(value = "username", required = false) String username) {
+    public ResponseEntity<?> rating(@RequestBody PsuRating psuRating, @CookieValue(value = "username", required = true) String username) {
         psuRatingRepository.save(psuRating);
-        updateLog(username, psuRating.getPsu(), psuRating.getRating() + " star");
-        return ResponseEntity.ok(new AuthenticationResponse("Rated"));
+        updateLog(username, psuRating.getPsu(), psuRating.getRating());
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
     @PostMapping("/user/rating/retailer")
-    public ResponseEntity<?> rating(@RequestBody RetailerRating retailerRating, @CookieValue(value = "username", required = false) String username) {
+    public ResponseEntity<?> rating(@RequestBody RetailerRating retailerRating, @CookieValue(value = "username", required = true) String username) {
         retailerRatingRepository.save(retailerRating);
         return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
-    void updateLog(String username, String componentId, String rating) {
+    void updateLog(String username, String componentId, double rating){
         User user = userRepository.findUserByUsername(username);
         if(user != null) {
             userActivityRepository.save(new UserActivity(user, "rate " + rating, componentId));
+            try {
+                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "rate " + (int) rating  + " star", user.getId(), componentId);
+                logger.log(ClientLevel.CLIENT, "Success");
+            } catch (Exception e) {
+                logger.log(ClientLevel.CLIENT, "Unsuccess");
+            }
         }
     }
 }

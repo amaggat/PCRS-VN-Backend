@@ -1,5 +1,6 @@
 package backend.pc.gpu;
 
+import backend.pc.drives.SolidStateDrive.SolidStateDrive;
 import backend.recommendation.type.repository.GpuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -7,16 +8,22 @@ import backend.user.UserActivity;
 import backend.user.UserActivityRepository;
 import backend.user.UserRepository;
 import backend.util.ClientLevel;
+import backend.util.Recommender;
+import backend.util.Result;
+import backend.util.Utility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.Predicate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @RestController
@@ -72,6 +79,7 @@ public class GpuController {
             User user = userRepository.findUserByUsername(username);
             if(user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", gpu.getId()));
+                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), gpu.getId());
                 gpuRepository.update(id);
             }
             gpu.setGpuRating(gpuRatingRepository.findById(user.getId() + "-" + id));
@@ -81,6 +89,27 @@ public class GpuController {
         } catch (Exception e) {
             logger.log(ClientLevel.CLIENT, "Unsuccess");
             return gpu;
+        }
+    }
+
+    @GetMapping("/api/recommend/gpu/{id}")
+    public Page<GraphicProcessor> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+        GraphicProcessor gpu = gpuRepository.findByID(id);
+        List<GraphicProcessor> graphicProcessors = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", gpu.getId(), "gpu", userId);
+            for(Recommender recommender : result.getResult()) {
+                if(recommender.getScore() > 0) {
+                    System.out.println(recommender.getItem());
+                    graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
+                }
+            }
+            Page<GraphicProcessor> gpuPage = new PageImpl<>(graphicProcessors);
+            return gpuPage;
+        } catch (Exception e) {
+            Page<GraphicProcessor> gpuPage = new PageImpl<>(graphicProcessors);
+            return gpuPage;
         }
     }
 

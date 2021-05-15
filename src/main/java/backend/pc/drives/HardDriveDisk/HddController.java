@@ -1,6 +1,7 @@
 package backend.pc.drives.HardDriveDisk;
 
 
+import backend.pc.cpu.CentralProcessor;
 import backend.recommendation.type.repository.HddRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -8,16 +9,22 @@ import backend.user.UserActivity;
 import backend.user.UserActivityRepository;
 import backend.user.UserRepository;
 import backend.util.ClientLevel;
+import backend.util.Recommender;
+import backend.util.Result;
+import backend.util.Utility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.Predicate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @RestController
@@ -72,6 +79,7 @@ public class HddController {
             User user = userRepository.findUserByUsername(username);
             if(user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", hdd.getId()));
+                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), hdd.getId());
                 hddRepository.update(id);
             }
             hdd.setHddRating(hddRatingRepository.findById(user.getId() + "-" + id));
@@ -84,4 +92,24 @@ public class HddController {
         }
     }
 
+    @GetMapping("/api/recommend/hdd/{id}")
+    public Page<HardDiskDrive> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+        HardDiskDrive hdd = hddRepository.findByID(id);
+        List<HardDiskDrive> hardDiskDrives = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", hdd.getId(), "hdd", userId);
+            for(Recommender recommender : result.getResult()) {
+                if(recommender.getScore() > 0) {
+                    System.out.println(recommender.getItem());
+                    hardDiskDrives.add(hddRepository.findByID(recommender.getItem()));
+                }
+            }
+            Page<HardDiskDrive> hddPage = new PageImpl<>(hardDiskDrives);
+            return hddPage;
+        } catch (Exception e) {
+            Page<HardDiskDrive> hddPage = new PageImpl<>(hardDiskDrives);
+            return hddPage;
+        }
+    }
 }

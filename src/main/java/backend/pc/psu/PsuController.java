@@ -1,6 +1,7 @@
 package backend.pc.psu;
 
 
+import backend.pc.mainboard.Mainboard;
 import backend.recommendation.type.repository.PsuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -8,16 +9,22 @@ import backend.user.UserActivity;
 import backend.user.UserActivityRepository;
 import backend.user.UserRepository;
 import backend.util.ClientLevel;
+import backend.util.Recommender;
+import backend.util.Result;
+import backend.util.Utility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.Predicate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @RestController
@@ -77,6 +84,7 @@ public class PsuController {
             User user = userRepository.findUserByUsername(username);
             if(user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", psu.getId()));
+                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), psu.getId());
                 psuRepository.update(id);
             }
             psu.setPsuRating(psuRatingRepository.findById(user.getId() + "-" + id));
@@ -86,6 +94,27 @@ public class PsuController {
         } catch (Exception e) {
             logger.log(ClientLevel.CLIENT, "Unsuccess");
             return psu;
+        }
+    }
+
+    @GetMapping("/api/recommend/psu/{id}")
+    public Page<PowerSupplyUnit> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+        PowerSupplyUnit psu = psuRepository.findByID(id);
+        List<PowerSupplyUnit> powerSupplyUnits = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", psu.getId(), "psu", userId);
+            for(Recommender recommender : result.getResult()) {
+                if(recommender.getScore() > 0) {
+                    System.out.println(recommender.getItem());
+                    powerSupplyUnits.add(psuRepository.findByID(recommender.getItem()));
+                }
+            }
+            Page<PowerSupplyUnit> psuPage = new PageImpl<>(powerSupplyUnits);
+            return psuPage;
+        } catch (Exception e) {
+            Page<PowerSupplyUnit> psuPage = new PageImpl<>(powerSupplyUnits);
+            return psuPage;
         }
     }
 

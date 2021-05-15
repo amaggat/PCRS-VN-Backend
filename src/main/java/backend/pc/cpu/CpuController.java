@@ -6,15 +6,21 @@ import backend.recommendation.type.repository.CpuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.*;
 import backend.util.ClientLevel;
+import backend.util.Recommender;
+import backend.util.Result;
+import backend.util.Utility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.persistence.criteria.Predicate;
@@ -77,6 +83,7 @@ public class CpuController {
             User user = userRepository.findUserByUsername(username);
             if(user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", cpu.getId()));
+                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), cpu.getId());
                 cpuRepository.update(id);
             }
 
@@ -87,6 +94,27 @@ public class CpuController {
         } catch (Exception e) {
             logger.log(ClientLevel.CLIENT, "Unsuccess");
             return cpu;
+        }
+    }
+
+    @GetMapping("/api/recommend/cpu/{id}")
+    public Page<CentralProcessor> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+        CentralProcessor cpu = cpuRepository.findByID(id);
+        List<CentralProcessor> centralProcessors = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", cpu.getId(), "cpu", userId);
+            for(Recommender recommender : result.getResult()) {
+                if(recommender.getScore() > 0) {
+                    System.out.println(recommender.getItem());
+                    centralProcessors.add(cpuRepository.findByID(recommender.getItem()));
+                }
+            }
+            Page<CentralProcessor> cpuPage = new PageImpl<>(centralProcessors);
+            return cpuPage;
+        } catch (Exception e) {
+            Page<CentralProcessor> cpuPage = new PageImpl<>(centralProcessors);
+            return cpuPage;
         }
     }
 }
