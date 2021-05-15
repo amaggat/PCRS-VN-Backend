@@ -76,6 +76,23 @@ public class CpuController {
         return cpu;
     }
 
+    @GetMapping("/api/recommend/cpu")
+    public Page<CentralProcessor> recommendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+        List<CentralProcessor> centralProcessors = new ArrayList<>();
+        try {
+            Result result = Utility.returnReccomendedItem(Utility.URL, null, "cpu", userId);
+            for(Recommender recommender : result.getResult()) {
+                System.out.println(recommender.getItem() + " " + recommender.getScore());
+                centralProcessors.add(cpuRepository.findByID(recommender.getItem()));
+            }
+            Page<CentralProcessor> cpuPage = new PageImpl<>(centralProcessors);
+            return cpuPage;
+        } catch (Exception e) {
+            Page<CentralProcessor> cpuPage = new PageImpl<>(centralProcessors);
+            return cpuPage;
+        }
+    }
+
     @GetMapping("/api/cpu/{CpuID}")
     public CentralProcessor SearchById(@PathVariable("CpuID") String id, @CookieValue(value = "username", required = false) String username) {
         CentralProcessor cpu = cpuRepository.findByID(id);
@@ -103,10 +120,10 @@ public class CpuController {
         List<CentralProcessor> centralProcessors = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", cpu.getId(), "cpu", userId);
+            Result result = Utility.returnReccomendedItem(Utility.URL, cpu.getId(), "cpu", userId);
             for(Recommender recommender : result.getResult()) {
                 if(recommender.getScore() > 0) {
-                    System.out.println(recommender.getItem());
+                    System.out.println(recommender.getItem() + " " + recommender.getScore());
                     centralProcessors.add(cpuRepository.findByID(recommender.getItem()));
                 }
             }

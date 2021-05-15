@@ -1,5 +1,6 @@
 package backend.pc.drives.SolidStateDrive;
 
+import backend.pc.cpu.CentralProcessor;
 import backend.pc.drives.HardDriveDisk.HardDiskDrive;
 import backend.recommendation.type.repository.SsdRatingRepository;
 import backend.security.utils.JwtUtils;
@@ -92,13 +93,31 @@ public class SsdController {
         }
     }
 
+    @GetMapping("/api/recommend/ssd")
+    public Page<SolidStateDrive> recommendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+        List<SolidStateDrive> solidStateDrives = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem(Utility.URL, null, "ssd", userId);
+            for(Recommender recommender : result.getResult()) {
+                System.out.println(recommender.getItem() + " " + recommender.getScore());
+                solidStateDrives.add(ssdRepository.findByID(recommender.getItem()));
+            }
+            Page<SolidStateDrive> ssdPage = new PageImpl<>(solidStateDrives);
+            return ssdPage;
+        } catch (Exception e) {
+            Page<SolidStateDrive> ssdPage = new PageImpl<>(solidStateDrives);
+            return ssdPage;
+        }
+    }
+
     @GetMapping("/api/recommend/ssd/{id}")
     public Page<SolidStateDrive> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
         SolidStateDrive ssd = ssdRepository.findByID(id);
         List<SolidStateDrive> solidStateDrives = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", ssd.getId(), "ssd", userId);
+            Result result = Utility.returnReccomendedItem(Utility.URL, ssd.getId(), "ssd", userId);
             for(Recommender recommender : result.getResult()) {
                 if(recommender.getScore() > 0) {
                     System.out.println(recommender.getItem());

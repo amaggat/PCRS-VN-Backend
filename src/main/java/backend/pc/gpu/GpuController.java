@@ -1,5 +1,6 @@
 package backend.pc.gpu;
 
+import backend.pc.cpu.CentralProcessor;
 import backend.pc.drives.SolidStateDrive.SolidStateDrive;
 import backend.recommendation.type.repository.GpuRatingRepository;
 import backend.security.utils.JwtUtils;
@@ -92,16 +93,34 @@ public class GpuController {
         }
     }
 
+    @GetMapping("/api/recommend/gpu")
+    public Page<GraphicProcessor> recommendFront(@CookieValue(value = "userid", required = false) Integer userId){
+        List<GraphicProcessor> graphicProcessors = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem(Utility.URL, null, "gpu", userId);
+            for(Recommender recommender : result.getResult()) {
+                    System.out.println(recommender.getItem() + " " + recommender.getScore());
+                    graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
+            }
+            Page<GraphicProcessor> gpuPage = new PageImpl<>(graphicProcessors);
+            return gpuPage;
+        } catch (Exception e) {
+            Page<GraphicProcessor> gpuPage = new PageImpl<>(graphicProcessors);
+            return gpuPage;
+        }
+    }
+
     @GetMapping("/api/recommend/gpu/{id}")
     public Page<GraphicProcessor> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
         GraphicProcessor gpu = gpuRepository.findByID(id);
         List<GraphicProcessor> graphicProcessors = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", gpu.getId(), "gpu", userId);
+            Result result = Utility.returnReccomendedItem(Utility.URL, gpu.getId(), "gpu", userId);
             for(Recommender recommender : result.getResult()) {
                 if(recommender.getScore() > 0) {
-                    System.out.println(recommender.getItem());
+                    System.out.println(recommender.getItem() + " " + recommender.getScore());
                     graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
                 }
             }

@@ -92,16 +92,33 @@ public class HddController {
         }
     }
 
+    @GetMapping("/api/recommend/hdd")
+    public Page<HardDiskDrive> recommendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+        List<HardDiskDrive> hardDiskDrives = new ArrayList<>();
+        try {
+            Result result = Utility.returnReccomendedItem(Utility.URL, null, "hdd", userId);
+            for(Recommender recommender : result.getResult()) {
+                System.out.println(recommender.getItem() + " " + recommender.getScore());
+                hardDiskDrives.add(hddRepository.findByID(recommender.getItem()));
+            }
+            Page<HardDiskDrive> hddPage = new PageImpl<>(hardDiskDrives);
+            return hddPage;
+        } catch (Exception e) {
+            Page<HardDiskDrive> hddPage = new PageImpl<>(hardDiskDrives);
+            return hddPage;
+        }
+    }
+
     @GetMapping("/api/recommend/hdd/{id}")
     public Page<HardDiskDrive> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
         HardDiskDrive hdd = hddRepository.findByID(id);
         List<HardDiskDrive> hardDiskDrives = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", hdd.getId(), "hdd", userId);
+            Result result = Utility.returnReccomendedItem(Utility.URL, hdd.getId(), "hdd", userId);
             for(Recommender recommender : result.getResult()) {
                 if(recommender.getScore() > 0) {
-                    System.out.println(recommender.getItem());
+                    System.out.println(recommender.getItem() + " " + recommender.getScore());
                     hardDiskDrives.add(hddRepository.findByID(recommender.getItem()));
                 }
             }

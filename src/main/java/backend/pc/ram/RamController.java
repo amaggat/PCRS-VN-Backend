@@ -1,6 +1,7 @@
 package backend.pc.ram;
 
 
+import backend.pc.cpu.CentralProcessor;
 import backend.pc.psu.PowerSupplyUnit;
 import backend.recommendation.type.repository.RamRatingRepository;
 import backend.security.utils.JwtUtils;
@@ -97,16 +98,34 @@ public class RamController {
         }
     }
 
+    @GetMapping("/api/recommend/ram")
+    public Page<Ram> reccomendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+        List<Ram> rams = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem(Utility.URL, null, "ram", userId);
+            for(Recommender recommender : result.getResult()) {
+                    System.out.println(recommender.getItem() + " " + recommender.getScore());
+                    rams.add(ramRepository.findByID(recommender.getItem()));
+            }
+            Page<Ram> psuPage = new PageImpl<>(rams);
+            return psuPage;
+        } catch (Exception e) {
+            Page<Ram> psuPage = new PageImpl<>(rams);
+            return psuPage;
+        }
+    }
+
     @GetMapping("/api/recommend/ram/{id}")
     public Page<Ram> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
         Ram ram = ramRepository.findByID(id);
         List<Ram> rams = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", ram.getId(), "ram", userId);
+            Result result = Utility.returnReccomendedItem(Utility.URL, ram.getId(), "ram", userId);
             for(Recommender recommender : result.getResult()) {
                 if(recommender.getScore() > 0) {
-                    System.out.println(recommender.getItem());
+                    System.out.println(recommender.getItem() + " " + recommender.getScore());
                     rams.add(ramRepository.findByID(recommender.getItem()));
                 }
             }

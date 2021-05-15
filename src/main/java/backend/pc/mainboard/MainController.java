@@ -1,5 +1,6 @@
 package backend.pc.mainboard;
 
+import backend.pc.cpu.CentralProcessor;
 import backend.pc.gpu.GraphicProcessor;
 import backend.recommendation.type.repository.MainRatingRepository;
 import backend.security.utils.JwtUtils;
@@ -104,16 +105,34 @@ public class MainController {
         }
     }
 
+    @GetMapping("/api/recommend/mainboard")
+    public Page<Mainboard> reccomendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+        List<Mainboard> mainboards = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem(Utility.URL, null, "mainboard", userId);
+            for(Recommender recommender : result.getResult()) {
+                System.out.println(recommender.getItem() + " " + recommender.getScore());
+                mainboards.add(mainRepository.findByID(recommender.getItem()));
+            }
+            Page<Mainboard> mainboardPage = new PageImpl<>(mainboards);
+            return mainboardPage;
+        } catch (Exception e) {
+            Page<Mainboard> mainboardPage = new PageImpl<>(mainboards);
+            return mainboardPage;
+        }
+    }
+
     @GetMapping("/api/recommend/mainboard/{id}")
     public Page<Mainboard> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
         Mainboard mainboard = mainRepository.findByID(id);
         List<Mainboard> mainboards = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", mainboard.getId(), "mainboard", userId);
+            Result result = Utility.returnReccomendedItem(Utility.URL, mainboard.getId(), "mainboard", userId);
             for(Recommender recommender : result.getResult()) {
                 if(recommender.getScore() > 0) {
-                    System.out.println(recommender.getItem());
+                    System.out.println(recommender.getItem() + " " + recommender.getScore());
                     mainboards.add(mainRepository.findByID(recommender.getItem()));
                 }
             }

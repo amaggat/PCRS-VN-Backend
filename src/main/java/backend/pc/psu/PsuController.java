@@ -1,6 +1,7 @@
 package backend.pc.psu;
 
 
+import backend.pc.cpu.CentralProcessor;
 import backend.pc.mainboard.Mainboard;
 import backend.recommendation.type.repository.PsuRatingRepository;
 import backend.security.utils.JwtUtils;
@@ -97,16 +98,34 @@ public class PsuController {
         }
     }
 
+    @GetMapping("/api/recommend/psu")
+    public Page<PowerSupplyUnit> reccomendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+        List<PowerSupplyUnit> powerSupplyUnits = new ArrayList<>();
+
+        try {
+            Result result = Utility.returnReccomendedItem(Utility.URL, null, "psu", userId);
+            for(Recommender recommender : result.getResult()) {
+                System.out.println(recommender.getItem() + " " + recommender.getScore());
+                powerSupplyUnits.add(psuRepository.findByID(recommender.getItem()));
+            }
+            Page<PowerSupplyUnit> psuPage = new PageImpl<>(powerSupplyUnits);
+            return psuPage;
+        } catch (Exception e) {
+            Page<PowerSupplyUnit> psuPage = new PageImpl<>(powerSupplyUnits);
+            return psuPage;
+        }
+    }
+
     @GetMapping("/api/recommend/psu/{id}")
     public Page<PowerSupplyUnit> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
         PowerSupplyUnit psu = psuRepository.findByID(id);
         List<PowerSupplyUnit> powerSupplyUnits = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem("http://localhost:9090/engines/pcrs_change/queries","item", psu.getId(), "psu", userId);
+            Result result = Utility.returnReccomendedItem(Utility.URL, psu.getId(), "psu", userId);
             for(Recommender recommender : result.getResult()) {
                 if(recommender.getScore() > 0) {
-                    System.out.println(recommender.getItem());
+                    System.out.println(recommender.getItem() + " " + recommender.getScore());
                     powerSupplyUnits.add(psuRepository.findByID(recommender.getItem()));
                 }
             }

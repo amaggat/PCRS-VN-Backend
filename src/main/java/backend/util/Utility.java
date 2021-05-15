@@ -16,6 +16,8 @@ import java.util.List;
 
 public class Utility {
 
+    public static final String URL = "http://localhost:9090/engines/pcrs_change/queries";
+
     public static List<String> returnPcProfileID(List<PcProfile> pcProfileList) {
         List<String> profileId = new ArrayList<>();
 
@@ -36,9 +38,9 @@ public class Utility {
         return componentId;
     }
 
-    public static Result returnReccomendedItem(String linkQueries, String type, String typeValue, String value, Integer id) throws IOException {
+    public static Result returnReccomendedItem(String linkQueries, String typeValue, String value, Integer id) throws IOException {
         HttpURLConnection con = setConnection(linkQueries);
-        String jsonInputString = toJsonString(type, typeValue, value, id);
+        String jsonInputString = toJsonString(typeValue, value, id);
         System.out.println(jsonInputString);
         doPost(con, jsonInputString);
         Result result = outJsonResponse(con);
@@ -112,33 +114,32 @@ public class Utility {
         return jsonInputString;
     }
 
-    public static String toJsonString(String type, String typeValue, String value, Integer id) {
-        String jsonInputString = new String();
+    public static String toJsonString(String typeValue, String value, Integer id) {
+        String jsonType = new String();
+        String user = new String();
+        String rules = "    \"rules\": [\n" +
+                "    {\n" +
+                "      \"name\": \"category\",\n" +
+                "      \"values\": [\""+ value+ "\"],\n" +
+                "      \"bias\": -1\n" +
+                "    }\n" +
+                "  ]\n" ;
 
-        if(id != null) {
-            jsonInputString = "{\n" +
-                    "    \"" + type + "\": \""+ typeValue +"\",\n" +
-                    "    \"user\": \""+ id +"\",\n" +
-                    "    \"rules\": [\n" +
-                    "    {\n" +
-                    "      \"name\": \"category\",\n" +
-                    "      \"values\": [\""+ value+ "\"],\n" +
-                    "      \"bias\": -1\n" +
-                    "    }\n" +
-                    "  ]\n" +
-                    "}";
-        } else {
-            jsonInputString = "{\n" +
-                    "    \"" + type + "\": \""+ typeValue +"\",\n" +
-                    "    \"rules\": [\n" +
-                    "    {\n" +
-                    "      \"name\": \"category\",\n" +
-                    "      \"values\": [\""+ value+ "\"],\n" +
-                    "      \"bias\": -1\n" +
-                    "    }\n" +
-                    "  ]\n" +
-                    "}";
+        if(id!= null) {
+            user = "    \"user\": \""+ id +"\",\n";
         }
+
+        if(typeValue!= null) {
+            jsonType = "    \"item\": \""+ typeValue +"\",\n";
+        }
+
+        String jsonInputString = new String();
+        jsonInputString = "{\n" +
+                    jsonType +
+                    user +
+                    rules +
+                    "}";
+
         return jsonInputString;
     }
 }
