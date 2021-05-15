@@ -5,8 +5,6 @@ import backend.user.User;
 import javafx.util.Pair;
 
 import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -35,17 +33,16 @@ public class Rating {
         return new Pair<>(this.user.getId(), this.user.getName());
     }
 
-
-    public void setId(String id) {
-        this.id = id;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getId() {
         return id;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public double getRating() {

@@ -16,7 +16,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotEmpty;
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,24 +49,23 @@ public class CentralProcessor extends ElectronicComponents {
     private Optional<CpuRating> cpuRating;
 
     @Override
-    public Double getAverageRating(){
+    public Double getAverageRating() {
 
-        if(cpuRatingList.isEmpty()) {
+        if (cpuRatingList.isEmpty()) {
             return null;
-        }
-        else {
+        } else {
             double avg = 0.0;
-            for(CpuRating obj : this.cpuRatingList) {
+            for (CpuRating obj : this.cpuRatingList) {
                 avg += obj.getRating();
             }
-            avg = avg/this.cpuRatingList.size();
-            double average = (((int)avg)*100)/100;
+            avg = avg / this.cpuRatingList.size();
+            double average = (((int) avg) * 100) / 100;
             return average;
         }
     }
 
     @Override
-    public Integer getNumberOfRating(){
+    public Integer getNumberOfRating() {
         return this.cpuRatingList.size();
     }
 
@@ -119,11 +117,11 @@ public class CentralProcessor extends ElectronicComponents {
         this.cpuRatingList = cpuRatingList;
     }
 
-    public  Optional<CpuRating> getCpuRating() {
+    public Optional<CpuRating> getCpuRating() {
         return cpuRating;
     }
 
-    public void setCpuRating( Optional<CpuRating> cpuRating) {
+    public void setCpuRating(Optional<CpuRating> cpuRating) {
         this.cpuRating = cpuRating;
     }
 }

@@ -21,7 +21,7 @@ public class ElectronicComponents {
     @Column(name = "chipset")
     private String chipset = new String();
 
-    @Column(name= "image")
+    @Column(name = "image")
     @NotEmpty
     private String image = new String();
 
@@ -30,7 +30,7 @@ public class ElectronicComponents {
     private String fullname = new String();
 
     @ManyToOne
-    @JoinColumn(name= "categoryid")
+    @JoinColumn(name = "categoryid")
     private Category category;
 
     @Column(name = "view")

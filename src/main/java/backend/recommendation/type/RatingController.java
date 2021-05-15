@@ -27,19 +27,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
-import java.util.Optional;
-
 @RestController
 public class RatingController {
 
-    private static final Logger logger = LogManager.getLogger(RatingController.class);;
+    private static final Logger logger = LogManager.getLogger(RatingController.class);
 
     private final CpuRatingRepository cpuRatingRepository;
     private final GpuRatingRepository gpuRatingRepository;
@@ -126,10 +121,10 @@ public class RatingController {
         return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
     }
 
-    void updateLog(String username, String componentId, double rating){
+    void updateLog(String username, String componentId, double rating) {
         User user = userRepository.findUserByUsername(username);
-        if(user != null) {
-            String action = "rate " + (int) rating  + " star";
+        if (user != null) {
+            String action = "rate " + (int) rating + " star";
             userActivityRepository.save(new UserActivity(user, action, componentId));
             try {
                 Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", action, user.getId(), componentId);

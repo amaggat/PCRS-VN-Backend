@@ -3,13 +3,11 @@ package backend.pc.mainboard;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.GpuRating;
 import backend.recommendation.type.rating.MainboardRating;
 import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -110,25 +108,24 @@ public class Mainboard extends ElectronicComponents {
     }
 
     @Override
-    public Double getAverageRating(){
+    public Double getAverageRating() {
 
-        if(mainboardRatingList.isEmpty()) {
+        if (mainboardRatingList.isEmpty()) {
             return null;
-        }
-        else {
+        } else {
             double avg = 0.0;
-            for(MainboardRating obj : this.mainboardRatingList) {
+            for (MainboardRating obj : this.mainboardRatingList) {
                 avg += obj.getRating();
             }
-            avg = avg/this.mainboardRatingList.size();
-            double average = (((int)avg)*100)/100;
+            avg = avg / this.mainboardRatingList.size();
+            double average = (((int) avg) * 100) / 100;
             return average;
         }
 
     }
 
     @Override
-    public Integer getNumberOfRating(){
+    public Integer getNumberOfRating() {
         return this.mainboardRatingList.size();
     }
 }

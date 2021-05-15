@@ -1,7 +1,6 @@
 package backend.pc.cpu;
 
 
-import backend.recommendation.type.rating.CpuRating;
 import backend.recommendation.type.repository.CpuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.*;
@@ -22,7 +21,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.persistence.criteria.Predicate;
 
 @RestController
@@ -81,7 +79,7 @@ public class CpuController {
         List<CentralProcessor> centralProcessors = new ArrayList<>();
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, null, "cpu", userId);
-            for(Recommender recommender : result.getResult()) {
+            for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 centralProcessors.add(cpuRepository.findByID(recommender.getItem()));
             }
@@ -98,7 +96,7 @@ public class CpuController {
         CentralProcessor cpu = cpuRepository.findByID(id);
         try {
             User user = userRepository.findUserByUsername(username);
-            if(user != null) {
+            if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", cpu.getId()));
                 Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), cpu.getId());
                 cpuRepository.update(id);
@@ -121,8 +119,8 @@ public class CpuController {
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, cpu.getId(), "cpu", userId);
-            for(Recommender recommender : result.getResult()) {
-                if(recommender.getScore() > 0) {
+            for (Recommender recommender : result.getResult()) {
+                if (recommender.getScore() > 0) {
                     System.out.println(recommender.getItem() + " " + recommender.getScore());
                     centralProcessors.add(cpuRepository.findByID(recommender.getItem()));
                 }

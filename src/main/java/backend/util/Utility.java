@@ -55,7 +55,7 @@ public class Utility {
     }
 
     public static Result outJsonResponse(HttpURLConnection con) {
-        try(BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), "utf-8"))){
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), "utf-8"))) {
             StringBuilder response = new StringBuilder();
             String responseLine = null;
             while ((responseLine = br.readLine()) != null) {
@@ -73,9 +73,9 @@ public class Utility {
     }
 
     public static HttpURLConnection setConnection(String path) throws IOException {
-        URL url = new URL (path);
+        URL url = new URL(path);
 
-        HttpURLConnection con = (HttpURLConnection)url.openConnection();
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("POST");
 
         con.setRequestProperty("Content-Type", "application/json");
@@ -86,9 +86,8 @@ public class Utility {
     }
 
 
-
     public static void doPost(HttpURLConnection con, String jsonInputString) throws IOException {
-        try(OutputStream os = con.getOutputStream()){
+        try (OutputStream os = con.getOutputStream()) {
             byte[] input = jsonInputString.getBytes("utf-8");
             os.write(input, 0, input.length);
         } catch (IOException e) {
@@ -99,17 +98,15 @@ public class Utility {
     }
 
 
-
-
     public static String toJsonRequest(String action, Integer userid, String item) {
         String jsonInputString = "{\n" +
-                "    \"event\": \""+ action + "\",\n" +
-                "    \"entityType\": \""+ "user" + "\",\n" +
-                "    \"entityId\": \""+ userid +"\",\n" +
+                "    \"event\": \"" + action + "\",\n" +
+                "    \"entityType\": \"" + "user" + "\",\n" +
+                "    \"entityId\": \"" + userid + "\",\n" +
                 "    \"targetEntityType\": \"" + "item" + "\",\n" +
-                "    \"targetEntityId\": \""+ item + "\",\n" +
+                "    \"targetEntityId\": \"" + item + "\",\n" +
                 "    \"properties\": \" { }\",\n" +
-                "    \"eventTime\": \""+ LocalDateTime.now()+"Z" + "\"\n" +
+                "    \"eventTime\": \"" + LocalDateTime.now() + "Z" + "\"\n" +
                 "}";
         return jsonInputString;
     }
@@ -120,25 +117,25 @@ public class Utility {
         String rules = "    \"rules\": [\n" +
                 "    {\n" +
                 "      \"name\": \"category\",\n" +
-                "      \"values\": [\""+ value+ "\"],\n" +
+                "      \"values\": [\"" + value + "\"],\n" +
                 "      \"bias\": -1\n" +
                 "    }\n" +
-                "  ]\n" ;
+                "  ]\n";
 
-        if(id!= null) {
-            user = "    \"user\": \""+ id +"\",\n";
+        if (id != null) {
+            user = "    \"user\": \"" + id + "\",\n";
         }
 
-        if(typeValue!= null) {
-            jsonType = "    \"item\": \""+ typeValue +"\",\n";
+        if (typeValue != null) {
+            jsonType = "    \"item\": \"" + typeValue + "\",\n";
         }
 
         String jsonInputString = new String();
         jsonInputString = "{\n" +
-                    jsonType +
-                    user +
-                    rules +
-                    "}";
+                jsonType +
+                user +
+                rules +
+                "}";
 
         return jsonInputString;
     }

@@ -2,14 +2,10 @@ package backend.pc.drives.HardDriveDisk;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.CpuRating;
 import backend.recommendation.type.rating.HddRating;
-import backend.recommendation.type.rating.SsdRating;
 
 import javax.persistence.*;
-import javax.swing.text.html.Option;
 import javax.validation.constraints.NotEmpty;
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,18 +46,17 @@ public class HardDiskDrive extends ElectronicComponents {
     }
 
     @Override
-    public Double getAverageRating(){
+    public Double getAverageRating() {
 
-        if(hddRatingList.isEmpty()) {
+        if (hddRatingList.isEmpty()) {
             return null;
-        }
-        else {
+        } else {
             double avg = 0.0;
-            for(HddRating obj : this.hddRatingList) {
+            for (HddRating obj : this.hddRatingList) {
                 avg += obj.getRating();
             }
-            avg = avg/this.hddRatingList.size();
-            double average = (((int)avg)*100)/100;
+            avg = avg / this.hddRatingList.size();
+            double average = (((int) avg) * 100) / 100;
             return average;
         }
 
@@ -76,7 +71,7 @@ public class HardDiskDrive extends ElectronicComponents {
     }
 
     @Override
-    public Integer getNumberOfRating(){
+    public Integer getNumberOfRating() {
         return this.hddRatingList.size();
     }
 

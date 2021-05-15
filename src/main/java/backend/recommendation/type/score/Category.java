@@ -15,7 +15,7 @@ import java.util.List;
 @Table(name = "category")
 public class Category {
 
-    @Column(name= "type")
+    @Column(name = "type")
     private String type;
 
     @Column(name = "budget")
@@ -45,12 +45,12 @@ public class Category {
         this.budget = budget;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
 //    public List<CategorySimilarity> getCategorySimilarity() {

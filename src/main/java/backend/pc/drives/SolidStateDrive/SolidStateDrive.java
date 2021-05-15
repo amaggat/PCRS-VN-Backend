@@ -3,14 +3,10 @@ package backend.pc.drives.SolidStateDrive;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.GpuRating;
-import backend.recommendation.type.rating.HddRating;
 import backend.recommendation.type.rating.SsdRating;
 
 import javax.persistence.*;
-import javax.swing.text.html.Option;
 import javax.validation.constraints.NotEmpty;
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,25 +48,24 @@ public class SolidStateDrive extends ElectronicComponents {
     }
 
     @Override
-    public Double getAverageRating(){
+    public Double getAverageRating() {
 
-        if(ssdRatingList.isEmpty()) {
+        if (ssdRatingList.isEmpty()) {
             return null;
-        }
-        else {
+        } else {
             double avg = 0.0;
-            for(SsdRating obj : this.ssdRatingList) {
+            for (SsdRating obj : this.ssdRatingList) {
                 avg += obj.getRating();
             }
-            avg = avg/this.ssdRatingList.size();
-            double average = (((int)avg)*100)/100;
+            avg = avg / this.ssdRatingList.size();
+            double average = (((int) avg) * 100) / 100;
             return average;
         }
 
     }
 
     @Override
-    public Integer getNumberOfRating(){
+    public Integer getNumberOfRating() {
         return this.ssdRatingList.size();
     }
 

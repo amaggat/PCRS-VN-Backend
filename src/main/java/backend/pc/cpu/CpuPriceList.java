@@ -31,7 +31,6 @@ public class CpuPriceList {
     private int price;
 
 
-
     public int getId() {
         return Id;
     }

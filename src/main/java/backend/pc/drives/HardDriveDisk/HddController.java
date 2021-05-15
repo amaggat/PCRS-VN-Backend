@@ -1,7 +1,6 @@
 package backend.pc.drives.HardDriveDisk;
 
 
-import backend.pc.cpu.CentralProcessor;
 import backend.recommendation.type.repository.HddRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -77,7 +76,7 @@ public class HddController {
 
         try {
             User user = userRepository.findUserByUsername(username);
-            if(user != null) {
+            if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", hdd.getId()));
                 Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), hdd.getId());
                 hddRepository.update(id);
@@ -97,7 +96,7 @@ public class HddController {
         List<HardDiskDrive> hardDiskDrives = new ArrayList<>();
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, null, "hdd", userId);
-            for(Recommender recommender : result.getResult()) {
+            for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 hardDiskDrives.add(hddRepository.findByID(recommender.getItem()));
             }
@@ -116,8 +115,8 @@ public class HddController {
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, hdd.getId(), "hdd", userId);
-            for(Recommender recommender : result.getResult()) {
-                if(recommender.getScore() > 0) {
+            for (Recommender recommender : result.getResult()) {
+                if (recommender.getScore() > 0) {
                     System.out.println(recommender.getItem() + " " + recommender.getScore());
                     hardDiskDrives.add(hddRepository.findByID(recommender.getItem()));
                 }

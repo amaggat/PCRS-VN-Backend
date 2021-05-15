@@ -1,8 +1,6 @@
 package backend.pc.psu;
 
 
-import backend.pc.cpu.CentralProcessor;
-import backend.pc.mainboard.Mainboard;
 import backend.recommendation.type.repository.PsuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -83,7 +81,7 @@ public class PsuController {
 
         try {
             User user = userRepository.findUserByUsername(username);
-            if(user != null) {
+            if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", psu.getId()));
                 Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), psu.getId());
                 psuRepository.update(id);
@@ -104,7 +102,7 @@ public class PsuController {
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, null, "psu", userId);
-            for(Recommender recommender : result.getResult()) {
+            for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 powerSupplyUnits.add(psuRepository.findByID(recommender.getItem()));
             }
@@ -123,8 +121,8 @@ public class PsuController {
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, psu.getId(), "psu", userId);
-            for(Recommender recommender : result.getResult()) {
-                if(recommender.getScore() > 0) {
+            for (Recommender recommender : result.getResult()) {
+                if (recommender.getScore() > 0) {
                     System.out.println(recommender.getItem() + " " + recommender.getScore());
                     powerSupplyUnits.add(psuRepository.findByID(recommender.getItem()));
                 }

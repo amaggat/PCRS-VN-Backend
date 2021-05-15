@@ -3,13 +3,11 @@ package backend.pc.ram;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.PsuRating;
 import backend.recommendation.type.rating.RamRating;
 import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -87,25 +85,24 @@ public class Ram extends ElectronicComponents {
     }
 
     @Override
-    public Double getAverageRating(){
+    public Double getAverageRating() {
 
-        if(ramRatingList.isEmpty()) {
+        if (ramRatingList.isEmpty()) {
             return null;
-        }
-        else {
+        } else {
             double avg = 0.0;
-            for(RamRating obj : this.ramRatingList) {
+            for (RamRating obj : this.ramRatingList) {
                 avg += obj.getRating();
             }
-            avg = avg/this.ramRatingList.size();
-            double average = (((int)avg)*100)/100;
+            avg = avg / this.ramRatingList.size();
+            double average = (((int) avg) * 100) / 100;
             return average;
         }
 
     }
 
     @Override
-    public Integer getNumberOfRating(){
+    public Integer getNumberOfRating() {
         return this.ramRatingList.size();
     }
 }

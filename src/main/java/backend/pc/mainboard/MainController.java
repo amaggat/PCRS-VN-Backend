@@ -1,7 +1,5 @@
 package backend.pc.mainboard;
 
-import backend.pc.cpu.CentralProcessor;
-import backend.pc.gpu.GraphicProcessor;
 import backend.recommendation.type.repository.MainRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -90,7 +88,7 @@ public class MainController {
         try {
             User user = userRepository.findUserByUsername(username);
 
-            if(user != null) {
+            if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", mainboard.getId()));
                 Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), mainboard.getId());
                 mainRepository.update(id);
@@ -111,7 +109,7 @@ public class MainController {
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, null, "mainboard", userId);
-            for(Recommender recommender : result.getResult()) {
+            for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 mainboards.add(mainRepository.findByID(recommender.getItem()));
             }
@@ -130,8 +128,8 @@ public class MainController {
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, mainboard.getId(), "mainboard", userId);
-            for(Recommender recommender : result.getResult()) {
-                if(recommender.getScore() > 0) {
+            for (Recommender recommender : result.getResult()) {
+                if (recommender.getScore() > 0) {
                     System.out.println(recommender.getItem() + " " + recommender.getScore());
                     mainboards.add(mainRepository.findByID(recommender.getItem()));
                 }

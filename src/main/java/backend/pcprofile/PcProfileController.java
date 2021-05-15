@@ -41,7 +41,7 @@ public class PcProfileController {
                 p = cb.and(p, cb.like(root.get("type"), "%" + type + "%"));
             }
             if (Objects.nonNull(type)) {
-                p = cb.and(p, cb.equal(root.get("userid"),  id ));
+                p = cb.and(p, cb.equal(root.get("userid"), id));
             }
             cq.orderBy(cb.desc(root.get("name")), cb.asc(root.get("id")));
             return p;

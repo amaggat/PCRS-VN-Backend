@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class HddRating extends Rating {
 
     @ManyToOne
-    @JoinColumn(name ="hddid")
+    @JoinColumn(name = "hddid")
     private HardDiskDrive hdd;
 
     public String getHdd() {

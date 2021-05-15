@@ -2,13 +2,11 @@ package backend.pc.psu;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.MainboardRating;
 import backend.recommendation.type.rating.PsuRating;
 import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -86,25 +84,24 @@ public class PowerSupplyUnit extends ElectronicComponents {
     }
 
     @Override
-    public Double getAverageRating(){
+    public Double getAverageRating() {
 
-        if(psuRatingList.isEmpty()) {
+        if (psuRatingList.isEmpty()) {
             return null;
-        }
-        else {
+        } else {
             double avg = 0.0;
-            for(PsuRating obj : this.psuRatingList) {
+            for (PsuRating obj : this.psuRatingList) {
                 avg += obj.getRating();
             }
-            avg = avg/this.psuRatingList.size();
-            double average = (((int)avg)*100)/100;
+            avg = avg / this.psuRatingList.size();
+            double average = (((int) avg) * 100) / 100;
             return average;
         }
 
     }
 
     @Override
-    public Integer getNumberOfRating(){
+    public Integer getNumberOfRating() {
         return this.psuRatingList.size();
     }
 }

@@ -1,7 +1,5 @@
 package backend.pc.drives.SolidStateDrive;
 
-import backend.pc.cpu.CentralProcessor;
-import backend.pc.drives.HardDriveDisk.HardDiskDrive;
 import backend.recommendation.type.repository.SsdRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -78,7 +76,7 @@ public class SsdController {
 
         try {
             User user = userRepository.findUserByUsername(username);
-            if(user != null) {
+            if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", ssd.getId()));
                 Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), ssd.getId());
                 ssdRepository.update(id);
@@ -99,7 +97,7 @@ public class SsdController {
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, null, "ssd", userId);
-            for(Recommender recommender : result.getResult()) {
+            for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 solidStateDrives.add(ssdRepository.findByID(recommender.getItem()));
             }
@@ -118,8 +116,8 @@ public class SsdController {
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, ssd.getId(), "ssd", userId);
-            for(Recommender recommender : result.getResult()) {
-                if(recommender.getScore() > 0) {
+            for (Recommender recommender : result.getResult()) {
+                if (recommender.getScore() > 0) {
                     System.out.println(recommender.getItem());
                     solidStateDrives.add(ssdRepository.findByID(recommender.getItem()));
                 }

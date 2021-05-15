@@ -1,7 +1,5 @@
 package backend.pc.gpu;
 
-import backend.pc.cpu.CentralProcessor;
-import backend.pc.drives.SolidStateDrive.SolidStateDrive;
 import backend.recommendation.type.repository.GpuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -78,7 +76,7 @@ public class GpuController {
 
         try {
             User user = userRepository.findUserByUsername(username);
-            if(user != null) {
+            if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", gpu.getId()));
                 Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), gpu.getId());
                 gpuRepository.update(id);
@@ -94,14 +92,14 @@ public class GpuController {
     }
 
     @GetMapping("/api/recommend/gpu")
-    public Page<GraphicProcessor> recommendFront(@CookieValue(value = "userid", required = false) Integer userId){
+    public Page<GraphicProcessor> recommendFront(@CookieValue(value = "userid", required = false) Integer userId) {
         List<GraphicProcessor> graphicProcessors = new ArrayList<>();
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, null, "gpu", userId);
-            for(Recommender recommender : result.getResult()) {
-                    System.out.println(recommender.getItem() + " " + recommender.getScore());
-                    graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
+            for (Recommender recommender : result.getResult()) {
+                System.out.println(recommender.getItem() + " " + recommender.getScore());
+                graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
             }
             Page<GraphicProcessor> gpuPage = new PageImpl<>(graphicProcessors);
             return gpuPage;
@@ -118,8 +116,8 @@ public class GpuController {
 
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, gpu.getId(), "gpu", userId);
-            for(Recommender recommender : result.getResult()) {
-                if(recommender.getScore() > 0) {
+            for (Recommender recommender : result.getResult()) {
+                if (recommender.getScore() > 0) {
                     System.out.println(recommender.getItem() + " " + recommender.getScore());
                     graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
                 }
