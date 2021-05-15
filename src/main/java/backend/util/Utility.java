@@ -38,13 +38,7 @@ public class Utility {
 
     public static Result returnReccomendedItem(String linkQueries, String type, String typeValue, String value, Integer id) throws IOException {
         HttpURLConnection con = setConnection(linkQueries);
-        String jsonInputString = new String();
-        if(id != null) {
-            jsonInputString = toJsonStringUser(type, typeValue, value, id);
-        }
-        else {
-            jsonInputString = toJsonString(type, typeValue, value);
-        }
+        String jsonInputString = toJsonString(type, typeValue, value, id);
         System.out.println(jsonInputString);
         doPost(con, jsonInputString);
         Result result = outJsonResponse(con);
@@ -54,6 +48,7 @@ public class Utility {
     public static void sendActivity(String linkQueries, String action, Integer userid, String item) throws IOException {
         HttpURLConnection con = setConnection(linkQueries);
         String jsonInputString = toJsonRequest(action, userid, item);
+        System.out.println(jsonInputString);
         doPost(con, jsonInputString);
     }
 
@@ -117,38 +112,33 @@ public class Utility {
         return jsonInputString;
     }
 
-    public static String toJsonString(String type, String typeValue, String value) {
+    public static String toJsonString(String type, String typeValue, String value, Integer id) {
         String jsonInputString = new String();
 
-        jsonInputString = "{\n" +
-                "    \"" + type + "\": \""+ typeValue +"\",\n" +
-                "    \"rules\": [\n" +
-                "    {\n" +
-                "      \"name\": \"category\",\n" +
-                "      \"values\": [\""+ value+ "\"],\n" +
-                "      \"bias\": -1\n" +
-                "    }\n" +
-                "  ]\n" +
-                "}";
-
-        return jsonInputString;
-    }
-
-    public static String toJsonStringUser(String type, String typeValue, String value, Integer id) {
-        String jsonInputString = new String();
-
-        jsonInputString = "{\n" +
-                "    \"" + type + "\": \""+ typeValue +"\",\n" +
-                "    \"user\": \""+ id +"\",\n" +
-                "    \"rules\": [\n" +
-                "    {\n" +
-                "      \"name\": \"category\",\n" +
-                "      \"values\": [\""+ value+ "\"],\n" +
-                "      \"bias\": -1\n" +
-                "    }\n" +
-                "  ]\n" +
-                "}";
-
+        if(id != null) {
+            jsonInputString = "{\n" +
+                    "    \"" + type + "\": \""+ typeValue +"\",\n" +
+                    "    \"user\": \""+ id +"\",\n" +
+                    "    \"rules\": [\n" +
+                    "    {\n" +
+                    "      \"name\": \"category\",\n" +
+                    "      \"values\": [\""+ value+ "\"],\n" +
+                    "      \"bias\": -1\n" +
+                    "    }\n" +
+                    "  ]\n" +
+                    "}";
+        } else {
+            jsonInputString = "{\n" +
+                    "    \"" + type + "\": \""+ typeValue +"\",\n" +
+                    "    \"rules\": [\n" +
+                    "    {\n" +
+                    "      \"name\": \"category\",\n" +
+                    "      \"values\": [\""+ value+ "\"],\n" +
+                    "      \"bias\": -1\n" +
+                    "    }\n" +
+                    "  ]\n" +
+                    "}";
+        }
         return jsonInputString;
     }
 }

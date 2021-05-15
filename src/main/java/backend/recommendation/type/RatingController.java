@@ -129,9 +129,10 @@ public class RatingController {
     void updateLog(String username, String componentId, double rating){
         User user = userRepository.findUserByUsername(username);
         if(user != null) {
-            userActivityRepository.save(new UserActivity(user, "rate " + rating, componentId));
+            String action = "rate " + (int) rating  + " star";
+            userActivityRepository.save(new UserActivity(user, action, componentId));
             try {
-                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "rate " + (int) rating  + " star", user.getId(), componentId);
+                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", action, user.getId(), componentId);
                 logger.log(ClientLevel.CLIENT, "Success");
             } catch (Exception e) {
                 logger.log(ClientLevel.CLIENT, "Unsuccess");
