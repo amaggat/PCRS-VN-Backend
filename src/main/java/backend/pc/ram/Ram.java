@@ -76,9 +76,9 @@ public class Ram extends ElectronicComponents {
         this.pcProfileList = pcProfileList;
     }
 
-    public List<RamRating> getRamRatingList() {
-        return ramRatingList;
-    }
+//    public List<RamRating> getRamRatingList() {
+//        return ramRatingList;
+//    }
 
     public void setRamRatingList(List<RamRating> ramRatingList) {
         this.ramRatingList = ramRatingList;
@@ -95,8 +95,7 @@ public class Ram extends ElectronicComponents {
                 avg += obj.getRating();
             }
             avg = avg / this.ramRatingList.size();
-            double average = (((int) avg) * 100) / 100;
-            return average;
+            return Utility.to2DecimalDouble(avg);
         }
 
     }

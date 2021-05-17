@@ -33,9 +33,9 @@ public class GraphicProcessor extends ElectronicComponents {
     @Transient
     Optional<GpuRating> gpuRating;
 
-    public List<GpuRating> getGpuRatingList() {
-        return gpuRatingList;
-    }
+//    public List<GpuRating> getGpuRatingList() {
+//        return gpuRatingList;
+//    }
 
     public void setGpuRatingList(List<GpuRating> gpuRatingList) {
         this.gpuRatingList = gpuRatingList;
@@ -84,8 +84,7 @@ public class GraphicProcessor extends ElectronicComponents {
                 avg += obj.getRating();
             }
             avg = avg / this.gpuRatingList.size();
-            double average = (((int) avg) * 100) / 100;
-            return average;
+            return Utility.to2DecimalDouble(avg);
         }
 
     }

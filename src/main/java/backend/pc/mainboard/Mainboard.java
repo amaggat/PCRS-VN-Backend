@@ -99,9 +99,9 @@ public class Mainboard extends ElectronicComponents {
         this.pcProfileList = pcProfileList;
     }
 
-    public List<MainboardRating> getMainboardRatingList() {
-        return mainboardRatingList;
-    }
+//    public List<MainboardRating> getMainboardRatingList() {
+//        return mainboardRatingList;
+//    }
 
     public void setMainboardRatingList(List<MainboardRating> mainboardRatingList) {
         this.mainboardRatingList = mainboardRatingList;
@@ -118,8 +118,7 @@ public class Mainboard extends ElectronicComponents {
                 avg += obj.getRating();
             }
             avg = avg / this.mainboardRatingList.size();
-            double average = (((int) avg) * 100) / 100;
-            return average;
+            return Utility.to2DecimalDouble(avg);
         }
 
     }

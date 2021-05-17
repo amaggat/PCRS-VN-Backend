@@ -75,9 +75,9 @@ public class PowerSupplyUnit extends ElectronicComponents {
         this.pcProfileList = pcProfileList;
     }
 
-    public List<PsuRating> getPsuRatingList() {
-        return psuRatingList;
-    }
+//    public List<PsuRating> getPsuRatingList() {
+//        return psuRatingList;
+//    }
 
     public void setPsuRatingList(List<PsuRating> psuRatingList) {
         this.psuRatingList = psuRatingList;
@@ -94,8 +94,7 @@ public class PowerSupplyUnit extends ElectronicComponents {
                 avg += obj.getRating();
             }
             avg = avg / this.psuRatingList.size();
-            double average = (((int) avg) * 100) / 100;
-            return average;
+            return Utility.to2DecimalDouble(avg);
         }
 
     }

@@ -4,6 +4,7 @@ package backend.pc.drives.SolidStateDrive;
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.type.rating.SsdRating;
+import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -58,8 +59,7 @@ public class SolidStateDrive extends ElectronicComponents {
                 avg += obj.getRating();
             }
             avg = avg / this.ssdRatingList.size();
-            double average = (((int) avg) * 100) / 100;
-            return average;
+            return Utility.to2DecimalDouble(avg);
         }
 
     }

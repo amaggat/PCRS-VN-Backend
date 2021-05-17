@@ -77,13 +77,13 @@ public class RamController {
     }
 
     @GetMapping("/api/ram/{RamID}")
-    public Ram SearchByID(@PathVariable("RamID") String id, @CookieValue(value = "username", required = false) String username) {
+    public Ram SearchByID(@PathVariable("RamID") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         Ram ram = ramRepository.findByID(id);
         try {
-            User user = userRepository.findUserByUsername(username);
+            User user = userRepository.findByID(userId);
             if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", ram.getId()));
-                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), ram.getId());
+                Utility.sendActivity(Utility.URL, "view", user.getId(), ram.getId());
                 ramRepository.update(id);
             }
             ram.setRamRating(ramRatingRepository.findById(user.getId() + "-" + id));
@@ -97,11 +97,11 @@ public class RamController {
     }
 
     @GetMapping("/api/recommend/ram")
-    public Page<Ram> reccomendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<Ram> reccomendFront(@CookieValue(value = "userId", required = false) Integer userId) {
         List<Ram> rams = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, null, "ram", userId);
+            Result result = Utility.returnReccomendedItem(null, "ram", userId);
             for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 rams.add(ramRepository.findByID(recommender.getItem()));
@@ -115,7 +115,7 @@ public class RamController {
     }
 
     @GetMapping("/api/recommend/ram/{id}")
-    public Page<Ram> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<Ram> recommendList(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         Ram ram = ramRepository.findByID(id);
         List<Ram> rams = new ArrayList<>();
 

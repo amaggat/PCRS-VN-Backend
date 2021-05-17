@@ -59,8 +59,7 @@ public class CentralProcessor extends ElectronicComponents {
                 avg += obj.getRating();
             }
             avg = avg / this.cpuRatingList.size();
-            double average = (((int) avg) * 100) / 100;
-            return average;
+            return Utility.to2DecimalDouble(avg);
         }
     }
 
@@ -109,9 +108,9 @@ public class CentralProcessor extends ElectronicComponents {
         this.pcProfileList = pcProfileList;
     }
 
-    public List<CpuRating> getCpuRatingList() {
-        return cpuRatingList;
-    }
+//    public List<CpuRating> getCpuRatingList() {
+//        return cpuRatingList;
+//    }
 
     public void setCpuRatingList(List<CpuRating> cpuRatingList) {
         this.cpuRatingList = cpuRatingList;

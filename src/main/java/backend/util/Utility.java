@@ -16,7 +16,8 @@ import java.util.List;
 
 public class Utility {
 
-    public static final String URL = "http://localhost:9090/engines/pcrs_change/queries";
+    public static final String URL = "http://localhost:9090/engines/pcrs/events";
+    public static final String URL_GET = "http://localhost:9090/engines/pcrs/queries";
 
     public static List<String> returnPcProfileID(List<PcProfile> pcProfileList) {
         List<String> profileId = new ArrayList<>();
@@ -38,8 +39,8 @@ public class Utility {
         return componentId;
     }
 
-    public static Result returnReccomendedItem(String linkQueries, String typeValue, String value, Integer id) throws IOException {
-        HttpURLConnection con = setConnection(linkQueries);
+    public static Result returnReccomendedItem(String typeValue, String value, Integer id) throws IOException {
+        HttpURLConnection con = setConnection(URL_GET);
         String jsonInputString = toJsonString(typeValue, value, id);
         System.out.println(jsonInputString);
         doPost(con, jsonInputString);
@@ -48,7 +49,7 @@ public class Utility {
     }
 
     public static void sendActivity(String linkQueries, String action, Integer userid, String item) throws IOException {
-        HttpURLConnection con = setConnection(linkQueries);
+        HttpURLConnection con = setConnection(URL);
         String jsonInputString = toJsonRequest(action, userid, item);
         System.out.println(jsonInputString);
         doPost(con, jsonInputString);
@@ -138,5 +139,12 @@ public class Utility {
                 "}";
 
         return jsonInputString;
+    }
+
+    public static double to2DecimalDouble(double avg) {
+        avg = avg*10;
+        avg = (double)((int) avg);
+        avg = avg/10;
+        return avg;
     }
 }

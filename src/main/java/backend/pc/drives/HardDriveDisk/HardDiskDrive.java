@@ -3,6 +3,7 @@ package backend.pc.drives.HardDriveDisk;
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.type.rating.HddRating;
+import backend.util.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -56,8 +57,7 @@ public class HardDiskDrive extends ElectronicComponents {
                 avg += obj.getRating();
             }
             avg = avg / this.hddRatingList.size();
-            double average = (((int) avg) * 100) / 100;
-            return average;
+            return Utility.to2DecimalDouble(avg);
         }
 
     }

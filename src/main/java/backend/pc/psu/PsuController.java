@@ -76,14 +76,14 @@ public class PsuController {
     }
 
     @GetMapping("/api/psu/{id}")
-    public PowerSupplyUnit SearchById(@PathVariable("id") String id, @CookieValue(value = "username", required = false) String username) {
+    public PowerSupplyUnit SearchById(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         PowerSupplyUnit psu = psuRepository.findByID(id);
 
         try {
-            User user = userRepository.findUserByUsername(username);
+            User user = userRepository.findByID(userId);
             if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", psu.getId()));
-                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), psu.getId());
+                Utility.sendActivity(Utility.URL, "view", user.getId(), psu.getId());
                 psuRepository.update(id);
             }
             psu.setPsuRating(psuRatingRepository.findById(user.getId() + "-" + id));
@@ -97,11 +97,11 @@ public class PsuController {
     }
 
     @GetMapping("/api/recommend/psu")
-    public Page<PowerSupplyUnit> reccomendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<PowerSupplyUnit> reccomendFront(@CookieValue(value = "userId", required = false) Integer userId) {
         List<PowerSupplyUnit> powerSupplyUnits = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, null, "psu", userId);
+            Result result = Utility.returnReccomendedItem(null, "psu", userId);
             for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 powerSupplyUnits.add(psuRepository.findByID(recommender.getItem()));
@@ -115,7 +115,7 @@ public class PsuController {
     }
 
     @GetMapping("/api/recommend/psu/{id}")
-    public Page<PowerSupplyUnit> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<PowerSupplyUnit> recommendList(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         PowerSupplyUnit psu = psuRepository.findByID(id);
         List<PowerSupplyUnit> powerSupplyUnits = new ArrayList<>();
 

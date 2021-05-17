@@ -9,6 +9,7 @@ import backend.pc.mainboard.MainPriceList;
 import backend.pc.psu.PsuPriceList;
 import backend.pc.ram.RamPriceList;
 import backend.recommendation.type.rating.RetailerRating;
+import backend.util.Utility;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -90,9 +91,9 @@ public class Retailer extends NameEntity {
         this.description = description;
     }
 
-    public List<RetailerRating> getRetailerRatingList() {
-        return retailerRatingList;
-    }
+//    public List<RetailerRating> getRetailerRatingList() {
+//        return retailerRatingList;
+//    }
 
     public void setRetailerRatingList(List<RetailerRating> retailerRatingList) {
         this.retailerRatingList = retailerRatingList;
@@ -111,8 +112,7 @@ public class Retailer extends NameEntity {
                 avg += obj.getRating();
             }
             avg = avg / this.retailerRatingList.size();
-            double average = (((int) avg) * 100) / 100;
-            return average;
+            return Utility.to2DecimalDouble(avg);
         }
     }
 

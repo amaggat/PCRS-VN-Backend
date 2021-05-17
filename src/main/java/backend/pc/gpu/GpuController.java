@@ -71,14 +71,14 @@ public class GpuController {
     }
 
     @GetMapping("/api/gpu/{id}")
-    public GraphicProcessor SearchById(@PathVariable("id") String id, @CookieValue(value = "username", required = false) String username) {
+    public GraphicProcessor SearchById(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         GraphicProcessor gpu = gpuRepository.findByID(id);
 
         try {
-            User user = userRepository.findUserByUsername(username);
+            User user = userRepository.findByID(userId);
             if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", gpu.getId()));
-                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), gpu.getId());
+                Utility.sendActivity(Utility.URL, "view", user.getId(), gpu.getId());
                 gpuRepository.update(id);
             }
             gpu.setGpuRating(gpuRatingRepository.findById(user.getId() + "-" + id));
@@ -92,11 +92,11 @@ public class GpuController {
     }
 
     @GetMapping("/api/recommend/gpu")
-    public Page<GraphicProcessor> recommendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<GraphicProcessor> recommendFront(@CookieValue(value = "userId", required = false) Integer userId) {
         List<GraphicProcessor> graphicProcessors = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, null, "gpu", userId);
+            Result result = Utility.returnReccomendedItem(null, "gpu", userId);
             for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
@@ -110,7 +110,7 @@ public class GpuController {
     }
 
     @GetMapping("/api/recommend/gpu/{id}")
-    public Page<GraphicProcessor> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<GraphicProcessor> recommendList(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         GraphicProcessor gpu = gpuRepository.findByID(id);
         List<GraphicProcessor> graphicProcessors = new ArrayList<>();
 

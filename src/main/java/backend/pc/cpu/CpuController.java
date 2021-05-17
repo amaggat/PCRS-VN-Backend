@@ -75,10 +75,10 @@ public class CpuController {
     }
 
     @GetMapping("/api/recommend/cpu")
-    public Page<CentralProcessor> recommendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<CentralProcessor> recommendFront(@CookieValue(value = "userId", required = false) Integer userId) {
         List<CentralProcessor> centralProcessors = new ArrayList<>();
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, null, "cpu", userId);
+            Result result = Utility.returnReccomendedItem(null, "cpu", userId);
             for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 centralProcessors.add(cpuRepository.findByID(recommender.getItem()));
@@ -92,13 +92,13 @@ public class CpuController {
     }
 
     @GetMapping("/api/cpu/{CpuID}")
-    public CentralProcessor SearchById(@PathVariable("CpuID") String id, @CookieValue(value = "username", required = false) String username) {
+    public CentralProcessor SearchById(@PathVariable("CpuID") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         CentralProcessor cpu = cpuRepository.findByID(id);
         try {
-            User user = userRepository.findUserByUsername(username);
+            User user = userRepository.findByID(userId);
             if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", cpu.getId()));
-                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), cpu.getId());
+                Utility.sendActivity(Utility.URL, "view", user.getId(), cpu.getId());
                 cpuRepository.update(id);
             }
 
@@ -113,10 +113,11 @@ public class CpuController {
     }
 
     @GetMapping("/api/recommend/cpu/{id}")
-    public Page<CentralProcessor> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<CentralProcessor> recommendList(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         CentralProcessor cpu = cpuRepository.findByID(id);
         List<CentralProcessor> centralProcessors = new ArrayList<>();
 
+        System.out.println("User: " + userId);
         try {
             Result result = Utility.returnReccomendedItem(Utility.URL, cpu.getId(), "cpu", userId);
             for (Recommender recommender : result.getResult()) {

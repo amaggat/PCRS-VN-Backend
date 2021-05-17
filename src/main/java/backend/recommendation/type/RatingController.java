@@ -67,67 +67,67 @@ public class RatingController {
     }
 
     @PostMapping("/user/rating/cpu")
-    public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating, @CookieValue(value = "username", required = true) String username) {
+    public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating, @CookieValue(value = "userid") Integer userid) {
         cpuRatingRepository.save(cpuRating);
-        updateLog(username, cpuRating.getCentralProcessor(), cpuRating.getRating());
-        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
+        updateLog(userid, cpuRating.getCentralProcessor(), cpuRating.getRating());
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/ssd")
-    public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating, @CookieValue(value = "username", required = true) String username) {
+    public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating, @CookieValue(value = "userid") Integer userid) {
         ssdRatingRepository.save(ssdRating);
-        updateLog(username, ssdRating.getSsd(), ssdRating.getRating());
-        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
+        updateLog(userid, ssdRating.getSsd(), ssdRating.getRating());
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/gpu")
-    public ResponseEntity<?> rating(@RequestBody GpuRating gpuRating, @CookieValue(value = "username", required = true) String username) {
+    public ResponseEntity<?> rating(@RequestBody GpuRating gpuRating, @CookieValue(value = "userid") Integer userid) {
         gpuRatingRepository.save(gpuRating);
-        updateLog(username, gpuRating.getGraphicProcessor(), gpuRating.getRating());
-        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
+        updateLog(userid, gpuRating.getGraphicProcessor(), gpuRating.getRating());
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/mainboard")
-    public ResponseEntity<?> rating(@RequestBody MainboardRating mainboardRating, @CookieValue(value = "username", required = true) String username) {
+    public ResponseEntity<?> rating(@RequestBody MainboardRating mainboardRating, @CookieValue(value = "userid") Integer userid) {
         mainRatingRepository.save(mainboardRating);
-        updateLog(username, mainboardRating.getMainboard(), mainboardRating.getRating());
-        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
+        updateLog(userid, mainboardRating.getMainboard(), mainboardRating.getRating());
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/ram")
-    public ResponseEntity<?> rating(@RequestBody RamRating ramRating, @CookieValue(value = "username", required = true) String username) {
+    public ResponseEntity<?> rating(@RequestBody RamRating ramRating, @CookieValue(value = "userid") Integer userid) {
         ramRatingRepository.save(ramRating);
-        updateLog(username, ramRating.getRam(), ramRating.getRating());
-        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
+        updateLog(userid, ramRating.getRam(), ramRating.getRating());
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/hdd")
-    public ResponseEntity<?> rating(@RequestBody HddRating hddRating, @CookieValue(value = "username", required = true) String username) {
+    public ResponseEntity<?> rating(@RequestBody HddRating hddRating, @CookieValue(value = "userid") Integer userid) {
         hddRatingRepository.save(hddRating);
-        updateLog(username, hddRating.getHdd(), hddRating.getRating());
-        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
+        updateLog(userid, hddRating.getHdd(), hddRating.getRating());
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/psu")
-    public ResponseEntity<?> rating(@RequestBody PsuRating psuRating, @CookieValue(value = "username", required = true) String username) {
+    public ResponseEntity<?> rating(@RequestBody PsuRating psuRating, @CookieValue(value = "userid") Integer userid) {
         psuRatingRepository.save(psuRating);
-        updateLog(username, psuRating.getPsu(), psuRating.getRating());
-        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
+        updateLog(userid, psuRating.getPsu(), psuRating.getRating());
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/retailer")
-    public ResponseEntity<?> rating(@RequestBody RetailerRating retailerRating, @CookieValue(value = "username", required = true) String username) {
+    public ResponseEntity<?> rating(@RequestBody RetailerRating retailerRating, @CookieValue(value = "userid") Integer userid) {
         retailerRatingRepository.save(retailerRating);
-        return ResponseEntity.ok(new AuthenticationResponse("Rated", username));
+        return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
-    void updateLog(String username, String componentId, double rating) {
-        User user = userRepository.findUserByUsername(username);
+    void updateLog(Integer userid, String componentId, double rating) {
+        User user = userRepository.findByID(userid);
         if (user != null) {
             String action = "rate " + (int) rating + " star";
             userActivityRepository.save(new UserActivity(user, action, componentId));
             try {
-                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", action, user.getId(), componentId);
+                Utility.sendActivity(Utility.URL_GET, action, userid, componentId);
                 logger.log(ClientLevel.CLIENT, "Success");
             } catch (Exception e) {
                 logger.log(ClientLevel.CLIENT, "Unsuccess");

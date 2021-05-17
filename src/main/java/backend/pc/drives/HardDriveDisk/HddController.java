@@ -71,14 +71,14 @@ public class HddController {
     }
 
     @GetMapping("/api/hdd/{id}")
-    public HardDiskDrive SearchByID(@PathVariable("id") String id, @CookieValue(value = "username", required = false) String username) {
+    public HardDiskDrive SearchByID(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         HardDiskDrive hdd = hddRepository.findByID(id);
 
         try {
-            User user = userRepository.findUserByUsername(username);
+            User user = userRepository.findByID(userId);
             if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", hdd.getId()));
-                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), hdd.getId());
+                Utility.sendActivity(Utility.URL, "view", user.getId(), hdd.getId());
                 hddRepository.update(id);
             }
             hdd.setHddRating(hddRatingRepository.findById(user.getId() + "-" + id));
@@ -92,10 +92,10 @@ public class HddController {
     }
 
     @GetMapping("/api/recommend/hdd")
-    public Page<HardDiskDrive> recommendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<HardDiskDrive> recommendFront(@CookieValue(value = "userId", required = false) Integer userId) {
         List<HardDiskDrive> hardDiskDrives = new ArrayList<>();
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, null, "hdd", userId);
+            Result result = Utility.returnReccomendedItem(null, "hdd", userId);
             for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 hardDiskDrives.add(hddRepository.findByID(recommender.getItem()));
@@ -109,12 +109,12 @@ public class HddController {
     }
 
     @GetMapping("/api/recommend/hdd/{id}")
-    public Page<HardDiskDrive> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<HardDiskDrive> recommendList(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         HardDiskDrive hdd = hddRepository.findByID(id);
         List<HardDiskDrive> hardDiskDrives = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, hdd.getId(), "hdd", userId);
+            Result result = Utility.returnReccomendedItem(hdd.getId(), "hdd", userId);
             for (Recommender recommender : result.getResult()) {
                 if (recommender.getScore() > 0) {
                     System.out.println(recommender.getItem() + " " + recommender.getScore());

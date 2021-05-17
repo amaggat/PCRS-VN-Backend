@@ -83,14 +83,14 @@ public class MainController {
     }
 
     @GetMapping("/api/mainboard/{id}")
-    public Mainboard SearchByID(@PathVariable("id") String id, @CookieValue(value = "username", required = false) String username) {
+    public Mainboard SearchByID(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         Mainboard mainboard = mainRepository.findByID(id);
         try {
-            User user = userRepository.findUserByUsername(username);
+            User user = userRepository.findByID(userId);
 
             if (user != null) {
                 userActivityRepository.save(new UserActivity(user, "view", mainboard.getId()));
-                Utility.sendActivity("http://localhost:9090/engines/pcrs_change/events", "view", user.getId(), mainboard.getId());
+                Utility.sendActivity(Utility.URL, "view", user.getId(), mainboard.getId());
                 mainRepository.update(id);
             }
             mainboard.setMainboardRating(mainRatingRepository.findById(user.getId() + "-" + id));
@@ -104,11 +104,11 @@ public class MainController {
     }
 
     @GetMapping("/api/recommend/mainboard")
-    public Page<Mainboard> reccomendFront(@CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<Mainboard> reccomendFront(@CookieValue(value = "userId", required = false) Integer userId) {
         List<Mainboard> mainboards = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, null, "mainboard", userId);
+            Result result = Utility.returnReccomendedItem(null, "mainboard", userId);
             for (Recommender recommender : result.getResult()) {
                 System.out.println(recommender.getItem() + " " + recommender.getScore());
                 mainboards.add(mainRepository.findByID(recommender.getItem()));
@@ -122,7 +122,7 @@ public class MainController {
     }
 
     @GetMapping("/api/recommend/mainboard/{id}")
-    public Page<Mainboard> recommendList(@PathVariable("id") String id, @CookieValue(value = "userid", required = false) Integer userId) {
+    public Page<Mainboard> recommendList(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         Mainboard mainboard = mainRepository.findByID(id);
         List<Mainboard> mainboards = new ArrayList<>();
 
