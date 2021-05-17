@@ -2,9 +2,8 @@ package backend.pc.mainboard;
 
 
 import backend.model.ElectronicComponents;
-import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.MainboardRating;
+import backend.recommendation.rating.MainboardRating;
 import backend.util.Utility;
 
 import javax.persistence.*;

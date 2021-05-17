@@ -1,6 +1,6 @@
 package backend.model;
 
-import backend.recommendation.type.score.Category;
+import backend.recommendation.score.Category;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

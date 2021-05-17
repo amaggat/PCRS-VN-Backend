@@ -8,7 +8,7 @@ import backend.pc.gpu.GpuPriceList;
 import backend.pc.mainboard.MainPriceList;
 import backend.pc.psu.PsuPriceList;
 import backend.pc.ram.RamPriceList;
-import backend.recommendation.type.rating.RetailerRating;
+import backend.recommendation.rating.RetailerRating;
 import backend.util.Utility;
 
 import javax.persistence.CascadeType;

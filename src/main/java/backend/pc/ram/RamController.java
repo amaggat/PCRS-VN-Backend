@@ -1,8 +1,7 @@
 package backend.pc.ram;
 
 
-import backend.pc.psu.PowerSupplyUnit;
-import backend.recommendation.type.repository.RamRatingRepository;
+import backend.recommendation.repository.RamRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;

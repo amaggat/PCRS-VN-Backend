@@ -1,7 +1,6 @@
 package backend.pc.mainboard;
 
-import backend.pc.gpu.GraphicProcessor;
-import backend.recommendation.type.repository.MainRatingRepository;
+import backend.recommendation.repository.MainRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;

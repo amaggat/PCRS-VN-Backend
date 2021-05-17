@@ -1,7 +1,6 @@
 package backend.pc.drives.SolidStateDrive;
 
-import backend.pc.drives.HardDriveDisk.HardDiskDrive;
-import backend.recommendation.type.repository.SsdRatingRepository;
+import backend.recommendation.repository.SsdRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;

@@ -7,7 +7,7 @@ import backend.pc.gpu.GraphicProcessor;
 import backend.pc.mainboard.Mainboard;
 import backend.pc.psu.PowerSupplyUnit;
 import backend.pc.ram.Ram;
-import backend.recommendation.type.score.Category;
+import backend.recommendation.score.Category;
 import backend.user.User;
 import javafx.util.Pair;
 

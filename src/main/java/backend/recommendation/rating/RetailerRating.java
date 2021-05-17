@@ -1,6 +1,6 @@
-package backend.recommendation.type.rating;
+package backend.recommendation.rating;
 
-import backend.recommendation.type.score.Rating;
+import backend.recommendation.score.Rating;
 import backend.retailer.Retailer;
 
 import javax.persistence.Entity;

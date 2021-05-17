@@ -1,7 +1,7 @@
-package backend.recommendation.type.rating;
+package backend.recommendation.rating;
 
 import backend.pc.drives.HardDriveDisk.HardDiskDrive;
-import backend.recommendation.type.score.Rating;
+import backend.recommendation.score.Rating;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;

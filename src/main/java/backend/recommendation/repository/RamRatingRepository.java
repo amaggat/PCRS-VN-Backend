@@ -1,6 +1,6 @@
-package backend.recommendation.type.repository;
+package backend.recommendation.repository;
 
-import backend.recommendation.type.rating.RamRating;
+import backend.recommendation.rating.RamRating;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

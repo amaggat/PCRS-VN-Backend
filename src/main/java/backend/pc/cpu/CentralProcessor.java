@@ -3,7 +3,7 @@ package backend.pc.cpu;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.CpuRating;
+import backend.recommendation.rating.CpuRating;
 import backend.util.Utility;
 
 

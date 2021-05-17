@@ -2,9 +2,8 @@ package backend.pc.ram;
 
 
 import backend.model.ElectronicComponents;
-import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.RamRating;
+import backend.recommendation.rating.RamRating;
 import backend.util.Utility;
 
 import javax.persistence.*;

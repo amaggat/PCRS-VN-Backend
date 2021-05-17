@@ -1,9 +1,8 @@
 package backend.pc.gpu;
 
 import backend.model.ElectronicComponents;
-import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.GpuRating;
+import backend.recommendation.rating.GpuRating;
 import backend.util.Utility;
 
 import javax.persistence.*;

@@ -1,9 +1,8 @@
 package backend.pc.psu;
 
 import backend.model.ElectronicComponents;
-import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.PsuRating;
+import backend.recommendation.rating.PsuRating;
 import backend.util.Utility;
 
 import javax.persistence.*;

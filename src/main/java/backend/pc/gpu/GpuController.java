@@ -1,7 +1,6 @@
 package backend.pc.gpu;
 
-import backend.pc.drives.SolidStateDrive.SolidStateDrive;
-import backend.recommendation.type.repository.GpuRatingRepository;
+import backend.recommendation.repository.GpuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;

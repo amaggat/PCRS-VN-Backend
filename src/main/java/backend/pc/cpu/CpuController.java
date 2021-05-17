@@ -1,7 +1,7 @@
 package backend.pc.cpu;
 
 
-import backend.recommendation.type.repository.CpuRatingRepository;
+import backend.recommendation.repository.CpuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.*;
 import backend.util.ClientLevel;

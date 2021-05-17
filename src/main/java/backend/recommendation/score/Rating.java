@@ -1,4 +1,4 @@
-package backend.recommendation.type.score;
+package backend.recommendation.score;
 
 
 import backend.user.User;

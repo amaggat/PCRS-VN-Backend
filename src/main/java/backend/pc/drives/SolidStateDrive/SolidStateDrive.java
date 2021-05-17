@@ -2,9 +2,8 @@ package backend.pc.drives.SolidStateDrive;
 
 
 import backend.model.ElectronicComponents;
-import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.SsdRating;
+import backend.recommendation.rating.SsdRating;
 import backend.util.Utility;
 
 import javax.persistence.*;

@@ -1,15 +1,11 @@
-package backend.recommendation.type.score;
-
-import backend.recommendation.type.similarity.CategorySimilarity;
+package backend.recommendation.score;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.util.List;
 
 @Entity
 @Table(name = "category")
@@ -24,10 +20,6 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @OneToMany
-
-    private List<CategorySimilarity> categorySimilarity;
 
     public String getType() {
         return type;
@@ -52,12 +44,4 @@ public class Category {
     public void setId(Integer id) {
         this.id = id;
     }
-
-//    public List<CategorySimilarity> getCategorySimilarity() {
-//        return categorySimilarity;
-//    }
-//
-//    public void setCategorySimilarity(List<CategorySimilarity> categorySimilarity) {
-//        this.categorySimilarity = categorySimilarity;
-//    }
 }

@@ -1,8 +1,7 @@
 package backend.pc.psu;
 
 
-import backend.pc.mainboard.Mainboard;
-import backend.recommendation.type.repository.PsuRatingRepository;
+import backend.recommendation.repository.PsuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;

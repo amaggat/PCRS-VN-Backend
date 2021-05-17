@@ -1,9 +1,8 @@
 package backend.pc.drives.HardDriveDisk;
 
 import backend.model.ElectronicComponents;
-import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.type.rating.HddRating;
+import backend.recommendation.rating.HddRating;
 import backend.util.Utility;
 
 import javax.persistence.*;

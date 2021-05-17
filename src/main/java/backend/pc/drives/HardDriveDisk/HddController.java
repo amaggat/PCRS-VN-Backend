@@ -1,8 +1,7 @@
 package backend.pc.drives.HardDriveDisk;
 
 
-import backend.pc.cpu.CentralProcessor;
-import backend.recommendation.type.repository.HddRatingRepository;
+import backend.recommendation.repository.HddRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
 import backend.user.UserActivity;
