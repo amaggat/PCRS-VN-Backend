@@ -79,10 +79,7 @@ public class CpuController {
         List<CentralProcessor> centralProcessors = new ArrayList<>();
         try {
             Result result = Utility.returnReccomendedItem(null, "cpu", userId);
-            for (Recommender recommender : result.getResult()) {
-                System.out.println(recommender.getItem() + " " + recommender.getScore());
-                centralProcessors.add(cpuRepository.findByID(recommender.getItem()));
-            }
+            centralProcessors = doRecommender(result);
             Page<CentralProcessor> cpuPage = new PageImpl<>(centralProcessors);
             return cpuPage;
         } catch (Exception e) {
@@ -101,7 +98,6 @@ public class CpuController {
                 Utility.sendActivity(Utility.URL, "view", user.getId(), cpu.getId());
                 cpuRepository.update(id);
             }
-
             cpu.setCpuRating(cpuRatingRepository.findById(user.getId() + "-" + id));
             logger.log(ClientLevel.CLIENT, "Success");
             return cpu;
@@ -116,21 +112,25 @@ public class CpuController {
     public Page<CentralProcessor> recommendList(@PathVariable("id") String id, @CookieValue(value = "userId", required = false) Integer userId) {
         CentralProcessor cpu = cpuRepository.findByID(id);
         List<CentralProcessor> centralProcessors = new ArrayList<>();
-
         System.out.println("User: " + userId);
         try {
             Result result = Utility.returnReccomendedItem(cpu.getId(), "cpu", userId);
-            for (int i = 0; i <10; ++i) {
-                Recommender recommender = result.getResult().get(i);
-                    System.out.println(recommender.getItem() + " " + recommender.getScore());
-                    centralProcessors.add(cpuRepository.findByID(recommender.getItem()));
-
-            }
+            centralProcessors = doRecommender(result);
             Page<CentralProcessor> cpuPage = new PageImpl<>(centralProcessors);
             return cpuPage;
         } catch (Exception e) {
             Page<CentralProcessor> cpuPage = new PageImpl<>(centralProcessors);
             return cpuPage;
         }
+    }
+
+    public List<CentralProcessor> doRecommender(Result result) {
+        List<CentralProcessor> recommendList = new ArrayList<>();
+        for (int i = 0; i <10; ++i) {
+            Recommender recommender = result.getResult().get(i);
+            System.out.println(recommender.getItem() + " " + recommender.getScore());
+            recommendList.add(cpuRepository.findByID(recommender.getItem()));
+        }
+        return recommendList;
     }
 }

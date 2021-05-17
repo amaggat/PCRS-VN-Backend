@@ -1,5 +1,6 @@
 package backend.pc.gpu;
 
+import backend.pc.drives.SolidStateDrive.SolidStateDrive;
 import backend.recommendation.type.repository.GpuRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -97,10 +98,7 @@ public class GpuController {
 
         try {
             Result result = Utility.returnReccomendedItem(null, "gpu", userId);
-            for (Recommender recommender : result.getResult()) {
-                System.out.println(recommender.getItem() + " " + recommender.getScore());
-                graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
-            }
+            graphicProcessors = doRecommender(result);
             Page<GraphicProcessor> gpuPage = new PageImpl<>(graphicProcessors);
             return gpuPage;
         } catch (Exception e) {
@@ -116,17 +114,23 @@ public class GpuController {
 
         try {
             Result result = Utility.returnReccomendedItem(gpu.getId(), "gpu", userId);
-            for (int i = 0; i <10; ++i) {
-                Recommender recommender = result.getResult().get(i);
-                    System.out.println(recommender.getItem() + " " + recommender.getScore());
-                    graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
-            }
+            graphicProcessors = doRecommender(result);
             Page<GraphicProcessor> gpuPage = new PageImpl<>(graphicProcessors);
             return gpuPage;
         } catch (Exception e) {
             Page<GraphicProcessor> gpuPage = new PageImpl<>(graphicProcessors);
             return gpuPage;
         }
+    }
+
+    public List<GraphicProcessor> doRecommender(Result result) {
+        List<GraphicProcessor> recommendList = new ArrayList<>();
+        for (int i = 0; i <10; ++i) {
+            Recommender recommender = result.getResult().get(i);
+            System.out.println(recommender.getItem() + " " + recommender.getScore());
+            recommendList.add(gpuRepository.findByID(recommender.getItem()));
+        }
+        return recommendList;
     }
 
 }

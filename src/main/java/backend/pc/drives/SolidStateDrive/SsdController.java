@@ -1,5 +1,6 @@
 package backend.pc.drives.SolidStateDrive;
 
+import backend.pc.drives.HardDriveDisk.HardDiskDrive;
 import backend.recommendation.type.repository.SsdRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -97,10 +98,7 @@ public class SsdController {
 
         try {
             Result result = Utility.returnReccomendedItem(null, "ssd", userId);
-            for (Recommender recommender : result.getResult()) {
-                System.out.println(recommender.getItem() + " " + recommender.getScore());
-                solidStateDrives.add(ssdRepository.findByID(recommender.getItem()));
-            }
+            solidStateDrives = doRecommender(result);
             Page<SolidStateDrive> ssdPage = new PageImpl<>(solidStateDrives);
             return ssdPage;
         } catch (Exception e) {
@@ -116,12 +114,7 @@ public class SsdController {
 
         try {
             Result result = Utility.returnReccomendedItem(ssd.getId(), "ssd", userId);
-            for (int i = 0; i <10; ++i) {
-                Recommender recommender = result.getResult().get(i);
-                    System.out.println(recommender.getItem());
-                    solidStateDrives.add(ssdRepository.findByID(recommender.getItem()));
-
-            }
+            solidStateDrives = doRecommender(result);
             Page<SolidStateDrive> ssdPage = new PageImpl<>(solidStateDrives);
             return ssdPage;
         } catch (Exception e) {
@@ -130,4 +123,13 @@ public class SsdController {
         }
     }
 
+    public List<SolidStateDrive> doRecommender(Result result) {
+        List<SolidStateDrive> recommendList = new ArrayList<>();
+        for (int i = 0; i <10; ++i) {
+            Recommender recommender = result.getResult().get(i);
+            System.out.println(recommender.getItem() + " " + recommender.getScore());
+            recommendList.add(ssdRepository.findByID(recommender.getItem()));
+        }
+        return recommendList;
+    }
 }

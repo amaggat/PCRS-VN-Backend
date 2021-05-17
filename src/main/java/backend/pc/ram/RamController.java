@@ -1,6 +1,7 @@
 package backend.pc.ram;
 
 
+import backend.pc.psu.PowerSupplyUnit;
 import backend.recommendation.type.repository.RamRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -102,10 +103,7 @@ public class RamController {
 
         try {
             Result result = Utility.returnReccomendedItem(null, "ram", userId);
-            for (Recommender recommender : result.getResult()) {
-                System.out.println(recommender.getItem() + " " + recommender.getScore());
-                rams.add(ramRepository.findByID(recommender.getItem()));
-            }
+            rams = doRecommender(result);
             Page<Ram> psuPage = new PageImpl<>(rams);
             return psuPage;
         } catch (Exception e) {
@@ -121,17 +119,22 @@ public class RamController {
 
         try {
             Result result = Utility.returnReccomendedItem(ram.getId(), "ram", userId);
-            for (int i = 0; i <10; ++i) {
-                Recommender recommender = result.getResult().get(i);
-                    System.out.println(recommender.getItem() + " " + recommender.getScore());
-                    rams.add(ramRepository.findByID(recommender.getItem()));
-
-            }
+            rams = doRecommender(result);
             Page<Ram> psuPage = new PageImpl<>(rams);
             return psuPage;
         } catch (Exception e) {
             Page<Ram> psuPage = new PageImpl<>(rams);
             return psuPage;
         }
+    }
+
+    public List<Ram> doRecommender(Result result) {
+        List<Ram> recommendList = new ArrayList<>();
+        for (int i = 0; i <10; ++i) {
+            Recommender recommender = result.getResult().get(i);
+            System.out.println(recommender.getItem() + " " + recommender.getScore());
+            recommendList.add(ramRepository.findByID(recommender.getItem()));
+        }
+        return recommendList;
     }
 }

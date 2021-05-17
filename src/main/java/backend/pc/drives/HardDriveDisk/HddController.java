@@ -1,6 +1,7 @@
 package backend.pc.drives.HardDriveDisk;
 
 
+import backend.pc.cpu.CentralProcessor;
 import backend.recommendation.type.repository.HddRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -96,10 +97,7 @@ public class HddController {
         List<HardDiskDrive> hardDiskDrives = new ArrayList<>();
         try {
             Result result = Utility.returnReccomendedItem(null, "hdd", userId);
-            for (Recommender recommender : result.getResult()) {
-                System.out.println(recommender.getItem() + " " + recommender.getScore());
-                hardDiskDrives.add(hddRepository.findByID(recommender.getItem()));
-            }
+            hardDiskDrives = doRecommender(result);
             Page<HardDiskDrive> hddPage = new PageImpl<>(hardDiskDrives);
             return hddPage;
         } catch (Exception e) {
@@ -115,17 +113,22 @@ public class HddController {
 
         try {
             Result result = Utility.returnReccomendedItem(hdd.getId(), "hdd", userId);
-            for (Recommender recommender : result.getResult()) {
-                if (recommender.getScore() > 0) {
-                    System.out.println(recommender.getItem() + " " + recommender.getScore());
-                    hardDiskDrives.add(hddRepository.findByID(recommender.getItem()));
-                }
-            }
+            hardDiskDrives = doRecommender(result);
             Page<HardDiskDrive> hddPage = new PageImpl<>(hardDiskDrives);
             return hddPage;
         } catch (Exception e) {
             Page<HardDiskDrive> hddPage = new PageImpl<>(hardDiskDrives);
             return hddPage;
         }
+    }
+
+    public List<HardDiskDrive> doRecommender(Result result) {
+        List<HardDiskDrive> recommendList = new ArrayList<>();
+        for (int i = 0; i <10; ++i) {
+            Recommender recommender = result.getResult().get(i);
+            System.out.println(recommender.getItem() + " " + recommender.getScore());
+            recommendList.add(hddRepository.findByID(recommender.getItem()));
+        }
+        return recommendList;
     }
 }

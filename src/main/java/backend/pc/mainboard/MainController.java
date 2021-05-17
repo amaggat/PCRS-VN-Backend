@@ -1,5 +1,6 @@
 package backend.pc.mainboard;
 
+import backend.pc.gpu.GraphicProcessor;
 import backend.recommendation.type.repository.MainRatingRepository;
 import backend.security.utils.JwtUtils;
 import backend.user.User;
@@ -109,10 +110,7 @@ public class MainController {
 
         try {
             Result result = Utility.returnReccomendedItem(null, "mainboard", userId);
-            for (Recommender recommender : result.getResult()) {
-                System.out.println(recommender.getItem() + " " + recommender.getScore());
-                mainboards.add(mainRepository.findByID(recommender.getItem()));
-            }
+            mainboards = doRecommender(result);
             Page<Mainboard> mainboardPage = new PageImpl<>(mainboards);
             return mainboardPage;
         } catch (Exception e) {
@@ -128,17 +126,23 @@ public class MainController {
 
         try {
             Result result = Utility.returnReccomendedItem(mainboard.getId(), "mainboard", userId);
-            for (int i = 0; i <10; ++i) {
-                Recommender recommender = result.getResult().get(i);
-                System.out.println(recommender.getItem() + " " + recommender.getScore());
-                mainboards.add(mainRepository.findByID(recommender.getItem()));
-            }
+            mainboards = doRecommender(result);
             Page<Mainboard> mainboardPage = new PageImpl<>(mainboards);
             return mainboardPage;
         } catch (Exception e) {
             Page<Mainboard> mainboardPage = new PageImpl<>(mainboards);
             return mainboardPage;
         }
+    }
+
+    public List<Mainboard> doRecommender(Result result) {
+        List<Mainboard> recommendList = new ArrayList<>();
+        for (int i = 0; i <10; ++i) {
+            Recommender recommender = result.getResult().get(i);
+            System.out.println(recommender.getItem() + " " + recommender.getScore());
+            recommendList.add(mainRepository.findByID(recommender.getItem()));
+        }
+        return recommendList;
     }
 
 }

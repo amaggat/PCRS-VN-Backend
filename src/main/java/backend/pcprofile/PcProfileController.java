@@ -1,9 +1,11 @@
 package backend.pcprofile;
 
 
+import backend.pc.cpu.CentralProcessor;
 import backend.security.model.AuthenticationResponse;
 import backend.user.User;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.criteria.Predicate;
+import java.util.List;
 import java.util.Objects;
 
 @RestController
@@ -55,8 +58,10 @@ public class PcProfileController {
     }
 
     @GetMapping("/api/user/{UserID}/pcprofile")
-    public PcProfile findByUserID(@PathVariable("UserID") Integer id) {
-        return pcProfileRepository.findByUserID(id);
+    public Page<PcProfile> findByUserID(@PathVariable("UserID") Integer id) {
+        List<PcProfile> pcProfiles = pcProfileRepository.findByUserID(id);
+        Page<PcProfile> cpuPage = new PageImpl<>(pcProfiles);
+        return cpuPage;
     }
 
     @PostMapping("user/addPc")

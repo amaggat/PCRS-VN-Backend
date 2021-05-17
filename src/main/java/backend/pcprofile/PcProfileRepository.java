@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 public interface PcProfileRepository extends JpaRepository<PcProfile, String>, JpaSpecificationExecutor<PcProfile> {
 
     @Query("SELECT DISTINCT pcProfile FROM PcProfile pcProfile WHERE pcProfile.id= :id")
@@ -13,6 +15,6 @@ public interface PcProfileRepository extends JpaRepository<PcProfile, String>, J
 
     @Query("SELECT DISTINCT pcProfile FROM PcProfile pcProfile WHERE pcProfile.user.id = :id")
     @Transactional(readOnly = true)
-    PcProfile findByUserID(Integer id);
+    List<PcProfile> findByUserID(Integer id);
 
 }
