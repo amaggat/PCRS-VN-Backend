@@ -115,12 +115,12 @@ public class SsdController {
         List<SolidStateDrive> solidStateDrives = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, ssd.getId(), "ssd", userId);
-            for (Recommender recommender : result.getResult()) {
-                if (recommender.getScore() > 0) {
+            Result result = Utility.returnReccomendedItem(ssd.getId(), "ssd", userId);
+            for (int i = 0; i <10; ++i) {
+                Recommender recommender = result.getResult().get(i);
                     System.out.println(recommender.getItem());
                     solidStateDrives.add(ssdRepository.findByID(recommender.getItem()));
-                }
+
             }
             Page<SolidStateDrive> ssdPage = new PageImpl<>(solidStateDrives);
             return ssdPage;

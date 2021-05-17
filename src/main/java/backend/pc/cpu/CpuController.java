@@ -119,12 +119,12 @@ public class CpuController {
 
         System.out.println("User: " + userId);
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, cpu.getId(), "cpu", userId);
-            for (Recommender recommender : result.getResult()) {
-                if (recommender.getScore() > 0) {
+            Result result = Utility.returnReccomendedItem(cpu.getId(), "cpu", userId);
+            for (int i = 0; i <10; ++i) {
+                Recommender recommender = result.getResult().get(i);
                     System.out.println(recommender.getItem() + " " + recommender.getScore());
                     centralProcessors.add(cpuRepository.findByID(recommender.getItem()));
-                }
+
             }
             Page<CentralProcessor> cpuPage = new PageImpl<>(centralProcessors);
             return cpuPage;

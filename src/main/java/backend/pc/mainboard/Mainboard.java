@@ -2,6 +2,7 @@ package backend.pc.mainboard;
 
 
 import backend.model.ElectronicComponents;
+import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.type.rating.MainboardRating;
 import backend.util.Utility;
@@ -126,5 +127,19 @@ public class Mainboard extends ElectronicComponents {
     @Override
     public Integer getNumberOfRating() {
         return this.mainboardRatingList.size();
+    }
+
+    @Transient
+    private int minPrice;
+
+    public int getMinPrice(){
+        int min = 500000000;
+        for(MainPriceList mainPriceList : this.PriceList)
+        {
+            if(mainPriceList.getPrice() < min) {
+                min = mainPriceList.getPrice();
+            }
+        }
+        return min;
     }
 }

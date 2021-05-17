@@ -34,6 +34,9 @@ public class PcProfile {
     @JoinColumn(name = "categoryid")
     private Category category;
 
+    @Transient
+    private int price;
+
     @ManyToMany
     @JoinTable(
             name = "pcprofile_cpu",
@@ -96,6 +99,44 @@ public class PcProfile {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getPrice() {
+        int price = 0;
+
+        for(CentralProcessor cpu : this.centralProcessor) {
+            price += cpu.getMinPrice();
+        }
+
+        for(Mainboard mainboard : this.main) {
+            price += mainboard.getMinPrice();
+        }
+
+        for(GraphicProcessor gpu : this.graphicProcessor) {
+            price += gpu.getMinPrice();
+        }
+
+        for(Ram ram : this.ram) {
+            price += ram.getMinPrice();
+        }
+
+        for(SolidStateDrive ssd : this.ssd) {
+            price += ssd.getMinPrice();
+        }
+
+        for(HardDiskDrive hdd : this.hdd) {
+            price += hdd.getMinPrice();
+        }
+
+        for(PowerSupplyUnit psu : this.psu) {
+            price += psu.getMinPrice();
+        }
+
+        return price;
     }
 
     public Pair<Integer, String> getUser() {

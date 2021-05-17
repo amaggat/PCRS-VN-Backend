@@ -115,12 +115,11 @@ public class GpuController {
         List<GraphicProcessor> graphicProcessors = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, gpu.getId(), "gpu", userId);
-            for (Recommender recommender : result.getResult()) {
-                if (recommender.getScore() > 0) {
+            Result result = Utility.returnReccomendedItem(gpu.getId(), "gpu", userId);
+            for (int i = 0; i <10; ++i) {
+                Recommender recommender = result.getResult().get(i);
                     System.out.println(recommender.getItem() + " " + recommender.getScore());
                     graphicProcessors.add(gpuRepository.findByID(recommender.getItem()));
-                }
             }
             Page<GraphicProcessor> gpuPage = new PageImpl<>(graphicProcessors);
             return gpuPage;

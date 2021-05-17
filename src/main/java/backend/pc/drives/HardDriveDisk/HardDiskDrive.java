@@ -1,6 +1,7 @@
 package backend.pc.drives.HardDriveDisk;
 
 import backend.model.ElectronicComponents;
+import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.type.rating.HddRating;
 import backend.util.Utility;
@@ -20,6 +21,9 @@ public class HardDiskDrive extends ElectronicComponents {
 
     @Transient
     Optional<HddRating> hddRating;
+
+    @Transient
+    private int minPrice;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "hdd")
     private List<PcProfile> pcProfile;
@@ -75,4 +79,14 @@ public class HardDiskDrive extends ElectronicComponents {
         return this.hddRatingList.size();
     }
 
+    public int getMinPrice(){
+        int min = 500000000;
+        for(HddPriceList hddPriceList : this.PriceList)
+        {
+            if(hddPriceList.getPrice() < min) {
+                min = hddPriceList.getPrice();
+            }
+        }
+        return min;
+    }
 }

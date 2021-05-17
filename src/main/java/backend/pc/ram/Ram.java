@@ -2,6 +2,7 @@ package backend.pc.ram;
 
 
 import backend.model.ElectronicComponents;
+import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.type.rating.RamRating;
 import backend.util.Utility;
@@ -103,5 +104,16 @@ public class Ram extends ElectronicComponents {
     @Override
     public Integer getNumberOfRating() {
         return this.ramRatingList.size();
+    }
+
+    public int getMinPrice(){
+        int min = 500000000;
+        for(RamPriceList ramPriceList : this.PriceList)
+        {
+            if(ramPriceList.getPrice() < min) {
+                min = ramPriceList.getPrice();
+            }
+        }
+        return min;
     }
 }

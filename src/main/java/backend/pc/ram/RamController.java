@@ -120,12 +120,12 @@ public class RamController {
         List<Ram> rams = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, ram.getId(), "ram", userId);
-            for (Recommender recommender : result.getResult()) {
-                if (recommender.getScore() > 0) {
+            Result result = Utility.returnReccomendedItem(ram.getId(), "ram", userId);
+            for (int i = 0; i <10; ++i) {
+                Recommender recommender = result.getResult().get(i);
                     System.out.println(recommender.getItem() + " " + recommender.getScore());
                     rams.add(ramRepository.findByID(recommender.getItem()));
-                }
+
             }
             Page<Ram> psuPage = new PageImpl<>(rams);
             return psuPage;

@@ -2,6 +2,7 @@ package backend.pc.drives.SolidStateDrive;
 
 
 import backend.model.ElectronicComponents;
+import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.type.rating.SsdRating;
 import backend.util.Utility;
@@ -75,5 +76,19 @@ public class SolidStateDrive extends ElectronicComponents {
 
     public void setSsdRating(Optional<SsdRating> ssdRating) {
         this.ssdRating = ssdRating;
+    }
+
+    @Transient
+    private int minPrice;
+
+    public int getMinPrice(){
+        int min = 500000000;
+        for(SsdPriceList ssdPriceList : this.PriceList)
+        {
+            if(ssdPriceList.getPrice() < min) {
+                min = ssdPriceList.getPrice();
+            }
+        }
+        return min;
     }
 }

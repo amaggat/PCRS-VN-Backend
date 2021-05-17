@@ -127,12 +127,11 @@ public class MainController {
         List<Mainboard> mainboards = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, mainboard.getId(), "mainboard", userId);
-            for (Recommender recommender : result.getResult()) {
-                if (recommender.getScore() > 0) {
-                    System.out.println(recommender.getItem() + " " + recommender.getScore());
-                    mainboards.add(mainRepository.findByID(recommender.getItem()));
-                }
+            Result result = Utility.returnReccomendedItem(mainboard.getId(), "mainboard", userId);
+            for (int i = 0; i <10; ++i) {
+                Recommender recommender = result.getResult().get(i);
+                System.out.println(recommender.getItem() + " " + recommender.getScore());
+                mainboards.add(mainRepository.findByID(recommender.getItem()));
             }
             Page<Mainboard> mainboardPage = new PageImpl<>(mainboards);
             return mainboardPage;

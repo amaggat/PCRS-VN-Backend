@@ -98,7 +98,6 @@ public class Utility {
         System.out.println(code);
     }
 
-
     public static String toJsonRequest(String action, Integer userid, String item) {
         String jsonInputString = "{\n" +
                 "    \"event\": \"" + action + "\",\n" +

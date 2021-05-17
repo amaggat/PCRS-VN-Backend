@@ -36,6 +36,9 @@ public class CentralProcessor extends ElectronicComponents {
     @NotEmpty
     private Integer Threads;
 
+    @Transient
+    private int minPrice;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "centralProcessor", fetch = FetchType.EAGER)
     private List<CpuPriceList> PriceList;
 
@@ -122,5 +125,16 @@ public class CentralProcessor extends ElectronicComponents {
 
     public void setCpuRating(Optional<CpuRating> cpuRating) {
         this.cpuRating = cpuRating;
+    }
+
+    public int getMinPrice(){
+        int min = 500000000;
+        for(CpuPriceList cpuPriceList : this.PriceList)
+        {
+            if(cpuPriceList.getPrice() < min) {
+                min = cpuPriceList.getPrice();
+            }
+        }
+        return min;
     }
 }

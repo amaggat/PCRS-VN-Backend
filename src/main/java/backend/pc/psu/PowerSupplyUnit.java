@@ -1,6 +1,7 @@
 package backend.pc.psu;
 
 import backend.model.ElectronicComponents;
+import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.type.rating.PsuRating;
 import backend.util.Utility;
@@ -102,5 +103,16 @@ public class PowerSupplyUnit extends ElectronicComponents {
     @Override
     public Integer getNumberOfRating() {
         return this.psuRatingList.size();
+    }
+
+    public int getMinPrice(){
+        int min = 500000000;
+        for(PsuPriceList psuPriceList : this.PriceList)
+        {
+            if(psuPriceList.getPrice() < min) {
+                min = psuPriceList.getPrice();
+            }
+        }
+        return min;
     }
 }

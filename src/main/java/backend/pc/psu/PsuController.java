@@ -120,12 +120,11 @@ public class PsuController {
         List<PowerSupplyUnit> powerSupplyUnits = new ArrayList<>();
 
         try {
-            Result result = Utility.returnReccomendedItem(Utility.URL, psu.getId(), "psu", userId);
-            for (Recommender recommender : result.getResult()) {
-                if (recommender.getScore() > 0) {
-                    System.out.println(recommender.getItem() + " " + recommender.getScore());
-                    powerSupplyUnits.add(psuRepository.findByID(recommender.getItem()));
-                }
+            Result result = Utility.returnReccomendedItem(psu.getId(), "psu", userId);
+            for (int i = 0; i <10; ++i) {
+                Recommender recommender = result.getResult().get(i);
+                System.out.println(recommender.getItem() + " " + recommender.getScore());
+                powerSupplyUnits.add(psuRepository.findByID(recommender.getItem()));
             }
             Page<PowerSupplyUnit> psuPage = new PageImpl<>(powerSupplyUnits);
             return psuPage;

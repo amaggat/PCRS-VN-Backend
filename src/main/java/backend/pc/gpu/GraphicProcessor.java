@@ -1,6 +1,7 @@
 package backend.pc.gpu;
 
 import backend.model.ElectronicComponents;
+import backend.pc.cpu.CpuPriceList;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.type.rating.GpuRating;
 import backend.util.Utility;
@@ -95,5 +96,19 @@ public class GraphicProcessor extends ElectronicComponents {
     }
 
     public GraphicProcessor() {
+    }
+
+    @Transient
+    private int minPrice;
+
+    public int getMinPrice(){
+        int min = 500000000;
+        for(GpuPriceList gpuPriceList : this.PriceList)
+        {
+            if(gpuPriceList.getPrice() < min) {
+                min = gpuPriceList.getPrice();
+            }
+        }
+        return min;
     }
 }
