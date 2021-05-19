@@ -6,6 +6,7 @@ import backend.pc.cpu.CpuRepository;
 import backend.util.Recommender;
 import backend.util.Result;
 import backend.util.Utility;
+import javafx.util.Pair;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Service;
@@ -36,9 +37,10 @@ public class ChatbotServiceImpl implements ChatbotService{
     }
 
    public List getComponentId(Result result, String type) {
-        List componentId = new ArrayList(Arrays.asList("http://localhost:3000/products/",
-                "http://localhost:3000/products/",
-                "http://localhost:3000/products/"));
+        List componentId = new ArrayList(Arrays.asList(
+                new Pair<>("ProductID", "http://localhost:3000/products/"),
+                new Pair<>("ProductID", "http://localhost:3000/products/"),
+                new Pair<>("ProductID", "http://localhost:3000/products/")));
 
 //        for (int i = 0; i <3; ++i) {
 //           Recommender recommender = result.getResult().get(i);

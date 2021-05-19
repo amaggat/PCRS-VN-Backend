@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ResponseModel {
     private String response = new String();
-    private List<CentralProcessor> responseList = new ArrayList();
+    private List responseList = new ArrayList();
 
     public String getResponse() {
         return response;
