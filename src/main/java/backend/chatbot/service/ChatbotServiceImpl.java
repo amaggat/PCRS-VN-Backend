@@ -11,6 +11,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -35,12 +36,14 @@ public class ChatbotServiceImpl implements ChatbotService{
     }
 
    public List getComponentId(Result result, String type) {
-        List componentId = new ArrayList();
+        List componentId = new ArrayList(Arrays.asList("http://localhost:3000/products/",
+                "http://localhost:3000/products/",
+                "http://localhost:3000/products/"));
 
-        for (int i = 0; i <3; ++i) {
-           Recommender recommender = result.getResult().get(i);
-           componentId.add("http://localhost:3000/products/" + type + "/" + recommender.getItem());
-        }
+//        for (int i = 0; i <3; ++i) {
+//           Recommender recommender = result.getResult().get(i);
+//           componentId.add("http://localhost:3000/products/" + type + "/" + recommender.getItem());
+//        }
 
         return componentId;
    }
