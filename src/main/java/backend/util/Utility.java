@@ -16,8 +16,8 @@ import java.util.List;
 
 public class Utility {
 
-    public static final String URL = "http://localhost:9090/engines/pcrs/events";
-    public static final String URL_GET = "http://localhost:9090/engines/pcrs/queries";
+    public static final String URL = "http://localhost:9090/engines/pcrs_change/events";
+    public static final String URL_GET = "http://localhost:9090/engines/pcrs_change/queries";
 
     public static List<String> returnPcProfileID(List<PcProfile> pcProfileList) {
         List<String> profileId = new ArrayList<>();
