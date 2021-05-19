@@ -37,8 +37,9 @@ public class ChatbotServiceImpl implements ChatbotService{
    public List getComponentId(Result result, String type) {
         List componentId = new ArrayList();
 
-        for (Recommender obj : result.getResult()) {
-            componentId.add("http://localhost:3000/products/" + type + "/" + obj.getItem());
+        for (int i = 0; i <3; ++i) {
+           Recommender recommender = result.getResult().get(i);
+           componentId.add("http://localhost:3000/products/" + type + "/" + recommender.getItem());
         }
 
         return componentId;

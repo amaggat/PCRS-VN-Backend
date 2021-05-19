@@ -17,11 +17,11 @@ public class ResponseModel {
         this.response = response;
     }
 
-    public List<CentralProcessor> getResponseList() {
+    public List getResponseList() {
         return responseList;
     }
 
-    public void setResponseList(List<CentralProcessor> responseList) {
+    public void setResponseList(List responseList) {
         this.responseList = responseList;
     }
 }
