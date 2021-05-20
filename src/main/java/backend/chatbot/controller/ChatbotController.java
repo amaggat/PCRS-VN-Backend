@@ -20,13 +20,8 @@ public class ChatbotController {
 
     @PostMapping("user/chatbot")
     public ResponseModel response(@RequestBody RequestModel requestModel, @CookieValue("userId") Integer id) {
-        ResponseModel responseModel = new ResponseModel();
-
         String request = requestModel.getContent().toLowerCase();
-        System.out.println(request + ", userID = " + id);
-
-        responseModel = returnResponseModel(request, id);
-
+        ResponseModel responseModel = returnResponseModel(request, id);
         return responseModel;
     }
 
