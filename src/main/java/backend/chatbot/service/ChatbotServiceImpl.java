@@ -39,11 +39,11 @@ public class ChatbotServiceImpl implements ChatbotService{
         this.psuRepository = psuRepository;
     }
 
-    public List returnRecommendList(Integer id, String type) {
+    public List returnRecommendList(Integer id, String type, String url) {
         List recommendList = new ArrayList();
         try {
             Result result = Utility.returnReccomendedItem(null, type, id);
-            recommendList = getComponentId(result, type);
+            recommendList = getComponentId(result, type, url);
         } catch (Exception e) {
             return recommendList;
         }
@@ -51,11 +51,11 @@ public class ChatbotServiceImpl implements ChatbotService{
         return recommendList;
     }
 
-   private List getComponentId(Result result, String type) {
+   private List getComponentId(Result result, String type, String url) {
         List componentId = new ArrayList();
         for (int i = 0; i <2; ++i) {
             Recommender recommender = result.getResult().get(i);
-            String link = "http://localhost:3000/products/" + type + "/" + recommender.getItem();
+            String link = "http://localhost:3000/products/" + url + "/" + recommender.getItem();
             Pair<String, String> product = new Pair<>(getComponentName(recommender, type), link);
             componentId.add(product);
         }

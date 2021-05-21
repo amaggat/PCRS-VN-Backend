@@ -1,6 +1,7 @@
 package backend.chatbot.controller;
 
 import backend.chatbot.model.RequestModel;
+import backend.chatbot.model.Resources;
 import backend.chatbot.model.ResponseModel;
 import backend.chatbot.service.ChatbotService;
 import backend.pc.cpu.CpuController;
@@ -30,26 +31,32 @@ public class ChatbotController {
         responseModel.setResponse("IMO, you should see ");
 
         switch (request) {
+            case "hello":
+                responseModel.setResponse(Resources.chooseRandom(Resources.GREETINGS));
+                break;
+            case "hi":
+                responseModel.setResponse(Resources.chooseRandom(Resources.GREETINGS));
+                break;
             case "recommend me some cpu":
-                responseModel.setResponseList(chatbotService.returnRecommendList(id, "cpu"));
+                responseModel.setResponseList(chatbotService.returnRecommendList(id, "cpu", "cpu"));
                 break;
             case "recommend me some gpu":
-                responseModel.setResponseList(chatbotService.returnRecommendList(id, "gpu"));
+                responseModel.setResponseList(chatbotService.returnRecommendList(id, "gpu", "video-card"));
                 break;
             case "recommend me some mainboard":
-                responseModel.setResponseList(chatbotService.returnRecommendList(id, "mainboard"));
+                responseModel.setResponseList(chatbotService.returnRecommendList(id, "mainboard", "motherboard"));
                 break;
             case "recommend me some ram":
-                responseModel.setResponseList(chatbotService.returnRecommendList(id, "ram"));
+                responseModel.setResponseList(chatbotService.returnRecommendList(id, "ram", "memory"));
                 break;
             case "recommend me some ssd":
-                responseModel.setResponseList(chatbotService.returnRecommendList(id, "ssd"));
+                responseModel.setResponseList(chatbotService.returnRecommendList(id, "ssd", "ssd"));
                 break;
             case "recommend me some hdd":
-                responseModel.setResponseList(chatbotService.returnRecommendList(id, "hdd"));
+                responseModel.setResponseList(chatbotService.returnRecommendList(id, "hdd", "hdd"));
                 break;
             case "recommend me some psu":
-                responseModel.setResponseList(chatbotService.returnRecommendList(id, "psu"));
+                responseModel.setResponseList(chatbotService.returnRecommendList(id, "psu", "power"));
                 break;
         }
 

@@ -67,56 +67,56 @@ public class RatingController {
     }
 
     @PostMapping("/user/rating/cpu")
-    public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating, @CookieValue(value = "userid") Integer userid) {
+    public ResponseEntity<?> rating(@RequestBody CpuRating cpuRating, @CookieValue(value = "userId") Integer userid) {
         cpuRatingRepository.save(cpuRating);
         updateLog(userid, cpuRating.getCentralProcessor(), cpuRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/ssd")
-    public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating, @CookieValue(value = "userid") Integer userid) {
+    public ResponseEntity<?> rating(@RequestBody SsdRating ssdRating, @CookieValue(value = "userId") Integer userid) {
         ssdRatingRepository.save(ssdRating);
         updateLog(userid, ssdRating.getSsd(), ssdRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/gpu")
-    public ResponseEntity<?> rating(@RequestBody GpuRating gpuRating, @CookieValue(value = "userid") Integer userid) {
+    public ResponseEntity<?> rating(@RequestBody GpuRating gpuRating, @CookieValue(value = "userId") Integer userid) {
         gpuRatingRepository.save(gpuRating);
         updateLog(userid, gpuRating.getGraphicProcessor(), gpuRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/mainboard")
-    public ResponseEntity<?> rating(@RequestBody MainboardRating mainboardRating, @CookieValue(value = "userid") Integer userid) {
+    public ResponseEntity<?> rating(@RequestBody MainboardRating mainboardRating, @CookieValue(value = "userId") Integer userid) {
         mainRatingRepository.save(mainboardRating);
         updateLog(userid, mainboardRating.getMainboard(), mainboardRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/ram")
-    public ResponseEntity<?> rating(@RequestBody RamRating ramRating, @CookieValue(value = "userid") Integer userid) {
+    public ResponseEntity<?> rating(@RequestBody RamRating ramRating, @CookieValue(value = "userId") Integer userid) {
         ramRatingRepository.save(ramRating);
         updateLog(userid, ramRating.getRam(), ramRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/hdd")
-    public ResponseEntity<?> rating(@RequestBody HddRating hddRating, @CookieValue(value = "userid") Integer userid) {
+    public ResponseEntity<?> rating(@RequestBody HddRating hddRating, @CookieValue(value = "userId") Integer userid) {
         hddRatingRepository.save(hddRating);
         updateLog(userid, hddRating.getHdd(), hddRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/psu")
-    public ResponseEntity<?> rating(@RequestBody PsuRating psuRating, @CookieValue(value = "userid") Integer userid) {
+    public ResponseEntity<?> rating(@RequestBody PsuRating psuRating, @CookieValue(value = "userId") Integer userid) {
         psuRatingRepository.save(psuRating);
         updateLog(userid, psuRating.getPsu(), psuRating.getRating());
         return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
 
     @PostMapping("/user/rating/retailer")
-    public ResponseEntity<?> rating(@RequestBody RetailerRating retailerRating, @CookieValue(value = "userid") Integer userid) {
+    public ResponseEntity<?> rating(@RequestBody RetailerRating retailerRating, @CookieValue(value = "userId") Integer userid) {
         retailerRatingRepository.save(retailerRating);
         return ResponseEntity.ok(new AuthenticationResponse("Rated", userid.toString()));
     }
