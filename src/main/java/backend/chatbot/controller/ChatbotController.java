@@ -32,8 +32,6 @@ public class ChatbotController {
 
         switch (request) {
             case "hello":
-                responseModel.setResponse(Resources.chooseRandom(Resources.GREETINGS));
-                break;
             case "hi":
                 responseModel.setResponse(Resources.chooseRandom(Resources.GREETINGS));
                 break;
