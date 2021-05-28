@@ -1,6 +1,5 @@
 package backend.chatbot.model;
 
-import backend.pc.cpu.CentralProcessor;
 
 import java.util.ArrayList;
 import java.util.List;
