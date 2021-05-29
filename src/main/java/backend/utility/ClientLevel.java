@@ -1,4 +1,4 @@
-package backend.util;
+package backend.utility;
 
 import org.apache.logging.log4j.Level;
 

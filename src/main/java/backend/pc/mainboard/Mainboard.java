@@ -4,7 +4,7 @@ package backend.pc.mainboard;
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.rating.MainboardRating;
-import backend.util.Utility;
+import backend.utility.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

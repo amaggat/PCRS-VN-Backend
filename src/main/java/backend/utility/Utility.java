@@ -1,4 +1,4 @@
-package backend.util;
+package backend.utility;
 
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
@@ -13,12 +13,25 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import edu.cmu.sphinx.api.Configuration;
 
 public class Utility {
 
     public static final String URL = "http://localhost:9090/engines/pcrs_change/events";
     public static final String URL_GET = "http://localhost:9090/engines/pcrs_change/queries";
     public static final String URL_CHATBOT = "http://localhost:5000/chatbot";
+    public static final String URL_CHATBOT_VOICE = "http://localhost:5000/chatbot/voice";
+
+    public static Configuration setConfiguration() {
+        Configuration configuration = new Configuration();
+        // Set path to acoustic model.
+        configuration.setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
+        // Set path to dictionary.
+        configuration.setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
+        // Set language model.
+        configuration.setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
+        return configuration;
+    }
 
     public static List<String> returnPcProfileID(List<PcProfile> pcProfileList) {
         List<String> profileId = new ArrayList<>();
@@ -47,8 +60,8 @@ public class Utility {
         return componentId;
     }
 
-    public static Chatbot returnContent(String content) throws IOException {
-        HttpURLConnection con = setConnection(URL_CHATBOT);
+    public static Chatbot returnContent(String content, String URL) throws IOException {
+        HttpURLConnection con = setConnection(URL);
         String jsonChat = toJsonChatbot(content);
         doPost(con, jsonChat);
         Chatbot contentReturn = outChatbotResponse(con);
@@ -182,6 +195,5 @@ public class Utility {
         json = "{\"content\": \"" + content + "\"}";
         return json;
     }
-
 
 }

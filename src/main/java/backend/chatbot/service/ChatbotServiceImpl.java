@@ -1,6 +1,5 @@
 package backend.chatbot.service;
 
-import backend.pc.cpu.CentralProcessor;
 import backend.pc.cpu.CpuRepository;
 import backend.pc.drives.HardDriveDisk.HddRepository;
 import backend.pc.drives.SolidStateDrive.SsdRepository;
@@ -8,9 +7,9 @@ import backend.pc.gpu.GpuRepository;
 import backend.pc.mainboard.MainRepository;
 import backend.pc.psu.PsuRepository;
 import backend.pc.ram.RamRepository;
-import backend.util.Recommender;
-import backend.util.Result;
-import backend.util.Utility;
+import backend.utility.Recommender;
+import backend.utility.Result;
+import backend.utility.Utility;
 import javafx.util.Pair;
 import org.springframework.stereotype.Service;
 

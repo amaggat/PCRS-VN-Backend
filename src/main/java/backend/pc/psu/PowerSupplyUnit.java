@@ -3,7 +3,7 @@ package backend.pc.psu;
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.rating.PsuRating;
-import backend.util.Utility;
+import backend.utility.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

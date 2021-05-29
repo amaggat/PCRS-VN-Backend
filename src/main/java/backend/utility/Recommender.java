@@ -1,4 +1,4 @@
-package backend.util;
+package backend.utility;
 
 public class Recommender {
     private String item = new String();

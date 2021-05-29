@@ -1,4 +1,4 @@
-package backend.util;
+package backend.utility;
 
 public class Chatbot {
     private String content = new String();

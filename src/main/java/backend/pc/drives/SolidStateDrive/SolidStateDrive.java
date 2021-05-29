@@ -4,7 +4,7 @@ package backend.pc.drives.SolidStateDrive;
 import backend.model.ElectronicComponents;
 import backend.pcprofile.PcProfile;
 import backend.recommendation.rating.SsdRating;
-import backend.util.Utility;
+import backend.utility.Utility;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

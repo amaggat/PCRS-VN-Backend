@@ -9,7 +9,7 @@ import backend.pc.mainboard.MainPriceList;
 import backend.pc.psu.PsuPriceList;
 import backend.pc.ram.RamPriceList;
 import backend.recommendation.rating.RetailerRating;
-import backend.util.Utility;
+import backend.utility.Utility;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

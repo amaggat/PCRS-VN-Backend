@@ -3,13 +3,16 @@ package backend.chatbot.controller;
 import backend.chatbot.model.RequestModel;
 import backend.chatbot.model.ResponseModel;
 import backend.chatbot.service.ChatbotService;
-import backend.util.Chatbot;
-import backend.util.Utility;
+import backend.utility.Chatbot;
+import backend.utility.Utility;
+import backend.vrecognition.payload.UploadFileResponse;
+import backend.vrecognition.service.FileStorageService;
+import edu.cmu.sphinx.api.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 public class ChatbotController {
@@ -17,17 +20,37 @@ public class ChatbotController {
     @Autowired
     ChatbotService chatbotService;
 
+    @Autowired
+    FileStorageService fileStorageService;
+
+
     @PostMapping("user/chatbot")
-    public ResponseModel response(@RequestBody RequestModel requestModel, @CookieValue("userId") Integer id) {
-        String request = requestModel.getContent().toLowerCase();
+    public ResponseModel response(@RequestBody RequestModel requestModel,
+                                  @CookieValue("userId") Integer id) {
+        String request = new String();
+        request = requestModel.getContent().toLowerCase();
         ResponseModel responseModel = returnResponseModel(request, id);
+        return responseModel;
+    }
+
+    @PostMapping("user/chatbot/voice")
+    public ResponseModel voiceResponse(@RequestParam(value = "file") MultipartFile file) {
+        String name = fileStorageService.storeFile(file);
+        Chatbot content = new Chatbot();
+        try {
+            content = Utility.returnContent(name, Utility.URL_CHATBOT_VOICE);
+        } catch (Exception e) {
+
+        }
+        ResponseModel responseModel = new ResponseModel();
+        responseModel.setResponse(content.getContent());
         return responseModel;
     }
 
     private ResponseModel returnResponseModel(String request, Integer id) {
         Chatbot content = new Chatbot();
         try {
-            content = Utility.returnContent(request);
+            content = Utility.returnContent(request, Utility.URL_CHATBOT);
             System.out.println(content.getTag() + " " + content.getContent());
         } catch (Exception e) {
 

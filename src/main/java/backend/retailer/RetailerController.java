@@ -1,11 +1,9 @@
 package backend.retailer;
 
-import backend.pc.ram.RamController;
 import backend.user.User;
-import backend.user.UserActivity;
 import backend.user.UserActivityRepository;
 import backend.user.UserRepository;
-import backend.util.ClientLevel;
+import backend.utility.ClientLevel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.data.domain.Page;
