@@ -22,17 +22,6 @@ public class Utility {
     public static final String URL_CHATBOT = "http://localhost:5000/chatbot";
     public static final String URL_CHATBOT_VOICE = "http://localhost:5000/chatbot/voice";
 
-    public static Configuration setConfiguration() {
-        Configuration configuration = new Configuration();
-        // Set path to acoustic model.
-        configuration.setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
-        // Set path to dictionary.
-        configuration.setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
-        // Set language model.
-        configuration.setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
-        return configuration;
-    }
-
     public static List<String> returnPcProfileID(List<PcProfile> pcProfileList) {
         List<String> profileId = new ArrayList<>();
 
