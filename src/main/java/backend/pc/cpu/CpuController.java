@@ -3,7 +3,10 @@ package backend.pc.cpu;
 
 import backend.recommendation.repository.CpuRatingRepository;
 import backend.security.utils.JwtUtils;
-import backend.user.*;
+import backend.user.User;
+import backend.user.UserActivity;
+import backend.user.UserActivityRepository;
+import backend.user.UserRepository;
 import backend.utility.ClientLevel;
 import backend.utility.Recommender;
 import backend.utility.Result;
@@ -18,10 +21,10 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.criteria.Predicate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import javax.persistence.criteria.Predicate;
 
 @RestController
 public class CpuController {

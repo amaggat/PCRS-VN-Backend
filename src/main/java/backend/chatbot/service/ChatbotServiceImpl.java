@@ -14,6 +14,8 @@ import javafx.util.Pair;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -52,6 +54,7 @@ public class ChatbotServiceImpl implements ChatbotService{
 
    private List getComponentId(Result result, String type, String url) {
         List componentId = new ArrayList();
+        Collections.shuffle(result.getResult());
         for (int i = 0; i <2; ++i) {
             Recommender recommender = result.getResult().get(i);
             String link = "http://localhost:3000/products/" + url + "/" + recommender.getItem();

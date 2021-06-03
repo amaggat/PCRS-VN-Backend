@@ -13,7 +13,6 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import edu.cmu.sphinx.api.Configuration;
 
 public class Utility {
 

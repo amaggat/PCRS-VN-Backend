@@ -5,14 +5,10 @@ import backend.chatbot.model.ResponseModel;
 import backend.chatbot.service.ChatbotService;
 import backend.utility.Chatbot;
 import backend.utility.Utility;
-import backend.vrecognition.payload.UploadFileResponse;
 import backend.vrecognition.service.FileStorageService;
-import edu.cmu.sphinx.api.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 public class ChatbotController {

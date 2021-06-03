@@ -1,20 +1,7 @@
 package backend.recommendation;
 
-import backend.recommendation.rating.CpuRating;
-import backend.recommendation.rating.GpuRating;
-import backend.recommendation.rating.HddRating;
-import backend.recommendation.rating.MainboardRating;
-import backend.recommendation.rating.PsuRating;
-import backend.recommendation.rating.RamRating;
-import backend.recommendation.rating.RetailerRating;
-import backend.recommendation.rating.SsdRating;
-import backend.recommendation.repository.CpuRatingRepository;
-import backend.recommendation.repository.GpuRatingRepository;
-import backend.recommendation.repository.HddRatingRepository;
-import backend.recommendation.repository.MainRatingRepository;
-import backend.recommendation.repository.PsuRatingRepository;
-import backend.recommendation.repository.RamRatingRepository;
-import backend.recommendation.repository.SsdRatingRepository;
+import backend.recommendation.rating.*;
+import backend.recommendation.repository.*;
 import backend.retailer.RetailerRatingRepository;
 import backend.security.model.AuthenticationResponse;
 import backend.user.User;

@@ -3,20 +3,9 @@ package backend.user;
 import backend.article.Post;
 import backend.model.NameEntity;
 import backend.pcprofile.PcProfile;
-import backend.recommendation.rating.CpuRating;
-import backend.recommendation.rating.GpuRating;
-import backend.recommendation.rating.HddRating;
-import backend.recommendation.rating.MainboardRating;
-import backend.recommendation.rating.PsuRating;
-import backend.recommendation.rating.RamRating;
-import backend.recommendation.rating.SsdRating;
+import backend.recommendation.rating.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity

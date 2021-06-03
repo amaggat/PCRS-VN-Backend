@@ -1,12 +1,8 @@
 package backend.vrecognition.service;
 
-import backend.utility.Utility;
-import backend.vrecognition.exception.FileStorageException;
 import backend.vrecognition.exception.FileNotFoundException;
+import backend.vrecognition.exception.FileStorageException;
 import backend.vrecognition.property.FileStorageProperties;
-import edu.cmu.sphinx.api.Configuration;
-import edu.cmu.sphinx.api.SpeechResult;
-import edu.cmu.sphinx.api.StreamSpeechRecognizer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -14,9 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;

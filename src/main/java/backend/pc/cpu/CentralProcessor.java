@@ -6,15 +6,7 @@ import backend.pcprofile.PcProfile;
 import backend.recommendation.rating.CpuRating;
 import backend.utility.Utility;
 
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
 import java.util.Optional;
