@@ -9,34 +9,48 @@ compatibility, it also allow users to compare price from different retail stores
 
 ## [Demo](demo)
 
-1. The dashboard:
+1. The homescreen:
    ![Dashboard](images/dashboard.png)
-2. The main area which allows users to build their PC:
+2. The System Builder:
    ![Main area](images/build-pc.png)
-3. Browsing PC item:
+3. Browsing PC components:
    ![Browsing](images/browse-product.png)
-4. We already create some finised build which users can use immediately.
-   ![Guild](images/guild.png)
-5. All the products were crawled from different retail stores. We want to create a website where users can easily check
-   for their items for their wishlist with its price, promo from retailer ...
-   ![Product-detail](images/view-product.png)
+4. We have compiled a list of multi-purpose PCs, with filters for users to narrow down their choice:
+   ![Build Guide](images/build-guide.png)
+5. Product details with ratings and similar products:
+   ![Product details](images/product-details.png)
+6. All products were crawled from different retail stores. We want to create a website where user can easly check for their items for their wishlist with its price, promo from retailer ...
+   ![Product-detail](images/retailers.png)
+
+## [Usage](usage)
+We are still working on deployment.
+The website will avaiable someday soon, thanks for your patient.
 
 ## [Database](data)
 
-We crawl product, price, promo, ... from many retail stores such as [PhongVu](https://phongvu.vn/)
+We crawl product, price, promo, ... from many retail stores such as [GearVN](https://gearvn.com/)
 , [AnPhat](https://www.anphatpc.com.vn/), [HanoiComputer](https://www.hanoicomputer.vn/), ... that users can access
 easly.
 
 *Note:* All the data we have are crawled from their public website.
 
-**The database architecture:**
-![DB-Architecture](images/database.png)
+## Front-end
 
-*For more detail, please checkout our backend service [here](https://github.com/amaggat/PcPartPickerVN_BackEndService)*
+In the project directory, you can run:
 
-## [Usage](usage)
+### `npm install`
+To install all the dependencies
 
-We are still working on deployment. The website will avaiable someday soon, thanks for your patient.
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+
+*For more detail, please checkout our Front-end service [here](https://github.com/amaggat/PCRS-VN-Frontend)*
+
 
 ## Back-end
 
@@ -44,74 +58,70 @@ We are still working on deployment. The website will avaiable someday soon, than
 
 ```
 spring.jpa.hibernate.ddl-auto=none
-spring.datasource.url= jdbc:mysql://localhost:3306/pc_parts_picker
-spring.datasource.username= 
-spring.datasource.password=  
+spring.datasource.url= jdbc:mysql://localhost:3306/ (link to pcrs database)
+spring.datasource.username= (insert username)
+spring.datasource.password= (insert password)
+spring.servlet.multipart.enabled=true
+# Threshold after which files are written to disk.
+spring.servlet.multipart.file-size-threshold=2KB
+# Max file size.
+spring.servlet.multipart.max-file-size=200MB
+# Max Request Size
+spring.servlet.multipart.max-request-size=215MB
+## File Storage Properties
+# Please change this to the path where you want the uploaded files to be stored.
+file.upload-dir=(Directory)/PCRS-Chatbot/voice/audio
 ```
 
-2. Import database.sql to MySQL.
 
-3. Run BackEndApplication.
+2. Import database.sql to MySQL with your database.
 
-If you want Front-end source code, visit https://github.com/manhdung20112000/PCbuilder-frontend
+3. Run ```BackEndApplication.java``` and you ready to go.
 
-## Front-end
 
-In the project directory, you can run:
+*For more detail, please checkout our Back-end service [here](https://github.com/amaggat/PcPartPickerVN_BackEndService)*
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Recommender
+1. If you are familiar with Docker and Docker Compose, here is the "one-liner":
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```git clone https://github.com/actionml/harness-docker-compose.git && cd harness-docker-compose && cp .env.sample .env && docker-compose up -d --build```
 
-### `npm test`
+2. Move config.json to harness-docker-compose/docker-persistence/harness/data.
+3. Open harness-cli. Use this command:```harness-cli add data/config.json```
+4. Run ```Setup.java``` and you ready to go.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
-information.
+*For more detail, please checkout our Recommender service [here](https://github.com/amaggat/PCRS-VN-Recommender)* \
+*For more commands, please checkout [here](https://actionml.com/docs/h_ur_queries)*
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in
-the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Chatbot
+1. Install all requirements
+2. Run ```application.py``` and you ready to go.
 
 ## [Our team](team)
-
 - Dung M. Nguyen
-  [Contact: [GitHub](https://github.com/manhdung20112000) | [Facebook](https://www.facebook.com/nmd2000)]
+  [Contact: [GitHub](https://github.com/manhdung20112000) [Facebook](https://www.facebook.com/nmd2000)]
 
 - Thanh T. Tran
-  [Contact: [GitHub](https://github.com/amaggat) | [Facebook](https://www.facebook.com/thanhtt.amg/)]
+  [Contact: [GitHub](https://github.com/amaggat) [Facebook](https://www.facebook.com/messages/t/100005149897099)]
+
+- Nhat Q. Le
+  [Contact: [GitHub](https://github.com/fuzeless) [Facebook](https://www.facebook.com/fuzeless)]
 
 - Hung P. Quang
-  [Contact: [GitHub](https://github.com/heor2807) | [Facebook](https://www.facebook.com/srw.king)]
+  [Contact: [GitHub](https://github.com/heor2807) [Facebook](https://www.facebook.com/srw.king)]
 
 - Binh M. Le
-  [Contact: [Facebook](https://www.facebook.com/luke.shrek)]
+  [Contact: [GitHub](https://github.com/LukeShrek) [Facebook](https://www.facebook.com/luke.shrek)]
+  
+- Hieu M. Tran
+  [Contact: [GitHub](https://github.com/hieutm211) [Facebook](https://www.facebook.com/hieutm211x)]
 
 - Hieu V. Pham
-  [Contact: [GitHub](https://github.com/hieuphamjr) | [Facebook](https://www.facebook.com/HieuPhamJR11)]
+  [Contact: [GitHub](https://github.com/hieuphamjr) [Facebook](https://www.facebook.com/HieuPhamJR11)]
 
 ##### *Special thanks to:*
-
 - Anh T. Tran
-  [Contact: [GitHub](https://github.com/zzNuAzz) | [Facebook](https://www.facebook.com/SoNguyenTo216/)]
-
-- Nhat Q. Nguyen [Contact: [GitHub](https://github.com/fuzeless) | [Facebook](https://www.facebook.com/fuzeless/)]
+  [Contact: [GitHub](https://github.com/zzNuAzz) [Facebook](https://www.facebook.com/SoNguyenTo216/)]
 
 
