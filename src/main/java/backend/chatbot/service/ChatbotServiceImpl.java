@@ -1,7 +1,7 @@
 package backend.chatbot.service;
 
 import backend.pc.cpu.CpuRepository;
-import backend.pc.drives.HardDriveDisk.HddRepository;
+import backend.pc.drives.HardDiskDrive.HddRepository;
 import backend.pc.drives.SolidStateDrive.SsdRepository;
 import backend.pc.gpu.GpuRepository;
 import backend.pc.mainboard.MainRepository;
@@ -14,7 +14,6 @@ import javafx.util.Pair;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 

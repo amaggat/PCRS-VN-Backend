@@ -1,7 +1,7 @@
 package backend.pcprofile;
 
 import backend.pc.cpu.CentralProcessor;
-import backend.pc.drives.HardDriveDisk.HardDiskDrive;
+import backend.pc.drives.HardDiskDrive.HardDiskDrive;
 import backend.pc.drives.SolidStateDrive.SolidStateDrive;
 import backend.pc.gpu.GraphicProcessor;
 import backend.pc.mainboard.Mainboard;

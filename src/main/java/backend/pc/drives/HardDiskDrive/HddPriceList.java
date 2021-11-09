@@ -1,4 +1,4 @@
-package backend.pc.drives.HardDriveDisk;
+package backend.pc.drives.HardDiskDrive;
 
 
 import backend.retailer.Retailer;
